@@ -1,37 +1,88 @@
 <article class="lab" data-lab="2.6">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>جدول لست عتبات: التنبيهات في اليوم، والدقة، والاستدعاء، واستدعاء الحوادث الحرجة.</li>
+    <li>الجدول نفسه بعد إخفاء تنبيهات الصيانة المجدولة.</li>
+    <li>عتبة مختارة ضمن طاقة المركز، وسببها في ثلاثة أسطر لرتيل الرميان.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="جدول بيانات">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/network/noc_capacity.txt" target="_blank"><b>network/noc_capacity.txt</b><span>طاقة المركز وشرط الحوادث الحرجة</span></a>
+  <a href="files/start/alert_matches.csv" target="_blank"><b>start/alert_matches.csv</b><span>كل التنبيهات موسومة بالحادثة التي تقابلها (إن وُجدت)</span></a>
+  <a href="files/start/incident_best_score.csv" target="_blank"><b>start/incident_best_score.csv</b><span>كل حادثة مع شدتها وأعلى درجة تنبيه وقع عليها</span></a>
+</div>
+<p class="small">يبدأ المختبر من ملفين جاهزين، فلا يحتاج نتيجة المختبر 2.5. الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · اقرأ المذكرة وافتح الملفين <span class="min">3 دقائق</span></h3>
+  <p>اكتب الشرطين: كم تنبيهًا في اليوم على الأكثر، وكم حادثة حرجة يُقبل أن تفوت في الأسبوع. في <code>alert_matches.csv</code>: <code>D</code> الدرجة، و<code>E</code> الصيانة المجدولة، و<code>F</code> رمز الحادثة المقابلة أو فارغ.</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · التنبيهات في اليوم والدقة <span class="min">7 دقائق</span></h3>
+  <p>ضع العتبات 0.3 و0.4 و0.5 و0.6 و0.7 و0.8 في عمود (<code>T</code> في الأسفل خلية العتبة).</p>
+  <pre class="code" data-file="alert_matches.csv"><code>alerts a day   =COUNTIF(D:D,"&gt;="&amp;T)/7
+precision, %   =COUNTIFS(D:D,"&gt;="&amp;T,F:F,"&lt;&gt;")/COUNTIF(D:D,"&gt;="&amp;T)*100</code></pre>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · الاستدعاء واستدعاء الحرجة <span class="min">6 دقائق</span></h3>
+  <p>الحادثة مكشوفة عند عتبة ما إذا كانت أعلى درجة تنبيه عليها لا تقل عن العتبة.</p>
+  <pre class="code" data-file="incident_best_score.csv"><code>recall, %            =COUNTIF(C:C,"&gt;="&amp;T)/72*100
+critical recall, %   =COUNTIFS(B:B,"critical",C:C,"&gt;="&amp;T)/COUNTIF(B:B,"critical")*100</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · إخفاء الصيانة المجدولة <span class="min">5 دقائق</span></h3>
+  <p>أعد التنبيهات في اليوم والدقة بإضافة شرط <code>E:E,0</code>. لماذا لا يتغير الاستدعاء؟</p>
+  <table>
+    <tr><th>العتبة</th><th>في اليوم</th><th>الدقة</th><th>في اليوم دون الصيانة</th><th>الدقة دون الصيانة</th><th>الاستدعاء</th><th>استدعاء الحرجة</th></tr>
+    <tr><td>0.4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>0.5</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>0.6</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · اختر العتبة <span class="min">4 دقائق</span></h3>
+  <p>ثلاثة أسطر لرتيل الرميان: العتبة، وما يكسبه المركز، وما يدفعه (كم حادثة تفوت أسبوعيًّا، وأي شدة).</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>اقترح عتبتين: واحدة للحوادث الحرجة وأخرى لغيرها. هل تسمح الملفات بتقدير أثر الاقتراح؟ ما المعلومة التي تنقص التنبيه لحظة صدوره؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>لماذا لا تصلح العتبة الافتراضية للمركز مع أن استدعاءها عالٍ؟</li>
+  <li>لماذا يرفع إخفاء الصيانة المجدولة الدقة دون أن يمس الاستدعاء؟</li>
+  <li>ما أعلى عتبة تحقق شرط الحوادث الحرجة؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <table>
+    <tr><th>العتبة</th><th>في اليوم</th><th>الدقة</th><th>دون الصيانة: في اليوم / الدقة</th><th>الاستدعاء</th><th>الحرجة</th></tr>
+    <tr><td>0.3</td><td>349.14</td><td>8.88</td><td>330.43 / 9.38</td><td>100</td><td>100</td></tr>
+    <tr><td>0.4</td><td>160.29</td><td>16.67</td><td>141.57 / 18.87</td><td>95.83</td><td>90.91</td></tr>
+    <tr><td>0.5</td><td>86.14</td><td>26.37</td><td>67.57 / 33.62</td><td>86.11</td><td>90.91</td></tr>
+    <tr><td>0.6</td><td>48.00</td><td>32.44</td><td>31.14 / 50.00</td><td>69.44</td><td>81.82</td></tr>
+    <tr><td>0.7</td><td>23.86</td><td>35.33</td><td>13.00 / 64.84</td><td>50.00</td><td>72.73</td></tr>
+    <tr><td>0.8</td><td>8.86</td><td>38.71</td><td>4.86 / 70.59</td><td>23.61</td><td>54.55</td></tr>
+  </table>
+  <ul>
+    <li><b>الجواب:</b> 0.5 مع إخفاء الصيانة المجدولة: 67.57 تنبيهًا في اليوم (ضمن 120)، والدقة 33.62%، وتفوت حادثة حرجة واحدة (المقبول). عند 0.6 تفوت حادثتان حرجتان. عند 0.4 حتى بعد إخفاء الصيانة 141.57 في اليوم، فوق الطاقة.</li>
+    <li><b>الثمن:</b> عند 0.5 يفوت 10 من 72 حادثة في الأسبوع بدل 3. يجب أن يُكتب هذا في التوصية، لا أن يُخفى.</li>
+    <li><b>الاستدعاء لا يتغير بإخفاء الصيانة:</b> لا تنبيه في صيانة مجدولة يقابل حادثة غير معروفة.</li>
+    <li><b>التمرين الإضافي:</b> شدة الحادثة لا تُعرف إلا بعد التأكيد، فلا يحمل التنبيه شدته لحظة صدوره. الملفات لا تسمح بالتقدير إلا بمؤشر بديل (نوع <code>kpi</code> أو المنطقة)، وهذا يحتاج اختبارًا.</li>
+    <li><b>الفخ:</b> قسمة التنبيهات على 24 بدل 7، أو حساب الاستدعاء على التنبيهات بدل الحوادث.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.6</code>.</li>
+  </ul>
+</details>
 </article>

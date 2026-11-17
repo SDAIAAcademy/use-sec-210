@@ -1,37 +1,73 @@
 <article class="lab" data-lab="2.5">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>كل تنبيه موسوم: يقابله حادثة مؤكدة أو لا.</li>
+    <li>كل حادثة موسومة: كشفها تنبيه عند العتبة الافتراضية 0.4 أو لا.</li>
+    <li>عند العتبة الافتراضية: التنبيهات في اليوم، والدقة، والاستدعاء، والحوادث الفائتة، وسطران أمام نشرة المورد.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="جدول بيانات">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/network/rasd_note.txt" target="_blank"><b>network/rasd_note.txt</b><span>نشرة «رصد» وقاعدة ربط التنبيه بالحادثة</span></a>
+  <a href="files/network/alerts_week.csv" target="_blank"><b>network/alerts_week.csv</b><span>2,444 تنبيهًا في أسبوع على 1,200 موقع</span></a>
+  <a href="files/network/incidents_week.csv" target="_blank"><b>network/incidents_week.csv</b><span>72 حادثة مؤكدة في الأسبوع نفسه، مع شدتها</span></a>
+</div>
+<p class="small">الأداة جدول بيانات: ضع الملفين في ورقتين من مصنف واحد باسمي <code>alerts</code> و<code>incidents</code>. سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · اقرأ النشرة وقاعدة الربط <span class="min">3 دقائق</span></h3>
+  <p>التنبيه صحيح إذا كانت في الموقع نفسه حادثة مؤكدة و<code>start_hour - 1 &lt;= hour_of_week &lt;= end_hour</code>. اكتب بكلماتك كيف حُسب رقم 97% في النشرة.</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · وسم التنبيهات <span class="min">8 دقائق</span></h3>
+  <pre class="code" data-file="alerts_week.csv"><code>H2  =COUNTIFS(incidents!B:B,B2,incidents!D:D,"&lt;="&amp;D2+1,incidents!E:E,"&gt;="&amp;D2)&gt;0</code></pre>
+  <p>الناتج TRUE أو FALSE. انسخ المعادلة إلى آخر صف.</p>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · وسم الحوادث <span class="min">6 دقائق</span></h3>
+  <pre class="code" data-file="incidents_week.csv"><code>G2  =COUNTIFS(alerts!B:B,B2,alerts!D:D,"&gt;="&amp;D2-1,alerts!D:D,"&lt;="&amp;E2,alerts!E:E,"&gt;=0.4")&gt;0</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · ثلاثة أرقام عند 0.4 <span class="min">5 دقائق</span></h3>
+  <pre class="code" data-file="alerts / incidents"><code>alerts a day   =COUNTIF(alerts!E:E,"&gt;=0.4")/7
+precision, %   =COUNTIFS(alerts!E:E,"&gt;=0.4",alerts!H:H,TRUE)/COUNTIF(alerts!E:E,"&gt;=0.4")*100
+recall, %      =COUNTIF(incidents!G:G,TRUE)/72*100</code></pre>
+  <p>اكتب أرقام الحوادث الفائتة وشدتها.</p>
+</div>
+
+<div class="step">
+  <h3>5 · أمام نشرة المورد <span class="min">3 دقائق</span></h3>
+  <p>سطران لرتيل الرميان: ما الذي يعنيه 97%، وما الذي تعنيه أرقامك للمركز.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>عدّ التنبيهات التي جاءت أثناء أعمال صيانة مجدولة (<code>planned_work = 1</code>) عند 0.4، وأعد حساب الدقة دونها.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>من كل ستة تنبيهات يفحصها المهندس، كم واحدًا يقابله عطل حقيقي؟</li>
+  <li>لماذا تبقى «الدقة» المحسوبة على كل الساعات عالية حتى لو لم يكشف النظام شيئًا؟</li>
+  <li>أي الحوادث الفائتة أخطر؟ ولماذا لا يكفي الاستدعاء الكلي لقول ذلك؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>عند 0.4:</b> 1,122 تنبيهًا في الأسبوع، أي 160.29 في اليوم. 187 منها يقابلها حادثة: الدقة 16.67%. الاستدعاء 69 من 72 = 95.83%.</li>
+    <li><b>الفائتة:</b> INC034 (بسيطة، أعلى درجة 0.30)، وINC040 (كبيرة، 0.38)، وINC055 (حرجة، 0.39). استدعاء الحرجة 10 من 11 = 90.91%.</li>
+    <li><b>رقم 97%:</b> محسوب على 1,200 × 168 = 201,600 ساعة موقع، أغلبها لا حادثة فيها ولا تنبيه، فتُعد «صحيحة». نظام لا ينبّه أبدًا يحصل على رقم قريب منه.</li>
+    <li><b>التمرين الإضافي:</b> 131 تنبيهًا في صيانة مجدولة؛ دونها 991 تنبيهًا (141.57 في اليوم) والدقة 18.87%.</li>
+    <li><b>الفخ:</b> قلب شرطي الساعة (بدء الحادثة بعد التنبيه) أو نسيان «الموقع نفسه»، فيرتفع عدد المطابقات كثيرًا.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.5</code>.</li>
+  </ul>
+</details>
 </article>

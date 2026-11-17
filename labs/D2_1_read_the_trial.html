@@ -1,37 +1,83 @@
 <article class="lab" data-lab="2.1">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>فحص توازن بين من تلقوا العرض ومن لم يتلقوه: المدة والإيراد ونسبة من انتهى عقده.</li>
+    <li>أثر العرض على الانصراف في التجربة كلها، بالنقاط.</li>
+    <li>أثر العرض في كل شريحة من شرائح الخطر الخمس، وسطران عن القاعدة الحالية.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="جدول بيانات">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/telecom/retention_trial.csv" target="_blank"><b>telecom/retention_trial.csv</b><span>100,000 مشترك: شريحة الخطر، والعقد، والمدة، والإيراد، وهل تلقى العرض، وهل غادر</span></a>
+  <a href="files/telecom/trial_note.txt" target="_blank"><b>telecom/trial_note.txt</b><span>مذكرة التجربة: القرعة، والأعمدة، والقاعدة الحالية، والتكلفة</span></a>
+</div>
+<p class="small">الأداة جدول بيانات (الملف كبير: يفتح في ثوانٍ في Excel وLibreOffice، وفي Google Sheets بالاستيراد). سياسة الذكاء الاصطناعي: مساعد معلّم. لا يحتاج المختبر شيئًا من اليوم الأول.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · اقرأ المذكرة والأعمدة <span class="min">3 دقائق</span></h3>
+  <p>الأعمدة: <code>B</code> شريحة الخطر من 1 إلى 5، و<code>C</code> العقد، و<code>D</code> المدة بالأشهر، و<code>E</code> الإيراد الشهري، و<code>F</code> تلقى العرض (1) أو لا (0)، و<code>G</code> غادر خلال 90 يومًا (1) أو لا (0). اكتب القاعدة الحالية لفريق الاحتفاظ.</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · فحص التوازن <span class="min">6 دقائق</span></h3>
+  <p>القرعة لم تنظر إلى شيء، فالمجموعتان يجب أن تتشابها في كل شيء قبل العرض. إن اختلفتا كثيرًا، فالقرعة معطوبة.</p>
+  <pre class="code" data-file="retention_trial.csv"><code>tenure, offered      =AVERAGEIF(F:F,1,D:D)
+revenue, offered     =AVERAGEIF(F:F,1,E:E)
+out of contract, %   =COUNTIFS(F:F,1,C:C,"out_of_contract")/COUNTIF(F:F,1)*100</code></pre>
+  <p>كرر لمن لم يتلقوا العرض (<code>F</code> = 0).</p>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · الأثر في التجربة كلها <span class="min">5 دقائق</span></h3>
+  <pre class="code" data-file="retention_trial.csv"><code>churn without offer  =AVERAGEIF(F:F,0,G:G)*100
+churn with offer     =AVERAGEIF(F:F,1,G:G)*100
+effect, points       =without - with</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · الأثر في كل شريحة <span class="min">8 دقائق</span></h3>
+  <pre class="code" data-file="retention_trial.csv"><code>band 5, without  =AVERAGEIFS(G:G,F:F,0,B:B,5)*100
+band 5, with     =AVERAGEIFS(G:G,F:F,1,B:B,5)*100</code></pre>
+  <table>
+    <tr><th>الشريحة</th><th>الانصراف دون عرض (%)</th><th>الانصراف مع العرض (%)</th><th>الأثر (نقاط)</th></tr>
+    <tr><td>5 (الأعلى خطرًا)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>3</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>2</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>1 (الأقل خطرًا)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · ما تقوله النتيجة عن القاعدة الحالية <span class="min">3 دقائق</span></h3>
+  <p>سطران لقاسم البليهد: هل يذهب العرض اليوم إلى من يغيّر العرض قراره؟</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>انظر إلى نسبة الانصراف مع العرض في الشريحة 5 وحدها. اكتب لماذا لا تعني هذه النسبة وحدها نجاحًا ولا فشلًا، وما الرقم الذي يجب أن يقف بجانبها.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>هل المجموعتان متوازنتان؟ بأي ثلاثة أرقام عرفت؟</li>
+  <li>لماذا لا تحتاج التجربة العشوائية إلى «ضبط» للفروق بين العملاء؟</li>
+  <li>في أي شريحة يكون الأثر أكبر؟ وهل هي الشريحة التي تستهدفها القاعدة الحالية؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>التوازن:</b> 49,951 تلقوا العرض و50,049 لم يتلقوه. المدة 21.30 و21.41 شهرًا، والإيراد 165.45 و165.63 ريالًا، ومن انتهى عقده 54.95% و54.81%: متوازنتان.</li>
+    <li><b>الأثر الكلي:</b> الانصراف 15.31% دون عرض و13.16% معه: 2.15 نقطة.</li>
+    <li><b>بحسب الشريحة (نقاط):</b> 5: 0.38؛ 4: 6.67؛ 3: 5.42؛ 2: 0.67؛ 1: ناقص 1.55 (العرض يرفع الانصراف).</li>
+    <li><b>الخلاصة:</b> القاعدة الحالية ترسل العرض إلى الشريحة 5 حيث لا يغيّر قرار أحد تقريبًا: 41.37% يغادرون دون عرض و40.99% معه.</li>
+    <li><b>الفخ:</b> قراءة الانصراف مع العرض وحده في الشريحة 5 (40.99%) والقول إن العرض «فشل» أو «نجح». المهم هو الفرق.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.1</code>.</li>
+  </ul>
+</details>
 </article>
