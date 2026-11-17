@@ -29,7 +29,8 @@
       "session": 1,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "decision-chain"
     },
     {
       "id": "q-chain-02",
@@ -58,7 +59,8 @@
       "session": 1,
       "level": "understand",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "who-decides"
     },
     {
       "id": "q-chain-03",
@@ -87,7 +89,8 @@
       "session": 4,
       "level": "analyze",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "stayed-vs-kept"
     },
     {
       "id": "q-chain-04",
@@ -116,7 +119,8 @@
       "session": 7,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "energy-control-sites"
     },
     {
       "id": "q-fcst-01",
@@ -145,7 +149,8 @@
       "session": 2,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "test-on-later-period"
     },
     {
       "id": "q-fcst-02",
@@ -174,7 +179,8 @@
       "session": 3,
       "level": "analyze",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "saving-vs-fee"
     },
     {
       "id": "q-fcst-03",
@@ -199,7 +205,8 @@
       "session": 4,
       "level": "understand",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "sales-are-not-demand"
     },
     {
       "id": "q-fcst-04",
@@ -228,7 +235,8 @@
       "session": 2,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "moving-calendar"
     },
     {
       "id": "q-uplift-01",
@@ -257,7 +265,8 @@
       "session": 2,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "risk-is-not-response"
     },
     {
       "id": "q-uplift-02",
@@ -282,7 +291,8 @@
       "session": 2,
       "level": "understand",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "sleeping-dogs"
     },
     {
       "id": "q-uplift-03",
@@ -311,7 +321,8 @@
       "session": 3,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "policy-value"
     },
     {
       "id": "q-uplift-04",
@@ -340,7 +351,8 @@
       "session": 6,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "offline-is-not-online"
     },
     {
       "id": "q-price-01",
@@ -369,7 +381,8 @@
       "session": 7,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "consent-per-purpose"
     },
     {
       "id": "q-price-02",
@@ -398,7 +411,8 @@
       "session": 8,
       "level": "analyze",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "proxies"
     },
     {
       "id": "q-price-03",
@@ -423,7 +437,8 @@
       "session": 7,
       "level": "understand",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "sensitive-and-automated"
     },
     {
       "id": "q-price-04",
@@ -452,7 +467,8 @@
       "session": 8,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "findings-note"
     },
     {
       "id": "q-alert-01",
@@ -481,7 +497,8 @@
       "session": 5,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "precision-recall"
     },
     {
       "id": "q-alert-02",
@@ -510,7 +527,8 @@
       "session": 6,
       "level": "analyze",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "alert-budget"
     },
     {
       "id": "q-alert-03",
@@ -535,7 +553,8 @@
       "session": 5,
       "level": "understand",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "accuracy-misleads"
     },
     {
       "id": "q-alert-04",
@@ -564,7 +583,8 @@
       "session": 6,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "suppress-known"
     },
     {
       "id": "q-map-01",
@@ -593,7 +613,8 @@
       "session": 8,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "evidence-cap"
     },
     {
       "id": "q-map-02",
@@ -622,12 +643,13 @@
       "session": 8,
       "level": "analyze",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "map-quadrants"
     },
     {
       "id": "q-map-03",
       "type": "single",
-      "prompt": "حالتان مجموعهما متساوٍ: الأولى قيمتها من اختبار على الماضي، والثانية من تجربة عشوائية. بأيهما تبدأ في المناقشة؟",
+      "prompt": "حالتان متساويتان في المجموع، فيرتبهما الدليل بالرمز فقط. الأولى قيمتها من اختبار على الماضي، والثانية من تجربة عشوائية. بأيهما تفتتح المناقشة؟",
       "options": [
         "الأولى، لأن الاختبار على الماضي أسرع",
         "أيهما، فالمجموع متساوٍ",
@@ -651,7 +673,8 @@
       "session": 8,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "rank-and-choose"
     },
     {
       "id": "q-map-04",
@@ -680,7 +703,8 @@
       "session": 7,
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "slide": "location-aggregate"
     }
   ]
 }

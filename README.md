@@ -75,6 +75,8 @@ AI in Retail and Telecommunications
 | 2.8 | اليوم 2 · الجلسة 8 | خريطة الفرص والمخاطر | [`D2_8_opportunity_map.html`](labs/D2_8_opportunity_map.html) |
 <!-- /academy:labs -->
 
+ملفات البداية في `labs/files/`، وكلها اصطناعية. الحل المرجعي `labs/solutions/check.py` يعيد حساب كل مختبر من هذه الملفات (`uv run labs/solutions/check.py`)، ومفتاح المدرّب في `labs/solutions/answer_key.md`، والتفاصيل في [`labs/README.md`](labs/README.md). لا مختبر يستدعي نموذجًا لغويًّا.
+
 ## المشروع الختامي
 
 الخريطة، وتُناقَش مباشرة؛ ثم مهمة متابعة متعقَّبة يقيّم فيها المشارك حالتي استخدام من عمله
