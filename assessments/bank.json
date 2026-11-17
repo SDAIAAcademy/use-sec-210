@@ -266,7 +266,7 @@
       "level": "apply",
       "pool": "practice",
       "weight": 1,
-      "slide": "risk-is-not-response"
+      "slide": "uplift-per-cell"
     },
     {
       "id": "q-uplift-02",
