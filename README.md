@@ -5,7 +5,7 @@ AI in Retail and Telecommunications
 
 مسار الطلاقة في البيانات والذكاء الاصطناعي · أكاديمية سدايا · USE-SEC-210 · المستوى 200
 
-REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك فعله بعد المقرر
+تختبر التنبؤات والتوصيات والأسعار المخصصة وعروض الاحتفاظ وتنبيهات الشبكة أمام خطوط الأساس والتجارب، وتفحص استخدام بيانات العملاء، وترتّب حالات الاستخدام في خريطة تدافع عنها
 
 يختبر المديرون التجاريون ومديرو التسويق والشبكات وخدمة العملاء التنبؤات واستهداف العملاء المعرضين للانصراف وقواعد التسعير ونتائج أنظمة التوصية وتنبيهات الشبكة مقارنة بخطوط الأساس والتجارب، ويفحصون استخدام بيانات العملاء، ويبنون خريطة الفرص والمخاطر لتاجر تجزئة أو مشغل اتصالات افتراضي. أما العمل التسويقي الفردي فيغطيه المقرر USE-PRO-210.
 
@@ -30,9 +30,9 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | الوحدة | العنوان | الجلسات | الشرائح |
 |---|---|---|---|
-| اليوم 1 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4; REPLACE: عنوان الجلسة 5; REPLACE: عنوان الجلسة 6; REPLACE: عنوان الجلسة 7; REPLACE: عنوان الجلسة 8 | [`slides/day1.html`](slides/day1.html) |
-| اليوم 2 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4; REPLACE: عنوان الجلسة 5; REPLACE: عنوان الجلسة 6; REPLACE: عنوان الجلسة 7; REPLACE: عنوان الجلسة 8 | [`slides/day2.html`](slides/day2.html) |
-| المناقشة الختامية | REPLACE: عنوان المناقشة الختامية |  | [`slides/capstone.html`](slides/capstone.html) |
+| اليوم 1 | أسواق سحاب: القيمة قبل النموذج | كيف يصير مخرج النموذج قرارًا; خط الأساس قبل النموذج; أين يستحق النموذج تكلفته; العروض ورمضان والمبيعات الناقصة; التوصيات والبحث; المقاييس دون اتصال وتجارب A/B; الأسعار المخصصة والموافقة; فروق الأسعار والعملاء الأكثر عرضة للضرر | [`slides/day1.html`](slides/day1.html) |
+| اليوم 2 | سحاب للاتصالات: الاحتفاظ والشبكة والخريطة | من درجة الخطر إلى القرار; الاستهداف بالأثر الإضافي; الإيراد المحتفظ به والعروض المهدرة; حلقات التغذية الراجعة وادعاءات القيمة الصادقة; شذوذ الشبكة أمام الحوادث المؤكدة; عتبة يتحملها الفريق; توفير الطاقة وبيانات الموقع; خريطة الفرص والمخاطر | [`slides/day2.html`](slides/day2.html) |
+| المناقشة الختامية | الخريطة أمام مكتب القيمة |  | [`slides/capstone.html`](slides/capstone.html) |
 <!-- /academy:units -->
 
 ## دراسة الحالة
@@ -46,22 +46,22 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | | الجلسة | المختبر | الملف |
 |---|---|---|---|
-| 1.1 | اليوم 1 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 1.1 | [`D1_1.html`](labs/D1_1.html) |
-| 1.2 | اليوم 1 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 1.2 | [`D1_2.html`](labs/D1_2.html) |
-| 1.3 | اليوم 1 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 1.3 | [`D1_3.html`](labs/D1_3.html) |
-| 1.4 | اليوم 1 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 1.4 | [`D1_4.html`](labs/D1_4.html) |
-| 1.5 | اليوم 1 · الجلسة 5 | REPLACE: ما يبنيه المشاركون في المختبر 1.5 | [`D1_5.html`](labs/D1_5.html) |
-| 1.6 | اليوم 1 · الجلسة 6 | REPLACE: ما يبنيه المشاركون في المختبر 1.6 | [`D1_6.html`](labs/D1_6.html) |
-| 1.7 | اليوم 1 · الجلسة 7 | REPLACE: ما يبنيه المشاركون في المختبر 1.7 | [`D1_7.html`](labs/D1_7.html) |
-| 1.8 | اليوم 1 · الجلسة 8 | REPLACE: ما يبنيه المشاركون في المختبر 1.8 | [`D1_8.html`](labs/D1_8.html) |
-| 2.1 | اليوم 2 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 2.1 | [`D2_1.html`](labs/D2_1.html) |
-| 2.2 | اليوم 2 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 2.2 | [`D2_2.html`](labs/D2_2.html) |
-| 2.3 | اليوم 2 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 2.3 | [`D2_3.html`](labs/D2_3.html) |
-| 2.4 | اليوم 2 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 2.4 | [`D2_4.html`](labs/D2_4.html) |
-| 2.5 | اليوم 2 · الجلسة 5 | REPLACE: ما يبنيه المشاركون في المختبر 2.5 | [`D2_5.html`](labs/D2_5.html) |
-| 2.6 | اليوم 2 · الجلسة 6 | REPLACE: ما يبنيه المشاركون في المختبر 2.6 | [`D2_6.html`](labs/D2_6.html) |
-| 2.7 | اليوم 2 · الجلسة 7 | REPLACE: ما يبنيه المشاركون في المختبر 2.7 | [`D2_7.html`](labs/D2_7.html) |
-| 2.8 | اليوم 2 · الجلسة 8 | REPLACE: ما يبنيه المشاركون في المختبر 2.8 | [`D2_8.html`](labs/D2_8.html) |
+| 1.1 | اليوم 1 · الجلسة 1 | سلاسل القرار لعشر حالات | [`D1_1_decision_chains.html`](labs/D1_1_decision_chains.html) |
+| 1.2 | اليوم 1 · الجلسة 2 | خط الأساس الموسمي البسيط | [`D1_2_seasonal_baseline.html`](labs/D1_2_seasonal_baseline.html) |
+| 1.3 | اليوم 1 · الجلسة 3 | الخطأ وكلفته بحسب مجموعة المنتجات | [`D1_3_error_by_group.html`](labs/D1_3_error_by_group.html) |
+| 1.4 | اليوم 1 · الجلسة 4 | أسابيع العروض ورمضان والنفاد | [`D1_4_promo_and_stockouts.html`](labs/D1_4_promo_and_stockouts.html) |
+| 1.5 | اليوم 1 · الجلسة 5 | التقييم دون اتصال أمام خط أساس الشعبية | [`D1_5_offline_vs_popular.html`](labs/D1_5_offline_vs_popular.html) |
+| 1.6 | اليوم 1 · الجلسة 6 | قراءة نتيجة تجربة التوصيات | [`D1_6_ab_readout.html`](labs/D1_6_ab_readout.html) |
+| 1.7 | اليوم 1 · الجلسة 7 | جرد مدخلات سعرك أمام الموافقات | [`D1_7_consent_inventory.html`](labs/D1_7_consent_inventory.html) |
+| 1.8 | اليوم 1 · الجلسة 8 | فروق الأسعار بين الفئات ومذكرة النتائج | [`D1_8_group_differences.html`](labs/D1_8_group_differences.html) |
+| 2.1 | اليوم 2 · الجلسة 1 | قراءة تجربة الاحتفاظ | [`D2_1_read_the_trial.html`](labs/D2_1_read_the_trial.html) |
+| 2.2 | اليوم 2 · الجلسة 2 | جدول الاستهداف بالأثر الإضافي | [`D2_2_uplift_table.html`](labs/D2_2_uplift_table.html) |
+| 2.3 | اليوم 2 · الجلسة 3 | قيمة ثلاث سياسات | [`D2_3_policy_value.html`](labs/D2_3_policy_value.html) |
+| 2.4 | اليوم 2 · الجلسة 4 | ادعاء الحملة ومجموعة الضبط | [`D2_4_honest_claim.html`](labs/D2_4_honest_claim.html) |
+| 2.5 | اليوم 2 · الجلسة 5 | مطابقة التنبيهات بالحوادث المؤكدة | [`D2_5_alert_matching.html`](labs/D2_5_alert_matching.html) |
+| 2.6 | اليوم 2 · الجلسة 6 | عتبة يتحملها المركز | [`D2_6_threshold.html`](labs/D2_6_threshold.html) |
+| 2.7 | اليوم 2 · الجلسة 7 | تجربة سُبات وطلب بيانات الموقع | [`D2_7_energy_and_location.html`](labs/D2_7_energy_and_location.html) |
+| 2.8 | اليوم 2 · الجلسة 8 | خريطة الفرص والمخاطر | [`D2_8_opportunity_map.html`](labs/D2_8_opportunity_map.html) |
 <!-- /academy:labs -->
 
 ## المشروع الختامي
@@ -87,7 +87,29 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 <!-- academy:sources -->
 ## المصادر
 
-- REPLACE: كل مصدر يستشهد به المقرر مع عنوانه، في course.json ضمن "sources"؛ هذه القائمة تُكتب من هناك
+### المرجعيات الوطنية
+
+- [سدايا: نظام حماية البيانات الشخصية](https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataProtectionLawAr.pdf)
+- [سدايا: اللائحة التنفيذية لنظام حماية البيانات الشخصية](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLawAr.pdf)
+- [مكتب إدارة البيانات الوطنية: سياسة مشاركة البيانات](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataSharingPolicyAR.pdf)
+- [سدايا: مبادئ أخلاقيات الذكاء الاصطناعي](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+- [سدايا: الدليل المرجعي للتحيز في الذكاء الاصطناعي](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/AR-AI-BIAS.pdf)
+- [SDAIA: AI Bias Reference Guide, first edition (May 2026)](https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/EN-AI-BIAS.pdf)
+- [SDAIA: Implementing Regulation of the Personal Data Protection Law](https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf)
+
+### التنبؤ والتجارب والأثر الإضافي
+
+- [Hyndman and Athanasopoulos, Forecasting: Principles and Practice (3rd ed.), simple forecasting methods](https://otexts.com/fpp3/simple-methods.html)
+- [Hyndman and Athanasopoulos, Forecasting: Principles and Practice (3rd ed.), evaluating point forecast accuracy](https://otexts.com/fpp3/accuracy.html)
+- [Gutierrez and Gérardy (2017), Causal Inference and Uplift Modelling: A Review of the Literature, PMLR 67](https://proceedings.mlr.press/v67/gutierrez17a.html)
+- [Fabijan et al. (2019), Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, KDD](https://www.exp-platform.com/Documents/2019_KDDFabijanGupchupFuptaOmhoverVermeerDmitriev.pdf)
+- [Kohavi, Tang and Xu (2020), Trustworthy Online Controlled Experiments, Cambridge University Press](https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59)
+
+### الشبكات والأدوات
+
+- [3GPP TR 38.864: Study on network energy savings for NR](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3987)
+- [JupyterLite documentation](https://jupyterlite.readthedocs.io/en/stable/)
+- [Google Colab](https://colab.research.google.com/)
 <!-- /academy:sources -->
 
 ### المرجعيات الوطنية
