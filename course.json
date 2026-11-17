@@ -841,6 +841,11 @@
     "session_lab": true,
     "lab_minutes": 25
   },
+  "extensions": {
+    "css": [
+      "assets/course.css"
+    ]
+  },
   "sources": [
     {
       "group": "المرجعيات الوطنية",
