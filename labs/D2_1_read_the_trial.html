@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · قراءة تجربة الاحتفاظ · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_read_the_trial.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>قراءة تجربة الاحتفاظ</h1>
+<p>تقرأ تجربة الاحتفاظ العشوائية على 100,000 مشترك: تفحص التوازن بين من تلقوا العرض ومن لم يتلقوه، وتحسب أثر العرض في الكل وفي كل شريحة خطر.</p>
+<div class="meta"><span>20 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: من درجة الخطر إلى القرار</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>فحص توازن بين من تلقوا العرض ومن لم يتلقوه: المدة والإيراد ونسبة من انتهى عقده.</li>
+    <li>أثر العرض على الانصراف في التجربة كلها، بالنقاط.</li>
+    <li>أثر العرض في كل شريحة من شرائح الخطر الخمس، وسطران عن القاعدة الحالية.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/telecom/retention_trial.csv" target="_blank"><b>telecom/retention_trial.csv</b><span>100,000 مشترك: شريحة الخطر، والعقد، والمدة، والإيراد، وهل تلقى العرض، وهل غادر</span></a>
+  <a href="files/telecom/trial_note.txt" target="_blank"><b>telecom/trial_note.txt</b><span>مذكرة التجربة: القرعة، والأعمدة، والقاعدة الحالية، والتكلفة</span></a>
+</div>
+<p class="small">الأداة جدول بيانات (الملف كبير: يفتح في ثوانٍ في Excel وLibreOffice، وفي Google Sheets بالاستيراد). سياسة الذكاء الاصطناعي: مساعد معلّم. لا يحتاج المختبر شيئًا من اليوم الأول.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ المذكرة والأعمدة <span class="min">3 دقائق</span></h3>
+  <p>الأعمدة: <code>B</code> شريحة الخطر من 1 إلى 5، و<code>C</code> العقد، و<code>D</code> المدة بالأشهر، و<code>E</code> الإيراد الشهري، و<code>F</code> تلقى العرض (1) أو لا (0)، و<code>G</code> غادر خلال 90 يومًا (1) أو لا (0). اكتب القاعدة الحالية لفريق الاحتفاظ.</p>
+</div>
+
+<div class="step">
+  <h3>2 · فحص التوازن <span class="min">4 دقائق</span></h3>
+  <p>القرعة لم تنظر إلى شيء، فالمجموعتان يجب أن تتشابها في كل شيء قبل العرض. إن اختلفتا كثيرًا، فالقرعة معطوبة.</p>
+  <pre class="code" data-file="retention_trial.csv"><code>tenure, offered      =AVERAGEIF(F:F,1,D:D)
+revenue, offered     =AVERAGEIF(F:F,1,E:E)
+out of contract, %   =COUNTIFS(F:F,1,C:C,"out_of_contract")/COUNTIF(F:F,1)*100</code></pre>
+  <p>كرر لمن لم يتلقوا العرض (<code>F</code> = 0).</p>
+</div>
+
+<div class="step">
+  <h3>3 · الأثر في التجربة كلها <span class="min">4 دقائق</span></h3>
+  <pre class="code" data-file="retention_trial.csv"><code>churn without offer  =AVERAGEIF(F:F,0,G:G)*100
+churn with offer     =AVERAGEIF(F:F,1,G:G)*100
+effect, points       =without - with</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · الأثر في كل شريحة <span class="min">7 دقائق</span></h3>
+  <pre class="code" data-file="retention_trial.csv"><code>band 5, without  =AVERAGEIFS(G:G,F:F,0,B:B,5)*100
+band 5, with     =AVERAGEIFS(G:G,F:F,1,B:B,5)*100</code></pre>
+  <table>
+    <tr><th>الشريحة</th><th>الانصراف دون عرض (%)</th><th>الانصراف مع العرض (%)</th><th>الأثر (نقاط)</th></tr>
+    <tr><td>5 (الأعلى خطرًا)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>3</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>2</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>1 (الأقل خطرًا)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · ما تقوله النتيجة عن القاعدة الحالية <span class="min">دقيقتان</span></h3>
+  <p>سطران لقاسم البليهد: هل يذهب العرض اليوم إلى من يغيّر العرض قراره؟</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>انظر إلى نسبة الانصراف مع العرض في الشريحة 5 وحدها. اكتب لماذا لا تعني هذه النسبة وحدها نجاحًا ولا فشلًا، وما الرقم الذي يجب أن يقف بجانبها.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>هل المجموعتان متوازنتان؟ بأي ثلاثة أرقام عرفت؟</li>
+  <li>لماذا لا تحتاج التجربة العشوائية إلى «ضبط» للفروق بين العملاء؟</li>
+  <li>في أي شريحة يكون الأثر أكبر؟ وهل هي الشريحة التي تستهدفها القاعدة الحالية؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>التوازن:</b> 49,951 تلقوا العرض و50,049 لم يتلقوه. المدة 21.30 و21.41 شهرًا، والإيراد 165.45 و165.63 ريالًا، ومن انتهى عقده 54.95% و54.81%: متوازنتان.</li>
+    <li><b>الأثر الكلي:</b> الانصراف 15.31% دون عرض و13.16% معه: 2.15 نقطة.</li>
+    <li><b>بحسب الشريحة (نقاط):</b> 5: 0.38؛ 4: 6.67؛ 3: 5.42؛ 2: 0.67؛ 1: ناقص 1.55 (العرض يرفع الانصراف).</li>
+    <li><b>الخلاصة:</b> القاعدة الحالية ترسل العرض إلى الشريحة 5 حيث لا يغيّر قرار أحد تقريبًا: 41.37% يغادرون دون عرض و40.99% معه.</li>
+    <li><b>الفخ:</b> قراءة الانصراف مع العرض وحده في الشريحة 5 (40.99%) والقول إن العرض «فشل» أو «نجح». المهم هو الفرق.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.1</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_8_group_differences.html" rel="prev">→ المختبر السابق</a><a href="D2_2_uplift_table.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"2.1","title":"قراءة تجربة الاحتفاظ","summary":"تقرأ تجربة الاحتفاظ العشوائية على 100,000 مشترك: تفحص التوازن بين من تلقوا العرض ومن لم يتلقوه، وتحسب أثر العرض في الكل وفي كل شريحة خطر.","minutes":20,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_8_group_differences.html","next":"D2_2_uplift_table.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

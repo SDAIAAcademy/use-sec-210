@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.8 · فروق الأسعار بين الفئات ومذكرة النتائج · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_8_group_differences.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-8">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.8</span>
+<h1>فروق الأسعار بين الفئات ومذكرة النتائج</h1>
+<p>تحسب متوسط الخصم ومؤشر السعر لكل فئة عمرية وفئة دخل الحي ونوع الجهاز ومستخدمي التقسيط، وتتتبع كل فرق إلى مكوّنه، وتكتب مذكرة نتائج بتعديل مقترح.</p>
+<div class="meta"><span>25 دقيقة</span><span>اليوم 1</span><span>الجلسة 8: فروق الأسعار والعملاء الأكثر عرضة للضرر</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.8">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>متوسط الخصم ومؤشر السعر لكل فئة: العمر، ودخل الحي، ونوع الجهاز، ومستخدمو التقسيط.</li>
+    <li>لكل فرق كبير: المكوّن في القاعدة الذي يصنعه.</li>
+    <li>مذكرة نتائج من صفحة واحدة بتعديل مقترح وطريقة قياس أثره.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/start/offers_with_groups.csv" target="_blank"><b>start/offers_with_groups.csv</b><span>قسائم الشهر لـ6,000 عميل مع فئاتهم ومكونات الخصم الخمسة</span></a>
+  <a href="files/pricing/saerak_rule.txt" target="_blank"><b>pricing/saerak_rule.txt</b><span>وصف القاعدة</span></a>
+</div>
+<p class="small">يبدأ المختبر من ملف جاهز، فلا يحتاج نتيجة المختبر 1.7. الأداة جدول بيانات (جدول محوري أو <code>AVERAGEIF</code>). سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · افهم الأعمدة <span class="min">3 دقائق</span></h3>
+  <p><code>F</code> نسبة الخصم، و<code>G</code> مؤشر السعر (100 ناقص الخصم: ما يدفعه العميل من كل 100 ريال)، و<code>H</code> إلى <code>L</code> مكونات الخصم: من السجل، ومن الموقع، ومن الجهاز، ومن التقسيط، ومن العمر. مجموع المكونات هو الخصم (ولا يقل عن صفر).</p>
+</div>
+
+<div class="step">
+  <h3>2 · متوسط الخصم لكل فئة <span class="min">7 دقائق</span></h3>
+  <pre class="code" data-file="offers_with_groups.csv"><code>=AVERAGEIF(B:B,"60+",F:F)       age band
+=AVERAGEIF(C:C,"low",F:F)       district income
+=AVERAGEIF(D:D,"ios",F:F)       device
+=AVERAGEIF(E:E,1,F:F)           instalments users</code></pre>
+  <table>
+    <tr><th>الفئة</th><th>العدد</th><th>متوسط الخصم (%)</th><th>مؤشر السعر</th></tr>
+    <tr><td>العمر 18-29 / 30-44 / 45-59 / 60+</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>دخل الحي low / middle / high</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>الجهاز ios / android_new / android_old</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>التقسيط 0 / 1</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>3 · من أين يأتي الفرق <span class="min">6 دقائق</span></h3>
+  <p>لكل فئة يظهر فيها فرق أكبر من نقطة، احسب متوسط كل مكوّن. المكوّن الذي يتغير أكثر بين الفئات هو مصدر الفرق.</p>
+  <pre class="code" data-file="offers_with_groups.csv"><code>=AVERAGEIF(C:C,"low",I:I)       location part, low-income districts
+=AVERAGEIF(C:C,"high",I:I)      location part, high-income districts</code></pre>
+  <p>انتبه للمكوّن الذي لا يذكر الفئة باسمها ويصنع الفرق بينها: هذا متغير وكيل.</p>
+</div>
+
+<div class="step">
+  <h3>4 · مذكرة النتائج <span class="min">5 دقائق</span></h3>
+  <p>مذكرة لروزان الباهلي، ونسخة لوصال الحبشان، بثلاثة أجزاء: الفرق بالأرقام، ومصدره في القاعدة، ومن يتضرر ولماذا يهم ذلك عند فئة أكثر عرضة للضرر.</p>
+</div>
+
+<div class="step">
+  <h3>5 · التعديل المقترح <span class="min">4 دقائق</span></h3>
+  <p>اقترح تعديلًا واحدًا محددًا، وكيف يُقاس أثره بعد شهر: على الفروق بين الفئات، وعلى الهامش.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>أضف عمودًا للخصم دون مكوّني العمر والتقسيط (<code>=MAX(0,H2+I2+J2)</code>)، وأعد حساب الفرق بين الأعمار وبين مستخدمي التقسيط وغيرهم.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>أي فئة تدفع أكثر، وبكم نقطة؟</li>
+  <li>لماذا يصنع مكوّن الموقع فرقًا بين أحياء الدخل، مع أن القاعدة لا تقرأ الدخل؟</li>
+  <li>لماذا لا يكفي حذف عمود العمر من البيانات لإزالة الفرق؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>متوسط الخصم:</b> الكل 3.61. العمر: 18-29 3.75، و30-44 3.80، و45-59 3.73، و60+ 2.60. دخل الحي: low 2.94، وmiddle 3.69، وhigh 4.25. الجهاز: ios 2.96، وandroid_new 3.97، وandroid_old 4.17. التقسيط: 4.19 لغير مستخدميه و1.89 لمستخدميه.</li>
+    <li><b>المصادر:</b> العمر: مكوّن العمر ناقص 1.5 لمن عمره 60 فأكثر («أوفى»). التقسيط: ناقص 2.5 («أقل حساسية»). دخل الحي: مكوّن الموقع 0.86 في الأحياء الأقل دخلًا مقابل 2.50 في الأعلى، لأن المتاجر المنافسة أقل فيها، ثم التقسيط (ناقص 0.96 مقابل ناقص 0.21).</li>
+    <li><b>من يتضرر:</b> كبار السن ومستخدمو التقسيط وسكان الأحياء الأقل دخلًا يدفعون أكثر. وهذا قريب مما يسميه الدليل المرجعي للتحيز تحيزًا تاريخيًّا (افتراضات من الماضي لم تعد صحيحة يعيد النظام إنتاجها)، ومبدأ الإنصاف في مبادئ أخلاقيات الذكاء الاصطناعي يطلب تقييمًا للإنصاف بمقاييس محددة.</li>
+    <li><b>تعديل معقول:</b> حذف مكوّني العمر والتقسيط، وسقف لفرق متوسط الخصم بين أي فئتين (نقطة واحدة مثلًا)، وقياس شهري للفروق والهامش.</li>
+    <li><b>التمرين الإضافي:</b> دون مكوّني العمر والتقسيط يصير الخصم 4.30 و4.33 و4.30 و4.61 للأعمار، و4.37 و4.31 لغير مستخدمي التقسيط ومستخدميه؛ ويبقى فرق الأحياء (3.95 و4.47 و4.62) لأن الموقع وكيل للدخل.</li>
+    <li><b>الفخ:</b> الاكتفاء بحذف عمود العمر. التقسيط والموقع وكيلان يعيدان جزءًا من الفرق.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 1.8</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_7_consent_inventory.html" rel="prev">→ المختبر السابق</a><a href="D2_1_read_the_trial.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"1.8","title":"فروق الأسعار بين الفئات ومذكرة النتائج","summary":"تحسب متوسط الخصم ومؤشر السعر لكل فئة عمرية وفئة دخل الحي ونوع الجهاز ومستخدمي التقسيط، وتتتبع كل فرق إلى مكوّنه، وتكتب مذكرة نتائج بتعديل مقترح.","minutes":25,"day":1,"unit":"اليوم 1","session":8,"deck":"../slides/day1.html#lab-1-8","prev":"D1_7_consent_inventory.html","next":"D2_1_read_the_trial.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

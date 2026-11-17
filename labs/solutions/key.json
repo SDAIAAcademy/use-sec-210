@@ -1,0 +1,849 @@
+{
+ "1.2": {
+  "rows": 2600,
+  "wape_model": 7.2,
+  "wape_snaive": 15.2,
+  "bias_model": 0.61,
+  "bias_snaive": -1.46
+ },
+ "1.3": {
+  "groups": {
+   "fresh": {
+    "rows": 514,
+    "wape_model": 7.5,
+    "wape_snaive": 12.13,
+    "cost_model": 783306,
+    "cost_snaive": 1236866,
+    "saving": 453560,
+    "net": 233560,
+    "earns": true
+   },
+   "dairy": {
+    "rows": 514,
+    "wape_model": 5.92,
+    "wape_snaive": 11.99,
+    "cost_model": 737352,
+    "cost_snaive": 1464598,
+    "saving": 727246,
+    "net": 507246,
+    "earns": true
+   },
+   "staples": {
+    "rows": 515,
+    "wape_model": 5.14,
+    "wape_snaive": 9.64,
+    "cost_model": 215327,
+    "cost_snaive": 395111,
+    "saving": 179784,
+    "net": -40216,
+    "earns": false
+   },
+   "beverages": {
+    "rows": 512,
+    "wape_model": 8.2,
+    "wape_snaive": 22.14,
+    "cost_model": 392563,
+    "cost_snaive": 1204967,
+    "saving": 812404,
+    "net": 592404,
+    "earns": true
+   },
+   "household": {
+    "rows": 509,
+    "wape_model": 8.1,
+    "wape_snaive": 22.28,
+    "cost_model": 285342,
+    "cost_snaive": 748522,
+    "saving": 463180,
+    "net": 243180,
+    "earns": true
+   }
+  },
+  "fee_per_group": 220000
+ },
+ "1.4": {
+  "promo": {
+   "rows": 171,
+   "wape_model": 7.26,
+   "wape_snaive": 34.72
+  },
+  "ramadan": {
+   "rows": 233,
+   "wape_model": 7.63,
+   "wape_snaive": 16.81
+  },
+  "normal": {
+   "rows": 2160,
+   "wape_model": 6.63,
+   "wape_snaive": 12.45
+  },
+  "after_stockout_last_year": {
+   "rows": 88,
+   "bias_snaive": -24.05,
+   "bias_model": 1.66
+  },
+  "stockout_weeks_y2": 36,
+  "stockout_weeks_y1": 92
+ },
+ "1.5": {
+  "all": {
+   "sessions": 2000,
+   "hit_model": 11.85,
+   "hit_popular": 11.65
+  },
+  "returning": {
+   "sessions": 1416,
+   "hit_model": 15.11,
+   "hit_popular": 11.86
+  },
+  "new": {
+   "sessions": 584,
+   "hit_model": 3.94,
+   "hit_popular": 11.13
+  },
+  "share_top50": 66.54,
+  "distinct_items": 400,
+  "random_hit": 1.25
+ },
+ "1.6": {
+  "week1": {
+   "visitors_a": 67625,
+   "visitors_b": 67687,
+   "conv_a": 6.0451,
+   "conv_b": 6.5537,
+   "lift_pct": 8.41,
+   "diff_pts": 0.5086,
+   "ci_low_pts": 0.2497,
+   "ci_high_pts": 0.7675,
+   "rpv_a": 11.03,
+   "rpv_b": 11.48,
+   "rpv_lift_pct": 4.0,
+   "return_rate_a": 3.86,
+   "return_rate_b": 5.28
+  },
+  "weeks34": {
+   "visitors_a": 134904,
+   "visitors_b": 135212,
+   "conv_a": 6.008,
+   "conv_b": 6.0734,
+   "lift_pct": 1.09,
+   "diff_pts": 0.0654,
+   "ci_low_pts": -0.1142,
+   "ci_high_pts": 0.2451,
+   "rpv_a": 10.97,
+   "rpv_b": 10.71,
+   "rpv_lift_pct": -2.39,
+   "return_rate_a": 4.17,
+   "return_rate_b": 5.24
+  },
+  "all": {
+   "visitors_a": 271117,
+   "visitors_b": 271431,
+   "conv_a": 6.0277,
+   "conv_b": 6.2495,
+   "lift_pct": 3.68,
+   "diff_pts": 0.2218,
+   "ci_low_pts": 0.0941,
+   "ci_high_pts": 0.3496,
+   "rpv_a": 11.0,
+   "rpv_b": 10.98,
+   "rpv_lift_pct": -0.17,
+   "return_rate_a": 4.07,
+   "return_rate_b": 5.19
+  },
+  "srm_share_a": 49.97,
+  "srm_chi2": 0.18,
+  "srm_p": 0.6699
+ },
+ "1.7": {
+  "customers": 6000,
+  "history_without_personalisation": 3429,
+  "location_without_location_consent": 1776,
+  "offers_without_marketing_consent": 1626,
+  "health_segment_offers": 715,
+  "fully_covered": 1493
+ },
+ "1.8": {
+  "age": {
+   "18-29": {
+    "n": 1605,
+    "discount": 3.75,
+    "from_location": 1.7,
+    "from_instalments": -0.61,
+    "from_age": 0.0,
+    "from_device": -0.39,
+    "price_index": 96.25
+   },
+   "30-44": {
+    "n": 2145,
+    "discount": 3.8,
+    "from_location": 1.74,
+    "from_instalments": -0.58,
+    "from_age": 0.0,
+    "from_device": -0.45,
+    "price_index": 96.2
+   },
+   "45-59": {
+    "n": 1442,
+    "discount": 3.73,
+    "from_location": 1.69,
+    "from_instalments": -0.63,
+    "from_age": 0.0,
+    "from_device": -0.41,
+    "price_index": 96.27
+   },
+   "60+": {
+    "n": 808,
+    "discount": 2.6,
+    "from_location": 1.66,
+    "from_instalments": -0.79,
+    "from_age": -1.5,
+    "from_device": -0.02,
+    "price_index": 97.4
+   }
+  },
+  "income": {
+   "low": {
+    "n": 1784,
+    "discount": 2.94,
+    "from_location": 0.86,
+    "from_instalments": -0.96,
+    "from_age": -0.18,
+    "from_device": 0.05,
+    "price_index": 97.06
+   },
+   "middle": {
+    "n": 2707,
+    "discount": 3.69,
+    "from_location": 1.82,
+    "from_instalments": -0.65,
+    "from_age": -0.21,
+    "from_device": -0.34,
+    "price_index": 96.31
+   },
+   "high": {
+    "n": 1509,
+    "discount": 4.25,
+    "from_location": 2.5,
+    "from_instalments": -0.21,
+    "from_age": -0.2,
+    "from_device": -0.9,
+    "price_index": 95.75
+   }
+  },
+  "device": {
+   "ios": {
+    "n": 2440,
+    "discount": 2.96,
+    "from_location": 1.93,
+    "from_instalments": -0.51,
+    "from_age": -0.13,
+    "from_device": -1.5,
+    "price_index": 97.04
+   },
+   "android_new": {
+    "n": 2091,
+    "discount": 3.97,
+    "from_location": 1.72,
+    "from_instalments": -0.63,
+    "from_age": -0.21,
+    "from_device": 0.0,
+    "price_index": 96.03
+   },
+   "android_old": {
+    "n": 1469,
+    "discount": 4.17,
+    "from_location": 1.31,
+    "from_instalments": -0.84,
+    "from_age": -0.31,
+    "from_device": 1.0,
+    "price_index": 95.83
+   }
+  },
+  "inst": {
+   "0": {
+    "n": 4486,
+    "discount": 4.19,
+    "from_location": 1.8,
+    "from_instalments": 0.0,
+    "from_age": -0.18,
+    "from_device": -0.43,
+    "price_index": 95.81
+   },
+   "1": {
+    "n": 1514,
+    "discount": 1.89,
+    "from_location": 1.43,
+    "from_instalments": -2.5,
+    "from_age": -0.25,
+    "from_device": -0.17,
+    "price_index": 98.11
+   }
+  },
+  "all": {
+   "n": 6000,
+   "discount": 3.61
+  }
+ },
+ "2.1": {
+  "n": 100000,
+  "n_offered": 49951,
+  "n_control": 50049,
+  "tenure_offered": 21.3,
+  "tenure_control": 21.41,
+  "revenue_offered": 165.45,
+  "revenue_control": 165.63,
+  "out_share_offered": 54.95,
+  "out_share_control": 54.81,
+  "churn_offered": 13.16,
+  "churn_control": 15.31,
+  "uplift_all_pts": 2.15,
+  "uplift_top_band_pts": 0.38,
+  "churn_control_top_band": 41.37,
+  "churn_offered_top_band": 40.99,
+  "by_band": {
+   "1": {
+    "churn_control": 2.25,
+    "churn_offered": 3.79,
+    "uplift_pts": -1.55
+   },
+   "2": {
+    "churn_control": 4.91,
+    "churn_offered": 4.24,
+    "uplift_pts": 0.67
+   },
+   "3": {
+    "churn_control": 9.52,
+    "churn_offered": 4.1,
+    "uplift_pts": 5.42
+   },
+   "4": {
+    "churn_control": 18.76,
+    "churn_offered": 12.09,
+    "uplift_pts": 6.67
+   },
+   "5": {
+    "churn_control": 41.37,
+    "churn_offered": 40.99,
+    "uplift_pts": 0.38
+   }
+  }
+ },
+ "2.2": {
+  "cells": [
+   {
+    "contract": "out_of_contract",
+    "band": 5,
+    "n": 15150,
+    "n_offered": 7653,
+    "n_control": 7497,
+    "churn_offered": 46.0,
+    "churn_control": 47.13,
+    "uplift_pts": 1.13,
+    "revenue": 165.58
+   },
+   {
+    "contract": "out_of_contract",
+    "band": 4,
+    "n": 12827,
+    "n_offered": 6310,
+    "n_control": 6517,
+    "churn_offered": 14.64,
+    "churn_control": 22.48,
+    "uplift_pts": 7.84,
+    "revenue": 165.07
+   },
+   {
+    "contract": "out_of_contract",
+    "band": 3,
+    "n": 10980,
+    "n_offered": 5477,
+    "n_control": 5503,
+    "churn_offered": 4.97,
+    "churn_control": 11.85,
+    "uplift_pts": 6.88,
+    "revenue": 166.5
+   },
+   {
+    "contract": "out_of_contract",
+    "band": 2,
+    "n": 8886,
+    "n_offered": 4531,
+    "n_control": 4355,
+    "churn_offered": 5.36,
+    "churn_control": 6.61,
+    "uplift_pts": 1.25,
+    "revenue": 164.66
+   },
+   {
+    "contract": "out_of_contract",
+    "band": 1,
+    "n": 7033,
+    "n_offered": 3475,
+    "n_control": 3558,
+    "churn_offered": 4.55,
+    "churn_control": 3.2,
+    "uplift_pts": -1.34,
+    "revenue": 166.16
+   },
+   {
+    "contract": "in_contract",
+    "band": 5,
+    "n": 5012,
+    "n_offered": 2542,
+    "n_control": 2470,
+    "churn_offered": 25.92,
+    "churn_control": 23.89,
+    "uplift_pts": -2.04,
+    "revenue": 164.4
+   },
+   {
+    "contract": "in_contract",
+    "band": 4,
+    "n": 6903,
+    "n_offered": 3459,
+    "n_control": 3444,
+    "churn_offered": 7.43,
+    "churn_control": 11.73,
+    "uplift_pts": 4.3,
+    "revenue": 166.18
+   },
+   {
+    "contract": "in_contract",
+    "band": 3,
+    "n": 9066,
+    "n_offered": 4546,
+    "n_control": 4520,
+    "churn_offered": 3.06,
+    "churn_control": 6.68,
+    "uplift_pts": 3.62,
+    "revenue": 166.16
+   },
+   {
+    "contract": "in_contract",
+    "band": 2,
+    "n": 11050,
+    "n_offered": 5546,
+    "n_control": 5504,
+    "churn_offered": 3.32,
+    "churn_control": 3.56,
+    "uplift_pts": 0.24,
+    "revenue": 164.83
+   },
+   {
+    "contract": "in_contract",
+    "band": 1,
+    "n": 13093,
+    "n_offered": 6412,
+    "n_control": 6681,
+    "churn_offered": 3.38,
+    "churn_control": 1.74,
+    "uplift_pts": -1.65,
+    "revenue": 165.69
+   }
+  ],
+  "negative": [
+   "out_of_contract:1",
+   "in_contract:5",
+   "in_contract:1"
+  ],
+  "target": [
+   "out_of_contract:4",
+   "out_of_contract:3",
+   "in_contract:4",
+   "in_contract:3"
+  ]
+ },
+ "2.3": {
+  "offer_cost": 50,
+  "base": 400000,
+  "all": {
+   "offers": 400000,
+   "retained": 9129,
+   "revenue_12m": 18162327,
+   "cost": 20000000,
+   "net": -1837673,
+   "wasted": 390871,
+   "wasted_pct": 97.72
+  },
+  "top_band": {
+   "offers": 80648,
+   "retained": 276,
+   "revenue_12m": 553796,
+   "cost": 4032400,
+   "net": -3478604,
+   "wasted": 80372,
+   "wasted_pct": 99.66
+  },
+  "uplift3": {
+   "offers": 159104,
+   "retained": 9544,
+   "revenue_12m": 18990601,
+   "cost": 7955200,
+   "net": 11035401,
+   "wasted": 149560,
+   "wasted_pct": 94.0
+  }
+ },
+ "2.4": {
+  "claimed_saved_total": 168465,
+  "measured": [
+   {
+    "month": 1,
+    "uplift_pts": 3.11,
+    "incremental": 726
+   },
+   {
+    "month": 2,
+    "uplift_pts": 2.9,
+    "incremental": 655
+   },
+   {
+    "month": 3,
+    "uplift_pts": 2.97,
+    "incremental": 661
+   },
+   {
+    "month": 4,
+    "uplift_pts": 2.84,
+    "incremental": 644
+   },
+   {
+    "month": 8,
+    "uplift_pts": 0.78,
+    "incremental": 175
+   }
+  ],
+  "months_without_holdout": [
+   5,
+   6,
+   7
+  ]
+ },
+ "2.5": {
+  "alerts": 2444,
+  "incidents": 72,
+  "vendor_threshold": 0.4,
+  "at_vendor": {
+   "alerts": 1122,
+   "per_day": 160.29,
+   "precision": 16.67,
+   "recall": 95.83,
+   "critical_recall": 90.91,
+   "missed": 3
+  },
+  "alerts_matched_at_vendor": 187,
+  "planned_alerts": 131,
+  "critical": 11
+ },
+ "2.6": {
+  "capacity_per_day": 120,
+  "table": {
+   "0.3": {
+    "alerts": 2444,
+    "per_day": 349.14,
+    "precision": 8.88,
+    "recall": 100.0,
+    "critical_recall": 100.0,
+    "missed": 0
+   },
+   "0.3_no_planned": {
+    "alerts": 2313,
+    "per_day": 330.43,
+    "precision": 9.38,
+    "recall": 100.0,
+    "critical_recall": 100.0,
+    "missed": 0
+   },
+   "0.4": {
+    "alerts": 1122,
+    "per_day": 160.29,
+    "precision": 16.67,
+    "recall": 95.83,
+    "critical_recall": 90.91,
+    "missed": 3
+   },
+   "0.4_no_planned": {
+    "alerts": 991,
+    "per_day": 141.57,
+    "precision": 18.87,
+    "recall": 95.83,
+    "critical_recall": 90.91,
+    "missed": 3
+   },
+   "0.5": {
+    "alerts": 603,
+    "per_day": 86.14,
+    "precision": 26.37,
+    "recall": 86.11,
+    "critical_recall": 90.91,
+    "missed": 10
+   },
+   "0.5_no_planned": {
+    "alerts": 473,
+    "per_day": 67.57,
+    "precision": 33.62,
+    "recall": 86.11,
+    "critical_recall": 90.91,
+    "missed": 10
+   },
+   "0.6": {
+    "alerts": 336,
+    "per_day": 48.0,
+    "precision": 32.44,
+    "recall": 69.44,
+    "critical_recall": 81.82,
+    "missed": 22
+   },
+   "0.6_no_planned": {
+    "alerts": 218,
+    "per_day": 31.14,
+    "precision": 50.0,
+    "recall": 69.44,
+    "critical_recall": 81.82,
+    "missed": 22
+   },
+   "0.7": {
+    "alerts": 167,
+    "per_day": 23.86,
+    "precision": 35.33,
+    "recall": 50.0,
+    "critical_recall": 72.73,
+    "missed": 36
+   },
+   "0.7_no_planned": {
+    "alerts": 91,
+    "per_day": 13.0,
+    "precision": 64.84,
+    "recall": 50.0,
+    "critical_recall": 72.73,
+    "missed": 36
+   },
+   "0.8": {
+    "alerts": 62,
+    "per_day": 8.86,
+    "precision": 38.71,
+    "recall": 23.61,
+    "critical_recall": 54.55,
+    "missed": 55
+   },
+   "0.8_no_planned": {
+    "alerts": 34,
+    "per_day": 4.86,
+    "precision": 70.59,
+    "recall": 23.61,
+    "critical_recall": 54.55,
+    "missed": 55
+   }
+  }
+ },
+ "2.7": {
+  "pilot_change_pct": -14.51,
+  "control_change_pct": -6.43,
+  "did_pct": -8.08,
+  "drop_change_pilot": 0.0433,
+  "drop_change_control": -0.0003,
+  "did_drop": 0.0435,
+  "sites_over_guardrail": [
+   "S3009",
+   "S3016"
+  ]
+ },
+ "1.1": {
+  "cases": 10,
+  "key": {
+   "C01": {
+    "family": "forecast",
+    "output": "رقم: مبيعات الأسبوع القادم لكل منتج وفرع",
+    "rule": "المخطط يعدّل الطلبية",
+    "automatic": false,
+    "owner": "مدير تخطيط الإمداد",
+    "outcome": "تكلفة النفاد والهدر مقارنة بخط أساس موسمي بسيط",
+    "trap": ""
+   },
+   "C02": {
+    "family": "recommender",
+    "output": "ترتيب: خمسة منتجات",
+    "rule": "تظهر الخمسة الأولى",
+    "automatic": true,
+    "owner": "مديرة القنوات الرقمية",
+    "outcome": "الإيراد لكل زائر في تجربة عشوائية، لا نسبة النقر",
+    "trap": "نسبة النقر مقياس وسيط لا نتيجة"
+   },
+   "C03": {
+    "family": "recommender",
+    "output": "ترتيب: نتائج البحث",
+    "rule": "يظهر الترتيب كما هو",
+    "automatic": true,
+    "owner": "مديرة القنوات الرقمية",
+    "outcome": "نسبة عمليات البحث التي تنتهي بشراء، في تجربة عشوائية",
+    "trap": ""
+   },
+   "C04": {
+    "family": "pricing",
+    "output": "نسبة خصم لكل عميل",
+    "rule": "تظهر القسيمة مباشرة",
+    "automatic": true,
+    "owner": "المديرة التجارية",
+    "outcome": "الهامش الإضافي مع فروق السعر بين الفئات ونسبة العملاء بموافقة",
+    "trap": "قرار آلي بالكامل على بيانات شخصية"
+   },
+   "C05": {
+    "family": "pricing",
+    "output": "نسبة تخفيض لكل منتج طازج وفرع",
+    "rule": "مدير الفرع يوافق أو يعدّل",
+    "automatic": false,
+    "owner": "مدير الفرع",
+    "outcome": "الهدر والهامش مقارنة بقاعدة التخفيض الثابتة",
+    "trap": ""
+   },
+   "C06": {
+    "family": "churn",
+    "output": "شريحة خطر 1 إلى 5",
+    "rule": "عرض لكل من في الشريحة 5",
+    "automatic": false,
+    "owner": "رئيس قيمة العملاء والاحتفاظ",
+    "outcome": "العملاء المحتفظ بهم بسبب العرض (الأثر الإضافي) ناقص تكلفة العروض",
+    "trap": "الدقة لا تقول من يغيّر العرض قراره"
+   },
+   "C07": {
+    "family": "churn",
+    "output": "باقة واحدة مقترحة",
+    "rule": "الموظف يعرض أو يتجاهل",
+    "automatic": false,
+    "owner": "مدير مركز الاتصال",
+    "outcome": "الإيراد الإضافي والانصراف بعد العرض مقارنة بمجموعة ضابطة",
+    "trap": ""
+   },
+   "C08": {
+    "family": "network",
+    "output": "درجة شذوذ وتنبيه",
+    "rule": "تنبيه إذا تجاوزت الدرجة العتبة",
+    "automatic": false,
+    "owner": "مديرة مركز عمليات الشبكة",
+    "outcome": "الحوادث المؤكدة المكتشفة وعدد التنبيهات في اليوم",
+    "trap": "الدقة على كل الساعات تخفي الحوادث النادرة"
+   },
+   "C09": {
+    "family": "network",
+    "output": "قرار إطفاء حزمة أو إعادتها",
+    "rule": "ينفَّذ تلقائيًّا ضمن الحدود",
+    "automatic": true,
+    "owner": "فريق شبكة الراديو الذي وضع الحدود",
+    "outcome": "الطاقة الموفرة مقارنة بمواقع ضابطة، مع مؤشر الانقطاع",
+    "trap": "لا إنسان بين المخرج والفعل"
+   },
+   "C10": {
+    "family": "forecast",
+    "output": "رقم: حركة البيانات المتوقعة لكل خلية",
+    "rule": "اللجنة تختار المواقع",
+    "automatic": false,
+    "owner": "لجنة تخطيط الشبكة",
+    "outcome": "خطأ التنبؤ أمام خط أساس بسيط على الأشهر الماضية، والازدحام بعد التوسعة",
+    "trap": ""
+   }
+  }
+ },
+ "2.8": {
+  "scores": {
+   "R1": {
+    "value": 4,
+    "harm": 5,
+    "rights": 5,
+    "total": 18,
+    "quadrant": "pursue"
+   },
+   "R2": {
+    "value": 1,
+    "harm": 5,
+    "rights": 5,
+    "total": 12,
+    "quadrant": "stop"
+   },
+   "R3": {
+    "value": 1,
+    "harm": 5,
+    "rights": 3,
+    "total": 10,
+    "quadrant": "stop"
+   },
+   "R4": {
+    "value": 2,
+    "harm": 1,
+    "rights": 1,
+    "total": 6,
+    "quadrant": "stop"
+   },
+   "R5": {
+    "value": 2,
+    "harm": 5,
+    "rights": 5,
+    "total": 14,
+    "quadrant": "test_cheaply"
+   },
+   "R6": {
+    "value": 3,
+    "harm": 5,
+    "rights": 5,
+    "total": 16,
+    "quadrant": "test_cheaply"
+   },
+   "T1": {
+    "value": 1,
+    "harm": 5,
+    "rights": 3,
+    "total": 10,
+    "quadrant": "stop"
+   },
+   "T2": {
+    "value": 5,
+    "harm": 3,
+    "rights": 3,
+    "total": 16,
+    "quadrant": "pursue"
+   },
+   "T3": {
+    "value": 4,
+    "harm": 5,
+    "rights": 5,
+    "total": 18,
+    "quadrant": "pursue"
+   },
+   "T4": {
+    "value": 5,
+    "harm": 3,
+    "rights": 5,
+    "total": 18,
+    "quadrant": "pursue"
+   },
+   "T5": {
+    "value": 2,
+    "harm": 1,
+    "rights": 1,
+    "total": 6,
+    "quadrant": "stop"
+   },
+   "T6": {
+    "value": 2,
+    "harm": 5,
+    "rights": 5,
+    "total": 14,
+    "quadrant": "test_cheaply"
+   }
+  },
+  "ranking": [
+   "R1",
+   "T3",
+   "T4",
+   "R6",
+   "T2",
+   "R5",
+   "T6",
+   "R2",
+   "R3",
+   "T1",
+   "R4",
+   "T5"
+  ]
+ }
+}

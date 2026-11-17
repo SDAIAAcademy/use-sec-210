@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="deck" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اليوم 2 · سحاب للاتصالات: الاحتفاظ والشبكة والخريطة · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day2.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<div class="deck" data-course="الذكاء الاصطناعي في التجزئة والاتصالات" data-track="fluency" data-day="اليوم 2">
+<section class="slide title" id="title" data-auto="title" data-label="الترحيب" data-n="1">
+  <div class="kicker">أكاديمية سدايا · الذكاء الاصطناعي في التجزئة والاتصالات</div>
+  <h1>سحاب للاتصالات: الاحتفاظ والشبكة والخريطة</h1>
+  <p class="lead mt">اليوم 2: الاستهداف بالأثر الإضافي، والادعاء الصادق، وعتبة التنبيه، وتوفير الطاقة وبيانات الموقع، ثم الخريطة</p>
+  <div class="meta"><span class="track">مسار الطلاقة في البيانات والذكاء الاصطناعي</span><span>يومان تدريبيان + يوم للمشروع الختامي</span><span>8 جلسات · 8 مختبرات</span><span>USE-SEC-210</span></div>
+  <aside class="notes"><p>رحّب بالقاعة من جديد. اسأل: من أكمل مختبرًا من الأمس في المنزل؟ ومن فكّر في الشركة التي سيعرض خريطتها؟ اليوم ننتقل إلى سحاب للاتصالات: عروض الاحتفاظ، ثم الشبكة، ثم الخريطة التي تجمع اليومين.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="جدول اليوم" data-n="2">
+  <div class="kicker">اليوم</div>
+  <h2>سحاب للاتصالات: الاحتفاظ والشبكة والخريطة</h2>
+  <div class="agenda"><div class="item"><div><b>الجلسة 1 · من درجة الخطر إلى القرار</b><small>درجة الخطر، والتجربة العشوائية، وفحص التوازن</small></div></div><div class="item"><div><b>الجلسة 2 · الاستهداف بالأثر الإضافي</b><small>الأنواع الأربعة، والأثر الإضافي لكل خلية</small></div></div><div class="item"><div><b>الجلسة 3 · الإيراد المحتفظ به والعروض المهدرة</b><small>قيمة السياسة، والعروض المهدرة</small></div></div><div class="item"><div><b>الجلسة 4 · حلقات التغذية الراجعة وادعاءات القيمة الصادقة</b><small>مجموعة الضبط، وإعادة التدريب، والادعاء الصادق</small></div></div><div class="item"><div><b>الجلسة 5 · شذوذ الشبكة أمام الحوادث المؤكدة</b><small>ربط التنبيه بالحادثة، والدقة والاستدعاء</small></div></div><div class="item"><div><b>الجلسة 6 · عتبة يتحملها الفريق</b><small>طاقة الفريق، وشدة الحادثة، والصيانة المجدولة</small></div></div><div class="item"><div><b>الجلسة 7 · توفير الطاقة وبيانات الموقع</b><small>مواقع ضابطة، ومؤشر الحماية، وغرض بيانات الموقع</small></div></div><div class="item"><div><b>الجلسة 8 · خريطة الفرص والمخاطر</b><small>القيمة والضرر والحقوق، وصفحة واحدة تُناقش</small></div></div></div>
+  <aside class="notes"><p>ثماني جلسات بالإيقاع نفسه: مفاهيم قصيرة ثم مختبر. أربع جلسات من 45 دقيقة بمختبر من 25 (الجلسات 2 و5 و6 و8)، وأربع من 37 أو 38 دقيقة بمختبر من 20 (الجلسات 1 و3 و4 و7). الجلسات 1 إلى 4 في الاحتفاظ بالعملاء، و5 و6 في الشبكة، و7 في الطاقة وبيانات الموقع، و8 في الخريطة. تذكير: المختبر 2.2 يبدأ دون أي مساعد.</p></aside>
+</section>
+
+<section class="slide" id="sahab-telecom" data-lo="LO1" data-n="3">
+  <div class="kicker">دراسة الحالة اليوم</div>
+  <h2>سحاب للاتصالات: ثلاثة أنظمة، وثلاثة أسئلة قبل التوسع</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>«بقاء»</h4><p class="small mb0">درجة خطر الانصراف لكل مشترك. قاسم البليهد يرسل عرض الاحتفاظ لمن درجتهم أعلى. السؤال: هل يغيّر العرض قرار من يتلقاه؟</p></div>
+    <div class="card c-purple"><h4>«رصد»</h4><p class="small mb0">ينبّه إلى الشذوذ في مواقع الأبراج. رتيل الرميان تدير المركز الذي يفحص التنبيهات. السؤال: كم تنبيهًا يستطيع المركز فحصه؟</p></div>
+    <div class="card c-amber"><h4>«سُبات»</h4><p class="small mb0">يطفئ أجزاء من الموقع حين يقل الحمل. السؤال: كم يوفر فعلًا، وبأي ثمن في جودة المكالمات؟</p></div>
+  </div>
+  <div class="callout note mt"><b>ووصال الحبشان</b> مسؤولة حماية البيانات حاضرة في كل قرار يمس بيانات المشتركين.</div>
+  <aside class="notes"><p>الأنظمة والأشخاص اصطناعيون، والملف في <code>labs/files/company_profile.txt</code>. نحو 400,000 مشترك آجل الدفع. اربط بالأمس: السلسلة نفسها، بيانات ثم مخرج ثم فعل ثم نتيجة، والسؤال نفسه: ما الذي تغير بسبب النظام؟</p></aside>
+</section>
+
+<section class="slide" id="check-day1-review" data-lo="LO2" data-n="4">
+  <div class="kicker">مراجعة الأمس</div>
+  <h2>أين يستحق النموذج ترخيصه؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-day1-review-q1">
+    <p class="lead">مخبز يدرس نموذجًا للتنبؤ بالطلب ترخيصه 60,000 ريال لكل فئة في السنة. على سنة لم يرها النموذج، يقلل الهدر والنقص أمام «مبيعات الأسبوع نفسه من العام الماضي» بما قيمته 150,000 ريال في الخبز، و40,000 في الحلويات، و90,000 في المعجنات. ماذا يوصي المحلل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يحكم بالمجموع: 280,000 أكبر من 180,000، لكن الحلويات وحدها تخسر" data-k="أ">الترخيص للفئات الثلاث، فالوفر الكلي 280,000 ريال أكبر من الترخيص 180,000</div>
+      <div class="opt" data-why="يرفض النموذج لأن فئة واحدة تخسر: الخبز والمعجنات تربحان بوضوح" data-k="ب">لا ترخيص، فالنموذج لا يربح في كل الفئات</div>
+      <div class="opt" data-ok data-k="ج">الترخيص للخبز والمعجنات فقط، وتبقى الحلويات على القاعدة البسيطة</div>
+      <div class="opt" data-why="يقارن بلا خط أساس: السؤال ليس دقة النموذج وحده بل ما يضيفه فوق القاعدة البسيطة" data-k="د">نطلب من المورد دقة النموذج في كل فئة قبل أي قرار</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> القرار لكل فئة على حدة: وفر الفئة أمام ترخيصها. الخبز يربح 90,000، والمعجنات 30,000، والحلويات تخسر 20,000.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. الأرقام توضيحية ومن خارج سحاب، والفكرة فكرة المختبر 1.3. دقيقتان فقط. من اختار «أ» اسأله: من يدفع ترخيص الحلويات؟ ونربط باليوم: سنحسب القيمة الصافية لسياسات الاحتفاظ بالمنطق نفسه.</p></aside>
+</section>
+
+<!-- الجلسة 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="5">
+  <div class="kicker">الجلسة 1</div>
+  <h1>من درجة الخطر إلى القرار</h1>
+  <ul class="bullets outcomes"><li>تشرح لماذا لا تقول درجة الخطر من يغيّر العرض قراره</li><li>تفحص توازن مجموعتي التجربة العشوائية</li><li>تحسب أثر العرض في التجربة كلها وفي الشريحة المستهدفة</li></ul>
+  <div class="sess-no">01</div>
+  <aside class="notes"><p>نبدأ بـ«بقاء» وعروض الاحتفاظ. سؤال الجلسة: هل يكفي أن نعرف من سيغادر؟</p></aside>
+</section>
+
+<section class="slide" id="risk-is-not-response" data-lo="LO3 LO1" data-n="6" data-session="1">
+  <div class="kicker">سؤالان مختلفان</div>
+  <h2>درجة الخطر تقول من سيغادر، لا من يبقى بسبب العرض</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>ما تجيب عنه الدرجة</h4><p class="small mb0">من الأرجح أن يغادر خلال 90 يومًا إن لم نفعل شيئًا. تُقاس بمقارنة التوقع بما حدث.</p></div>
+    <div class="card c-teal"><h4>ما يحتاجه القرار</h4><p class="small mb0">من سيغيّر العرض قراره. شخص قرر المغادرة لسبب لا يصلحه الخصم درجته عالية، والعرض لا ينفعه.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> «النموذج دقيق في التنبؤ بالانصراف، إذن الحملة ناجحة». دقة التنبؤ لا تقول شيئًا عن أثر العرض.</div>
+  <aside class="notes"><p>مثال من خارج سحاب: نادٍ رياضي يعرف أن العضو الذي انتقل إلى مدينة أخرى سيلغي اشتراكه، ودرجته عالية جدًّا، لكن لا خصم يعيده. اسأل القاعة: من في عملكم يُستهدف لأنه «الأعلى خطرًا»؟ وهل قاس أحد ماذا حدث لمن لم يُستهدف؟</p><p>المصادر: Gutierrez and Gérardy (2017), Causal Inference and Uplift Modelling: A Review of the Literature.</p></aside>
+</section>
+
+<section class="slide" id="randomize-to-know" data-lo="LO3" data-n="7" data-session="1">
+  <div class="kicker">التجربة العشوائية</div>
+  <h2>القرعة تصنع مجموعتين متشابهتين، فيكون الفرق أثر العرض</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · المؤهلون</b>كل المشتركين المؤهلين للعرض</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · القرعة</b>نصف يتلقى العرض ونصف لا، دون النظر إلى أي صفة</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · الانتظار</b>90 يومًا لكل مشترك</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>4 · المقارنة</b>نسبة الانصراف في المجموعتين</div>
+  </div>
+  <div class="callout tip mt"><b>الخلاصة.</b> القرعة لا تحتاج «ضبطًا» للفروق بين العملاء: هي تصنع التشابه.</div>
+  <aside class="notes"><p>الفكرة نفسها في تجربة A/B بالأمس، لكن على أشخاص لا على زيارات. لماذا لا نقارن من تلقى العرض العام الماضي بمن لم يتلقه؟ لأن الاختيار كان بالدرجة: المجموعتان مختلفتان قبل العرض. اسأل: ما ثمن التجربة؟ (نصف المؤهلين لا يتلقون العرض فترة.)</p><p>المصادر: Kohavi, Tang and Xu (2020), Trustworthy Online Controlled Experiments.</p></aside>
+</section>
+
+<section class="slide" id="balance-check" data-lo="LO3" data-n="8" data-session="1">
+  <div class="kicker">قبل قراءة النتيجة</div>
+  <h2>افحص التوازن أولًا: صفات ما قبل العرض يجب أن تتشابه</h2>
+  <table class="t">
+    <tr><th>مثال: بنك يجرب ترقية مجانية للبطاقة</th><th class="num">تلقوا الترقية</th><th class="num">لم يتلقوها</th></tr>
+    <tr><td>العدد</td><td class="num">12,040</td><td class="num">11,960</td></tr>
+    <tr><td>متوسط مدة العلاقة (سنوات)</td><td class="num">6.1</td><td class="num">6.0</td></tr>
+    <tr><td>متوسط الإنفاق الشهري (ريال)</td><td class="num">4,210</td><td class="num">4,190</td></tr>
+    <tr><td>نسبة حاملي بطاقة أخرى</td><td class="num">31%</td><td class="num">31%</td></tr>
+  </table>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> إن اختلفت المجموعتان كثيرًا في صفة قبل العرض، فالقرعة معطوبة، ولا يُقرأ الفرق في النتيجة.</div>
+  <aside class="notes"><p>الأرقام توضيحية. فحص التوازن يُجرى على صفات لا يغيرها العرض: المدة والإيراد والعقد. ولا يُفحص على النتيجة نفسها. وبالأمس فحصنا نسبة الزوار في كل نسخة: الفكرة نفسها.</p></aside>
+</section>
+
+<section class="slide" id="effect-in-points" data-lo="LO3" data-n="9" data-session="1">
+  <div class="kicker">كيف يُكتب الأثر</div>
+  <h2>الأثر فرق بالنقاط، ويُحسب لكل شريحة على حدة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الأثر = الانصراف دون عرض ناقص الانصراف مع العرض</li>
+      <li>مثال: 20% دون عرض و17% معه: الأثر 3 نقاط</li>
+      <li>«خفض الانصراف 15%» صحيح نسبيًّا، ويبدو أكبر مما هو</li>
+      <li>الأثر في الكل متوسط لآثار مختلفة في الشرائح</li>
+    </ul>
+    <div class="card c-purple"><h4>في الجدول</h4><p class="small mb0"><code>AVERAGEIFS</code> على عمود الانصراف، بشرط العرض وشرط الشريحة، ثم الطرح.</p></div>
+  </div>
+  <aside class="notes"><p>الأرقام توضيحية. النقاط هي ما يُضرب في عدد العملاء لنعرف كم بقي بسبب العرض. اسأل: في أي شريحة تتوقعون أكبر أثر؟ اجمع توقعات القاعة واكتبها، ونعود إليها بعد المختبر.</p></aside>
+</section>
+
+<section class="slide" id="check-trial" data-lo="LO3" data-n="10" data-session="1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ماذا تقول هذه التجربة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-trial-q1">
+    <p class="lead">شركة تأمين تتصل هاتفيًّا قبل التجديد. في تجربة بالقرعة، المجموعتان متشابهتان في العمر ومدة الوثيقة. عدم التجديد 22% دون اتصال و18% مع الاتصال. في أعلى شريحة خطر: 45% دون اتصال و44% معه. ما الخلاصة؟</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="أ">الاتصال يخفض عدم التجديد 4 نقاط، ولا يكاد يغيّر أعلى شريحة خطر</div>
+      <div class="opt" data-why="يقرأ النسبة مع الاتصال وحدها: 44% لا تعني فشلًا ولا نجاحًا دون مقارنتها بـ45%" data-k="ب">الاتصال يفشل في أعلى شريحة لأن 44% ما زالوا لا يجددون</div>
+      <div class="opt" data-why="يشك في القرعة دون سبب: المجموعتان متشابهتان في صفات ما قبل الاتصال" data-k="ج">لا تُقرأ النتيجة لأن المجموعتين قد تختلفان</div>
+      <div class="opt" data-why="يخلط الخطر بالأثر: أعلى شريحة خطر ليست أعلى شريحة أثر" data-k="د">تُركّز الاتصالات على أعلى شريحة خطر، فهي الأكثر مغادرة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الأثر فرق بين مجموعتين متوازنتين. في أعلى شريحة خطر الفرق نقطة واحدة: من يغادر هناك يغادر على كل حال.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. الأرقام توضيحية ومن خارج سحاب. «د» هو القاعدة الحالية في سحاب للاتصالات، ولهذا نسأله هنا. من اختاره، اطلب منه أن يبحث عن الرقم الذي يثبته في المختبر.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-1" data-auto="lab" data-lab="2.1" data-label="المختبر 2.1" data-n="11" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.1 · 20 دقيقة</div><h2>قراءة تجربة الاحتفاظ</h2><p class="lead small">تقرأ تجربة الاحتفاظ العشوائية على 100,000 مشترك: تفحص التوازن بين من تلقوا العرض ومن لم يتلقوه، وتحسب أثر العرض في الكل وفي كل شريحة خطر.</p><a class="nb" href="../labs/D2_1_read_the_trial.html">D2_1_read_the_trial.html</a></div><ul class="checklist"><li>اقرأ مذكرة التجربة وأعمدة الملف <span class="min">3 د</span></li><li>افحص التوازن: المدة والإيراد ونسبة من انتهى عقده في المجموعتين <span class="min">4 د</span></li><li>احسب نسبة الانصراف والأثر في التجربة كلها <span class="min">4 د</span></li><li>احسب الأثر في كل شريحة خطر من الخمس <span class="min">7 د</span></li><li>اكتب في سطرين ما تقوله النتيجة عن القاعدة الحالية <span class="min">2 د</span></li><li class="stretch">✱ إضافي: احسب نسبة الانصراف في الشريحة 5 لمن تلقوا العرض، واكتب لماذا لا تعني نجاحًا ولا فشلًا وحدها</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. الملف 100,000 صف: في Google Sheets يُستورد ولا يُفتح بالنقر. راقب الخطوة 2: من يفحص التوازن على عمود الانصراف يخلط الفحص بالنتيجة. وراقب إشارة الطرح في الخطوة 4. لا يحتاج المختبر شيئًا من الأمس.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-1" data-lo="LO3" data-n="12" data-session="1">
+  <div class="kicker">بعد المختبر 2.1</div>
+  <h2>العرض يعمل في الشريحتين 3 و4، والقاعدة ترسله إلى 5</h2>
+  <div class="bars">
+    <div class="row"><span>الشريحة 5</span><div class="bar c-coral" style="--w:6%"></div><span class="val">0.38 نقطة</span></div>
+    <div class="row"><span>الشريحة 4</span><div class="bar c-teal" style="--w:100%"></div><span class="val">6.67 نقطة</span></div>
+    <div class="row"><span>الشريحة 3</span><div class="bar c-teal" style="--w:81%"></div><span class="val">5.42 نقطة</span></div>
+    <div class="row"><span>الشريحة 2</span><div class="bar c-amber" style="--w:10%"></div><span class="val">0.67 نقطة</span></div>
+    <div class="row"><span>الشريحة 1</span><div class="bar c-coral" style="--w:23%"></div><span class="val"><span class="ltr">-1.55</span> نقطة</span></div>
+  </div>
+  <div class="callout note mt"><b>متوازنتان:</b> المدة 21.30 و21.41 شهرًا، والإيراد 165.45 و165.63 ريالًا. الأثر الكلي 2.15 نقطة (15.31% دون عرض و13.16% معه).</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 2.1</code>). في الشريحة 5: 41.37% يغادرون دون عرض و40.99% معه. والشريحة 1 سالبة: العرض يرفع الانصراف. هذا سؤال الجلسة التالية. قارن بتوقعات القاعة المكتوبة قبل المختبر.</p></aside>
+</section>
+
+<!-- الجلسة 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="13">
+  <div class="kicker">الجلسة 2</div>
+  <h1>الاستهداف بالأثر الإضافي</h1>
+  <ul class="bullets outcomes"><li>تحسب الأثر الإضافي لكل خلية من خلايا الاستهداف</li><li>تميّز الخلايا التي يضر فيها العرض</li><li>تبني جدول استهداف بعتبة معلّلة</li></ul>
+  <div class="sess-no">02</div>
+  <aside class="notes"><p>من خمس شرائح إلى خلايا أدق، ومن «من يغادر» إلى «من يتغير».</p></aside>
+</section>
+
+<section class="slide" id="four-types" data-lo="LO3" data-n="14" data-session="2">
+  <div class="kicker">الأثر الإضافي</div>
+  <h2>أربعة أنواع من العملاء، والعرض ينفع نوعًا واحدًا</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>يقتنع بالعرض</h4><p class="small mb0">يغادر دون عرض ويبقى معه. هنا فقط يصنع العرض قيمة.</p></div>
+    <div class="card c-amber"><h4>يبقى على كل حال</h4><p class="small mb0">العرض له خصم مجاني: تكلفة بلا أثر.</p></div>
+    <div class="card c-purple"><h4>يغادر على كل حال</h4><p class="small mb0">قراره لا يغيره الخصم: تكلفة بلا أثر.</p></div>
+    <div class="card c-coral"><h4>يوقظه العرض</h4><p class="small mb0">كان سيبقى، فذكّره العرض بأن له خيارات: العرض يضر.</p></div>
+  </div>
+  <aside class="notes"><p>لا نعرف نوع كل فرد: كل شخص إما تلقى العرض أو لم يتلقه. لكننا نعرف نسب الأنواع في كل خلية من التجربة: الأثر الإضافي في الخلية هو صافي «يقتنع» ناقص «يوقظه». المصطلح بالإنجليزية <span class="en">uplift</span>، والأنواع في الأدبيات: <span class="en">persuadables, sure things, lost causes, sleeping dogs</span>.</p><p>المصادر: Gutierrez and Gérardy (2017), Causal Inference and Uplift Modelling: A Review of the Literature.</p></aside>
+</section>
+
+<section class="slide" id="uplift-per-cell" data-lo="LO3" data-n="15" data-session="2">
+  <div class="kicker">خلايا الاستهداف</div>
+  <h2>الأثر الإضافي يُحسب في خلايا تجمع صفتين أو أكثر</h2>
+  <table class="t">
+    <tr><th>مثال: مجلة ترسل عرض تجديد</th><th class="num">دون عرض</th><th class="num">مع العرض</th><th class="num">الأثر</th></tr>
+    <tr><td>مشترك ورقي، أقل من سنتين</td><td class="num">30%</td><td class="num">24%</td><td class="num">6 نقاط</td></tr>
+    <tr><td>مشترك ورقي، سنتان فأكثر</td><td class="num">12%</td><td class="num">11%</td><td class="num">1 نقطة</td></tr>
+    <tr class="hl"><td>مشترك رقمي، أقل من سنتين</td><td class="num">25%</td><td class="num">16%</td><td class="num">9 نقاط</td></tr>
+    <tr><td>مشترك رقمي، سنتان فأكثر</td><td class="num">8%</td><td class="num">10%</td><td class="num"><span class="ltr">-2</span> نقطتان</td></tr>
+  </table>
+  <div class="callout tip mt"><b>الخلاصة.</b> الصفة الثانية تكشف ما يخفيه متوسط الشريحة.</div>
+  <aside class="notes"><p>الأرقام توضيحية ومن خارج سحاب. في سحاب الصفة الثانية حالة العقد: من انتهى عقده يستطيع المغادرة غدًا، ومن ما زال في عقده لا. اسأل: لماذا قد يضر العرض في الخلية الأخيرة؟</p></aside>
+</section>
+
+<section class="slide" id="sleeping-dogs" data-lo="LO3" data-n="16" data-session="2">
+  <div class="kicker">حين يضر العرض</div>
+  <h2>العرض رسالة: قد يذكّر العميل الراضي بأن يقارن</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>رسالة «نفتقدك» لعضو ساكن في نادٍ رياضي تذكّره بأنه يدفع ولا يحضر</li>
+      <li>عرض لعميل في عقد يذكّره بموعد نهايته</li>
+      <li>الأثر السالب يظهر في الخلايا المستقرة غالبًا</li>
+      <li>الحل: لا عرض لهذه الخلايا، لا عرضًا أكبر</li>
+    </ul>
+    <div class="card c-coral"><h4>متى نصدق الأثر السالب؟</h4><p class="small mb0">في خلية كبيرة، وفي أكثر من خلية بالنمط نفسه. خلية صغيرة بفرق صغير قد تكون صدفة: نكتب ذلك ولا نبني عليه وحده.</p></div>
+  </div>
+  <aside class="notes"><p>هذا ما يفسر أن «العرض للجميع» قد يكون أسوأ من «لا عرض» في بعض الخلايا. والتنبيه في البطاقة مهم: لا نحتاج إحصاءً معقدًا هنا، لكن نحتاج أن نقول بصدق إن الخلية الصغيرة أقل يقينًا.</p></aside>
+</section>
+
+<section class="slide" id="ai-off-first" data-lo="LO3" data-n="17" data-session="2">
+  <div class="kicker">المختبر القادم</div>
+  <h2>المحاولة الأولى دون ذكاء اصطناعي، والمراجعة بعدها</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · وحدك</b>تبني الجدول وتكتب الاستهداف بنفسك</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · الحفظ</b>جدولك الأول هو ما يدخل سجل المختبرات</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · المراجعة</b>بعدها تطلب من مساعد أن يراجع، وتكتب ما قبلت ورفضت</div>
+  </div>
+  <div class="callout warn mt"><b>لماذا.</b> الحكم على خلية بأنها «تبقى على كل حال» أو «يوقظها العرض» هو المهارة نفسها. مساعد يكتبه عنك يأخذ المهارة منك.</div>
+  <aside class="notes"><p>أكّد القاعدة قبل فتح المختبر، واطلب إغلاق المساعدات. وفي التمرين الإضافي: يُعطى المساعد الأرقام لا الملف، فالملف قد يكون بيانات عملاء في الواقع.</p></aside>
+</section>
+
+<section class="slide" id="check-uplift" data-lo="LO3" data-n="18" data-session="2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>لمن ترسل العرض؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-uplift-q1">
+    <p class="lead">شركة كهرباء تجرب عرض خصم لمن يُتوقع أن ينتقلوا إلى مزوّد آخر. في خلية «فواتير مرتفعة، عقد منتهٍ» الانتقال 40% دون عرض و39% معه. في «فواتير متوسطة، عقد منتهٍ» 18% و11%. في «فواتير منخفضة، عقد سارٍ» 3% و5%. أي خلية ترسل لها العرض؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يستهدف بالخطر: 40% أعلى نسبة، لكن العرض يغيّر نقطة واحدة فقط" data-k="أ">«فواتير مرتفعة، عقد منتهٍ»، لأن نسبة الانتقال فيها أعلى</div>
+      <div class="opt" data-why="يقرأ النسبة المنخفضة على أنها نجاح: 5% مع العرض أسوأ من 3% دونه" data-k="ب">«فواتير منخفضة، عقد سارٍ»، لأن الانتقال فيها أقل</div>
+      <div class="opt" data-why="يرسل للجميع: الخلية الثالثة يضرها العرض، والأولى لا ينفعها" data-k="ج">الخلايا الثلاث، فالعرض لا يكلف كثيرًا</div>
+      <div class="opt" data-ok data-k="د">«فواتير متوسطة، عقد منتهٍ» وحدها، فالأثر فيها 7 نقاط والعرض يغيّر قرارهم</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الاستهداف بالأثر الإضافي: الفرق بين دون عرض ومعه. الأولى تغادر على كل حال، والثالثة يوقظها العرض.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. الأرقام توضيحية. هذه نقطة التحقق الوحيدة قبل محاولة دون مساعد، فخذ وقتك في «لماذا» قبل فتح المختبر.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-2" data-auto="lab" data-lab="2.2" data-label="المختبر 2.2" data-n="19" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.2 · 25 دقيقة</div><h2>جدول الاستهداف بالأثر الإضافي</h2><p class="lead small">تحسب الأثر الإضافي في عشر خلايا (شريحة الخطر × حالة العقد) وترتبها، وتحدد الخلايا التي يضر فيها العرض، وتبني جدول استهداف. المحاولة الأولى دون ذكاء اصطناعي.</p><a class="nb" href="../labs/D2_2_uplift_table.html">D2_2_uplift_table.html</a></div><ul class="checklist"><li>ابنِ جدول الخلايا العشر من ملف التجربة <span class="min">5 د</span></li><li>احسب نسبة الانصراف بالعرض ودونه في كل خلية <span class="min">8 د</span></li><li>احسب الأثر الإضافي ورتّب الخلايا <span class="min">5 د</span></li><li>علّم الخلايا السالبة والخلايا التي تتجاوز 3 نقاط <span class="min">3 د</span></li><li>اكتب جدول الاستهداف وسبب كل خلية مستبعدة <span class="min">4 د</span></li><li class="stretch">✱ إضافي: بعد المحاولة الأولى اسأل مساعدًا أن يراجع جدولك، واكتب ما وافقت عليه وما رفضته ولماذا</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: دون ذكاء اصطناعي حتى نهاية الخطوة 5. مرّ على القاعة وتأكد. الجدول المحوري يختصر الخطوة 2. راقب ترتيب الطرح (دون عرض ناقص مع العرض). المختبر لا يحتاج 2.1: يبدأ من ملف التجربة نفسه.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-2" data-lo="LO3" data-n="20" data-session="2">
+  <div class="kicker">بعد المختبر 2.2</div>
+  <h2>أربع خلايا تستحق العرض، وثلاث يضرها</h2>
+  <table class="t small">
+    <tr><th>الشريحة</th><th class="num">انتهى العقد</th><th class="num">في العقد</th></tr>
+    <tr><td>5</td><td class="num">1.13</td><td class="num"><span class="ltr">-2.04</span></td></tr>
+    <tr class="hl"><td>4</td><td class="num">7.84</td><td class="num">4.30</td></tr>
+    <tr class="hl"><td>3</td><td class="num">6.88</td><td class="num">3.62</td></tr>
+    <tr><td>2</td><td class="num">1.25</td><td class="num">0.24</td></tr>
+    <tr><td>1</td><td class="num"><span class="ltr">-1.34</span></td><td class="num"><span class="ltr">-1.65</span></td></tr>
+  </table>
+  <div class="callout tip mt"><b>الاستهداف:</b> الشريحتان 3 و4 في الحالتين. الشريحة 5 تغادر على كل حال، و1 و2 تبقيان على كل حال، والسالبة يوقظها العرض.</div>
+  <aside class="notes"><p>الأرقام بالنقاط من تشغيل الحل (<code>check.py 2.2</code>). خلية «في العقد، 5» فيها 5,012 مشتركًا فقط: أثرها السالب أقل يقينًا، ونقول ذلك. اسأل من أكمل التمرين الإضافي: ماذا قال المساعد، وماذا رفضتم؟</p></aside>
+</section>
+
+<!-- الجلسة 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="21">
+  <div class="kicker">الجلسة 3</div>
+  <h1>الإيراد المحتفظ به والعروض المهدرة</h1>
+  <ul class="bullets outcomes"><li>تقدّر الإيراد المحتفظ به لسياسة استهداف</li><li>تعدّ العروض المهدرة وتكلفتها</li><li>تقارن ثلاث سياسات بالقيمة الصافية</li></ul>
+  <div class="sess-no">03</div>
+  <aside class="notes"><p>جدول الاستهداف يقول لمن. هذه الجلسة تقول كم يساوي.</p></aside>
+</section>
+
+<section class="slide" id="policy-value" data-lo="LO3" data-n="22" data-session="3">
+  <div class="kicker">قيمة السياسة</div>
+  <h2>القيمة الصافية = المحتفظ بهم × قيمتهم ناقص العروض × تكلفتها</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · المحتفظ بهم</b>عدد الخلية × الأثر بالنقاط ÷ 100</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · الإيراد</b>المحتفظ بهم × الإيراد الشهري × 12</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>3 · التكلفة</b>كل عرض مُرسل × تكلفته، لمن تغيّر ومن لم يتغير</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>4 · الصافي</b>الإيراد ناقص التكلفة، لكل سياسة</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> حساب التكلفة على المحتفظ بهم وحدهم. العرض يُدفع لكل من يتلقاه.</div>
+  <aside class="notes"><p>السياسة قاعدة: لمن نرسل. نقارن السياسات بالمعادلة نفسها. والقيمة 12 شهرًا افتراض نكتبه، لا حقيقة: لا نعرف كم يبقى العميل بعد التسعين يومًا.</p></aside>
+</section>
+
+<section class="slide" id="wasted-offers" data-lo="LO3" data-n="23" data-session="3">
+  <div class="kicker">العروض المهدرة</div>
+  <h2>أغلب العروض لا تغيّر قرارًا، والحكم بالصافي</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>مقهى يرسل قسيمة لكل عملائه: أغلبهم كانوا سيأتون</li>
+      <li>العرض المهدر = أُرسل ولم يغيّر شيئًا</li>
+      <li>نسبة المهدر تبقى عالية في أفضل سياسة</li>
+      <li>المهم: هل يغطي القليل المتغير تكلفة الكل؟</li>
+    </ul>
+    <div class="card c-amber"><h4>سؤالان</h4><p class="small mb0">كم عرضًا أهدرنا؟ وكم ربحنا صافيًا؟ الأول يعلّم، والثاني يقرر.</p></div>
+  </div>
+  <aside class="notes"><p>مثال من خارج سحاب. اسأل: لو قيل لكم إن 95% من عروض سياسة ما مهدرة، هل تلغونها؟ الجواب: يعتمد على الصافي. سياسة تهدر 94% وتربح خير من سياسة تهدر 90% وتخسر.</p></aside>
+</section>
+
+<section class="slide" id="next-best-offer" data-lo="LO3" data-n="24" data-session="3">
+  <div class="kicker">العرض الأنسب</div>
+  <h2>«أي عرض» سؤال ثانٍ بعد «لمن»، ويُقاس بالطريقة نفسها</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>نظام «العرض الأنسب» يختار لكل عميل عرضًا من عدة عروض: خصم، أو باقة أكبر، أو جهاز</li>
+      <li>لكل عرض تكلفة مختلفة وأثر إضافي مختلف في كل خلية</li>
+      <li>التجربة تقسم المؤهلين بالقرعة على العروض وعلى «لا عرض»</li>
+      <li>العرض الأنسب للخلية: الأعلى قيمة صافية، لا الأعلى قبولًا</li>
+    </ul>
+    <div class="card c-purple"><h4>أين يقع الخطأ</h4><p class="small mb0">الحكم بنسبة قبول العرض. العميل الذي يقبل أكبر خصم قد يكون ممن يبقى على كل حال.</p></div>
+  </div>
+  <aside class="notes"><p>المصطلح بالإنجليزية <span class="en">next-best offer</span>. لا يحتاج المختبر هذه الشريحة: سحاب تجرّب عرضًا واحدًا. الفكرة أن المعادلة نفسها (الأثر الإضافي × القيمة ناقص التكلفة) تُحسب لكل عرض في كل خلية، ويُختار الأعلى صافيًا. مثال من خارج سحاب: نادٍ رياضي يقارن شهرًا مجانيًّا بجلسة تدريب خاصة لمن يوشك اشتراكه أن ينتهي.</p></aside>
+</section>
+
+<section class="slide" id="breakeven-uplift" data-lo="LO3" data-n="25" data-session="3">
+  <div class="kicker">نقطة التعادل</div>
+  <h2>أدنى أثر يجعل الخلية رابحة = التكلفة ÷ قيمة العميل</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">1.67</div><div class="lbl">نقطة: عرض بـ40 ريالًا لعميل يدفع 200 ريال في الشهر (40 ÷ 2,400)</div></div>
+    <div class="stat center"><div class="big">3.33</div><div class="lbl">نقطة: إن تضاعفت التكلفة إلى 80 ريالًا</div></div>
+  </div>
+  <div class="callout tip mt"><b>الخلاصة.</b> كل خلية أثرها تحت نقطة التعادل تخسر، مهما كان خطرها.</div>
+  <aside class="notes"><p>الأرقام توضيحية. هذا يعطي عتبة الاستهداف سببًا بالريال بدل رقم مختار. التمرين الإضافي في المختبر يطبقه على سحاب.</p></aside>
+</section>
+
+<section class="slide" id="scale-to-base" data-lo="LO3" data-n="26" data-session="3">
+  <div class="kicker">من التجربة إلى القاعدة</div>
+  <h2>تكبير التجربة إلى القاعدة كلها يفترض أشياء نكتبها</h2>
+  <ul class="bullets">
+    <li>أن عملاء الخلية في القاعدة يشبهون عملاءها في التجربة</li>
+    <li>أن الأثر المقيس في 90 يومًا يبقى بعدها</li>
+    <li>أن العرض نفسه بالتكلفة نفسها</li>
+    <li>أن المنافسين لا يغيرون عروضهم في الفترة نفسها</li>
+  </ul>
+  <div class="callout note mt"><b>في التوصية.</b> الرقم والافتراضات معًا. من يقرأ الرقم وحده يظنه وعدًا.</div>
+  <aside class="notes"><p>اطلب من المشاركين في الخطوة 5 من المختبر أن يكتبوا افتراضًا واحدًا على الأقل. القاعدة في سحاب نحو 400,000 مشترك، والملف يبدأ مكبّرًا.</p></aside>
+</section>
+
+<section class="slide" id="check-policy" data-lo="LO3" data-n="27" data-session="3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي سياسة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-policy-q1">
+    <p class="lead">شركة إنترنت منزلي تقارن سياستين لعرض بـ30 ريالًا. «الأعلى خطرًا»: 50,000 عرض، 200 محتفظ بهم، الصافي سالب. «بالأثر الإضافي»: 80,000 عرض، 3,000 محتفظ بهم، الصافي موجب، و96% من عروضها مهدرة. ماذا يقول المحلل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يحكم بنسبة المهدر وحدها: الصافي هو ما يقرر" data-k="أ">لا هذه ولا تلك، فـ96% من العروض مهدرة، وهي نسبة لا تقبلها أي إدارة</div>
+      <div class="opt" data-ok data-k="ب">سياسة الأثر الإضافي، مع افتراضات التكبير بجانب الرقم</div>
+      <div class="opt" data-why="يفضّل عددًا أقل من العروض: التكلفة أقل لكن الأثر شبه معدوم والصافي سالب" data-k="ج">«الأعلى خطرًا»، لأنها ترسل عروضًا أقل</div>
+      <div class="opt" data-why="يضيف عروضًا لا أثر لها: الخلايا عالية الخطر لا تتغير، فتزيد التكلفة فقط" data-k="د">الاثنتان معًا، لتصل العروض إلى الكل</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> القرار بالقيمة الصافية. ونسبة المهدر عالية في كل سياسة لأن أغلب الناس لا يغيرهم أي عرض.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. الأرقام توضيحية ومن خارج سحاب. من اختار «أ» اسأله: ما السياسة التي تهدر أقل من 90%؟ (لا عرض لأحد، وصافيها صفر.)</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-3" data-auto="lab" data-lab="2.3" data-label="المختبر 2.3" data-n="28" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.3 · 20 دقيقة</div><h2>قيمة ثلاث سياسات</h2><p class="lead small">تطبّق الأثر الإضافي المقيس على قاعدة من 400,000 مشترك، وتقدّر لثلاث سياسات (العرض للجميع، وللشريحة العليا، وبالأثر الإضافي) العملاء المحتفظ بهم والإيراد والعروض المهدرة والقيمة الصافية.</p><a class="nb" href="../labs/D2_3_policy_value.html">D2_3_policy_value.html</a></div><ul class="checklist"><li>افتح ملف الخلايا ومذكرة التجربة <span class="min">2 د</span></li><li>احسب لكل خلية العملاء المحتفظ بهم بسبب العرض <span class="min">5 د</span></li><li>احسب الإيراد والتكلفة والعروض المهدرة لكل خلية <span class="min">5 د</span></li><li>اجمع لكل سياسة من الثلاث <span class="min">5 د</span></li><li>اكتب التوصية لقاسم البليهد بالأرقام <span class="min">3 د</span></li><li class="stretch">✱ إضافي: ضاعف تكلفة العرض إلى 100 ريال: أي سياسة تبقى رابحة</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. المختبر يبدأ من <code>start/uplift_cells.csv</code>، فلا يحتاج 2.2. راقب الخطوة 3: التكلفة على عدد الخلية كله لا على المحتفظ بهم. ومن ينهي مبكرًا يأخذ التمرين الإضافي.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-3" data-lo="LO3" data-n="29" data-session="3">
+  <div class="kicker">بعد المختبر 2.3</div>
+  <h2>القاعدة الحالية تخسر 3.5 مليون، والاستهداف بالأثر يربح 11 مليونًا</h2>
+  <table class="t">
+    <tr><th>السياسة</th><th class="num">العروض</th><th class="num">المحتفظ بهم</th><th class="num">المهدر</th><th class="num">الصافي (ريال)</th></tr>
+    <tr><td>للجميع</td><td class="num">400,000</td><td class="num">9,129</td><td class="num">97.72%</td><td class="num"><span class="ltr">-1,837,673</span></td></tr>
+    <tr><td>للشريحة 5</td><td class="num">80,648</td><td class="num">276</td><td class="num">99.66%</td><td class="num"><span class="ltr">-3,478,604</span></td></tr>
+    <tr class="hl"><td>بالأثر الإضافي</td><td class="num">159,104</td><td class="num">9,544</td><td class="num">94.0%</td><td class="num">11,035,401</td></tr>
+  </table>
+  <div class="callout note mt"><b>لاحظ.</b> الاستهداف بالأثر يحتفظ بعدد أكبر من «للجميع» بنصف العروض تقريبًا: لأنه لا يوقظ أحدًا.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 2.3</code>). التمرين الإضافي: عند 165 ريالًا شهريًّا، التعادل نحو 2.5 نقطة لتكلفة 50 ونحو 5 نقاط لتكلفة 100. وهذه الأرقام تعود في الخريطة: T1 وT2.</p></aside>
+</section>
+
+<!-- الجلسة 4 -->
+
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="30">
+  <div class="kicker">الجلسة 4</div>
+  <h1>حلقات التغذية الراجعة وادعاءات القيمة الصادقة</h1>
+  <ul class="bullets outcomes"><li>تفرّق بين من بقي ومن بقي بسبب العرض</li><li>تكشف حلقة التغذية الراجعة بعد إعادة التدريب</li><li>تعيد كتابة ادعاء قيمة بما تقيسه مجموعة الضبط</li></ul>
+  <div class="sess-no">04</div>
+  <aside class="notes"><p>من التجربة إلى الحملة الجارية: كيف نقيس قيمة نظام بعد أن يعمل؟</p></aside>
+</section>
+
+<section class="slide" id="stayed-vs-kept" data-lo="LO3 LO1" data-n="31" data-session="4">
+  <div class="kicker">بقي أم أُبقي؟</div>
+  <h2>«بقي بعد العرض» ليس «بقي بسبب العرض»</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>ما يعدّه التقرير عادة</h4><p class="small mb0">مستشفى يتصل بالمرضى بعد الخروج: «90% لم يعودوا إلى الطوارئ، إذن الاتصال أنقذ 90%».</p></div>
+    <div class="card c-teal"><h4>ما يجب أن يُعدّ</h4><p class="small mb0">من لم يُتصل بهم: 87% لم يعودوا أيضًا. الاتصال صنع 3 نقاط، لا 90.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> كل من بقي يُحسب «أُنقذ»، فيصير الرقم ثلاثين ضعف الحقيقة أو أكثر.</div>
+  <aside class="notes"><p>الأرقام توضيحية ومن خارج سحاب. الفرق نفسه بين «بقي» و«أُبقي» الذي حسبناه في التجربة. الجديد هنا أن الحملة جارية، فلا نملك تجربة إلا إذا أبقينا مجموعة لا تتلقى العرض.</p></aside>
+</section>
+
+<section class="slide" id="holdout-always" data-lo="LO3" data-n="32" data-session="4">
+  <div class="kicker">مجموعة الضبط</div>
+  <h2>مجموعة ضبط دائمة: ثمن صغير لرقم يمكن تصديقه</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>نسبة صغيرة ممن يختارهم النظام لا تتلقى العرض، بالقرعة</li>
+      <li>تكلفتها: الأثر الضائع على هذه النسبة فقط</li>
+      <li>إلغاؤها «لكيلا نخسر إيرادًا» يلغي القدرة على القياس</li>
+      <li>الشهر دون مجموعة ضبط شهر بلا رقم</li>
+    </ul>
+    <div class="card c-purple"><h4>حساب سريع</h4><p class="small mb0">ضبط بنسبة 5% وأثر 3 نقاط: الخسارة 0.15 نقطة من المختارين. هذا ثمن معرفة أن الحملة تعمل.</p></div>
+  </div>
+  <aside class="notes"><p>المصطلح بالإنجليزية <span class="en">holdout</span>. اسأل: من يملك قرار إلغاء مجموعة الضبط في جهاتكم؟ وإن لم يكن أحد، فمن يلغيها حين يضيق الربع؟ التمرين الإضافي في المختبر يطلب هذه القاعدة.</p><p>المصادر: Kohavi, Tang and Xu (2020), Trustworthy Online Controlled Experiments.</p></aside>
+</section>
+
+<section class="slide" id="retrain-loop" data-lo="LO3 LO1" data-n="33" data-session="4">
+  <div class="kicker">حلقة التغذية الراجعة</div>
+  <h2>إعادة التدريب على نتائج الحملة قد تعلّم النموذج اختيار من يبقى على كل حال</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>الحملة</b>من تلقى العرض وبقي يُسجَّل «نجاحًا»</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>إعادة التدريب</b>النموذج يتعلم صفات «الناجحين»</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>الاختيار الجديد</b>يختار من يبقى على كل حال: نسبة البقاء ترتفع، والأثر يهبط</div>
+  </div>
+  <div class="callout tip mt"><b>ما تقيسه.</b> البقاء في مجموعة الضبط. إن ارتفع بعد النموذج الجديد، فالمختارون تغيروا لا العرض.</div>
+  <aside class="notes"><p>الدليل المرجعي للتحيز يسمي هذا تحيز حلقة التغذية الراجعة: مخرجات النظام تصير بيانات تدريبه. رأيناه أمس في النفاد وفي التوصيات. مثال من خارج سحاب: نموذج يختار الطلاب لبرنامج دعم، ويُدرَّب على من «نجح» بعد البرنامج، فيختار المتفوقين أصلًا.</p><p>المصادر: SDAIA, AI Bias Reference Guide, first edition, Feedback Loop Bias.</p></aside>
+</section>
+
+<section class="slide" id="honest-claim-rule" data-lo="LO3 LO1" data-n="34" data-session="4">
+  <div class="kicker">الادعاء الصادق</div>
+  <h2>ثلاثة أسطر: ما قيس، وما لم يُقس، وما يتغير</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>ما قيس وكم</h4><p class="small mb0">الأثر بالنقاط والعدد، في الفترات التي فيها مجموعة ضبط.</p></div>
+    <div class="card c-amber"><h4>ما لم يُقس</h4><p class="small mb0">الفترات بلا ضبط تُسمّى، ولا تُملأ بتقدير يُعرض كأنه قياس.</p></div>
+    <div class="card c-coral"><h4>ما يتغير الآن</h4><p class="small mb0">قرار واحد: إعادة الضبط، أو مراجعة الاختيار، أو إيقاف.</p></div>
+  </div>
+  <aside class="notes"><p>هذا شكل ادعاء القيمة في الخريطة غدًا أيضًا. اقرأ مثالًا من خارج سحاب: «في الأشهر الثلاثة الأولى أبقت الاتصالات نحو 400 مريض خارج الطوارئ؛ الشهر الرابع غير مقيس؛ نعيد مجموعة الضبط من الشهر القادم.»</p></aside>
+</section>
+
+<section class="slide" id="check-claim" data-lo="LO3" data-n="35" data-session="4">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما الذي تغير بعد النموذج الجديد؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-claim-q1">
+    <p class="lead">منصة تعليمية ترسل تذكيرًا لمن يُتوقع أن يتركوا الدورة. قبل تحديث النموذج: الإكمال 70% مع التذكير و64% في مجموعة الضبط. بعد تحديثه على نتائج الحملة: 80% مع التذكير و79% في الضبط. ماذا حدث؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقرأ النسبة مع التذكير وحدها: ارتفعت لأن المختارين تغيروا" data-k="أ">التحديث نجح، فالإكمال مع التذكير ارتفع 10 نقاط بعد إعادة التدريب</div>
+      <div class="opt" data-why="يحكم على التذكير نفسه: التذكير لم يتغير، الذي تغير من يتلقاه" data-k="ب">التذكير صار أضعف ويجب تغيير نصه</div>
+      <div class="opt" data-ok data-k="ج">النموذج الجديد يختار من يكمل على كل حال، فهبط الأثر</div>
+      <div class="opt" data-why="يشك في الضبط دون سبب: ارتفاع الضبط نفسه هو الدليل على تغير المختارين" data-k="د">مجموعة الضبط لم تعد صالحة، فلا نستطيع القول</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> البقاء في مجموعة الضبط ارتفع من 64% إلى 79%: المختارون صاروا ممن يكملون دون تذكير. الأثر هو الفرق، وقد هبط.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. الأرقام توضيحية ومن خارج سحاب. لولا مجموعة الضبط لما عرفنا شيئًا: الرقم الوحيد المتاح كان 80%.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-4" data-auto="lab" data-lab="2.4" data-label="المختبر 2.4" data-n="36" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.4 · 20 دقيقة</div><h2>ادعاء الحملة ومجموعة الضبط</h2><p class="lead small">تعيد حساب ادعاء تقرير الحملة على ثمانية أشهر بمجموعة الضبط، وتحدد الأشهر التي لا قياس فيها، وتكشف ما حدث بعد إعادة تدريب «بقاء»، ثم تكتب الادعاء الصادق.</p><a class="nb" href="../labs/D2_4_honest_claim.html">D2_4_honest_claim.html</a></div><ul class="checklist"><li>اقرأ تقرير الحملة واكتب طريقة حسابه <span class="min">2 د</span></li><li>احسب نسبة البقاء لمن تلقى العرض ولمجموعة الضبط في كل شهر <span class="min">5 د</span></li><li>احسب العملاء المحتفظ بهم بسبب العرض في الأشهر المقيسة <span class="min">5 د</span></li><li>قارن الشهر الثامن بالأشهر الأولى واشرح الفرق <span class="min">4 د</span></li><li>أعد كتابة الادعاء في ثلاثة أسطر <span class="min">4 د</span></li><li class="stretch">✱ إضافي: اكتب قاعدة دائمة لمجموعة الضبط: حجمها، ومن يملك قرار إلغائها</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. راقب الخطوة 3: الضرب في عدد من تلقوا العرض (<code>D</code>) لا في المختارين (<code>C</code>). والأشهر 5 إلى 7 بلا ضبط: من يملؤها بمتوسط يُسأل لماذا. الملف ثمانية صفوف، فالمختبر سريع ويترك وقتًا للادعاء.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-4" data-lo="LO3" data-n="37" data-session="4">
+  <div class="kicker">بعد المختبر 2.4</div>
+  <h2>التقرير قال 168,465، والمقيس 2,861 في خمسة أشهر</h2>
+  <table class="t small">
+    <tr><th>الشهر</th><th class="num">الأثر (نقاط)</th><th class="num">المحتفظ بهم بسبب العرض</th></tr>
+    <tr><td>1 إلى 4 (v1)</td><td class="num">من 2.84 إلى 3.11</td><td class="num">726 و655 و661 و644</td></tr>
+    <tr><td>5 إلى 7</td><td class="num">لا ضبط</td><td class="num">غير مقيس</td></tr>
+    <tr class="hl"><td>8 (v2)</td><td class="num">0.78</td><td class="num">175</td></tr>
+  </table>
+  <div class="callout warn mt"><b>حلقة التغذية الراجعة.</b> البقاء في مجموعة الضبط صار 92.86% في الشهر 8 بعد نحو 88%: «بقاء» v2 يختار من يبقى على كل حال، فارتفعت نسبة البقاء إلى 94% وهبط الأثر.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 2.4</code>). المقيس نحو 1.7% من رقم التقرير. اقرأ ادعاءً صادقًا جيدًا من القاعة بصوت عالٍ. والإجراء: إعادة الضبط دائمًا، ومراجعة ما يختاره v2 أو العودة إلى v1.</p></aside>
+</section>
+
+<!-- الجلسة 5 -->
+
+<section class="slide section" id="s5" data-auto="section" data-session="5" data-n="38">
+  <div class="kicker">الجلسة 5</div>
+  <h1>شذوذ الشبكة أمام الحوادث المؤكدة</h1>
+  <ul class="bullets outcomes"><li>تربط التنبيهات بالحوادث المؤكدة بقاعدة مكتوبة</li><li>تحسب الدقة على التنبيهات والاستدعاء على الحوادث</li><li>تشرح لماذا تضلل «الدقة» المحسوبة على كل الساعات</li></ul>
+  <div class="sess-no">05</div>
+  <aside class="notes"><p>ننتقل إلى الشبكة و«رصد». السؤال يتغير: لا عرض هنا، بل تنبيه يفحصه إنسان.</p></aside>
+</section>
+
+<section class="slide" id="alert-vs-incident" data-lo="LO5 LO1" data-n="39" data-session="5">
+  <div class="kicker">سلسلة القرار في الشبكة</div>
+  <h2>التنبيه ادعاء، والحادثة المؤكدة هي الحقيقة</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>البيانات</b>مؤشرات كل موقع كل ساعة</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>المخرج</b>درجة شذوذ من 0 إلى 1</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>العتبة</b>ما فوقها يصير تنبيهًا</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>الفعل</b>مهندس يفحص التنبيه</div>
+  </div>
+  <div class="callout tip mt"><b>قاعدة الربط تُكتب قبل الحساب:</b> الموقع نفسه، ونافذة زمنية محددة حول الحادثة.</div>
+  <aside class="notes"><p>الحادثة المؤكدة سجل من المركز: عطل حقيقي له بداية ونهاية وشدة. لماذا نكتب القاعدة أولًا؟ لأن من يكتبها بعد رؤية النتائج يوسّع النافذة حتى تحسن الأرقام. المصطلح بالإنجليزية <span class="en">anomaly detection</span>.</p></aside>
+</section>
+
+<section class="slide" id="precision-recall" data-lo="LO5" data-n="40" data-session="5">
+  <div class="kicker">مقياسان</div>
+  <h2>الدقة تُحسب على التنبيهات، والاستدعاء على الحوادث</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>الدقة</h4><p class="small mb0">من التنبيهات، كم منها يقابله عطل حقيقي؟ تقول للمهندس كم من وقته يذهب هدرًا.</p></div>
+    <div class="card c-purple"><h4>الاستدعاء</h4><p class="small mb0">من الحوادث، كم منها نبّه إليه النظام؟ تقول للمدير ما يفوت.</p></div>
+  </div>
+  <div class="callout note mt"><b>مثال من بنك:</b> 1,000 تنبيه احتيال، 50 منها احتيال فعلًا: الدقة 5%. وكان في الأسبوع 60 حالة احتيال، كُشف منها 50: الاستدعاء 83%.</div>
+  <aside class="notes"><p>الأرقام توضيحية ومن خارج سحاب. المصطلحان بالإنجليزية <span class="en">precision</span> و<span class="en">recall</span>. خطأ شائع: قسمة الحوادث المكشوفة على التنبيهات. القاسم مختلف في كل مقياس. اسأل: أي المقياسين يهتم به المهندس المناوب؟ وأيهما مدير الشبكة؟</p></aside>
+</section>
+
+<section class="slide" id="accuracy-misleads" data-lo="LO5" data-n="41" data-session="5">
+  <div class="kicker">الرقم الذي يعجب المورد</div>
+  <h2>«الدقة الإجمالية» على كل الساعات عالية حتى لنظام لا ينبّه أبدًا</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>كاشف دخان لا يرن أبدًا «صحيح» في كل ساعة لا حريق فيها</li>
+      <li>الساعات الهادئة تملأ المقام</li>
+      <li>الرقم الكبير لا يقول كم تنبيهًا يُفحص ولا كم عطلًا يفوت</li>
+      <li>اطلب دائمًا: الدقة على التنبيهات، والاستدعاء على الحوادث</li>
+    </ul>
+    <div class="card c-coral"><h4>اسأل المورد</h4><p class="small mb0">على أي شيء حُسبت النسبة؟ ساعات، أم تنبيهات، أم حوادث؟</p></div>
+  </div>
+  <aside class="notes"><p>الاسم بالإنجليزية لما في النشرات عادة <span class="en">accuracy</span>. في الأحداث النادرة يكون قريبًا من 100% دائمًا. سيقرأ المشاركون في المختبر نشرة «رصد» ويكتشفون على أي شيء حُسب رقمها.</p></aside>
+</section>
+
+<section class="slide" id="match-rule" data-lo="LO5" data-n="42" data-session="5">
+  <div class="kicker">في الجدول</div>
+  <h2>الربط شرطان: الموقع نفسه، والساعة داخل النافذة</h2>
+  <div class="cols cols-2">
+    <div class="card c-purple"><h4>التنبيه صحيح إذا</h4><p class="small mb0">وُجدت في موقعه حادثة بدأت قبل ساعته بساعة على الأكثر ولم تنتهِ قبلها. <code>COUNTIFS</code> بثلاثة شروط على ورقة الحوادث.</p></div>
+    <div class="card c-teal"><h4>الحادثة مكشوفة إذا</h4><p class="small mb0">وقع عليها تنبيه واحد على الأقل فوق العتبة في النافذة نفسها. <code>COUNTIFS</code> بأربعة شروط على ورقة التنبيهات.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> قلب اتجاه النافذة، أو نسيان شرط الموقع: تتضاعف المطابقات الزائفة.</div>
+  <aside class="notes"><p>اشرح لماذا ساعة قبل البدء: كثير من الأعطال تبدأ بتدهور يسبق تسجيلها. أعطِ المشاركين دقيقة ليكتبوا الصيغة على ورق قبل المختبر.</p></aside>
+</section>
+
+<section class="slide" id="network-capacity" data-lo="LO5 LO1" data-n="43" data-session="5">
+  <div class="kicker">السعة</div>
+  <h2>تنبؤ السعة يُقاس كما قسنا تنبؤ الطلب في المتجر</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>المخرج: الحركة المتوقعة في كل موقع للأشهر القادمة</li>
+      <li>القرار: أين تُضاف سعة، ومتى</li>
+      <li>خط الأساس: نمو الموسم الماضي نفسه، على فترة لم يرها النموذج</li>
+      <li>الخطأ غير متماثل: سعة زائدة مال مجمّد، ونقص يعني ازدحامًا وشكاوى</li>
+    </ul>
+    <div class="card c-teal"><h4>ورابطه بالتنبيهات</h4><p class="small mb0">موقع ينبّه كل مساء لأنه ممتلئ ليس عطلًا: هو سؤال سعة. فصله عن الأعطال يخفف المركز.</p></div>
+  </div>
+  <aside class="notes"><p>شريحة ربط لا مختبر لها: الأسئلة نفسها من اليوم الأول (فترة لم يرها النموذج، والكلفة بحسب اتجاه الخطأ) تنطبق على تخطيط السعة. اسأل القاعة: من يملك قرار إضافة السعة في جهاتكم، وبأي رقم يحكم؟</p></aside>
+</section>
+
+<section class="slide" id="check-alerts" data-lo="LO5" data-n="44" data-session="5">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>كيف تقرأ هذه النشرة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-alerts-q1">
+    <p class="lead">مورد لنظام مراقبة مصاعد في 300 مبنى يقول: «دقة إجمالية 99%». في أسبوع: 840 تنبيهًا، 42 منها يقابلها عطل مؤكد. وكان في الأسبوع 50 عطلًا مؤكدًا، كُشف منها 42. ماذا يكتب المحلل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقبل رقمًا محسوبًا على كل الساعات: الساعات الهادئة تجعله عاليًا دائمًا" data-k="أ">النظام ممتاز، والنشرة تؤكد ذلك</div>
+      <div class="opt" data-ok data-k="ب">الدقة 5% والاستدعاء 84%</div>
+      <div class="opt" data-why="يقسم على القاسم الخطأ: 42 ÷ 50 هو الاستدعاء لا الدقة" data-k="ج">الدقة 84%، أي 42 من 50 عطلًا، وهي قريبة مما قاله المورد</div>
+      <div class="opt" data-why="يحكم بالاستدعاء وحده: الثمن آلاف دقائق الفحص الضائعة" data-k="د">النظام يكشف أغلب الأعطال، فلا مشكلة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> 42 ÷ 840 = 5% دقة؛ و42 ÷ 50 = 84% استدعاء. والسؤال التالي: هل يتحمل الفريق 840 تنبيهًا في الأسبوع؟</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. الأرقام توضيحية ومن خارج سحاب. «ج» هو الخطأ الأشيع: راجع القاسم في كل مقياس.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-5" data-auto="lab" data-lab="2.5" data-label="المختبر 2.5" data-n="45" data-session="5">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.5 · 25 دقيقة</div><h2>مطابقة التنبيهات بالحوادث المؤكدة</h2><p class="lead small">تطابق أسبوعًا من تنبيهات «رصد» على 1,200 موقع بالحوادث المؤكدة، وتحسب عند العتبة الافتراضية عدد التنبيهات في اليوم والدقة والاستدعاء والحوادث الفائتة.</p><a class="nb" href="../labs/D2_5_alert_matching.html">D2_5_alert_matching.html</a></div><ul class="checklist"><li>اقرأ نشرة رصد وقاعدة الربط <span class="min">3 د</span></li><li>علّم كل تنبيه: هل يقابله حادثة مؤكدة <span class="min">8 د</span></li><li>علّم كل حادثة: هل كشفها تنبيه عند العتبة الافتراضية <span class="min">6 د</span></li><li>احسب التنبيهات في اليوم والدقة والاستدعاء <span class="min">5 د</span></li><li>قارن بنشرة المورد واكتب سطرين <span class="min">3 د</span></li><li class="stretch">✱ إضافي: عدّ التنبيهات أثناء أعمال الصيانة المجدولة واحسب الدقة دونها</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. الخطوة 2 تحتاج الملفين في مصنف واحد: ساعد من لا يعرف الإشارة إلى ورقة أخرى. صيغة الربط هي الجزء الصعب: اكتبها على السبورة إن تعثر أكثر من ثلث القاعة. لا يحتاج المختبر شيئًا من الجلسات السابقة.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-5" data-lo="LO5" data-n="46" data-session="5">
+  <div class="kicker">بعد المختبر 2.5</div>
+  <h2>«97%» على الساعات؛ على التنبيهات 16.67%</h2>
+  <div class="cols cols-3">
+    <div class="stat center"><div class="big">160.29</div><div class="lbl">تنبيهًا في اليوم عند العتبة الافتراضية 0.4</div></div>
+    <div class="stat center"><div class="big">16.67%</div><div class="lbl">دقة: 187 من 1,122 تنبيهًا</div></div>
+    <div class="stat center"><div class="big">95.83%</div><div class="lbl">استدعاء: فاتت 3 من 72 حادثة، إحداها حرجة</div></div>
+  </div>
+  <div class="callout warn mt"><b>والسؤال التالي.</b> هل يستطيع المركز أن يفحص 160 تنبيهًا كل يوم فحصًا سليمًا؟ وإن لم يستطع، فما الذي يحدث لما لا يُفحص؟</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 2.5</code>). الفائتة: INC034 بسيطة، وINC040 كبيرة، وINC055 حرجة بأعلى درجة 0.39. ورقم 97% على 201,600 ساعة موقع. والتمرين الإضافي: 131 تنبيهًا في صيانة مجدولة. هذا يمهد للجلسة التالية.</p></aside>
+</section>
+
+<!-- الجلسة 6 -->
+
+<section class="slide section" id="s6" data-auto="section" data-session="6" data-n="47">
+  <div class="kicker">الجلسة 6</div>
+  <h1>عتبة يتحملها الفريق</h1>
+  <ul class="bullets outcomes"><li>تبني جدول الدقة والاستدعاء لعدة عتبات</li><li>تختار عتبة ضمن طاقة الفريق دون تفويت الحوادث الحرجة</li><li>تقترح تغييرًا لا يحتاج نموذجًا جديدًا</li></ul>
+  <div class="sess-no">06</div>
+  <aside class="notes"><p>من قياس النظام إلى اختيار عتبته: القرار الذي يملكه المركز لا المورد.</p></aside>
+</section>
+
+<section class="slide" id="alert-budget" data-lo="LO5" data-n="48" data-session="6">
+  <div class="kicker">طاقة الفريق</div>
+  <h2>العتبة تبدأ من عدد التنبيهات الذي يُفحص فحصًا سليمًا</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>الأشخاص</b>3 محللين في كل مناوبة، ومناوبتان</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>الوقت</b>نصف المناوبة للتنبيهات: 4 ساعات لكل محلل</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>الفحص</b>20 دقيقة للتنبيه: 12 لكل محلل</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>الطاقة</b>72 تنبيهًا في اليوم</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> اختيار العتبة بأعلى استدعاء. ما فوق الطاقة يُغلق دون فحص، فيضيع الاستدعاء على الورق.</div>
+  <aside class="notes"><p>مثال توضيحي لفريق كشف احتيال في بنك. في سحاب الطاقة مكتوبة في <code>noc_capacity.txt</code>. اسأل: كم تنبيهًا يصل فرقكم في اليوم، وكم يُفحص فعلًا؟</p></aside>
+</section>
+
+<section class="slide" id="threshold-table" data-lo="LO5" data-n="49" data-session="6">
+  <div class="kicker">جدول العتبات</div>
+  <h2>كل عتبة سطر: كم تنبيهًا، وكم دقة، وكم يفوت</h2>
+  <table class="t">
+    <tr><th>مثال: كشف احتيال البطاقات</th><th class="num">في اليوم</th><th class="num">الدقة</th><th class="num">الاستدعاء</th></tr>
+    <tr><td>0.5</td><td class="num">210</td><td class="num">6%</td><td class="num">95%</td></tr>
+    <tr class="hl"><td>0.7</td><td class="num">65</td><td class="num">15%</td><td class="num">82%</td></tr>
+    <tr><td>0.9</td><td class="num">12</td><td class="num">40%</td><td class="num">40%</td></tr>
+  </table>
+  <div class="callout tip mt"><b>الخلاصة.</b> رفع العتبة يرفع الدقة ويخفض الاستدعاء. الطاقة تختار السطر، والشدة تضع الحد الأدنى.</div>
+  <aside class="notes"><p>الأرقام توضيحية. بطاقة 72 في اليوم من الشريحة السابقة، السطر المختار 0.7. الاستدعاء لا يتغير بالفحص: يعتمد على أعلى درجة وقعت على الحادثة، ولهذا يبدأ المختبر من ملف فيه أعلى درجة لكل حادثة.</p></aside>
+</section>
+
+<section class="slide" id="severity-first" data-lo="LO5" data-n="50" data-session="6">
+  <div class="kicker">ليست كل حادثة سواء</div>
+  <h2>شرط الحوادث الحرجة يُكتب قبل اختيار العتبة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الاستدعاء الكلي يخلط البسيط بالحرج</li>
+      <li>احسب استدعاء الحرجة وحدها لكل عتبة</li>
+      <li>الشرط مثل: «لا تفوت أكثر من حادثة حرجة في الأسبوع»</li>
+      <li>العتبة المختارة: أقل عتبة ضمن الطاقة، إن حققت الشرط</li>
+    </ul>
+    <div class="card c-amber"><h4>والثمن يُكتب</h4><p class="small mb0">كم حادثة غير حرجة تفوت بالعتبة المختارة. التوصية التي تخفي الثمن تُرفض في أول عطل.</p></div>
+  </div>
+  <aside class="notes"><p>اسأل: إن لم تحقق أي عتبة الشرطين معًا، فما الخيارات؟ (فريق أكبر، أو تقليل التنبيهات المعروفة مسبقًا، أو نموذج أفضل.) الخيار الثاني موضوع الشريحة التالية.</p></aside>
+</section>
+
+<section class="slide" id="suppress-known" data-lo="LO5" data-n="51" data-session="6">
+  <div class="kicker">تغيير لا يحتاج نموذجًا</div>
+  <h2>أخفِ التنبيهات التي تعرف سببها مسبقًا</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>مثال</h4><p class="small mb0">نظام مراقبة خوادم ينبّه كل ليلة أثناء النسخ الاحتياطي المجدول. الفريق يعرف السبب، ويغلق التنبيه.</p></div>
+    <div class="card c-purple"><h4>الأثر</h4><p class="small mb0">التنبيهات تقل والدقة ترتفع، والاستدعاء لا يتغير: لا عطل مجهول يختبئ في عمل معروف.</p></div>
+  </div>
+  <div class="callout warn mt"><b>بشرط.</b> سجل الأعمال المجدولة دقيق ومحدث. عمل مجدول مسجل خطأً يخفي عطلًا حقيقيًّا.</div>
+  <aside class="notes"><p>مثال من خارج سحاب. في سحاب عمود <code>planned_work</code> في الملف. هذا النوع من التغيير يأتي قبل شراء نموذج جديد: أرخص وأسرع، ويُقاس في أسبوع.</p></aside>
+</section>
+
+<section class="slide" id="check-threshold" data-lo="LO5" data-n="52" data-session="6">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي عتبة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-threshold-q1">
+    <p class="lead">فريق مراقبة جودة في مصنع يفحص 50 تنبيهًا في اليوم على الأكثر، ولا يُقبل أن يفوت أكثر من عيب خطير واحد في الأسبوع. عند 0.5: 90 تنبيهًا وعيب خطير فائت. عند 0.6: 45 تنبيهًا وعيب خطير فائت. عند 0.7: 20 تنبيهًا وثلاثة عيوب خطيرة فائتة. أيها تختار؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يختار بالاستدعاء: 90 تنبيهًا فوق طاقة الفريق، فيُغلق نصفها دون فحص" data-k="أ">0.5، لأنها تفوّت أقل عدد من العيوب</div>
+      <div class="opt" data-why="يختار بالدقة: تفوّت ثلاثة عيوب خطيرة، والشرط واحد" data-k="ب">0.7، لأن دقتها أعلى وتنبيهاتها الأقل بين العتبات الثلاث</div>
+      <div class="opt" data-why="يؤجل قرارًا يمكن اتخاذه: عتبة واحدة تحقق الشرطين الآن" data-k="ج">لا عتبة، حتى يُشترى نموذج أفضل</div>
+      <div class="opt" data-ok data-k="د">0.6، فهي ضمن الطاقة وتحقق شرط العيوب الخطيرة، وثمنها يُكتب</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الطاقة تستبعد 0.5، وشرط العيوب الخطيرة يستبعد 0.7. والثمن يُكتب: كم عيبًا غير خطير يفوت عند 0.6.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. الأرقام توضيحية ومن خارج سحاب. اسأل من اختار «ج»: ما الذي يحدث للتنبيهات حتى يصل النموذج الجديد؟</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-6" data-auto="lab" data-lab="2.6" data-label="المختبر 2.6" data-n="53" data-session="6">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.6 · 25 دقيقة</div><h2>عتبة يتحملها المركز</h2><p class="lead small">تبني لست عتبات جدول التنبيهات في اليوم والدقة والاستدعاء واستدعاء الحوادث الحرجة، بأعمال الصيانة ودونها، وتختار عتبة ضمن طاقة المركز.</p><a class="nb" href="../labs/D2_6_threshold.html">D2_6_threshold.html</a></div><ul class="checklist"><li>اقرأ مذكرة طاقة المركز وافتح ملفي البداية <span class="min">3 د</span></li><li>احسب التنبيهات في اليوم والدقة لكل عتبة <span class="min">7 د</span></li><li>احسب الاستدعاء واستدعاء الحرجة لكل عتبة <span class="min">6 د</span></li><li>أعد الحساب بعد إخفاء تنبيهات الصيانة المجدولة <span class="min">5 د</span></li><li>اختر العتبة واكتب سببها لرتيل الرميان <span class="min">4 د</span></li><li class="stretch">✱ إضافي: اقترح عتبتين: واحدة للحوادث الحرجة وأخرى لغيرها، وقدّر أثرها</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. يبدأ المختبر من ملفين جاهزين فيهما الربط محسوبًا، فلا يحتاج 2.5. راقب القسمة على 7 أيام، والقاسم في الاستدعاء (72 حادثة، و11 حرجة). من ينهي مبكرًا يأخذ التمرين الإضافي، وجوابه نقاش لا رقم.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-6" data-lo="LO5" data-n="54" data-session="6">
+  <div class="kicker">بعد المختبر 2.6</div>
+  <h2>0.5 مع إخفاء الصيانة: ضمن الطاقة، وتفوت حادثة حرجة واحدة</h2>
+  <table class="t small">
+    <tr><th>العتبة</th><th class="num">في اليوم</th><th class="num">الدقة</th><th class="num">الاستدعاء</th><th class="num">الحرجة</th></tr>
+    <tr><td>0.4 دون الصيانة</td><td class="num">141.57</td><td class="num">18.87%</td><td class="num">95.83%</td><td class="num">90.91%</td></tr>
+    <tr><td>0.5</td><td class="num">86.14</td><td class="num">26.37%</td><td class="num">86.11%</td><td class="num">90.91%</td></tr>
+    <tr class="hl"><td>0.5 دون الصيانة</td><td class="num">67.57</td><td class="num">33.62%</td><td class="num">86.11%</td><td class="num">90.91%</td></tr>
+    <tr><td>0.6</td><td class="num">48.00</td><td class="num">32.44%</td><td class="num">69.44%</td><td class="num">81.82%</td></tr>
+  </table>
+  <div class="callout warn mt"><b>الثمن.</b> عند 0.5 تفوت 10 من 72 حادثة في الأسبوع بدل 3. يُكتب في التوصية لرتيل.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 2.6</code>). عند 0.6 تفوت حادثتان حرجتان، فتُستبعد. والتمرين الإضافي: شدة الحادثة لا تُعرف لحظة التنبيه، فعتبتان بحسب الشدة تحتاجان مؤشرًا بديلًا يُختبر. هذه الحالة T3 في الخريطة.</p></aside>
+</section>
+
+<!-- الجلسة 7 -->
+
+<section class="slide section" id="s7" data-auto="section" data-session="7" data-n="55">
+  <div class="kicker">الجلسة 7</div>
+  <h1>توفير الطاقة وبيانات الموقع</h1>
+  <ul class="bullets outcomes"><li>تقيس توفير الطاقة بالمقارنة بمواقع ضابطة</li><li>تفحص مؤشر الحماية موقعًا موقعًا</li><li>تقرر في طلب بيانات موقع بالغرض والموافقة والتجميع</li></ul>
+  <div class="sess-no">07</div>
+  <aside class="notes"><p>جلسة من نصفين: ادعاء توفير الطاقة، ثم طلب بيانات يمر بمكتب القيمة.</p></aside>
+</section>
+
+<section class="slide" id="energy-control-sites" data-lo="LO1" data-n="56" data-session="7">
+  <div class="kicker">قبل وبعد لا يكفي</div>
+  <h2>التوفير الحقيقي = تغير مواقع التجربة ناقص تغير المواقع الضابطة</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>ما يعرضه المورد</h4><p class="small mb0">منظم حرارة ذكي في 20 مبنى مكاتب: الاستهلاك انخفض 12% بين الشهر قبل التركيب والشهر بعده.</p></div>
+    <div class="card c-teal"><h4>ما يسأله المحلل</h4><p class="small mb0">20 مبنى دون المنظم في الشهرين نفسيهما انخفضت 5%: الطقس تغير. التوفير 7%.</p></div>
+  </div>
+  <div class="callout tip mt"><b>الخلاصة.</b> المواقع الضابطة تحمل كل ما تغير غير النظام: الطقس، والأحمال، والمواسم.</div>
+  <aside class="notes"><p>الأرقام توضيحية ومن خارج سحاب. الطريقة اسمها بالإنجليزية <span class="en">difference in differences</span>. في الاتصالات، معيار 3GPP يدرس توفير الطاقة في الشبكات، ويذكّر بأن التوفير يُوزن دائمًا بأثره على الخدمة.</p><p>المصادر: 3GPP TR 38.864, Study on network energy savings for NR.</p></aside>
+</section>
+
+<section class="slide" id="guardrail-per-site" data-lo="LO1" data-n="57" data-session="7">
+  <div class="kicker">حد الحماية</div>
+  <h2>حد الحماية يُفحص موقعًا موقعًا، لا بالمتوسط</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>حد الحماية: مقياس يجب ألا يسوء، مهما وفّر النظام</li>
+      <li>متوسط الفرق على كل المواقع قد يكون صغيرًا ويخفي مواقع ساءت كثيرًا</li>
+      <li>اسأل: أي المواقع لا بديل لسكانها إن ساءت الخدمة؟</li>
+      <li>موقع فوق الحد: يُستثنى أو يُعدّل قبل التعميم</li>
+    </ul>
+    <div class="card c-purple"><h4>في الجدول</h4><p class="small mb0">عمود للفرق بعد ناقص قبل، وعمود منطقي: <code>AND</code> للمجموعة والحد. ثم تصفية.</p></div>
+  </div>
+  <aside class="notes"><p>تذكّر مقياس الحماية في تجربة A/B بالأمس: المرتجعات. هنا معدل المكالمات المنقطعة. اسأل: من يتضرر إن ساء الانقطاع في موقع واحد لا بديل لسكانه؟ مثال من خارج سحاب: نظام توفير طاقة في مستشفيات يُفحص أثره على كل جناح، لا على متوسط المستشفى.</p></aside>
+</section>
+
+<section class="slide" id="location-purpose" data-lo="LO6" data-n="58" data-session="7">
+  <div class="kicker">بيانات الموقع</div>
+  <h2>البيانات جُمعت لغرض، واستعمالها لغرض آخر يحتاج أساسًا</h2>
+  <table class="t small">
+    <tr><th>السؤال</th><th>لماذا يهم</th></tr>
+    <tr><td>لأي غرض جُمعت؟</td><td>المعالجة لغير غرض الجمع جائزة في حالات محددة أولها الموافقة، وتسبقها إحاطة صاحب البيانات</td></tr>
+    <tr><td>هل وافق صاحبها على هذا الغرض؟</td><td>التسويق والإعلان بوسائل الاتصال الشخصية يحتاجان موافقة مسبقة وطريقة سهلة للانسحاب</td></tr>
+    <tr><td>هل الطالب جهة أخرى؟</td><td>تمكين أي شخص غير الجهة المسؤولة من البيانات إفصاح، والإفصاح مقيد بحالات محددة أولها الموافقة</td></tr>
+    <tr><td>هل يلزم أن تكون فردية؟</td><td>من حالات الإفصاح الجائزة معالجة لا يمكن معها التعرف على صاحب البيانات</td></tr>
+  </table>
+  <aside class="notes"><p>صياغة مختصرة لنصوص النظام لا رأي قانوني: القرار في كل حالة لمسؤول حماية البيانات. المواد: المادة 1 (تعريف الإفصاح)، والمادة 10 (المعالجة لغير غرض الجمع في حالات محددة، أولها الموافقة)، والمادة 11 (الغرض)، والمادة 15 (حالات الإفصاح، ومنها الموافقة، ومعالجة لا يمكن معها التعرف على الشخص)، والمادتان 25 و26 (الإعلان والتسويق) من النظام؛ والمادة 4 (الإحاطة قبل المعالجة لغرض جديد)، والمادة 18 (ضوابط المعالجة لغرض آخر)، والمادتان 11 و29 (الموافقة والتسويق المباشر) من اللائحة التنفيذية. أن شركة مستقلة في المجموعة نفسها «جهة أخرى» استنتاج من تعريف الإفصاح، تؤكده مسؤولة حماية البيانات. مثال من خارج سحاب: مستشفى يطلب منه شريك تأمين قائمة بمرضى قسم معين لعروض خاصة.</p><p>المصادر: SDAIA, Personal Data Protection Law, articles 1, 10, 11, 15, 25 and 26; SDAIA, Implementing Regulation of the Personal Data Protection Law, articles 4, 11, 18 and 29.</p></aside>
+</section>
+
+<section class="slide" id="location-aggregate" data-lo="LO6" data-n="59" data-session="7">
+  <div class="kicker">البديل</div>
+  <h2>أعداد مجمّعة بحد أدنى للخلية تخدم سؤال الأعمال غالبًا</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>السؤال التجاري</b>أين يتسوق الناس، ومتى؟</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>التجميع</b>أعداد بحسب الحي والأسبوع، دون معرّفات</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>الحد الأدنى</b>خلية أقل من حد معين لا تُعرض</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>القرار</b>فرع جديد، أو عرض عام في حي</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> أن تكون البيانات متاحة داخل المؤسسة لا يجعل كل استعمال لها جائزًا.</div>
+  <aside class="notes"><p>الحد الأدنى للخلية يمنع أن يُستدل على شخص من خلية فيها عدد قليل جدًّا. اسأل: ما السؤال التجاري الحقيقي خلف طلب قائمة أفراد عادة؟ غالبًا سؤال عن أماكن وأوقات، تجيب عنه الأعداد. سياسة مشاركة البيانات الصادرة عن مكتب إدارة البيانات الوطنية تحكم مشاركة بيانات الجهات الحكومية، فلا تُلزم سحاب؛ لكن مبادئها تصلح أسئلة هنا: غرض مشروع، واستعمال للغرض المحدد وحده، وأقل قدر من البيانات يحقق الغرض.</p><p>المصادر: National Data Management Office, Data Sharing Policy (scope; Third Principle: Legitimate Purpose).</p></aside>
+</section>
+
+<section class="slide" id="check-location" data-lo="LO6" data-n="60" data-session="7">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ماذا تقرر؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO6" data-id="check-location-q1">
+    <p class="lead">شركة نقل ذكي في مجموعة تضم سلسلة مطاعم. السلسلة تطلب أرقام جوالات من رُكّاب نُقلوا إلى مطاعم منافسة الشهر الماضي، لترسل لهم عروضًا. بيانات الرحلات جُمعت لتقديم خدمة النقل، ولا موافقة من الركاب على تسويق جهة أخرى. ما القرار؟</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="أ">رفض القائمة، واقتراح أعداد رحلات مجمّعة بلا معرّفات</div>
+      <div class="opt" data-why="يعد المجموعة جهة واحدة: السلسلة شركة مستقلة، فتمكينها من البيانات إفصاح على الأرجح، والغرض جديد بلا موافقة" data-k="ب">الموافقة، فالشركتان في مجموعة واحدة والبيانات داخل المجموعة أصلًا</div>
+      <div class="opt" data-why="يظن أن إخفاء الاسم يكفي: رقم الجوال معرّف شخصي، والغرض ما زال بلا موافقة" data-k="ج">الموافقة بعد حذف أسماء الركاب والإبقاء على الأرقام</div>
+      <div class="opt" data-why="يقدّم التسليم على الموافقة: الإفصاح دون موافقة لا يصححه سؤال لاحق" data-k="د">تسليم القائمة الآن، ثم سؤال الركاب عن الموافقة بعد أول عرض</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الغرض جديد، ولا موافقة، والطالب شركة مستقلة تُعامل على الأرجح جهة أخرى، والقائمة فردية. الأعداد المجمّعة تجيب عن السؤال التجاري دون ذلك كله.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. المثال من خارج سحاب. «د» يعكس الترتيب: الموافقة قبل الإفصاح لا بعده. ونقاش جيد لمن يسأل: يمكن للشركة التي جمعت البيانات أن تطلب موافقة لغرض جديد، وذلك قرار تملكه هي ومسؤول حماية البيانات. والقرار النهائي في الواقع لمسؤول حماية البيانات.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-7" data-auto="lab" data-lab="2.7" data-label="المختبر 2.7" data-n="61" data-session="7">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.7 · 20 دقيقة</div><h2>تجربة سُبات وطلب بيانات الموقع</h2><p class="lead small">تحسب توفير «سُبات» الحقيقي بطرح تغير المواقع الضابطة، وتفحص معدل الانقطاع موقعًا موقعًا، ثم تقرر في طلب أسواق سحاب لقائمة فردية من بيانات الموقع وتقترح بديلًا.</p><a class="nb" href="../labs/D2_7_energy_and_location.html">D2_7_energy_and_location.html</a></div><ul class="checklist"><li>احسب تغير الطاقة في مواقع التجربة والمواقع الضابطة <span class="min">5 د</span></li><li>احسب التوفير الصافي وقارنه بادعاء المورد <span class="min">3 د</span></li><li>افحص معدل الانقطاع وحد الحماية لكل موقع <span class="min">4 د</span></li><li>اقرأ طلب بيانات الموقع واكتب قرارك وأسبابه <span class="min">5 د</span></li><li>اقترح بديلًا مجمّعًا يخدم الغرض التجاري <span class="min">3 د</span></li><li class="stretch">✱ إضافي: قدّر الوفر السنوي على 3,000 موقع بعد الترخيص، بسعر الطاقة في مذكرة المورد</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. نصف المختبر حساب ونصفه قرار مكتوب. راقب نسبة المجاميع مقابل متوسط النسب: نقبل الاثنين مع ذكر الطريقة. وفي الخطوة 4 يجب أن يذكر القرار ثلاثة أسباب. لا يحتاج المختبر شيئًا سابقًا.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-7" data-lo="LO1 LO6" data-n="62" data-session="7">
+  <div class="kicker">بعد المختبر 2.7</div>
+  <h2>سُبات يوفر 8.08% لا 14.5%، والقائمة الفردية تُرفض</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>الطاقة</h4><p class="small mb0">التجربة <span class="ltr">-14.51%</span>، والضابطة <span class="ltr">-6.43%</span>، والصافي 8.08%. نحو 3.7 مليون ريال في السنة بعد الترخيص، لا «أكثر من 9 ملايين». وموقعان ريفيان، S3009 وS3016، تجاوزا حد الانقطاع.</p></div>
+    <div class="card c-coral"><h4>طلب الموقع</h4><p class="small mb0">رفض: غرض الجمع الخدمة، ولا موافقة على تسويق جهة أخرى، والقائمة فردية. البديل: أعداد مجمّعة بحسب الحي والأسبوع بحد أدنى للخلية.</p></div>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 2.7</code>). متوسط فرق الانقطاع 0.0435 نقطة فقط: المتوسط يخفي الموقعين. حساب الوفر: نحو 320 كيلوواط ساعة × 8.08% × 365 × 0.18 × 3,000 = نحو 5.1 مليون، ثم يُطرح الترخيص. وهذه الحالات T4 وT5 وT6 في الخريطة.</p></aside>
+</section>
+
+<!-- الجلسة 8 -->
+
+<section class="slide section" id="s8" data-auto="section" data-session="8" data-n="63">
+  <div class="kicker">الجلسة 8</div>
+  <h1>خريطة الفرص والمخاطر</h1>
+  <ul class="bullets outcomes"><li>تقدّر حالات الاستخدام بدليل مكتوب للقيمة والضرر والحقوق</li><li>ترتّب الحالات وتضعها في أرباع الخريطة</li><li>تجهّز خريطة من صفحة واحدة للمناقشة</li></ul>
+  <div class="sess-no">08</div>
+  <aside class="notes"><p>الجلسة الأخيرة تجمع اليومين في صفحة واحدة: خريطة الفرص والمخاطر.</p></aside>
+</section>
+
+<section class="slide" id="three-scores" data-lo="LO6" data-n="64" data-session="8">
+  <div class="kicker">خريطة الفرص والمخاطر</div>
+  <h2>ثلاث درجات لكل حالة استخدام: القيمة، والضرر، والحقوق</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>القيمة</h4><p class="small mb0">من الرقم الصافي المقيس بالريال في السنة، بسقف بحسب قوة الدليل.</p></div>
+    <div class="card c-amber"><h4>الضرر على العملاء</h4><p class="small mb0">منخفض أو متوسط أو مرتفع: من يدفع أكثر، ومن يُحرم، ومن تسوء خدمته.</p></div>
+    <div class="card c-purple"><h4>حقوق البيانات</h4><p class="small mb0">واضحة أو ناقصة أو غائبة: الغرض والموافقة، والبيانات الحساسة.</p></div>
+  </div>
+  <div class="callout note mt"><b>المجموع</b> = 2 × القيمة + الضرر + الحقوق، من 20. القيمة مضاعفة لأنها سبب المشروع، لكنها لا تغلب الحقوق وحدها.</div>
+  <aside class="notes"><p>الدليل في <code>labs/files/map/scoring_guide.txt</code>، وهو دليل مكتب القيمة في الحالة. شجّع المشاركين على نقده: الوزن والحدود اختيار، والمهم أن يُكتب ويُطبّق على الكل بالطريقة نفسها. مبادئ أخلاقيات الذكاء الاصطناعي تضع العدالة والخصوصية بجانب المنفعة، والخريطة تطبيق عملي لذلك.</p><p>المصادر: SDAIA, AI Ethics Principles.</p></aside>
+</section>
+
+<section class="slide" id="evidence-cap" data-lo="LO6" data-n="65" data-session="8">
+  <div class="kicker">سقف الدليل</div>
+  <h2>القيمة لا تتجاوز ما يستطيع الدليل إثباته</h2>
+  <table class="t">
+    <tr><th>نوع الدليل</th><th class="num">أعلى درجة قيمة</th></tr>
+    <tr><td>تجربة عشوائية، أو A/B، أو تجربة بمواقع ضابطة</td><td class="num">5</td></tr>
+    <tr><td>اختبار على فترة لم يرها النموذج</td><td class="num">4</td></tr>
+    <tr><td>مقياس دون اتصال فقط</td><td class="num">3</td></tr>
+    <tr><td>ادعاء مورد، أو لم يُقس</td><td class="num">2</td></tr>
+  </table>
+  <div class="callout tip mt"><b>الخلاصة.</b> ادعاء بعشرة ملايين وتجربة بمليون: التجربة أعلى درجة.</div>
+  <aside class="notes"><p>مثال من خارج سحاب: مورد نظام جدولة لعيادات يدّعي توفير 5 ملايين ريال، دون أي قياس: درجة قيمته 2. والطريقة الوحيدة لرفعها: قياس. هذا ما يجعل الخريطة تدفع نحو القياس لا نحو الوعود.</p></aside>
+</section>
+
+<section class="slide" id="map-quadrants" data-lo="LO6" data-n="66" data-session="8">
+  <div class="kicker">الأرباع</div>
+  <h2>أربعة قرارات، تُطبّق بترتيب ثابت</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>1 · توقّف</h4><p class="small mb0">الحقوق غائبة، أو القيمة صفر أو أقل. لا شيء يعوضهما.</p></div>
+    <div class="card c-teal"><h4>2 · امضِ</h4><p class="small mb0">قيمة 4 أو 5، وضرر منخفض أو متوسط.</p></div>
+    <div class="card c-amber"><h4>3 · أصلح أولًا</h4><p class="small mb0">قيمة 4 أو 5، وضرر مرتفع: يُعدَّل ثم يُقاس من جديد.</p></div>
+    <div class="card c-purple"><h4>4 · اختبر بتكلفة قليلة</h4><p class="small mb0">كل ما عدا ذلك: الدليل لا يكفي بعد.</p></div>
+  </div>
+  <aside class="notes"><p>الترتيب مهم: حالة قيمتها 5 وحقوقها غائبة تتوقف، ولا تصل إلى «أصلح أولًا». اسأل: لماذا نوقف حالة لها قيمة كبيرة؟ (لأن الحقوق ليست درجة تُشترى بالقيمة.)</p></aside>
+</section>
+
+<section class="slide" id="rank-and-choose" data-lo="LO6" data-n="67" data-session="8">
+  <div class="kicker">صفحة واحدة</div>
+  <h2>رتّب، ثم اختر القرار الأول الذي تطلبه</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · قدّر</b>ثلاث درجات بالدليل لكل حالة</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · رتّب</b>بالمجموع، ثم بالرمز عند التساوي</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · ضع</b>كل حالة في ربعها</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>4 · افتتح</b>بأول قرار تطلبه؛ وعند التساوي، بالأقوى دليلًا</div>
+  </div>
+  <div class="callout note mt"><b>المشروع الختامي.</b> خريطة شركة واحدة: خمس دقائق للعرض، وثلاث تعيد فيها تقدير حالة يختارها المدرب.</div>
+  <aside class="notes"><p>الترتيب عند التساوي بالرمز لأنه قاعدة ثابتة لا تُناقش؛ أما الافتتاح فبالحالة الأقوى دليلًا، لأنها تصمد حين يُسأل المشارك عن مصدر كل رقم. الخريطة تُسلَّم رابطًا لمجلد في Google Drive، وفيها ثماني حالات على الأقل وسطر إفصاح عن استعمال الذكاء الاصطناعي. الاستعمال الكامل مسموح فيها، على أن يُدافع عن كل رقم مباشرة. سلّم المعايير في الجلسة الختامية.</p></aside>
+</section>
+
+<section class="slide" id="check-map" data-lo="LO6" data-n="68" data-session="8">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أين تضعها؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO6" data-id="check-map-q1">
+    <p class="lead">سلسلة صيدليات تدرس نظامًا يرسل عروضًا بحسب مشتريات الأدوية. المورد يدّعي 4 ملايين ريال في السنة دون قياس. الضرر منخفض، والعملاء لم يوافقوا على استعمال مشترياتهم الدوائية للتسويق. بالدليل المعروض، أين تقع؟</p>
+    <div class="opts">
+      <div class="opt" data-why="ينسى سقف الدليل: ادعاء المورد لا يتجاوز 2" data-k="أ">امضِ، فالقيمة 5 والضرر منخفض</div>
+      <div class="opt" data-why="يطبق الأرباع بغير ترتيبها: الحقوق تُفحص أولًا" data-k="ب">اختبر بتكلفة قليلة، فالقيمة 2 بعد سقف ادعاء المورد</div>
+      <div class="opt" data-ok data-k="ج">توقّف: بيانات صحية تُستعمل للتسويق</div>
+      <div class="opt" data-why="يعد الضرر وحده سبب الإصلاح: الضرر منخفض، والمشكلة في الحقوق" data-k="د">أصلح أولًا، ثم أعد التقدير</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المشتريات الدوائية بيانات صحية، والصحة من البيانات الحساسة، والنظام يستثنيها من المعالجة لأغراض تسويقية. فالحقوق 1، والقاعدة الأولى توقف الحالة مهما كانت القيمة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. المثال من خارج سحاب. «ب» يحسب القيمة صحيحًا لكنه يتجاوز القاعدة الأولى. ذكّر بشريحة الاهتمام الصحي في المختبر 1.7: الفكرة نفسها.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-8" data-auto="lab" data-lab="2.8" data-label="المختبر 2.8" data-n="69" data-session="8">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.8 · 25 دقيقة</div><h2>خريطة الفرص والمخاطر</h2><p class="lead small">تقدّر اثنتي عشرة حالة استخدام في مجموعة سحاب بدليل التقدير، وترتبها، وتضع كلًّا منها في ربعها، وتختار ما تبدأ به المناقشة الختامية.</p><a class="nb" href="../labs/D2_8_opportunity_map.html">D2_8_opportunity_map.html</a></div><ul class="checklist"><li>اقرأ دليل التقدير وجدول الحالات الاثنتي عشرة <span class="min">4 د</span></li><li>احسب درجة القيمة بسقف الدليل لكل حالة <span class="min">7 د</span></li><li>أضف درجتي الضرر والحقوق والمجموع <span class="min">5 د</span></li><li>رتّب الحالات وضع كلًّا منها في ربعها <span class="min">5 د</span></li><li>اختر الشركة التي ستعرض خريطتها واكتب سطر الافتتاح <span class="min">4 د</span></li><li class="stretch">✱ إضافي: أضف حالة من عملك بدليل التقدير نفسه، وهي أول صف في ورقة المتابعة</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم في الحساب، والاستعمال الكامل مسموح في الخريطة الختامية بعده. راقب السقف في الخطوة 2، وترتيب قاعدة الأرباع في الخطوة 4. الحالات تحمل أرقام المختبرات، فلا يحتاج المشارك ملفاته السابقة.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-8" data-lo="LO6" data-n="70" data-session="8">
+  <div class="kicker">بعد المختبر 2.8</div>
+  <h2>أربع حالات تمضي، وخمس تتوقف</h2>
+  <table class="t small">
+    <tr><th>الربع</th><th>الحالات (المجموع من 20)</th></tr>
+    <tr class="hl"><td>امضِ</td><td>R1 استشراف لأربع مجموعات (18)، T3 رصد بعتبة جديدة (18)، T4 سُبات (18)، T2 الاحتفاظ بالأثر (16)</td></tr>
+    <tr><td>اختبر بتكلفة قليلة</td><td>R6 البحث (16)، R5 سعرك المعدّل (14)، T6 الأعداد المجمّعة (14)</td></tr>
+    <tr><td>توقّف</td><td>R2 (12)، R3 مختارات (10)، T1 القاعدة الحالية (10)، R4 سعرك اليوم (6)، T5 القائمة الفردية (6)</td></tr>
+  </table>
+  <div class="callout warn mt"><b>لاحظ T5 وT6:</b> البيانات نفسها، فردية بلا موافقة أمام مجمّعة. وR4 وR5 كذلك في التجزئة.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 2.8</code>). لا حالة في «أصلح أولًا» بالدليل الحالي: R4 تتوقف بالحقوق قبل أن تصل إليه. الترتيب الكامل: R1، T3، T4، R6، T2، R5، T6، R2، R3، T1، R4، T5. اسأل: من سيعرض أسواق سحاب، ومن سحاب للاتصالات؟</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-lo="LO3 LO5 LO6" data-n="71" data-session="8">
+  <div class="kicker">خلاصة اليوم 2</div>
+  <h2>ثلاثة أمور تبقى معك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الأثر لا الخطر</h4><p class="small mb0">العرض لمن يغيّر العرض قراره، ومجموعة ضبط دائمة تقيسه.</p></div>
+    <div class="card c-purple"><h4>العتبة من الطاقة</h4><p class="small mb0">الدقة على التنبيهات، والاستدعاء على الحوادث، وشرط الحرجة أولًا.</p></div>
+    <div class="card c-coral"><h4>الحقوق قبل القيمة</h4><p class="small mb0">الدليل يحدد سقف القيمة، والحقوق الغائبة توقف أي حالة.</p></div>
+  </div>
+  <aside class="notes"><p>اطلب من كل مشارك جملة واحدة: أي حالة في عمله ستكون أول صف في ورقة المتابعة؟ تُسلَّم الورقة خلال 30 يومًا بأسماء مغيّرة وأرقام مقرّبة.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="التالي" data-n="72" data-session="8">
+  <div class="kicker">التالي</div>
+  <h2>الجلسة الختامية: الخريطة أمام مكتب القيمة</h2>
+  <p class="lead">خريطة من صفحة واحدة لشركة تختارها، خمس دقائق للعرض، وثلاث تعيد فيها تقدير حالة يختارها المدرب.</p>
+  <aside class="notes"><p>ذكّر بالتسليم: رابط مجلد في Google Drive فيه الخريطة وجداول المختبرات التي تستند إليها وسطر الإفصاح. وكل رقم في الخريطة يجب أن يعرف صاحبه من أي مختبر جاء.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"deck":{"id":"day2","kind":"day","day":2,"label":"اليوم 2","title":"سحاب للاتصالات: الاحتفاظ والشبكة والخريطة","prev":"day1.html","next":"capstone.html","md":"day2.md","alt":{}},"sessions":[{"n":1,"label":"الجلسة 1","title":"من درجة الخطر إلى القرار","slide":"s1","outcomes":["تشرح لماذا لا تقول درجة الخطر من يغيّر العرض قراره","تفحص توازن مجموعتي التجربة العشوائية","تحسب أثر العرض في التجربة كلها وفي الشريحة المستهدفة"],"minutes":38,"lab":{"id":"2.1","title":"قراءة تجربة الاحتفاظ","minutes":20,"href":"../labs/D2_1_read_the_trial.html"}},{"n":2,"label":"الجلسة 2","title":"الاستهداف بالأثر الإضافي","slide":"s2","outcomes":["تحسب الأثر الإضافي لكل خلية من خلايا الاستهداف","تميّز الخلايا التي يضر فيها العرض","تبني جدول استهداف بعتبة معلّلة"],"minutes":45,"lab":{"id":"2.2","title":"جدول الاستهداف بالأثر الإضافي","minutes":25,"href":"../labs/D2_2_uplift_table.html"}},{"n":3,"label":"الجلسة 3","title":"الإيراد المحتفظ به والعروض المهدرة","slide":"s3","outcomes":["تقدّر الإيراد المحتفظ به لسياسة استهداف","تعدّ العروض المهدرة وتكلفتها","تقارن ثلاث سياسات بالقيمة الصافية"],"minutes":37,"lab":{"id":"2.3","title":"قيمة ثلاث سياسات","minutes":20,"href":"../labs/D2_3_policy_value.html"}},{"n":4,"label":"الجلسة 4","title":"حلقات التغذية الراجعة وادعاءات القيمة الصادقة","slide":"s4","outcomes":["تفرّق بين من بقي ومن بقي بسبب العرض","تكشف حلقة التغذية الراجعة بعد إعادة التدريب","تعيد كتابة ادعاء قيمة بما تقيسه مجموعة الضبط"],"minutes":38,"lab":{"id":"2.4","title":"ادعاء الحملة ومجموعة الضبط","minutes":20,"href":"../labs/D2_4_honest_claim.html"}},{"n":5,"label":"الجلسة 5","title":"شذوذ الشبكة أمام الحوادث المؤكدة","slide":"s5","outcomes":["تربط التنبيهات بالحوادث المؤكدة بقاعدة مكتوبة","تحسب الدقة على التنبيهات والاستدعاء على الحوادث","تشرح لماذا تضلل «الدقة» المحسوبة على كل الساعات"],"minutes":45,"lab":{"id":"2.5","title":"مطابقة التنبيهات بالحوادث المؤكدة","minutes":25,"href":"../labs/D2_5_alert_matching.html"}},{"n":6,"label":"الجلسة 6","title":"عتبة يتحملها الفريق","slide":"s6","outcomes":["تبني جدول الدقة والاستدعاء لعدة عتبات","تختار عتبة ضمن طاقة الفريق دون تفويت الحوادث الحرجة","تقترح تغييرًا لا يحتاج نموذجًا جديدًا"],"minutes":45,"lab":{"id":"2.6","title":"عتبة يتحملها المركز","minutes":25,"href":"../labs/D2_6_threshold.html"}},{"n":7,"label":"الجلسة 7","title":"توفير الطاقة وبيانات الموقع","slide":"s7","outcomes":["تقيس توفير الطاقة بالمقارنة بمواقع ضابطة","تفحص مؤشر الحماية موقعًا موقعًا","تقرر في طلب بيانات موقع بالغرض والموافقة والتجميع"],"minutes":37,"lab":{"id":"2.7","title":"تجربة سُبات وطلب بيانات الموقع","minutes":20,"href":"../labs/D2_7_energy_and_location.html"}},{"n":8,"label":"الجلسة 8","title":"خريطة الفرص والمخاطر","slide":"s8","outcomes":["تقدّر حالات الاستخدام بدليل مكتوب للقيمة والضرر والحقوق","ترتّب الحالات وتضعها في أرباع الخريطة","تجهّز خريطة من صفحة واحدة للمناقشة"],"minutes":45,"lab":{"id":"2.8","title":"خريطة الفرص والمخاطر","minutes":25,"href":"../labs/D2_8_opportunity_map.html"}}],"slides":[{"id":"title","n":1,"title":"سحاب للاتصالات: الاحتفاظ والشبكة والخريطة","kind":"title","session":0,"hash":"e51e7f8b","md":"#### [day2#title] سحاب للاتصالات: الاحتفاظ والشبكة والخريطة\n\n*أكاديمية سدايا · الذكاء الاصطناعي في التجزئة والاتصالات*\n\nاليوم 2: الاستهداف بالأثر الإضافي، والادعاء الصادق، وعتبة التنبيه، وتوفير الطاقة وبيانات الموقع، ثم الخريطة\n\nمسار الطلاقة في البيانات والذكاء الاصطناعي · يومان تدريبيان + يوم للمشروع الختامي · 8 جلسات · 8 مختبرات · USE-SEC-210","notes":"رحّب بالقاعة من جديد. اسأل: من أكمل مختبرًا من الأمس في المنزل؟ ومن فكّر في الشركة التي سيعرض خريطتها؟ اليوم ننتقل إلى سحاب للاتصالات: عروض الاحتفاظ، ثم الشبكة، ثم الخريطة التي تجمع اليومين.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"سحاب للاتصالات: الاحتفاظ والشبكة والخريطة","kind":"content","session":0,"hash":"c47fbba3","md":"#### [day2#agenda] سحاب للاتصالات: الاحتفاظ والشبكة والخريطة\n\n*اليوم*\n\n- **الجلسة 1 · من درجة الخطر إلى القرار**: درجة الخطر، والتجربة العشوائية، وفحص التوازن\n- **الجلسة 2 · الاستهداف بالأثر الإضافي**: الأنواع الأربعة، والأثر الإضافي لكل خلية\n- **الجلسة 3 · الإيراد المحتفظ به والعروض المهدرة**: قيمة السياسة، والعروض المهدرة\n- **الجلسة 4 · حلقات التغذية الراجعة وادعاءات القيمة الصادقة**: مجموعة الضبط، وإعادة التدريب، والادعاء الصادق\n- **الجلسة 5 · شذوذ الشبكة أمام الحوادث المؤكدة**: ربط التنبيه بالحادثة، والدقة والاستدعاء\n- **الجلسة 6 · عتبة يتحملها الفريق**: طاقة الفريق، وشدة الحادثة، والصيانة المجدولة\n- **الجلسة 7 · توفير الطاقة وبيانات الموقع**: مواقع ضابطة، ومؤشر الحماية، وغرض بيانات الموقع\n- **الجلسة 8 · خريطة الفرص والمخاطر**: القيمة والضرر والحقوق، وصفحة واحدة تُناقش","notes":"ثماني جلسات بالإيقاع نفسه: مفاهيم قصيرة ثم مختبر. أربع جلسات من 45 دقيقة بمختبر من 25 (الجلسات 2 و5 و6 و8)، وأربع من 37 أو 38 دقيقة بمختبر من 20 (الجلسات 1 و3 و4 و7). الجلسات 1 إلى 4 في الاحتفاظ بالعملاء، و5 و6 في الشبكة، و7 في الطاقة وبيانات الموقع، و8 في الخريطة. تذكير: المختبر 2.2 يبدأ دون أي مساعد.","minutes":null,"lo":[]},{"id":"sahab-telecom","n":3,"title":"سحاب للاتصالات: ثلاثة أنظمة، وثلاثة أسئلة قبل التوسع","kind":"content","session":0,"hash":"297de5ca","md":"#### [day2#sahab-telecom] سحاب للاتصالات: ثلاثة أنظمة، وثلاثة أسئلة قبل التوسع\n\n*دراسة الحالة اليوم*\n\n- **«بقاء».** درجة خطر الانصراف لكل مشترك. قاسم البليهد يرسل عرض الاحتفاظ لمن درجتهم أعلى. السؤال: هل يغيّر العرض قرار من يتلقاه؟\n- **«رصد».** ينبّه إلى الشذوذ في مواقع الأبراج. رتيل الرميان تدير المركز الذي يفحص التنبيهات. السؤال: كم تنبيهًا يستطيع المركز فحصه؟\n- **«سُبات».** يطفئ أجزاء من الموقع حين يقل الحمل. السؤال: كم يوفر فعلًا، وبأي ثمن في جودة المكالمات؟\n\n> **ووصال الحبشان** مسؤولة حماية البيانات حاضرة في كل قرار يمس بيانات المشتركين.","notes":"الأنظمة والأشخاص اصطناعيون، والملف في `labs/files/company_profile.txt`. نحو 400,000 مشترك آجل الدفع. اربط بالأمس: السلسلة نفسها، بيانات ثم مخرج ثم فعل ثم نتيجة، والسؤال نفسه: ما الذي تغير بسبب النظام؟","minutes":null,"lo":["LO1"]},{"id":"check-day1-review","n":4,"title":"أين يستحق النموذج ترخيصه؟","kind":"quiz","session":0,"hash":"0d44ac27","md":"#### [day2#check-day1-review] أين يستحق النموذج ترخيصه؟\n\n*مراجعة الأمس*\n\n**سؤال:** مخبز يدرس نموذجًا للتنبؤ بالطلب ترخيصه 60,000 ريال لكل فئة في السنة. على سنة لم يرها النموذج، يقلل الهدر والنقص أمام «مبيعات الأسبوع نفسه من العام الماضي» بما قيمته 150,000 ريال في الخبز، و40,000 في الحلويات، و90,000 في المعجنات. ماذا يوصي المحلل؟\n\n- أ. الترخيص للفئات الثلاث، فالوفر الكلي 280,000 ريال أكبر من الترخيص 180,000\n- ب. لا ترخيص، فالنموذج لا يربح في كل الفئات\n- ج. الترخيص للخبز والمعجنات فقط، وتبقى الحلويات على القاعدة البسيطة\n- د. نطلب من المورد دقة النموذج في كل فئة قبل أي قرار","notes":"الإجابة: ج. الأرقام توضيحية ومن خارج سحاب، والفكرة فكرة المختبر 1.3. دقيقتان فقط. من اختار «أ» اسأله: من يدفع ترخيص الحلويات؟ ونربط باليوم: سنحسب القيمة الصافية لسياسات الاحتفاظ بالمنطق نفسه.","minutes":null,"lo":["LO2"]},{"id":"s1","n":5,"title":"من درجة الخطر إلى القرار","kind":"section","session":1,"hash":"12318898","md":"#### [day2#s1] من درجة الخطر إلى القرار\n\n*الجلسة 1*\n\n- تشرح لماذا لا تقول درجة الخطر من يغيّر العرض قراره\n- تفحص توازن مجموعتي التجربة العشوائية\n- تحسب أثر العرض في التجربة كلها وفي الشريحة المستهدفة","notes":"نبدأ بـ«بقاء» وعروض الاحتفاظ. سؤال الجلسة: هل يكفي أن نعرف من سيغادر؟","minutes":null,"lo":["LO3","LO1"]},{"id":"risk-is-not-response","n":6,"title":"درجة الخطر تقول من سيغادر، لا من يبقى بسبب العرض","kind":"content","session":1,"hash":"971331ae","md":"#### [day2#risk-is-not-response] درجة الخطر تقول من سيغادر، لا من يبقى بسبب العرض\n\n*سؤالان مختلفان*\n\n- **ما تجيب عنه الدرجة.** من الأرجح أن يغادر خلال 90 يومًا إن لم نفعل شيئًا. تُقاس بمقارنة التوقع بما حدث.\n- **ما يحتاجه القرار.** من سيغيّر العرض قراره. شخص قرر المغادرة لسبب لا يصلحه الخصم درجته عالية، والعرض لا ينفعه.\n\n> **أين يقع الخطأ.** «النموذج دقيق في التنبؤ بالانصراف، إذن الحملة ناجحة». دقة التنبؤ لا تقول شيئًا عن أثر العرض.","notes":"مثال من خارج سحاب: نادٍ رياضي يعرف أن العضو الذي انتقل إلى مدينة أخرى سيلغي اشتراكه، ودرجته عالية جدًّا، لكن لا خصم يعيده. اسأل القاعة: من في عملكم يُستهدف لأنه «الأعلى خطرًا»؟ وهل قاس أحد ماذا حدث لمن لم يُستهدف؟\n\nالمصادر: Gutierrez and Gérardy (2017), Causal Inference and Uplift Modelling: A Review of the Literature.","minutes":null,"lo":["LO3","LO1"]},{"id":"randomize-to-know","n":7,"title":"القرعة تصنع مجموعتين متشابهتين، فيكون الفرق أثر العرض","kind":"content","session":1,"hash":"68021d5b","md":"#### [day2#randomize-to-know] القرعة تصنع مجموعتين متشابهتين، فيكون الفرق أثر العرض\n\n*التجربة العشوائية*\n\n1. **1 · المؤهلون** كل المشتركين المؤهلين للعرض\n2. **2 · القرعة** نصف يتلقى العرض ونصف لا، دون النظر إلى أي صفة\n3. **3 · الانتظار** 90 يومًا لكل مشترك\n4. **4 · المقارنة** نسبة الانصراف في المجموعتين\n\n> **الخلاصة.** القرعة لا تحتاج «ضبطًا» للفروق بين العملاء: هي تصنع التشابه.","notes":"الفكرة نفسها في تجربة A/B بالأمس، لكن على أشخاص لا على زيارات. لماذا لا نقارن من تلقى العرض العام الماضي بمن لم يتلقه؟ لأن الاختيار كان بالدرجة: المجموعتان مختلفتان قبل العرض. اسأل: ما ثمن التجربة؟ (نصف المؤهلين لا يتلقون العرض فترة.)\n\nالمصادر: Kohavi, Tang and Xu (2020), Trustworthy Online Controlled Experiments.","minutes":null,"lo":["LO3"]},{"id":"balance-check","n":8,"title":"افحص التوازن أولًا: صفات ما قبل العرض يجب أن تتشابه","kind":"content","session":1,"hash":"11314a90","md":"#### [day2#balance-check] افحص التوازن أولًا: صفات ما قبل العرض يجب أن تتشابه\n\n*قبل قراءة النتيجة*\n\n| مثال: بنك يجرب ترقية مجانية للبطاقة | تلقوا الترقية | لم يتلقوها |\n| --- | --- | --- |\n| العدد | 12,040 | 11,960 |\n| متوسط مدة العلاقة (سنوات) | 6.1 | 6.0 |\n| متوسط الإنفاق الشهري (ريال) | 4,210 | 4,190 |\n| نسبة حاملي بطاقة أخرى | 31% | 31% |\n\n> **أين يقع الخطأ.** إن اختلفت المجموعتان كثيرًا في صفة قبل العرض، فالقرعة معطوبة، ولا يُقرأ الفرق في النتيجة.","notes":"الأرقام توضيحية. فحص التوازن يُجرى على صفات لا يغيرها العرض: المدة والإيراد والعقد. ولا يُفحص على النتيجة نفسها. وبالأمس فحصنا نسبة الزوار في كل نسخة: الفكرة نفسها.","minutes":null,"lo":["LO3"]},{"id":"effect-in-points","n":9,"title":"الأثر فرق بالنقاط، ويُحسب لكل شريحة على حدة","kind":"content","session":1,"hash":"6865f811","md":"#### [day2#effect-in-points] الأثر فرق بالنقاط، ويُحسب لكل شريحة على حدة\n\n*كيف يُكتب الأثر*\n\n- الأثر = الانصراف دون عرض ناقص الانصراف مع العرض\n- مثال: 20% دون عرض و17% معه: الأثر 3 نقاط\n- «خفض الانصراف 15%» صحيح نسبيًّا، ويبدو أكبر مما هو\n- الأثر في الكل متوسط لآثار مختلفة في الشرائح\n\n- **في الجدول.** `AVERAGEIFS` على عمود الانصراف، بشرط العرض وشرط الشريحة، ثم الطرح.","notes":"الأرقام توضيحية. النقاط هي ما يُضرب في عدد العملاء لنعرف كم بقي بسبب العرض. اسأل: في أي شريحة تتوقعون أكبر أثر؟ اجمع توقعات القاعة واكتبها، ونعود إليها بعد المختبر.","minutes":null,"lo":["LO3"]},{"id":"check-trial","n":10,"title":"ماذا تقول هذه التجربة؟","kind":"quiz","session":1,"hash":"99c07078","md":"#### [day2#check-trial] ماذا تقول هذه التجربة؟\n\n*نقطة تحقق*\n\n**سؤال:** شركة تأمين تتصل هاتفيًّا قبل التجديد. في تجربة بالقرعة، المجموعتان متشابهتان في العمر ومدة الوثيقة. عدم التجديد 22% دون اتصال و18% مع الاتصال. في أعلى شريحة خطر: 45% دون اتصال و44% معه. ما الخلاصة؟\n\n- أ. الاتصال يخفض عدم التجديد 4 نقاط، ولا يكاد يغيّر أعلى شريحة خطر\n- ب. الاتصال يفشل في أعلى شريحة لأن 44% ما زالوا لا يجددون\n- ج. لا تُقرأ النتيجة لأن المجموعتين قد تختلفان\n- د. تُركّز الاتصالات على أعلى شريحة خطر، فهي الأكثر مغادرة","notes":"الإجابة: أ. الأرقام توضيحية ومن خارج سحاب. «د» هو القاعدة الحالية في سحاب للاتصالات، ولهذا نسأله هنا. من اختاره، اطلب منه أن يبحث عن الرقم الذي يثبته في المختبر.","minutes":null,"lo":["LO3"]},{"id":"lab-2-1","n":11,"title":"قراءة تجربة الاحتفاظ","kind":"lab","session":1,"hash":"176b9bde","md":"#### [day2#lab-2-1] قراءة تجربة الاحتفاظ\n\nالمختبر 2.1 · 20 دقيقة\n\nتقرأ تجربة الاحتفاظ العشوائية على 100,000 مشترك: تفحص التوازن بين من تلقوا العرض ومن لم يتلقوه، وتحسب أثر العرض في الكل وفي كل شريحة خطر.\n\n[D2_1_read_the_trial.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_1_read_the_trial.html)\n\n- [ ] اقرأ مذكرة التجربة وأعمدة الملف (3 د)\n- [ ] افحص التوازن: المدة والإيراد ونسبة من انتهى عقده في المجموعتين (4 د)\n- [ ] احسب نسبة الانصراف والأثر في التجربة كلها (4 د)\n- [ ] احسب الأثر في كل شريحة خطر من الخمس (7 د)\n- [ ] اكتب في سطرين ما تقوله النتيجة عن القاعدة الحالية (2 د)\n- [ ] ✱ إضافي: احسب نسبة الانصراف في الشريحة 5 لمن تلقوا العرض، واكتب لماذا لا تعني نجاحًا ولا فشلًا وحدها","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. الملف 100,000 صف: في Google Sheets يُستورد ولا يُفتح بالنقر. راقب الخطوة 2: من يفحص التوازن على عمود الانصراف يخلط الفحص بالنتيجة. وراقب إشارة الطرح في الخطوة 4. لا يحتاج المختبر شيئًا من الأمس.","minutes":null,"lo":[]},{"id":"debrief-2-1","n":12,"title":"العرض يعمل في الشريحتين 3 و4، والقاعدة ترسله إلى 5","kind":"content","session":1,"hash":"9e38516f","md":"#### [day2#debrief-2-1] العرض يعمل في الشريحتين 3 و4، والقاعدة ترسله إلى 5\n\n*بعد المختبر 2.1*\n\n| البند | القيمة |\n| --- | --- |\n| الشريحة 5 | 0.38 نقطة |\n| الشريحة 4 | 6.67 نقطة |\n| الشريحة 3 | 5.42 نقطة |\n| الشريحة 2 | 0.67 نقطة |\n| الشريحة 1 | -1.55 نقطة |\n\n> **متوازنتان:** المدة 21.30 و21.41 شهرًا، والإيراد 165.45 و165.63 ريالًا. الأثر الكلي 2.15 نقطة (15.31% دون عرض و13.16% معه).","notes":"الأرقام من تشغيل الحل (`check.py 2.1`). في الشريحة 5: 41.37% يغادرون دون عرض و40.99% معه. والشريحة 1 سالبة: العرض يرفع الانصراف. هذا سؤال الجلسة التالية. قارن بتوقعات القاعة المكتوبة قبل المختبر.","minutes":null,"lo":["LO3"]},{"id":"s2","n":13,"title":"الاستهداف بالأثر الإضافي","kind":"section","session":2,"hash":"2228bc6d","md":"#### [day2#s2] الاستهداف بالأثر الإضافي\n\n*الجلسة 2*\n\n- تحسب الأثر الإضافي لكل خلية من خلايا الاستهداف\n- تميّز الخلايا التي يضر فيها العرض\n- تبني جدول استهداف بعتبة معلّلة","notes":"من خمس شرائح إلى خلايا أدق، ومن «من يغادر» إلى «من يتغير».","minutes":null,"lo":["LO3"]},{"id":"four-types","n":14,"title":"أربعة أنواع من العملاء، والعرض ينفع نوعًا واحدًا","kind":"content","session":2,"hash":"54ea39fd","md":"#### [day2#four-types] أربعة أنواع من العملاء، والعرض ينفع نوعًا واحدًا\n\n*الأثر الإضافي*\n\n- **يقتنع بالعرض.** يغادر دون عرض ويبقى معه. هنا فقط يصنع العرض قيمة.\n- **يبقى على كل حال.** العرض له خصم مجاني: تكلفة بلا أثر.\n- **يغادر على كل حال.** قراره لا يغيره الخصم: تكلفة بلا أثر.\n- **يوقظه العرض.** كان سيبقى، فذكّره العرض بأن له خيارات: العرض يضر.","notes":"لا نعرف نوع كل فرد: كل شخص إما تلقى العرض أو لم يتلقه. لكننا نعرف نسب الأنواع في كل خلية من التجربة: الأثر الإضافي في الخلية هو صافي «يقتنع» ناقص «يوقظه». المصطلح بالإنجليزية uplift، والأنواع في الأدبيات: persuadables, sure things, lost causes, sleeping dogs.\n\nالمصادر: Gutierrez and Gérardy (2017), Causal Inference and Uplift Modelling: A Review of the Literature.","minutes":null,"lo":["LO3"]},{"id":"uplift-per-cell","n":15,"title":"الأثر الإضافي يُحسب في خلايا تجمع صفتين أو أكثر","kind":"content","session":2,"hash":"6000677d","md":"#### [day2#uplift-per-cell] الأثر الإضافي يُحسب في خلايا تجمع صفتين أو أكثر\n\n*خلايا الاستهداف*\n\n| مثال: مجلة ترسل عرض تجديد | دون عرض | مع العرض | الأثر |\n| --- | --- | --- | --- |\n| مشترك ورقي، أقل من سنتين | 30% | 24% | 6 نقاط |\n| مشترك ورقي، سنتان فأكثر | 12% | 11% | 1 نقطة |\n| مشترك رقمي، أقل من سنتين | 25% | 16% | 9 نقاط |\n| مشترك رقمي، سنتان فأكثر | 8% | 10% | -2 نقطتان |\n\n> **الخلاصة.** الصفة الثانية تكشف ما يخفيه متوسط الشريحة.","notes":"الأرقام توضيحية ومن خارج سحاب. في سحاب الصفة الثانية حالة العقد: من انتهى عقده يستطيع المغادرة غدًا، ومن ما زال في عقده لا. اسأل: لماذا قد يضر العرض في الخلية الأخيرة؟","minutes":null,"lo":["LO3"]},{"id":"sleeping-dogs","n":16,"title":"العرض رسالة: قد يذكّر العميل الراضي بأن يقارن","kind":"content","session":2,"hash":"30c479bb","md":"#### [day2#sleeping-dogs] العرض رسالة: قد يذكّر العميل الراضي بأن يقارن\n\n*حين يضر العرض*\n\n- رسالة «نفتقدك» لعضو ساكن في نادٍ رياضي تذكّره بأنه يدفع ولا يحضر\n- عرض لعميل في عقد يذكّره بموعد نهايته\n- الأثر السالب يظهر في الخلايا المستقرة غالبًا\n- الحل: لا عرض لهذه الخلايا، لا عرضًا أكبر\n\n- **متى نصدق الأثر السالب؟** في خلية كبيرة، وفي أكثر من خلية بالنمط نفسه. خلية صغيرة بفرق صغير قد تكون صدفة: نكتب ذلك ولا نبني عليه وحده.","notes":"هذا ما يفسر أن «العرض للجميع» قد يكون أسوأ من «لا عرض» في بعض الخلايا. والتنبيه في البطاقة مهم: لا نحتاج إحصاءً معقدًا هنا، لكن نحتاج أن نقول بصدق إن الخلية الصغيرة أقل يقينًا.","minutes":null,"lo":["LO3"]},{"id":"ai-off-first","n":17,"title":"المحاولة الأولى دون ذكاء اصطناعي، والمراجعة بعدها","kind":"content","session":2,"hash":"d109629e","md":"#### [day2#ai-off-first] المحاولة الأولى دون ذكاء اصطناعي، والمراجعة بعدها\n\n*المختبر القادم*\n\n1. **1 · وحدك** تبني الجدول وتكتب الاستهداف بنفسك\n2. **2 · الحفظ** جدولك الأول هو ما يدخل سجل المختبرات\n3. **3 · المراجعة** بعدها تطلب من مساعد أن يراجع، وتكتب ما قبلت ورفضت\n\n> **لماذا.** الحكم على خلية بأنها «تبقى على كل حال» أو «يوقظها العرض» هو المهارة نفسها. مساعد يكتبه عنك يأخذ المهارة منك.","notes":"أكّد القاعدة قبل فتح المختبر، واطلب إغلاق المساعدات. وفي التمرين الإضافي: يُعطى المساعد الأرقام لا الملف، فالملف قد يكون بيانات عملاء في الواقع.","minutes":null,"lo":["LO3"]},{"id":"check-uplift","n":18,"title":"لمن ترسل العرض؟","kind":"quiz","session":2,"hash":"7a0f7b4f","md":"#### [day2#check-uplift] لمن ترسل العرض؟\n\n*نقطة تحقق*\n\n**سؤال:** شركة كهرباء تجرب عرض خصم لمن يُتوقع أن ينتقلوا إلى مزوّد آخر. في خلية «فواتير مرتفعة، عقد منتهٍ» الانتقال 40% دون عرض و39% معه. في «فواتير متوسطة، عقد منتهٍ» 18% و11%. في «فواتير منخفضة، عقد سارٍ» 3% و5%. أي خلية ترسل لها العرض؟\n\n- أ. «فواتير مرتفعة، عقد منتهٍ»، لأن نسبة الانتقال فيها أعلى\n- ب. «فواتير منخفضة، عقد سارٍ»، لأن الانتقال فيها أقل\n- ج. الخلايا الثلاث، فالعرض لا يكلف كثيرًا\n- د. «فواتير متوسطة، عقد منتهٍ» وحدها، فالأثر فيها 7 نقاط والعرض يغيّر قرارهم","notes":"الإجابة: د. الأرقام توضيحية. هذه نقطة التحقق الوحيدة قبل محاولة دون مساعد، فخذ وقتك في «لماذا» قبل فتح المختبر.","minutes":null,"lo":["LO3"]},{"id":"lab-2-2","n":19,"title":"جدول الاستهداف بالأثر الإضافي","kind":"lab","session":2,"hash":"8eab8c75","md":"#### [day2#lab-2-2] جدول الاستهداف بالأثر الإضافي\n\nالمختبر 2.2 · 25 دقيقة\n\nتحسب الأثر الإضافي في عشر خلايا (شريحة الخطر × حالة العقد) وترتبها، وتحدد الخلايا التي يضر فيها العرض، وتبني جدول استهداف. المحاولة الأولى دون ذكاء اصطناعي.\n\n[D2_2_uplift_table.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_2_uplift_table.html)\n\n- [ ] ابنِ جدول الخلايا العشر من ملف التجربة (5 د)\n- [ ] احسب نسبة الانصراف بالعرض ودونه في كل خلية (8 د)\n- [ ] احسب الأثر الإضافي ورتّب الخلايا (5 د)\n- [ ] علّم الخلايا السالبة والخلايا التي تتجاوز 3 نقاط (3 د)\n- [ ] اكتب جدول الاستهداف وسبب كل خلية مستبعدة (4 د)\n- [ ] ✱ إضافي: بعد المحاولة الأولى اسأل مساعدًا أن يراجع جدولك، واكتب ما وافقت عليه وما رفضته ولماذا","notes":"سياسة الذكاء الاصطناعي: دون ذكاء اصطناعي حتى نهاية الخطوة 5. مرّ على القاعة وتأكد. الجدول المحوري يختصر الخطوة 2. راقب ترتيب الطرح (دون عرض ناقص مع العرض). المختبر لا يحتاج 2.1: يبدأ من ملف التجربة نفسه.","minutes":null,"lo":[]},{"id":"debrief-2-2","n":20,"title":"أربع خلايا تستحق العرض، وثلاث يضرها","kind":"content","session":2,"hash":"fcc7672b","md":"#### [day2#debrief-2-2] أربع خلايا تستحق العرض، وثلاث يضرها\n\n*بعد المختبر 2.2*\n\n| الشريحة | انتهى العقد | في العقد |\n| --- | --- | --- |\n| 5 | 1.13 | -2.04 |\n| 4 | 7.84 | 4.30 |\n| 3 | 6.88 | 3.62 |\n| 2 | 1.25 | 0.24 |\n| 1 | -1.34 | -1.65 |\n\n> **الاستهداف:** الشريحتان 3 و4 في الحالتين. الشريحة 5 تغادر على كل حال، و1 و2 تبقيان على كل حال، والسالبة يوقظها العرض.","notes":"الأرقام بالنقاط من تشغيل الحل (`check.py 2.2`). خلية «في العقد، 5» فيها 5,012 مشتركًا فقط: أثرها السالب أقل يقينًا، ونقول ذلك. اسأل من أكمل التمرين الإضافي: ماذا قال المساعد، وماذا رفضتم؟","minutes":null,"lo":["LO3"]},{"id":"s3","n":21,"title":"الإيراد المحتفظ به والعروض المهدرة","kind":"section","session":3,"hash":"2a45555f","md":"#### [day2#s3] الإيراد المحتفظ به والعروض المهدرة\n\n*الجلسة 3*\n\n- تقدّر الإيراد المحتفظ به لسياسة استهداف\n- تعدّ العروض المهدرة وتكلفتها\n- تقارن ثلاث سياسات بالقيمة الصافية","notes":"جدول الاستهداف يقول لمن. هذه الجلسة تقول كم يساوي.","minutes":null,"lo":["LO3"]},{"id":"policy-value","n":22,"title":"القيمة الصافية = المحتفظ بهم × قيمتهم ناقص العروض × تكلفتها","kind":"content","session":3,"hash":"9f16c29c","md":"#### [day2#policy-value] القيمة الصافية = المحتفظ بهم × قيمتهم ناقص العروض × تكلفتها\n\n*قيمة السياسة*\n\n1. **1 · المحتفظ بهم** عدد الخلية × الأثر بالنقاط ÷ 100\n2. **2 · الإيراد** المحتفظ بهم × الإيراد الشهري × 12\n3. **3 · التكلفة** كل عرض مُرسل × تكلفته، لمن تغيّر ومن لم يتغير\n4. **4 · الصافي** الإيراد ناقص التكلفة، لكل سياسة\n\n> **أين يقع الخطأ.** حساب التكلفة على المحتفظ بهم وحدهم. العرض يُدفع لكل من يتلقاه.","notes":"السياسة قاعدة: لمن نرسل. نقارن السياسات بالمعادلة نفسها. والقيمة 12 شهرًا افتراض نكتبه، لا حقيقة: لا نعرف كم يبقى العميل بعد التسعين يومًا.","minutes":null,"lo":["LO3"]},{"id":"wasted-offers","n":23,"title":"أغلب العروض لا تغيّر قرارًا، والحكم بالصافي","kind":"content","session":3,"hash":"dc1923b5","md":"#### [day2#wasted-offers] أغلب العروض لا تغيّر قرارًا، والحكم بالصافي\n\n*العروض المهدرة*\n\n- مقهى يرسل قسيمة لكل عملائه: أغلبهم كانوا سيأتون\n- العرض المهدر = أُرسل ولم يغيّر شيئًا\n- نسبة المهدر تبقى عالية في أفضل سياسة\n- المهم: هل يغطي القليل المتغير تكلفة الكل؟\n\n- **سؤالان.** كم عرضًا أهدرنا؟ وكم ربحنا صافيًا؟ الأول يعلّم، والثاني يقرر.","notes":"مثال من خارج سحاب. اسأل: لو قيل لكم إن 95% من عروض سياسة ما مهدرة، هل تلغونها؟ الجواب: يعتمد على الصافي. سياسة تهدر 94% وتربح خير من سياسة تهدر 90% وتخسر.","minutes":null,"lo":["LO3"]},{"id":"next-best-offer","n":24,"title":"«أي عرض» سؤال ثانٍ بعد «لمن»، ويُقاس بالطريقة نفسها","kind":"content","session":3,"hash":"d7f481ee","md":"#### [day2#next-best-offer] «أي عرض» سؤال ثانٍ بعد «لمن»، ويُقاس بالطريقة نفسها\n\n*العرض الأنسب*\n\n- نظام «العرض الأنسب» يختار لكل عميل عرضًا من عدة عروض: خصم، أو باقة أكبر، أو جهاز\n- لكل عرض تكلفة مختلفة وأثر إضافي مختلف في كل خلية\n- التجربة تقسم المؤهلين بالقرعة على العروض وعلى «لا عرض»\n- العرض الأنسب للخلية: الأعلى قيمة صافية، لا الأعلى قبولًا\n\n- **أين يقع الخطأ.** الحكم بنسبة قبول العرض. العميل الذي يقبل أكبر خصم قد يكون ممن يبقى على كل حال.","notes":"المصطلح بالإنجليزية next-best offer. لا يحتاج المختبر هذه الشريحة: سحاب تجرّب عرضًا واحدًا. الفكرة أن المعادلة نفسها (الأثر الإضافي × القيمة ناقص التكلفة) تُحسب لكل عرض في كل خلية، ويُختار الأعلى صافيًا. مثال من خارج سحاب: نادٍ رياضي يقارن شهرًا مجانيًّا بجلسة تدريب خاصة لمن يوشك اشتراكه أن ينتهي.","minutes":null,"lo":["LO3"]},{"id":"breakeven-uplift","n":25,"title":"أدنى أثر يجعل الخلية رابحة = التكلفة ÷ قيمة العميل","kind":"content","session":3,"hash":"79f3c627","md":"#### [day2#breakeven-uplift] أدنى أثر يجعل الخلية رابحة = التكلفة ÷ قيمة العميل\n\n*نقطة التعادل*\n\n- **1.67** نقطة: عرض بـ40 ريالًا لعميل يدفع 200 ريال في الشهر (40 ÷ 2,400)\n- **3.33** نقطة: إن تضاعفت التكلفة إلى 80 ريالًا\n\n> **الخلاصة.** كل خلية أثرها تحت نقطة التعادل تخسر، مهما كان خطرها.","notes":"الأرقام توضيحية. هذا يعطي عتبة الاستهداف سببًا بالريال بدل رقم مختار. التمرين الإضافي في المختبر يطبقه على سحاب.","minutes":null,"lo":["LO3"]},{"id":"scale-to-base","n":26,"title":"تكبير التجربة إلى القاعدة كلها يفترض أشياء نكتبها","kind":"content","session":3,"hash":"c1c680bc","md":"#### [day2#scale-to-base] تكبير التجربة إلى القاعدة كلها يفترض أشياء نكتبها\n\n*من التجربة إلى القاعدة*\n\n- أن عملاء الخلية في القاعدة يشبهون عملاءها في التجربة\n- أن الأثر المقيس في 90 يومًا يبقى بعدها\n- أن العرض نفسه بالتكلفة نفسها\n- أن المنافسين لا يغيرون عروضهم في الفترة نفسها\n\n> **في التوصية.** الرقم والافتراضات معًا. من يقرأ الرقم وحده يظنه وعدًا.","notes":"اطلب من المشاركين في الخطوة 5 من المختبر أن يكتبوا افتراضًا واحدًا على الأقل. القاعدة في سحاب نحو 400,000 مشترك، والملف يبدأ مكبّرًا.","minutes":null,"lo":["LO3"]},{"id":"check-policy","n":27,"title":"أي سياسة؟","kind":"quiz","session":3,"hash":"da74615a","md":"#### [day2#check-policy] أي سياسة؟\n\n*نقطة تحقق*\n\n**سؤال:** شركة إنترنت منزلي تقارن سياستين لعرض بـ30 ريالًا. «الأعلى خطرًا»: 50,000 عرض، 200 محتفظ بهم، الصافي سالب. «بالأثر الإضافي»: 80,000 عرض، 3,000 محتفظ بهم، الصافي موجب، و96% من عروضها مهدرة. ماذا يقول المحلل؟\n\n- أ. لا هذه ولا تلك، فـ96% من العروض مهدرة، وهي نسبة لا تقبلها أي إدارة\n- ب. سياسة الأثر الإضافي، مع افتراضات التكبير بجانب الرقم\n- ج. «الأعلى خطرًا»، لأنها ترسل عروضًا أقل\n- د. الاثنتان معًا، لتصل العروض إلى الكل","notes":"الإجابة: ب. الأرقام توضيحية ومن خارج سحاب. من اختار «أ» اسأله: ما السياسة التي تهدر أقل من 90%؟ (لا عرض لأحد، وصافيها صفر.)","minutes":null,"lo":["LO3"]},{"id":"lab-2-3","n":28,"title":"قيمة ثلاث سياسات","kind":"lab","session":3,"hash":"43830265","md":"#### [day2#lab-2-3] قيمة ثلاث سياسات\n\nالمختبر 2.3 · 20 دقيقة\n\nتطبّق الأثر الإضافي المقيس على قاعدة من 400,000 مشترك، وتقدّر لثلاث سياسات (العرض للجميع، وللشريحة العليا، وبالأثر الإضافي) العملاء المحتفظ بهم والإيراد والعروض المهدرة والقيمة الصافية.\n\n[D2_3_policy_value.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_3_policy_value.html)\n\n- [ ] افتح ملف الخلايا ومذكرة التجربة (2 د)\n- [ ] احسب لكل خلية العملاء المحتفظ بهم بسبب العرض (5 د)\n- [ ] احسب الإيراد والتكلفة والعروض المهدرة لكل خلية (5 د)\n- [ ] اجمع لكل سياسة من الثلاث (5 د)\n- [ ] اكتب التوصية لقاسم البليهد بالأرقام (3 د)\n- [ ] ✱ إضافي: ضاعف تكلفة العرض إلى 100 ريال: أي سياسة تبقى رابحة","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. المختبر يبدأ من `start/uplift_cells.csv`، فلا يحتاج 2.2. راقب الخطوة 3: التكلفة على عدد الخلية كله لا على المحتفظ بهم. ومن ينهي مبكرًا يأخذ التمرين الإضافي.","minutes":null,"lo":[]},{"id":"debrief-2-3","n":29,"title":"القاعدة الحالية تخسر 3.5 مليون، والاستهداف بالأثر يربح 11 مليونًا","kind":"content","session":3,"hash":"e652ca3a","md":"#### [day2#debrief-2-3] القاعدة الحالية تخسر 3.5 مليون، والاستهداف بالأثر يربح 11 مليونًا\n\n*بعد المختبر 2.3*\n\n| السياسة | العروض | المحتفظ بهم | المهدر | الصافي (ريال) |\n| --- | --- | --- | --- | --- |\n| للجميع | 400,000 | 9,129 | 97.72% | -1,837,673 |\n| للشريحة 5 | 80,648 | 276 | 99.66% | -3,478,604 |\n| بالأثر الإضافي | 159,104 | 9,544 | 94.0% | 11,035,401 |\n\n> **لاحظ.** الاستهداف بالأثر يحتفظ بعدد أكبر من «للجميع» بنصف العروض تقريبًا: لأنه لا يوقظ أحدًا.","notes":"الأرقام من تشغيل الحل (`check.py 2.3`). التمرين الإضافي: عند 165 ريالًا شهريًّا، التعادل نحو 2.5 نقطة لتكلفة 50 ونحو 5 نقاط لتكلفة 100. وهذه الأرقام تعود في الخريطة: T1 وT2.","minutes":null,"lo":["LO3"]},{"id":"s4","n":30,"title":"حلقات التغذية الراجعة وادعاءات القيمة الصادقة","kind":"section","session":4,"hash":"ca5681f7","md":"#### [day2#s4] حلقات التغذية الراجعة وادعاءات القيمة الصادقة\n\n*الجلسة 4*\n\n- تفرّق بين من بقي ومن بقي بسبب العرض\n- تكشف حلقة التغذية الراجعة بعد إعادة التدريب\n- تعيد كتابة ادعاء قيمة بما تقيسه مجموعة الضبط","notes":"من التجربة إلى الحملة الجارية: كيف نقيس قيمة نظام بعد أن يعمل؟","minutes":null,"lo":["LO3","LO1"]},{"id":"stayed-vs-kept","n":31,"title":"«بقي بعد العرض» ليس «بقي بسبب العرض»","kind":"content","session":4,"hash":"a7b32f08","md":"#### [day2#stayed-vs-kept] «بقي بعد العرض» ليس «بقي بسبب العرض»\n\n*بقي أم أُبقي؟*\n\n- **ما يعدّه التقرير عادة.** مستشفى يتصل بالمرضى بعد الخروج: «90% لم يعودوا إلى الطوارئ، إذن الاتصال أنقذ 90%».\n- **ما يجب أن يُعدّ.** من لم يُتصل بهم: 87% لم يعودوا أيضًا. الاتصال صنع 3 نقاط، لا 90.\n\n> **أين يقع الخطأ.** كل من بقي يُحسب «أُنقذ»، فيصير الرقم ثلاثين ضعف الحقيقة أو أكثر.","notes":"الأرقام توضيحية ومن خارج سحاب. الفرق نفسه بين «بقي» و«أُبقي» الذي حسبناه في التجربة. الجديد هنا أن الحملة جارية، فلا نملك تجربة إلا إذا أبقينا مجموعة لا تتلقى العرض.","minutes":null,"lo":["LO3","LO1"]},{"id":"holdout-always","n":32,"title":"مجموعة ضبط دائمة: ثمن صغير لرقم يمكن تصديقه","kind":"content","session":4,"hash":"7fc81588","md":"#### [day2#holdout-always] مجموعة ضبط دائمة: ثمن صغير لرقم يمكن تصديقه\n\n*مجموعة الضبط*\n\n- نسبة صغيرة ممن يختارهم النظام لا تتلقى العرض، بالقرعة\n- تكلفتها: الأثر الضائع على هذه النسبة فقط\n- إلغاؤها «لكيلا نخسر إيرادًا» يلغي القدرة على القياس\n- الشهر دون مجموعة ضبط شهر بلا رقم\n\n- **حساب سريع.** ضبط بنسبة 5% وأثر 3 نقاط: الخسارة 0.15 نقطة من المختارين. هذا ثمن معرفة أن الحملة تعمل.","notes":"المصطلح بالإنجليزية holdout. اسأل: من يملك قرار إلغاء مجموعة الضبط في جهاتكم؟ وإن لم يكن أحد، فمن يلغيها حين يضيق الربع؟ التمرين الإضافي في المختبر يطلب هذه القاعدة.\n\nالمصادر: Kohavi, Tang and Xu (2020), Trustworthy Online Controlled Experiments.","minutes":null,"lo":["LO3"]},{"id":"retrain-loop","n":33,"title":"إعادة التدريب على نتائج الحملة قد تعلّم النموذج اختيار من يبقى على كل حال","kind":"content","session":4,"hash":"69a4d0ee","md":"#### [day2#retrain-loop] إعادة التدريب على نتائج الحملة قد تعلّم النموذج اختيار من يبقى على كل حال\n\n*حلقة التغذية الراجعة*\n\n1. **الحملة** من تلقى العرض وبقي يُسجَّل «نجاحًا»\n2. **إعادة التدريب** النموذج يتعلم صفات «الناجحين»\n3. **الاختيار الجديد** يختار من يبقى على كل حال: نسبة البقاء ترتفع، والأثر يهبط\n\n> **ما تقيسه.** البقاء في مجموعة الضبط. إن ارتفع بعد النموذج الجديد، فالمختارون تغيروا لا العرض.","notes":"الدليل المرجعي للتحيز يسمي هذا تحيز حلقة التغذية الراجعة: مخرجات النظام تصير بيانات تدريبه. رأيناه أمس في النفاد وفي التوصيات. مثال من خارج سحاب: نموذج يختار الطلاب لبرنامج دعم، ويُدرَّب على من «نجح» بعد البرنامج، فيختار المتفوقين أصلًا.\n\nالمصادر: SDAIA, AI Bias Reference Guide, first edition, Feedback Loop Bias.","minutes":null,"lo":["LO3","LO1"]},{"id":"honest-claim-rule","n":34,"title":"ثلاثة أسطر: ما قيس، وما لم يُقس، وما يتغير","kind":"content","session":4,"hash":"0510d7a9","md":"#### [day2#honest-claim-rule] ثلاثة أسطر: ما قيس، وما لم يُقس، وما يتغير\n\n*الادعاء الصادق*\n\n- **ما قيس وكم.** الأثر بالنقاط والعدد، في الفترات التي فيها مجموعة ضبط.\n- **ما لم يُقس.** الفترات بلا ضبط تُسمّى، ولا تُملأ بتقدير يُعرض كأنه قياس.\n- **ما يتغير الآن.** قرار واحد: إعادة الضبط، أو مراجعة الاختيار، أو إيقاف.","notes":"هذا شكل ادعاء القيمة في الخريطة غدًا أيضًا. اقرأ مثالًا من خارج سحاب: «في الأشهر الثلاثة الأولى أبقت الاتصالات نحو 400 مريض خارج الطوارئ؛ الشهر الرابع غير مقيس؛ نعيد مجموعة الضبط من الشهر القادم.»","minutes":null,"lo":["LO3","LO1"]},{"id":"check-claim","n":35,"title":"ما الذي تغير بعد النموذج الجديد؟","kind":"quiz","session":4,"hash":"a3269d12","md":"#### [day2#check-claim] ما الذي تغير بعد النموذج الجديد؟\n\n*نقطة تحقق*\n\n**سؤال:** منصة تعليمية ترسل تذكيرًا لمن يُتوقع أن يتركوا الدورة. قبل تحديث النموذج: الإكمال 70% مع التذكير و64% في مجموعة الضبط. بعد تحديثه على نتائج الحملة: 80% مع التذكير و79% في الضبط. ماذا حدث؟\n\n- أ. التحديث نجح، فالإكمال مع التذكير ارتفع 10 نقاط بعد إعادة التدريب\n- ب. التذكير صار أضعف ويجب تغيير نصه\n- ج. النموذج الجديد يختار من يكمل على كل حال، فهبط الأثر\n- د. مجموعة الضبط لم تعد صالحة، فلا نستطيع القول","notes":"الإجابة: ج. الأرقام توضيحية ومن خارج سحاب. لولا مجموعة الضبط لما عرفنا شيئًا: الرقم الوحيد المتاح كان 80%.","minutes":null,"lo":["LO3"]},{"id":"lab-2-4","n":36,"title":"ادعاء الحملة ومجموعة الضبط","kind":"lab","session":4,"hash":"858762d3","md":"#### [day2#lab-2-4] ادعاء الحملة ومجموعة الضبط\n\nالمختبر 2.4 · 20 دقيقة\n\nتعيد حساب ادعاء تقرير الحملة على ثمانية أشهر بمجموعة الضبط، وتحدد الأشهر التي لا قياس فيها، وتكشف ما حدث بعد إعادة تدريب «بقاء»، ثم تكتب الادعاء الصادق.\n\n[D2_4_honest_claim.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_4_honest_claim.html)\n\n- [ ] اقرأ تقرير الحملة واكتب طريقة حسابه (2 د)\n- [ ] احسب نسبة البقاء لمن تلقى العرض ولمجموعة الضبط في كل شهر (5 د)\n- [ ] احسب العملاء المحتفظ بهم بسبب العرض في الأشهر المقيسة (5 د)\n- [ ] قارن الشهر الثامن بالأشهر الأولى واشرح الفرق (4 د)\n- [ ] أعد كتابة الادعاء في ثلاثة أسطر (4 د)\n- [ ] ✱ إضافي: اكتب قاعدة دائمة لمجموعة الضبط: حجمها، ومن يملك قرار إلغائها","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. راقب الخطوة 3: الضرب في عدد من تلقوا العرض (`D`) لا في المختارين (`C`). والأشهر 5 إلى 7 بلا ضبط: من يملؤها بمتوسط يُسأل لماذا. الملف ثمانية صفوف، فالمختبر سريع ويترك وقتًا للادعاء.","minutes":null,"lo":[]},{"id":"debrief-2-4","n":37,"title":"التقرير قال 168,465، والمقيس 2,861 في خمسة أشهر","kind":"content","session":4,"hash":"ea52209d","md":"#### [day2#debrief-2-4] التقرير قال 168,465، والمقيس 2,861 في خمسة أشهر\n\n*بعد المختبر 2.4*\n\n| الشهر | الأثر (نقاط) | المحتفظ بهم بسبب العرض |\n| --- | --- | --- |\n| 1 إلى 4 (v1) | من 2.84 إلى 3.11 | 726 و655 و661 و644 |\n| 5 إلى 7 | لا ضبط | غير مقيس |\n| 8 (v2) | 0.78 | 175 |\n\n> **حلقة التغذية الراجعة.** البقاء في مجموعة الضبط صار 92.86% في الشهر 8 بعد نحو 88%: «بقاء» v2 يختار من يبقى على كل حال، فارتفعت نسبة البقاء إلى 94% وهبط الأثر.","notes":"الأرقام من تشغيل الحل (`check.py 2.4`). المقيس نحو 1.7% من رقم التقرير. اقرأ ادعاءً صادقًا جيدًا من القاعة بصوت عالٍ. والإجراء: إعادة الضبط دائمًا، ومراجعة ما يختاره v2 أو العودة إلى v1.","minutes":null,"lo":["LO3"]},{"id":"s5","n":38,"title":"شذوذ الشبكة أمام الحوادث المؤكدة","kind":"section","session":5,"hash":"043f0230","md":"#### [day2#s5] شذوذ الشبكة أمام الحوادث المؤكدة\n\n*الجلسة 5*\n\n- تربط التنبيهات بالحوادث المؤكدة بقاعدة مكتوبة\n- تحسب الدقة على التنبيهات والاستدعاء على الحوادث\n- تشرح لماذا تضلل «الدقة» المحسوبة على كل الساعات","notes":"ننتقل إلى الشبكة و«رصد». السؤال يتغير: لا عرض هنا، بل تنبيه يفحصه إنسان.","minutes":null,"lo":["LO5"]},{"id":"alert-vs-incident","n":39,"title":"التنبيه ادعاء، والحادثة المؤكدة هي الحقيقة","kind":"content","session":5,"hash":"9cefb5a3","md":"#### [day2#alert-vs-incident] التنبيه ادعاء، والحادثة المؤكدة هي الحقيقة\n\n*سلسلة القرار في الشبكة*\n\n1. **البيانات** مؤشرات كل موقع كل ساعة\n2. **المخرج** درجة شذوذ من 0 إلى 1\n3. **العتبة** ما فوقها يصير تنبيهًا\n4. **الفعل** مهندس يفحص التنبيه\n\n> **قاعدة الربط تُكتب قبل الحساب:** الموقع نفسه، ونافذة زمنية محددة حول الحادثة.","notes":"الحادثة المؤكدة سجل من المركز: عطل حقيقي له بداية ونهاية وشدة. لماذا نكتب القاعدة أولًا؟ لأن من يكتبها بعد رؤية النتائج يوسّع النافذة حتى تحسن الأرقام. المصطلح بالإنجليزية anomaly detection.","minutes":null,"lo":["LO5","LO1"]},{"id":"precision-recall","n":40,"title":"الدقة تُحسب على التنبيهات، والاستدعاء على الحوادث","kind":"content","session":5,"hash":"7f5a3be7","md":"#### [day2#precision-recall] الدقة تُحسب على التنبيهات، والاستدعاء على الحوادث\n\n*مقياسان*\n\n- **الدقة.** من التنبيهات، كم منها يقابله عطل حقيقي؟ تقول للمهندس كم من وقته يذهب هدرًا.\n- **الاستدعاء.** من الحوادث، كم منها نبّه إليه النظام؟ تقول للمدير ما يفوت.\n\n> **مثال من بنك:** 1,000 تنبيه احتيال، 50 منها احتيال فعلًا: الدقة 5%. وكان في الأسبوع 60 حالة احتيال، كُشف منها 50: الاستدعاء 83%.","notes":"الأرقام توضيحية ومن خارج سحاب. المصطلحان بالإنجليزية precision وrecall. خطأ شائع: قسمة الحوادث المكشوفة على التنبيهات. القاسم مختلف في كل مقياس. اسأل: أي المقياسين يهتم به المهندس المناوب؟ وأيهما مدير الشبكة؟","minutes":null,"lo":["LO5"]},{"id":"accuracy-misleads","n":41,"title":"«الدقة الإجمالية» على كل الساعات عالية حتى لنظام لا ينبّه أبدًا","kind":"content","session":5,"hash":"71a334d2","md":"#### [day2#accuracy-misleads] «الدقة الإجمالية» على كل الساعات عالية حتى لنظام لا ينبّه أبدًا\n\n*الرقم الذي يعجب المورد*\n\n- كاشف دخان لا يرن أبدًا «صحيح» في كل ساعة لا حريق فيها\n- الساعات الهادئة تملأ المقام\n- الرقم الكبير لا يقول كم تنبيهًا يُفحص ولا كم عطلًا يفوت\n- اطلب دائمًا: الدقة على التنبيهات، والاستدعاء على الحوادث\n\n- **اسأل المورد.** على أي شيء حُسبت النسبة؟ ساعات، أم تنبيهات، أم حوادث؟","notes":"الاسم بالإنجليزية لما في النشرات عادة accuracy. في الأحداث النادرة يكون قريبًا من 100% دائمًا. سيقرأ المشاركون في المختبر نشرة «رصد» ويكتشفون على أي شيء حُسب رقمها.","minutes":null,"lo":["LO5"]},{"id":"match-rule","n":42,"title":"الربط شرطان: الموقع نفسه، والساعة داخل النافذة","kind":"content","session":5,"hash":"ab191c4f","md":"#### [day2#match-rule] الربط شرطان: الموقع نفسه، والساعة داخل النافذة\n\n*في الجدول*\n\n- **التنبيه صحيح إذا.** وُجدت في موقعه حادثة بدأت قبل ساعته بساعة على الأكثر ولم تنتهِ قبلها. `COUNTIFS` بثلاثة شروط على ورقة الحوادث.\n- **الحادثة مكشوفة إذا.** وقع عليها تنبيه واحد على الأقل فوق العتبة في النافذة نفسها. `COUNTIFS` بأربعة شروط على ورقة التنبيهات.\n\n> **أين يقع الخطأ.** قلب اتجاه النافذة، أو نسيان شرط الموقع: تتضاعف المطابقات الزائفة.","notes":"اشرح لماذا ساعة قبل البدء: كثير من الأعطال تبدأ بتدهور يسبق تسجيلها. أعطِ المشاركين دقيقة ليكتبوا الصيغة على ورق قبل المختبر.","minutes":null,"lo":["LO5"]},{"id":"network-capacity","n":43,"title":"تنبؤ السعة يُقاس كما قسنا تنبؤ الطلب في المتجر","kind":"content","session":5,"hash":"7ac6d580","md":"#### [day2#network-capacity] تنبؤ السعة يُقاس كما قسنا تنبؤ الطلب في المتجر\n\n*السعة*\n\n- المخرج: الحركة المتوقعة في كل موقع للأشهر القادمة\n- القرار: أين تُضاف سعة، ومتى\n- خط الأساس: نمو الموسم الماضي نفسه، على فترة لم يرها النموذج\n- الخطأ غير متماثل: سعة زائدة مال مجمّد، ونقص يعني ازدحامًا وشكاوى\n\n- **ورابطه بالتنبيهات.** موقع ينبّه كل مساء لأنه ممتلئ ليس عطلًا: هو سؤال سعة. فصله عن الأعطال يخفف المركز.","notes":"شريحة ربط لا مختبر لها: الأسئلة نفسها من اليوم الأول (فترة لم يرها النموذج، والكلفة بحسب اتجاه الخطأ) تنطبق على تخطيط السعة. اسأل القاعة: من يملك قرار إضافة السعة في جهاتكم، وبأي رقم يحكم؟","minutes":null,"lo":["LO5","LO1"]},{"id":"check-alerts","n":44,"title":"كيف تقرأ هذه النشرة؟","kind":"quiz","session":5,"hash":"4a33c958","md":"#### [day2#check-alerts] كيف تقرأ هذه النشرة؟\n\n*نقطة تحقق*\n\n**سؤال:** مورد لنظام مراقبة مصاعد في 300 مبنى يقول: «دقة إجمالية 99%». في أسبوع: 840 تنبيهًا، 42 منها يقابلها عطل مؤكد. وكان في الأسبوع 50 عطلًا مؤكدًا، كُشف منها 42. ماذا يكتب المحلل؟\n\n- أ. النظام ممتاز، والنشرة تؤكد ذلك\n- ب. الدقة 5% والاستدعاء 84%\n- ج. الدقة 84%، أي 42 من 50 عطلًا، وهي قريبة مما قاله المورد\n- د. النظام يكشف أغلب الأعطال، فلا مشكلة","notes":"الإجابة: ب. الأرقام توضيحية ومن خارج سحاب. «ج» هو الخطأ الأشيع: راجع القاسم في كل مقياس.","minutes":null,"lo":["LO5"]},{"id":"lab-2-5","n":45,"title":"مطابقة التنبيهات بالحوادث المؤكدة","kind":"lab","session":5,"hash":"5fc3a41e","md":"#### [day2#lab-2-5] مطابقة التنبيهات بالحوادث المؤكدة\n\nالمختبر 2.5 · 25 دقيقة\n\nتطابق أسبوعًا من تنبيهات «رصد» على 1,200 موقع بالحوادث المؤكدة، وتحسب عند العتبة الافتراضية عدد التنبيهات في اليوم والدقة والاستدعاء والحوادث الفائتة.\n\n[D2_5_alert_matching.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_5_alert_matching.html)\n\n- [ ] اقرأ نشرة رصد وقاعدة الربط (3 د)\n- [ ] علّم كل تنبيه: هل يقابله حادثة مؤكدة (8 د)\n- [ ] علّم كل حادثة: هل كشفها تنبيه عند العتبة الافتراضية (6 د)\n- [ ] احسب التنبيهات في اليوم والدقة والاستدعاء (5 د)\n- [ ] قارن بنشرة المورد واكتب سطرين (3 د)\n- [ ] ✱ إضافي: عدّ التنبيهات أثناء أعمال الصيانة المجدولة واحسب الدقة دونها","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. الخطوة 2 تحتاج الملفين في مصنف واحد: ساعد من لا يعرف الإشارة إلى ورقة أخرى. صيغة الربط هي الجزء الصعب: اكتبها على السبورة إن تعثر أكثر من ثلث القاعة. لا يحتاج المختبر شيئًا من الجلسات السابقة.","minutes":null,"lo":[]},{"id":"debrief-2-5","n":46,"title":"«97%» على الساعات؛ على التنبيهات 16.67%","kind":"content","session":5,"hash":"59fa8eb2","md":"#### [day2#debrief-2-5] «97%» على الساعات؛ على التنبيهات 16.67%\n\n*بعد المختبر 2.5*\n\n- **160.29** تنبيهًا في اليوم عند العتبة الافتراضية 0.4\n- **16.67%** دقة: 187 من 1,122 تنبيهًا\n- **95.83%** استدعاء: فاتت 3 من 72 حادثة، إحداها حرجة\n\n> **والسؤال التالي.** هل يستطيع المركز أن يفحص 160 تنبيهًا كل يوم فحصًا سليمًا؟ وإن لم يستطع، فما الذي يحدث لما لا يُفحص؟","notes":"الأرقام من تشغيل الحل (`check.py 2.5`). الفائتة: INC034 بسيطة، وINC040 كبيرة، وINC055 حرجة بأعلى درجة 0.39. ورقم 97% على 201,600 ساعة موقع. والتمرين الإضافي: 131 تنبيهًا في صيانة مجدولة. هذا يمهد للجلسة التالية.","minutes":null,"lo":["LO5"]},{"id":"s6","n":47,"title":"عتبة يتحملها الفريق","kind":"section","session":6,"hash":"1c45ce0e","md":"#### [day2#s6] عتبة يتحملها الفريق\n\n*الجلسة 6*\n\n- تبني جدول الدقة والاستدعاء لعدة عتبات\n- تختار عتبة ضمن طاقة الفريق دون تفويت الحوادث الحرجة\n- تقترح تغييرًا لا يحتاج نموذجًا جديدًا","notes":"من قياس النظام إلى اختيار عتبته: القرار الذي يملكه المركز لا المورد.","minutes":null,"lo":["LO5"]},{"id":"alert-budget","n":48,"title":"العتبة تبدأ من عدد التنبيهات الذي يُفحص فحصًا سليمًا","kind":"content","session":6,"hash":"0a02dae9","md":"#### [day2#alert-budget] العتبة تبدأ من عدد التنبيهات الذي يُفحص فحصًا سليمًا\n\n*طاقة الفريق*\n\n1. **الأشخاص** 3 محللين في كل مناوبة، ومناوبتان\n2. **الوقت** نصف المناوبة للتنبيهات: 4 ساعات لكل محلل\n3. **الفحص** 20 دقيقة للتنبيه: 12 لكل محلل\n4. **الطاقة** 72 تنبيهًا في اليوم\n\n> **أين يقع الخطأ.** اختيار العتبة بأعلى استدعاء. ما فوق الطاقة يُغلق دون فحص، فيضيع الاستدعاء على الورق.","notes":"مثال توضيحي لفريق كشف احتيال في بنك. في سحاب الطاقة مكتوبة في `noc_capacity.txt`. اسأل: كم تنبيهًا يصل فرقكم في اليوم، وكم يُفحص فعلًا؟","minutes":null,"lo":["LO5"]},{"id":"threshold-table","n":49,"title":"كل عتبة سطر: كم تنبيهًا، وكم دقة، وكم يفوت","kind":"content","session":6,"hash":"d9364add","md":"#### [day2#threshold-table] كل عتبة سطر: كم تنبيهًا، وكم دقة، وكم يفوت\n\n*جدول العتبات*\n\n| مثال: كشف احتيال البطاقات | في اليوم | الدقة | الاستدعاء |\n| --- | --- | --- | --- |\n| 0.5 | 210 | 6% | 95% |\n| 0.7 | 65 | 15% | 82% |\n| 0.9 | 12 | 40% | 40% |\n\n> **الخلاصة.** رفع العتبة يرفع الدقة ويخفض الاستدعاء. الطاقة تختار السطر، والشدة تضع الحد الأدنى.","notes":"الأرقام توضيحية. بطاقة 72 في اليوم من الشريحة السابقة، السطر المختار 0.7. الاستدعاء لا يتغير بالفحص: يعتمد على أعلى درجة وقعت على الحادثة، ولهذا يبدأ المختبر من ملف فيه أعلى درجة لكل حادثة.","minutes":null,"lo":["LO5"]},{"id":"severity-first","n":50,"title":"شرط الحوادث الحرجة يُكتب قبل اختيار العتبة","kind":"content","session":6,"hash":"ac87168c","md":"#### [day2#severity-first] شرط الحوادث الحرجة يُكتب قبل اختيار العتبة\n\n*ليست كل حادثة سواء*\n\n- الاستدعاء الكلي يخلط البسيط بالحرج\n- احسب استدعاء الحرجة وحدها لكل عتبة\n- الشرط مثل: «لا تفوت أكثر من حادثة حرجة في الأسبوع»\n- العتبة المختارة: أقل عتبة ضمن الطاقة، إن حققت الشرط\n\n- **والثمن يُكتب.** كم حادثة غير حرجة تفوت بالعتبة المختارة. التوصية التي تخفي الثمن تُرفض في أول عطل.","notes":"اسأل: إن لم تحقق أي عتبة الشرطين معًا، فما الخيارات؟ (فريق أكبر، أو تقليل التنبيهات المعروفة مسبقًا، أو نموذج أفضل.) الخيار الثاني موضوع الشريحة التالية.","minutes":null,"lo":["LO5"]},{"id":"suppress-known","n":51,"title":"أخفِ التنبيهات التي تعرف سببها مسبقًا","kind":"content","session":6,"hash":"3ddd4fff","md":"#### [day2#suppress-known] أخفِ التنبيهات التي تعرف سببها مسبقًا\n\n*تغيير لا يحتاج نموذجًا*\n\n- **مثال.** نظام مراقبة خوادم ينبّه كل ليلة أثناء النسخ الاحتياطي المجدول. الفريق يعرف السبب، ويغلق التنبيه.\n- **الأثر.** التنبيهات تقل والدقة ترتفع، والاستدعاء لا يتغير: لا عطل مجهول يختبئ في عمل معروف.\n\n> **بشرط.** سجل الأعمال المجدولة دقيق ومحدث. عمل مجدول مسجل خطأً يخفي عطلًا حقيقيًّا.","notes":"مثال من خارج سحاب. في سحاب عمود `planned_work` في الملف. هذا النوع من التغيير يأتي قبل شراء نموذج جديد: أرخص وأسرع، ويُقاس في أسبوع.","minutes":null,"lo":["LO5"]},{"id":"check-threshold","n":52,"title":"أي عتبة؟","kind":"quiz","session":6,"hash":"4126caf7","md":"#### [day2#check-threshold] أي عتبة؟\n\n*نقطة تحقق*\n\n**سؤال:** فريق مراقبة جودة في مصنع يفحص 50 تنبيهًا في اليوم على الأكثر، ولا يُقبل أن يفوت أكثر من عيب خطير واحد في الأسبوع. عند 0.5: 90 تنبيهًا وعيب خطير فائت. عند 0.6: 45 تنبيهًا وعيب خطير فائت. عند 0.7: 20 تنبيهًا وثلاثة عيوب خطيرة فائتة. أيها تختار؟\n\n- أ. 0.5، لأنها تفوّت أقل عدد من العيوب\n- ب. 0.7، لأن دقتها أعلى وتنبيهاتها الأقل بين العتبات الثلاث\n- ج. لا عتبة، حتى يُشترى نموذج أفضل\n- د. 0.6، فهي ضمن الطاقة وتحقق شرط العيوب الخطيرة، وثمنها يُكتب","notes":"الإجابة: د. الأرقام توضيحية ومن خارج سحاب. اسأل من اختار «ج»: ما الذي يحدث للتنبيهات حتى يصل النموذج الجديد؟","minutes":null,"lo":["LO5"]},{"id":"lab-2-6","n":53,"title":"عتبة يتحملها المركز","kind":"lab","session":6,"hash":"a2aa32db","md":"#### [day2#lab-2-6] عتبة يتحملها المركز\n\nالمختبر 2.6 · 25 دقيقة\n\nتبني لست عتبات جدول التنبيهات في اليوم والدقة والاستدعاء واستدعاء الحوادث الحرجة، بأعمال الصيانة ودونها، وتختار عتبة ضمن طاقة المركز.\n\n[D2_6_threshold.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_6_threshold.html)\n\n- [ ] اقرأ مذكرة طاقة المركز وافتح ملفي البداية (3 د)\n- [ ] احسب التنبيهات في اليوم والدقة لكل عتبة (7 د)\n- [ ] احسب الاستدعاء واستدعاء الحرجة لكل عتبة (6 د)\n- [ ] أعد الحساب بعد إخفاء تنبيهات الصيانة المجدولة (5 د)\n- [ ] اختر العتبة واكتب سببها لرتيل الرميان (4 د)\n- [ ] ✱ إضافي: اقترح عتبتين: واحدة للحوادث الحرجة وأخرى لغيرها، وقدّر أثرها","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. يبدأ المختبر من ملفين جاهزين فيهما الربط محسوبًا، فلا يحتاج 2.5. راقب القسمة على 7 أيام، والقاسم في الاستدعاء (72 حادثة، و11 حرجة). من ينهي مبكرًا يأخذ التمرين الإضافي، وجوابه نقاش لا رقم.","minutes":null,"lo":[]},{"id":"debrief-2-6","n":54,"title":"0.5 مع إخفاء الصيانة: ضمن الطاقة، وتفوت حادثة حرجة واحدة","kind":"content","session":6,"hash":"78ed4193","md":"#### [day2#debrief-2-6] 0.5 مع إخفاء الصيانة: ضمن الطاقة، وتفوت حادثة حرجة واحدة\n\n*بعد المختبر 2.6*\n\n| العتبة | في اليوم | الدقة | الاستدعاء | الحرجة |\n| --- | --- | --- | --- | --- |\n| 0.4 دون الصيانة | 141.57 | 18.87% | 95.83% | 90.91% |\n| 0.5 | 86.14 | 26.37% | 86.11% | 90.91% |\n| 0.5 دون الصيانة | 67.57 | 33.62% | 86.11% | 90.91% |\n| 0.6 | 48.00 | 32.44% | 69.44% | 81.82% |\n\n> **الثمن.** عند 0.5 تفوت 10 من 72 حادثة في الأسبوع بدل 3. يُكتب في التوصية لرتيل.","notes":"الأرقام من تشغيل الحل (`check.py 2.6`). عند 0.6 تفوت حادثتان حرجتان، فتُستبعد. والتمرين الإضافي: شدة الحادثة لا تُعرف لحظة التنبيه، فعتبتان بحسب الشدة تحتاجان مؤشرًا بديلًا يُختبر. هذه الحالة T3 في الخريطة.","minutes":null,"lo":["LO5"]},{"id":"s7","n":55,"title":"توفير الطاقة وبيانات الموقع","kind":"section","session":7,"hash":"363eb22b","md":"#### [day2#s7] توفير الطاقة وبيانات الموقع\n\n*الجلسة 7*\n\n- تقيس توفير الطاقة بالمقارنة بمواقع ضابطة\n- تفحص مؤشر الحماية موقعًا موقعًا\n- تقرر في طلب بيانات موقع بالغرض والموافقة والتجميع","notes":"جلسة من نصفين: ادعاء توفير الطاقة، ثم طلب بيانات يمر بمكتب القيمة.","minutes":null,"lo":["LO1","LO6"]},{"id":"energy-control-sites","n":56,"title":"التوفير الحقيقي = تغير مواقع التجربة ناقص تغير المواقع الضابطة","kind":"content","session":7,"hash":"7c1cf550","md":"#### [day2#energy-control-sites] التوفير الحقيقي = تغير مواقع التجربة ناقص تغير المواقع الضابطة\n\n*قبل وبعد لا يكفي*\n\n- **ما يعرضه المورد.** منظم حرارة ذكي في 20 مبنى مكاتب: الاستهلاك انخفض 12% بين الشهر قبل التركيب والشهر بعده.\n- **ما يسأله المحلل.** 20 مبنى دون المنظم في الشهرين نفسيهما انخفضت 5%: الطقس تغير. التوفير 7%.\n\n> **الخلاصة.** المواقع الضابطة تحمل كل ما تغير غير النظام: الطقس، والأحمال، والمواسم.","notes":"الأرقام توضيحية ومن خارج سحاب. الطريقة اسمها بالإنجليزية difference in differences. في الاتصالات، معيار 3GPP يدرس توفير الطاقة في الشبكات، ويذكّر بأن التوفير يُوزن دائمًا بأثره على الخدمة.\n\nالمصادر: 3GPP TR 38.864, Study on network energy savings for NR.","minutes":null,"lo":["LO1"]},{"id":"guardrail-per-site","n":57,"title":"حد الحماية يُفحص موقعًا موقعًا، لا بالمتوسط","kind":"content","session":7,"hash":"c7a3efd8","md":"#### [day2#guardrail-per-site] حد الحماية يُفحص موقعًا موقعًا، لا بالمتوسط\n\n*حد الحماية*\n\n- حد الحماية: مقياس يجب ألا يسوء، مهما وفّر النظام\n- متوسط الفرق على كل المواقع قد يكون صغيرًا ويخفي مواقع ساءت كثيرًا\n- اسأل: أي المواقع لا بديل لسكانها إن ساءت الخدمة؟\n- موقع فوق الحد: يُستثنى أو يُعدّل قبل التعميم\n\n- **في الجدول.** عمود للفرق بعد ناقص قبل، وعمود منطقي: `AND` للمجموعة والحد. ثم تصفية.","notes":"تذكّر مقياس الحماية في تجربة A/B بالأمس: المرتجعات. هنا معدل المكالمات المنقطعة. اسأل: من يتضرر إن ساء الانقطاع في موقع واحد لا بديل لسكانه؟ مثال من خارج سحاب: نظام توفير طاقة في مستشفيات يُفحص أثره على كل جناح، لا على متوسط المستشفى.","minutes":null,"lo":["LO1"]},{"id":"location-purpose","n":58,"title":"البيانات جُمعت لغرض، واستعمالها لغرض آخر يحتاج أساسًا","kind":"content","session":7,"hash":"47abe21f","md":"#### [day2#location-purpose] البيانات جُمعت لغرض، واستعمالها لغرض آخر يحتاج أساسًا\n\n*بيانات الموقع*\n\n| السؤال | لماذا يهم |\n| --- | --- |\n| لأي غرض جُمعت؟ | المعالجة لغير غرض الجمع جائزة في حالات محددة أولها الموافقة، وتسبقها إحاطة صاحب البيانات |\n| هل وافق صاحبها على هذا الغرض؟ | التسويق والإعلان بوسائل الاتصال الشخصية يحتاجان موافقة مسبقة وطريقة سهلة للانسحاب |\n| هل الطالب جهة أخرى؟ | تمكين أي شخص غير الجهة المسؤولة من البيانات إفصاح، والإفصاح مقيد بحالات محددة أولها الموافقة |\n| هل يلزم أن تكون فردية؟ | من حالات الإفصاح الجائزة معالجة لا يمكن معها التعرف على صاحب البيانات |","notes":"صياغة مختصرة لنصوص النظام لا رأي قانوني: القرار في كل حالة لمسؤول حماية البيانات. المواد: المادة 1 (تعريف الإفصاح)، والمادة 10 (المعالجة لغير غرض الجمع في حالات محددة، أولها الموافقة)، والمادة 11 (الغرض)، والمادة 15 (حالات الإفصاح، ومنها الموافقة، ومعالجة لا يمكن معها التعرف على الشخص)، والمادتان 25 و26 (الإعلان والتسويق) من النظام؛ والمادة 4 (الإحاطة قبل المعالجة لغرض جديد)، والمادة 18 (ضوابط المعالجة لغرض آخر)، والمادتان 11 و29 (الموافقة والتسويق المباشر) من اللائحة التنفيذية. أن شركة مستقلة في المجموعة نفسها «جهة أخرى» استنتاج من تعريف الإفصاح، تؤكده مسؤولة حماية البيانات. مثال من خارج سحاب: مستشفى يطلب منه شريك تأمين قائمة بمرضى قسم معين لعروض خاصة.\n\nالمصادر: SDAIA, Personal Data Protection Law, articles 1, 10, 11, 15, 25 and 26; SDAIA, Implementing Regulation of the Personal Data Protection Law, articles 4, 11, 18 and 29.","minutes":null,"lo":["LO6"]},{"id":"location-aggregate","n":59,"title":"أعداد مجمّعة بحد أدنى للخلية تخدم سؤال الأعمال غالبًا","kind":"content","session":7,"hash":"25c33369","md":"#### [day2#location-aggregate] أعداد مجمّعة بحد أدنى للخلية تخدم سؤال الأعمال غالبًا\n\n*البديل*\n\n1. **السؤال التجاري** أين يتسوق الناس، ومتى؟\n2. **التجميع** أعداد بحسب الحي والأسبوع، دون معرّفات\n3. **الحد الأدنى** خلية أقل من حد معين لا تُعرض\n4. **القرار** فرع جديد، أو عرض عام في حي\n\n> **أين يقع الخطأ.** أن تكون البيانات متاحة داخل المؤسسة لا يجعل كل استعمال لها جائزًا.","notes":"الحد الأدنى للخلية يمنع أن يُستدل على شخص من خلية فيها عدد قليل جدًّا. اسأل: ما السؤال التجاري الحقيقي خلف طلب قائمة أفراد عادة؟ غالبًا سؤال عن أماكن وأوقات، تجيب عنه الأعداد. سياسة مشاركة البيانات الصادرة عن مكتب إدارة البيانات الوطنية تحكم مشاركة بيانات الجهات الحكومية، فلا تُلزم سحاب؛ لكن مبادئها تصلح أسئلة هنا: غرض مشروع، واستعمال للغرض المحدد وحده، وأقل قدر من البيانات يحقق الغرض.\n\nالمصادر: National Data Management Office, Data Sharing Policy (scope; Third Principle: Legitimate Purpose).","minutes":null,"lo":["LO6"]},{"id":"check-location","n":60,"title":"ماذا تقرر؟","kind":"quiz","session":7,"hash":"3198466a","md":"#### [day2#check-location] ماذا تقرر؟\n\n*نقطة تحقق*\n\n**سؤال:** شركة نقل ذكي في مجموعة تضم سلسلة مطاعم. السلسلة تطلب أرقام جوالات من رُكّاب نُقلوا إلى مطاعم منافسة الشهر الماضي، لترسل لهم عروضًا. بيانات الرحلات جُمعت لتقديم خدمة النقل، ولا موافقة من الركاب على تسويق جهة أخرى. ما القرار؟\n\n- أ. رفض القائمة، واقتراح أعداد رحلات مجمّعة بلا معرّفات\n- ب. الموافقة، فالشركتان في مجموعة واحدة والبيانات داخل المجموعة أصلًا\n- ج. الموافقة بعد حذف أسماء الركاب والإبقاء على الأرقام\n- د. تسليم القائمة الآن، ثم سؤال الركاب عن الموافقة بعد أول عرض","notes":"الإجابة: أ. المثال من خارج سحاب. «د» يعكس الترتيب: الموافقة قبل الإفصاح لا بعده. ونقاش جيد لمن يسأل: يمكن للشركة التي جمعت البيانات أن تطلب موافقة لغرض جديد، وذلك قرار تملكه هي ومسؤول حماية البيانات. والقرار النهائي في الواقع لمسؤول حماية البيانات.","minutes":null,"lo":["LO6"]},{"id":"lab-2-7","n":61,"title":"تجربة سُبات وطلب بيانات الموقع","kind":"lab","session":7,"hash":"8f0352e5","md":"#### [day2#lab-2-7] تجربة سُبات وطلب بيانات الموقع\n\nالمختبر 2.7 · 20 دقيقة\n\nتحسب توفير «سُبات» الحقيقي بطرح تغير المواقع الضابطة، وتفحص معدل الانقطاع موقعًا موقعًا، ثم تقرر في طلب أسواق سحاب لقائمة فردية من بيانات الموقع وتقترح بديلًا.\n\n[D2_7_energy_and_location.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_7_energy_and_location.html)\n\n- [ ] احسب تغير الطاقة في مواقع التجربة والمواقع الضابطة (5 د)\n- [ ] احسب التوفير الصافي وقارنه بادعاء المورد (3 د)\n- [ ] افحص معدل الانقطاع وحد الحماية لكل موقع (4 د)\n- [ ] اقرأ طلب بيانات الموقع واكتب قرارك وأسبابه (5 د)\n- [ ] اقترح بديلًا مجمّعًا يخدم الغرض التجاري (3 د)\n- [ ] ✱ إضافي: قدّر الوفر السنوي على 3,000 موقع بعد الترخيص، بسعر الطاقة في مذكرة المورد","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. نصف المختبر حساب ونصفه قرار مكتوب. راقب نسبة المجاميع مقابل متوسط النسب: نقبل الاثنين مع ذكر الطريقة. وفي الخطوة 4 يجب أن يذكر القرار ثلاثة أسباب. لا يحتاج المختبر شيئًا سابقًا.","minutes":null,"lo":[]},{"id":"debrief-2-7","n":62,"title":"سُبات يوفر 8.08% لا 14.5%، والقائمة الفردية تُرفض","kind":"content","session":7,"hash":"3c581f71","md":"#### [day2#debrief-2-7] سُبات يوفر 8.08% لا 14.5%، والقائمة الفردية تُرفض\n\n*بعد المختبر 2.7*\n\n- **الطاقة.** التجربة -14.51%، والضابطة -6.43%، والصافي 8.08%. نحو 3.7 مليون ريال في السنة بعد الترخيص، لا «أكثر من 9 ملايين». وموقعان ريفيان، S3009 وS3016، تجاوزا حد الانقطاع.\n- **طلب الموقع.** رفض: غرض الجمع الخدمة، ولا موافقة على تسويق جهة أخرى، والقائمة فردية. البديل: أعداد مجمّعة بحسب الحي والأسبوع بحد أدنى للخلية.","notes":"الأرقام من تشغيل الحل (`check.py 2.7`). متوسط فرق الانقطاع 0.0435 نقطة فقط: المتوسط يخفي الموقعين. حساب الوفر: نحو 320 كيلوواط ساعة × 8.08% × 365 × 0.18 × 3,000 = نحو 5.1 مليون، ثم يُطرح الترخيص. وهذه الحالات T4 وT5 وT6 في الخريطة.","minutes":null,"lo":["LO1","LO6"]},{"id":"s8","n":63,"title":"خريطة الفرص والمخاطر","kind":"section","session":8,"hash":"1de1467d","md":"#### [day2#s8] خريطة الفرص والمخاطر\n\n*الجلسة 8*\n\n- تقدّر حالات الاستخدام بدليل مكتوب للقيمة والضرر والحقوق\n- ترتّب الحالات وتضعها في أرباع الخريطة\n- تجهّز خريطة من صفحة واحدة للمناقشة","notes":"الجلسة الأخيرة تجمع اليومين في صفحة واحدة: خريطة الفرص والمخاطر.","minutes":null,"lo":["LO6"]},{"id":"three-scores","n":64,"title":"ثلاث درجات لكل حالة استخدام: القيمة، والضرر، والحقوق","kind":"content","session":8,"hash":"3ee9deaf","md":"#### [day2#three-scores] ثلاث درجات لكل حالة استخدام: القيمة، والضرر، والحقوق\n\n*خريطة الفرص والمخاطر*\n\n- **القيمة.** من الرقم الصافي المقيس بالريال في السنة، بسقف بحسب قوة الدليل.\n- **الضرر على العملاء.** منخفض أو متوسط أو مرتفع: من يدفع أكثر، ومن يُحرم، ومن تسوء خدمته.\n- **حقوق البيانات.** واضحة أو ناقصة أو غائبة: الغرض والموافقة، والبيانات الحساسة.\n\n> **المجموع** = 2 × القيمة + الضرر + الحقوق، من 20. القيمة مضاعفة لأنها سبب المشروع، لكنها لا تغلب الحقوق وحدها.","notes":"الدليل في `labs/files/map/scoring_guide.txt`، وهو دليل مكتب القيمة في الحالة. شجّع المشاركين على نقده: الوزن والحدود اختيار، والمهم أن يُكتب ويُطبّق على الكل بالطريقة نفسها. مبادئ أخلاقيات الذكاء الاصطناعي تضع العدالة والخصوصية بجانب المنفعة، والخريطة تطبيق عملي لذلك.\n\nالمصادر: SDAIA, AI Ethics Principles.","minutes":null,"lo":["LO6"]},{"id":"evidence-cap","n":65,"title":"القيمة لا تتجاوز ما يستطيع الدليل إثباته","kind":"content","session":8,"hash":"c199bae0","md":"#### [day2#evidence-cap] القيمة لا تتجاوز ما يستطيع الدليل إثباته\n\n*سقف الدليل*\n\n| نوع الدليل | أعلى درجة قيمة |\n| --- | --- |\n| تجربة عشوائية، أو A/B، أو تجربة بمواقع ضابطة | 5 |\n| اختبار على فترة لم يرها النموذج | 4 |\n| مقياس دون اتصال فقط | 3 |\n| ادعاء مورد، أو لم يُقس | 2 |\n\n> **الخلاصة.** ادعاء بعشرة ملايين وتجربة بمليون: التجربة أعلى درجة.","notes":"مثال من خارج سحاب: مورد نظام جدولة لعيادات يدّعي توفير 5 ملايين ريال، دون أي قياس: درجة قيمته 2. والطريقة الوحيدة لرفعها: قياس. هذا ما يجعل الخريطة تدفع نحو القياس لا نحو الوعود.","minutes":null,"lo":["LO6"]},{"id":"map-quadrants","n":66,"title":"أربعة قرارات، تُطبّق بترتيب ثابت","kind":"content","session":8,"hash":"3fc025f3","md":"#### [day2#map-quadrants] أربعة قرارات، تُطبّق بترتيب ثابت\n\n*الأرباع*\n\n- **1 · توقّف.** الحقوق غائبة، أو القيمة صفر أو أقل. لا شيء يعوضهما.\n- **2 · امضِ.** قيمة 4 أو 5، وضرر منخفض أو متوسط.\n- **3 · أصلح أولًا.** قيمة 4 أو 5، وضرر مرتفع: يُعدَّل ثم يُقاس من جديد.\n- **4 · اختبر بتكلفة قليلة.** كل ما عدا ذلك: الدليل لا يكفي بعد.","notes":"الترتيب مهم: حالة قيمتها 5 وحقوقها غائبة تتوقف، ولا تصل إلى «أصلح أولًا». اسأل: لماذا نوقف حالة لها قيمة كبيرة؟ (لأن الحقوق ليست درجة تُشترى بالقيمة.)","minutes":null,"lo":["LO6"]},{"id":"rank-and-choose","n":67,"title":"رتّب، ثم اختر القرار الأول الذي تطلبه","kind":"content","session":8,"hash":"e82a625c","md":"#### [day2#rank-and-choose] رتّب، ثم اختر القرار الأول الذي تطلبه\n\n*صفحة واحدة*\n\n1. **1 · قدّر** ثلاث درجات بالدليل لكل حالة\n2. **2 · رتّب** بالمجموع، ثم بالرمز عند التساوي\n3. **3 · ضع** كل حالة في ربعها\n4. **4 · افتتح** بأول قرار تطلبه؛ وعند التساوي، بالأقوى دليلًا\n\n> **المشروع الختامي.** خريطة شركة واحدة: خمس دقائق للعرض، وثلاث تعيد فيها تقدير حالة يختارها المدرب.","notes":"الترتيب عند التساوي بالرمز لأنه قاعدة ثابتة لا تُناقش؛ أما الافتتاح فبالحالة الأقوى دليلًا، لأنها تصمد حين يُسأل المشارك عن مصدر كل رقم. الخريطة تُسلَّم رابطًا لمجلد في Google Drive، وفيها ثماني حالات على الأقل وسطر إفصاح عن استعمال الذكاء الاصطناعي. الاستعمال الكامل مسموح فيها، على أن يُدافع عن كل رقم مباشرة. سلّم المعايير في الجلسة الختامية.","minutes":null,"lo":["LO6"]},{"id":"check-map","n":68,"title":"أين تضعها؟","kind":"quiz","session":8,"hash":"978d6488","md":"#### [day2#check-map] أين تضعها؟\n\n*نقطة تحقق*\n\n**سؤال:** سلسلة صيدليات تدرس نظامًا يرسل عروضًا بحسب مشتريات الأدوية. المورد يدّعي 4 ملايين ريال في السنة دون قياس. الضرر منخفض، والعملاء لم يوافقوا على استعمال مشترياتهم الدوائية للتسويق. بالدليل المعروض، أين تقع؟\n\n- أ. امضِ، فالقيمة 5 والضرر منخفض\n- ب. اختبر بتكلفة قليلة، فالقيمة 2 بعد سقف ادعاء المورد\n- ج. توقّف: بيانات صحية تُستعمل للتسويق\n- د. أصلح أولًا، ثم أعد التقدير","notes":"الإجابة: ج. المثال من خارج سحاب. «ب» يحسب القيمة صحيحًا لكنه يتجاوز القاعدة الأولى. ذكّر بشريحة الاهتمام الصحي في المختبر 1.7: الفكرة نفسها.","minutes":null,"lo":["LO6"]},{"id":"lab-2-8","n":69,"title":"خريطة الفرص والمخاطر","kind":"lab","session":8,"hash":"4114fcc9","md":"#### [day2#lab-2-8] خريطة الفرص والمخاطر\n\nالمختبر 2.8 · 25 دقيقة\n\nتقدّر اثنتي عشرة حالة استخدام في مجموعة سحاب بدليل التقدير، وترتبها، وتضع كلًّا منها في ربعها، وتختار ما تبدأ به المناقشة الختامية.\n\n[D2_8_opportunity_map.html](https://sdaiaacademy.github.io/use-sec-210/labs/D2_8_opportunity_map.html)\n\n- [ ] اقرأ دليل التقدير وجدول الحالات الاثنتي عشرة (4 د)\n- [ ] احسب درجة القيمة بسقف الدليل لكل حالة (7 د)\n- [ ] أضف درجتي الضرر والحقوق والمجموع (5 د)\n- [ ] رتّب الحالات وضع كلًّا منها في ربعها (5 د)\n- [ ] اختر الشركة التي ستعرض خريطتها واكتب سطر الافتتاح (4 د)\n- [ ] ✱ إضافي: أضف حالة من عملك بدليل التقدير نفسه، وهي أول صف في ورقة المتابعة","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم في الحساب، والاستعمال الكامل مسموح في الخريطة الختامية بعده. راقب السقف في الخطوة 2، وترتيب قاعدة الأرباع في الخطوة 4. الحالات تحمل أرقام المختبرات، فلا يحتاج المشارك ملفاته السابقة.","minutes":null,"lo":[]},{"id":"debrief-2-8","n":70,"title":"أربع حالات تمضي، وخمس تتوقف","kind":"content","session":8,"hash":"8612496b","md":"#### [day2#debrief-2-8] أربع حالات تمضي، وخمس تتوقف\n\n*بعد المختبر 2.8*\n\n| الربع | الحالات (المجموع من 20) |\n| --- | --- |\n| امضِ | R1 استشراف لأربع مجموعات (18)، T3 رصد بعتبة جديدة (18)، T4 سُبات (18)، T2 الاحتفاظ بالأثر (16) |\n| اختبر بتكلفة قليلة | R6 البحث (16)، R5 سعرك المعدّل (14)، T6 الأعداد المجمّعة (14) |\n| توقّف | R2 (12)، R3 مختارات (10)، T1 القاعدة الحالية (10)، R4 سعرك اليوم (6)، T5 القائمة الفردية (6) |\n\n> **لاحظ T5 وT6:** البيانات نفسها، فردية بلا موافقة أمام مجمّعة. وR4 وR5 كذلك في التجزئة.","notes":"الأرقام من تشغيل الحل (`check.py 2.8`). لا حالة في «أصلح أولًا» بالدليل الحالي: R4 تتوقف بالحقوق قبل أن تصل إليه. الترتيب الكامل: R1، T3، T4، R6، T2، R5، T6، R2، R3، T1، R4، T5. اسأل: من سيعرض أسواق سحاب، ومن سحاب للاتصالات؟","minutes":null,"lo":["LO6"]},{"id":"wrap-up","n":71,"title":"ثلاثة أمور تبقى معك","kind":"content","session":8,"hash":"daabf3c7","md":"#### [day2#wrap-up] ثلاثة أمور تبقى معك\n\n*خلاصة اليوم 2*\n\n- **الأثر لا الخطر.** العرض لمن يغيّر العرض قراره، ومجموعة ضبط دائمة تقيسه.\n- **العتبة من الطاقة.** الدقة على التنبيهات، والاستدعاء على الحوادث، وشرط الحرجة أولًا.\n- **الحقوق قبل القيمة.** الدليل يحدد سقف القيمة، والحقوق الغائبة توقف أي حالة.","notes":"اطلب من كل مشارك جملة واحدة: أي حالة في عمله ستكون أول صف في ورقة المتابعة؟ تُسلَّم الورقة خلال 30 يومًا بأسماء مغيّرة وأرقام مقرّبة.","minutes":null,"lo":["LO3","LO5","LO6"]},{"id":"next","n":72,"title":"الجلسة الختامية: الخريطة أمام مكتب القيمة","kind":"content","session":8,"hash":"539bdb33","md":"#### [day2#next] الجلسة الختامية: الخريطة أمام مكتب القيمة\n\n*التالي*\n\nخريطة من صفحة واحدة لشركة تختارها، خمس دقائق للعرض، وثلاث تعيد فيها تقدير حالة يختارها المدرب.","notes":"ذكّر بالتسليم: رابط مجلد في Google Drive فيه الخريطة وجداول المختبرات التي تستند إليها وسطر الإفصاح. وكل رقم في الخريطة يجب أن يعرف صاحبه من أي مختبر جاء.","minutes":null,"lo":[]}],"activities":[{"id":"check-day1-review-q1","slide":"check-day1-review","type":"single","prompt":"مخبز يدرس نموذجًا للتنبؤ بالطلب ترخيصه 60,000 ريال لكل فئة في السنة. على سنة لم يرها النموذج، يقلل الهدر والنقص أمام «مبيعات الأسبوع نفسه من العام الماضي» بما قيمته 150,000 ريال في الخبز، و40,000 في الحلويات، و90,000 في المعجنات. ماذا يوصي المحلل؟","options":[{"key":"أ","text":"الترخيص للفئات الثلاث، فالوفر الكلي 280,000 ريال أكبر من الترخيص 180,000"},{"key":"ب","text":"لا ترخيص، فالنموذج لا يربح في كل الفئات"},{"key":"ج","text":"الترخيص للخبز والمعجنات فقط، وتبقى الحلويات على القاعدة البسيطة"},{"key":"د","text":"نطلب من المورد دقة النموذج في كل فئة قبل أي قرار"}],"correct":[2],"explanation":"القرار لكل فئة على حدة: وفر الفئة أمام ترخيصها. الخبز يربح 90,000، والمعجنات 30,000، والحلويات تخسر 20,000.","misconceptions":["يحكم بالمجموع: 280,000 أكبر من 180,000، لكن الحلويات وحدها تخسر","يرفض النموذج لأن فئة واحدة تخسر: الخبز والمعجنات تربحان بوضوح","","يقارن بلا خط أساس: السؤال ليس دقة النموذج وحده بل ما يضيفه فوق القاعدة البسيطة"],"lo":["LO2"]},{"id":"check-trial-q1","slide":"check-trial","type":"single","prompt":"شركة تأمين تتصل هاتفيًّا قبل التجديد. في تجربة بالقرعة، المجموعتان متشابهتان في العمر ومدة الوثيقة. عدم التجديد 22% دون اتصال و18% مع الاتصال. في أعلى شريحة خطر: 45% دون اتصال و44% معه. ما الخلاصة؟","options":[{"key":"أ","text":"الاتصال يخفض عدم التجديد 4 نقاط، ولا يكاد يغيّر أعلى شريحة خطر"},{"key":"ب","text":"الاتصال يفشل في أعلى شريحة لأن 44% ما زالوا لا يجددون"},{"key":"ج","text":"لا تُقرأ النتيجة لأن المجموعتين قد تختلفان"},{"key":"د","text":"تُركّز الاتصالات على أعلى شريحة خطر، فهي الأكثر مغادرة"}],"correct":[0],"explanation":"الأثر فرق بين مجموعتين متوازنتين. في أعلى شريحة خطر الفرق نقطة واحدة: من يغادر هناك يغادر على كل حال.","misconceptions":["","يقرأ النسبة مع الاتصال وحدها: 44% لا تعني فشلًا ولا نجاحًا دون مقارنتها بـ45%","يشك في القرعة دون سبب: المجموعتان متشابهتان في صفات ما قبل الاتصال","يخلط الخطر بالأثر: أعلى شريحة خطر ليست أعلى شريحة أثر"],"lo":["LO3"]},{"id":"check-uplift-q1","slide":"check-uplift","type":"single","prompt":"شركة كهرباء تجرب عرض خصم لمن يُتوقع أن ينتقلوا إلى مزوّد آخر. في خلية «فواتير مرتفعة، عقد منتهٍ» الانتقال 40% دون عرض و39% معه. في «فواتير متوسطة، عقد منتهٍ» 18% و11%. في «فواتير منخفضة، عقد سارٍ» 3% و5%. أي خلية ترسل لها العرض؟","options":[{"key":"أ","text":"«فواتير مرتفعة، عقد منتهٍ»، لأن نسبة الانتقال فيها أعلى"},{"key":"ب","text":"«فواتير منخفضة، عقد سارٍ»، لأن الانتقال فيها أقل"},{"key":"ج","text":"الخلايا الثلاث، فالعرض لا يكلف كثيرًا"},{"key":"د","text":"«فواتير متوسطة، عقد منتهٍ» وحدها، فالأثر فيها 7 نقاط والعرض يغيّر قرارهم"}],"correct":[3],"explanation":"الاستهداف بالأثر الإضافي: الفرق بين دون عرض ومعه. الأولى تغادر على كل حال، والثالثة يوقظها العرض.","misconceptions":["يستهدف بالخطر: 40% أعلى نسبة، لكن العرض يغيّر نقطة واحدة فقط","يقرأ النسبة المنخفضة على أنها نجاح: 5% مع العرض أسوأ من 3% دونه","يرسل للجميع: الخلية الثالثة يضرها العرض، والأولى لا ينفعها",""],"lo":["LO3"]},{"id":"check-policy-q1","slide":"check-policy","type":"single","prompt":"شركة إنترنت منزلي تقارن سياستين لعرض بـ30 ريالًا. «الأعلى خطرًا»: 50,000 عرض، 200 محتفظ بهم، الصافي سالب. «بالأثر الإضافي»: 80,000 عرض، 3,000 محتفظ بهم، الصافي موجب، و96% من عروضها مهدرة. ماذا يقول المحلل؟","options":[{"key":"أ","text":"لا هذه ولا تلك، فـ96% من العروض مهدرة، وهي نسبة لا تقبلها أي إدارة"},{"key":"ب","text":"سياسة الأثر الإضافي، مع افتراضات التكبير بجانب الرقم"},{"key":"ج","text":"«الأعلى خطرًا»، لأنها ترسل عروضًا أقل"},{"key":"د","text":"الاثنتان معًا، لتصل العروض إلى الكل"}],"correct":[1],"explanation":"القرار بالقيمة الصافية. ونسبة المهدر عالية في كل سياسة لأن أغلب الناس لا يغيرهم أي عرض.","misconceptions":["يحكم بنسبة المهدر وحدها: الصافي هو ما يقرر","","يفضّل عددًا أقل من العروض: التكلفة أقل لكن الأثر شبه معدوم والصافي سالب","يضيف عروضًا لا أثر لها: الخلايا عالية الخطر لا تتغير، فتزيد التكلفة فقط"],"lo":["LO3"]},{"id":"check-claim-q1","slide":"check-claim","type":"single","prompt":"منصة تعليمية ترسل تذكيرًا لمن يُتوقع أن يتركوا الدورة. قبل تحديث النموذج: الإكمال 70% مع التذكير و64% في مجموعة الضبط. بعد تحديثه على نتائج الحملة: 80% مع التذكير و79% في الضبط. ماذا حدث؟","options":[{"key":"أ","text":"التحديث نجح، فالإكمال مع التذكير ارتفع 10 نقاط بعد إعادة التدريب"},{"key":"ب","text":"التذكير صار أضعف ويجب تغيير نصه"},{"key":"ج","text":"النموذج الجديد يختار من يكمل على كل حال، فهبط الأثر"},{"key":"د","text":"مجموعة الضبط لم تعد صالحة، فلا نستطيع القول"}],"correct":[2],"explanation":"البقاء في مجموعة الضبط ارتفع من 64% إلى 79%: المختارون صاروا ممن يكملون دون تذكير. الأثر هو الفرق، وقد هبط.","misconceptions":["يقرأ النسبة مع التذكير وحدها: ارتفعت لأن المختارين تغيروا","يحكم على التذكير نفسه: التذكير لم يتغير، الذي تغير من يتلقاه","","يشك في الضبط دون سبب: ارتفاع الضبط نفسه هو الدليل على تغير المختارين"],"lo":["LO3"]},{"id":"check-alerts-q1","slide":"check-alerts","type":"single","prompt":"مورد لنظام مراقبة مصاعد في 300 مبنى يقول: «دقة إجمالية 99%». في أسبوع: 840 تنبيهًا، 42 منها يقابلها عطل مؤكد. وكان في الأسبوع 50 عطلًا مؤكدًا، كُشف منها 42. ماذا يكتب المحلل؟","options":[{"key":"أ","text":"النظام ممتاز، والنشرة تؤكد ذلك"},{"key":"ب","text":"الدقة 5% والاستدعاء 84%"},{"key":"ج","text":"الدقة 84%، أي 42 من 50 عطلًا، وهي قريبة مما قاله المورد"},{"key":"د","text":"النظام يكشف أغلب الأعطال، فلا مشكلة"}],"correct":[1],"explanation":"42 ÷ 840 = 5% دقة؛ و42 ÷ 50 = 84% استدعاء. والسؤال التالي: هل يتحمل الفريق 840 تنبيهًا في الأسبوع؟","misconceptions":["يقبل رقمًا محسوبًا على كل الساعات: الساعات الهادئة تجعله عاليًا دائمًا","","يقسم على القاسم الخطأ: 42 ÷ 50 هو الاستدعاء لا الدقة","يحكم بالاستدعاء وحده: الثمن آلاف دقائق الفحص الضائعة"],"lo":["LO5"]},{"id":"check-threshold-q1","slide":"check-threshold","type":"single","prompt":"فريق مراقبة جودة في مصنع يفحص 50 تنبيهًا في اليوم على الأكثر، ولا يُقبل أن يفوت أكثر من عيب خطير واحد في الأسبوع. عند 0.5: 90 تنبيهًا وعيب خطير فائت. عند 0.6: 45 تنبيهًا وعيب خطير فائت. عند 0.7: 20 تنبيهًا وثلاثة عيوب خطيرة فائتة. أيها تختار؟","options":[{"key":"أ","text":"0.5، لأنها تفوّت أقل عدد من العيوب"},{"key":"ب","text":"0.7، لأن دقتها أعلى وتنبيهاتها الأقل بين العتبات الثلاث"},{"key":"ج","text":"لا عتبة، حتى يُشترى نموذج أفضل"},{"key":"د","text":"0.6، فهي ضمن الطاقة وتحقق شرط العيوب الخطيرة، وثمنها يُكتب"}],"correct":[3],"explanation":"الطاقة تستبعد 0.5، وشرط العيوب الخطيرة يستبعد 0.7. والثمن يُكتب: كم عيبًا غير خطير يفوت عند 0.6.","misconceptions":["يختار بالاستدعاء: 90 تنبيهًا فوق طاقة الفريق، فيُغلق نصفها دون فحص","يختار بالدقة: تفوّت ثلاثة عيوب خطيرة، والشرط واحد","يؤجل قرارًا يمكن اتخاذه: عتبة واحدة تحقق الشرطين الآن",""],"lo":["LO5"]},{"id":"check-location-q1","slide":"check-location","type":"single","prompt":"شركة نقل ذكي في مجموعة تضم سلسلة مطاعم. السلسلة تطلب أرقام جوالات من رُكّاب نُقلوا إلى مطاعم منافسة الشهر الماضي، لترسل لهم عروضًا. بيانات الرحلات جُمعت لتقديم خدمة النقل، ولا موافقة من الركاب على تسويق جهة أخرى. ما القرار؟","options":[{"key":"أ","text":"رفض القائمة، واقتراح أعداد رحلات مجمّعة بلا معرّفات"},{"key":"ب","text":"الموافقة، فالشركتان في مجموعة واحدة والبيانات داخل المجموعة أصلًا"},{"key":"ج","text":"الموافقة بعد حذف أسماء الركاب والإبقاء على الأرقام"},{"key":"د","text":"تسليم القائمة الآن، ثم سؤال الركاب عن الموافقة بعد أول عرض"}],"correct":[0],"explanation":"الغرض جديد، ولا موافقة، والطالب شركة مستقلة تُعامل على الأرجح جهة أخرى، والقائمة فردية. الأعداد المجمّعة تجيب عن السؤال التجاري دون ذلك كله.","misconceptions":["","يعد المجموعة جهة واحدة: السلسلة شركة مستقلة، فتمكينها من البيانات إفصاح على الأرجح، والغرض جديد بلا موافقة","يظن أن إخفاء الاسم يكفي: رقم الجوال معرّف شخصي، والغرض ما زال بلا موافقة","يقدّم التسليم على الموافقة: الإفصاح دون موافقة لا يصححه سؤال لاحق"],"lo":["LO6"]},{"id":"check-map-q1","slide":"check-map","type":"single","prompt":"سلسلة صيدليات تدرس نظامًا يرسل عروضًا بحسب مشتريات الأدوية. المورد يدّعي 4 ملايين ريال في السنة دون قياس. الضرر منخفض، والعملاء لم يوافقوا على استعمال مشترياتهم الدوائية للتسويق. بالدليل المعروض، أين تقع؟","options":[{"key":"أ","text":"امضِ، فالقيمة 5 والضرر منخفض"},{"key":"ب","text":"اختبر بتكلفة قليلة، فالقيمة 2 بعد سقف ادعاء المورد"},{"key":"ج","text":"توقّف: بيانات صحية تُستعمل للتسويق"},{"key":"د","text":"أصلح أولًا، ثم أعد التقدير"}],"correct":[2],"explanation":"المشتريات الدوائية بيانات صحية، والصحة من البيانات الحساسة، والنظام يستثنيها من المعالجة لأغراض تسويقية. فالحقوق 1، والقاعدة الأولى توقف الحالة مهما كانت القيمة.","misconceptions":["ينسى سقف الدليل: ادعاء المورد لا يتجاوز 2","يطبق الأرباع بغير ترتيبها: الحقوق تُفحص أولًا","","يعد الضرر وحده سبب الإصلاح: الضرر منخفض، والمشكلة في الحقوق"],"lo":["LO6"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day2.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

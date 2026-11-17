@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.8 · خريطة الفرص والمخاطر · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_8_opportunity_map.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-8">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.8</span>
+<h1>خريطة الفرص والمخاطر</h1>
+<p>تقدّر اثنتي عشرة حالة استخدام في مجموعة سحاب بدليل التقدير، وترتبها، وتضع كلًّا منها في ربعها، وتختار ما تبدأ به المناقشة الختامية.</p>
+<div class="meta"><span>25 دقيقة</span><span>اليوم 2</span><span>الجلسة 8: خريطة الفرص والمخاطر</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.8">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>لاثنتي عشرة حالة استخدام: درجة القيمة بسقف الدليل، والضرر، والحقوق، والمجموع.</li>
+    <li>ترتيب الحالات وربع كل منها على الخريطة.</li>
+    <li>الشركة التي ستعرض خريطتها في اليوم الختامي، وسطر الافتتاح.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/map/scoring_guide.txt" target="_blank"><b>map/scoring_guide.txt</b><span>دليل التقدير: القيمة وسقفها، والضرر، والحقوق، والأرباع</span></a>
+  <a href="files/map/use_cases.csv" target="_blank"><b>map/use_cases.csv</b><span>12 حالة استخدام بالأرقام المقيسة في المختبرات ونوع الدليل</span></a>
+  <a href="files/map/map_template.csv" target="_blank"><b>map/map_template.csv</b><span>قالب الخريطة الذي تملؤه</span></a>
+</div>
+<p class="small">الحالات تجمع ما قسته في اليومين، فلا تحتاج ملفاتك السابقة. الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم. هذا الملف هو أساس المشروع الختامي.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ الدليل والحالات <span class="min">4 دقائق</span></h3>
+  <p>في <code>use_cases.csv</code>: <code>D</code> نوع الدليل، و<code>E</code> القيمة الصافية بالريال في السنة، و<code>F</code> الضرر، و<code>G</code> الحقوق.</p>
+</div>
+
+<div class="step">
+  <h3>2 · درجة القيمة بالسقف <span class="min">7 دقائق</span></h3>
+  <pre class="code" data-file="use_cases.csv"><code>I2  =IF(E2&lt;=0,1,IF(E2&lt;100000,2,IF(E2&lt;500000,3,IF(E2&lt;2000000,4,5))))
+J2  =IF(OR(D2="trial",D2="ab_test",D2="pilot_with_control"),5,IF(D2="backtest",4,IF(D2="offline_only",3,2)))
+K2  =MIN(I2,J2)                                       value score</code></pre>
+</div>
+
+<div class="step">
+  <h3>3 · الضرر والحقوق والمجموع <span class="min">5 دقائق</span></h3>
+  <pre class="code" data-file="use_cases.csv"><code>L2  =IF(F2="low",5,IF(F2="moderate",3,1))       harm
+M2  =IF(G2="clear",5,IF(G2="partial",3,1))      rights
+N2  =2*K2+L2+M2                                 total, out of 20</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · الترتيب والأرباع <span class="min">5 دقائق</span></h3>
+  <p>طبّق قاعدة الأرباع بالترتيب المكتوب في الدليل (الشرط الأول يغلب)، ثم رتّب بالمجموع ثم بالرمز. انقل النتيجة إلى <code>map_template.csv</code> مع سطر سبب لكل حالة.</p>
+</div>
+
+<div class="step">
+  <h3>5 · اختر وافتتح <span class="min">4 دقائق</span></h3>
+  <p>اختر الشركة التي ستعرض خريطتها (أسواق سحاب أو سحاب للاتصالات) واكتب سطر الافتتاح: أول قرار تطلبه من الإدارة.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>أضف حالة من عملك بالدليل نفسه: ما دليلها اليوم، وما درجتها، وأي ربع. هذه أول صف في ورقة المتابعة.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>أي حالة تخسر أكثر بسقف الدليل؟ وما الذي يرفع سقفها؟</li>
+  <li>لماذا تُوقف حالة قيمتها المدّعاة ملايين؟</li>
+  <li>حالتان من الشركة نفسها تتشابهان في البيانات، وتقعان في ربعين مختلفين. أيهما؟ ولماذا؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <table>
+    <tr><th>الحالة</th><th>القيمة</th><th>الضرر</th><th>الحقوق</th><th>المجموع</th><th>الربع</th></tr>
+    <tr><td>R1</td><td>4</td><td>5</td><td>5</td><td>18</td><td>pursue</td></tr>
+    <tr><td>T3</td><td>4</td><td>5</td><td>5</td><td>18</td><td>pursue</td></tr>
+    <tr><td>T4</td><td>5</td><td>3</td><td>5</td><td>18</td><td>pursue</td></tr>
+    <tr><td>R6</td><td>3</td><td>5</td><td>5</td><td>16</td><td>test_cheaply</td></tr>
+    <tr><td>T2</td><td>5</td><td>3</td><td>3</td><td>16</td><td>pursue</td></tr>
+    <tr><td>R5</td><td>2</td><td>5</td><td>5</td><td>14</td><td>test_cheaply</td></tr>
+    <tr><td>T6</td><td>2</td><td>5</td><td>5</td><td>14</td><td>test_cheaply</td></tr>
+    <tr><td>R2</td><td>1</td><td>5</td><td>5</td><td>12</td><td>stop</td></tr>
+    <tr><td>R3</td><td>1</td><td>5</td><td>3</td><td>10</td><td>stop</td></tr>
+    <tr><td>T1</td><td>1</td><td>5</td><td>3</td><td>10</td><td>stop</td></tr>
+    <tr><td>R4</td><td>2</td><td>1</td><td>1</td><td>6</td><td>stop</td></tr>
+    <tr><td>T5</td><td>2</td><td>1</td><td>1</td><td>6</td><td>stop</td></tr>
+  </table>
+  <ul>
+    <li><b>السقف:</b> T5 (3 ملايين مدّعاة) وR4 (2.1 مليون) تنزلان إلى 2 لأنهما ادعاء مورد، ثم تتوقفان بالحقوق. R6 (400,000) لا يحتاج سقفًا: قيمتها 3 أصلًا، ومقياسها دون اتصال يمنعها من 4.</li>
+    <li><b>الحالتان المتشابهتان:</b> T5 وT6: البيانات نفسها، فردية دون موافقة (stop) أمام مجمّعة (test_cheaply). وR4 أمام R5 في التجزئة.</li>
+    <li><b>T2 قبل R6 مع تساوي المجموع؟</b> لا: الترتيب بالمجموع ثم بالرمز، فـR6 قبل T2. الربع مستقل عن الترتيب.</li>
+    <li><b>الفخ:</b> نسيان السقف (فتصير T5 وR4 بقيمة 5)، أو تطبيق الأرباع بغير ترتيبها فتُعد R4 «أصلح أولًا».</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.8</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_7_energy_and_location.html" rel="prev">→ المختبر السابق</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"2.8","title":"خريطة الفرص والمخاطر","summary":"تقدّر اثنتي عشرة حالة استخدام في مجموعة سحاب بدليل التقدير، وترتبها، وتضع كلًّا منها في ربعها، وتختار ما تبدأ به المناقشة الختامية.","minutes":25,"day":2,"unit":"اليوم 2","session":8,"deck":"../slides/day2.html#lab-2-8","prev":"D2_7_energy_and_location.html","next":null,"alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

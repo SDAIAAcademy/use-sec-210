@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.1 · سلاسل القرار لعشر حالات · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_1_decision_chains.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.1</span>
+<h1>سلاسل القرار لعشر حالات</h1>
+<p>تكتب سلسلة القرار لعشر حالات استخدام في مجموعة سحاب: البيانات، والمخرج، وقاعدة القرار، والفعل، وصاحبه، ونتيجة العمل، وخط الأساس، ثم تطابقها بمفتاح الإجابة.</p>
+<div class="meta"><span>20 دقيقة</span><span>اليوم 1</span><span>الجلسة 1: كيف يصير مخرج النموذج قرارًا</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.1">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>جدول سلاسل القرار لعشر حالات استخدام في مجموعة سحاب، مطابَق بمفتاح الإجابة.</li>
+    <li>قائمة بالحالات التي يصل فيها مخرج النموذج إلى العميل دون إنسان يقرر.</li>
+    <li>نتيجة عمل واحدة لكل حالة يُحكم بها على النموذج، بدل مقياس المورد.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/company_profile.txt" target="_blank"><b>company_profile.txt</b><span>الملف التعريفي لمجموعة سحاب وأشخاصها وأنظمتها</span></a>
+  <a href="files/use_cases.csv" target="_blank"><b>use_cases.csv</b><span>بطاقات الحالات العشر كما وصفها أصحابها أو مورّدوها</span></a>
+  <a href="files/chain_template.csv" target="_blank"><b>chain_template.csv</b><span>الجدول الفارغ الذي تملؤه</span></a>
+  <a href="files/prework_sheet.csv" target="_blank"><b>prework_sheet.csv</b><span>ورقة عملك التحضيري، للتمرين الإضافي</span></a>
+</div>
+<p class="small">الأداة جدول بيانات. سياسة الذكاء الاصطناعي في هذا المختبر: مساعد معلّم، تسأله ليشرح لا ليملأ الجدول عنك. لا يحتاج المختبر شيئًا من مختبر سابق.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ الملف التعريفي والبطاقات <span class="min">3 دقائق</span></h3>
+  <p>افتح <b>company_profile.txt</b> ثم <b>use_cases.csv</b>. خمس بطاقات من أسواق سحاب (C01 إلى C05) وخمس من سحاب للاتصالات (C06 إلى C10). اقرأ كل بطاقة مرة واحدة دون أن تكتب شيئًا، وضع خطًّا تحت كل فعل فيها: يتنبأ، يرتّب، يحسب، يطفئ، يرسل.</p>
+</div>
+
+<div class="step">
+  <h3>2 · العائلة والمخرج وقاعدة القرار <span class="min">7 دقائق</span></h3>
+  <p>افتح <b>chain_template.csv</b> واملأ لكل حالة ثلاثة أعمدة:</p>
+  <table>
+    <tr><th>العمود</th><th>ما تكتبه</th></tr>
+    <tr><td><code>family</code></td><td>واحدة من: <code>forecast</code> أو <code>recommender</code> أو <code>pricing</code> أو <code>churn</code> أو <code>network</code></td></tr>
+    <tr><td><code>model_output</code></td><td>ما يخرج من النموذج بالضبط: رقم، أو ترتيب، أو نسبة، أو شريحة، أو تنبيه</td></tr>
+    <tr><td><code>decision_rule</code></td><td>ما يحدث للمخرج: من يقرأه، وهل يُنفَّذ دون موافقة أحد</td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>3 · صاحب القرار ونتيجة العمل وخط الأساس <span class="min">6 دقائق</span></h3>
+  <p>املأ <code>action</code> و<code>decision_owner</code> و<code>outcome_measure</code> و<code>baseline_today</code>. نتيجة العمل هي ما تتغير به أرقام الشركة: هدر، أو إيراد، أو عملاء باقون، أو حوادث مكتشفة. ليست نسبة نقر ولا «دقة» يذكرها المورد.</p>
+  <div class="callout tip"><b>اختبار سريع.</b> لو تحسّن المقياس الذي كتبته ولم يتغير شيء في حسابات الشركة، فهو ليس نتيجة عمل.</div>
+</div>
+
+<div class="step">
+  <h3>4 · طابق جدولك بالمفتاح <span class="min">4 دقائق</span></h3>
+  <p>يعرض المدرب المفتاح. علّم كل خانة اختلفت فيها عن المفتاح، واكتب بجانبها كلمة البطاقة التي كان يجب أن تحسم الخانة. الجدول الناجح يطابق العائلة وقاعدة القرار في تسع حالات على الأقل من عشر.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>أضف قرارك من العمل التحضيري صفًّا حادي عشر بالأعمدة نفسها، واكتب أي حلقة في سلسلته أضعف: البيانات، أم صاحب القرار، أم نتيجة العمل.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>في أي الحالات يصل المخرج إلى العميل أو إلى الشبكة دون موافقة إنسان على كل مرة؟</li>
+  <li>ما نتيجة العمل التي تحكم بها على الحالة C02 بدل نسبة النقر؟</li>
+  <li>لماذا لا تقول «دقة 88%» في C06 شيئًا عن قيمة العروض؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>العائلات:</b> forecast C01 وC10؛ recommender C02 وC03؛ pricing C04 وC05؛ churn C06 وC07؛ network C08 وC09.</li>
+    <li><b>قرار آلي دون موافقة على كل مرة:</b> C02 وC03 وC04 وC09. في C01 وC05 وC07 وC10 إنسان يقرر، وفي C06 فريق يرسل العروض بقاعدة ثابتة، وفي C08 مهندس يفحص التنبيه.</li>
+    <li><b>نتائج العمل:</b> C01 كلفة النفاد والهدر أمام الموسمي البسيط؛ C02 الإيراد لكل زائر في تجربة عشوائية؛ C04 الهامش الإضافي مع فروق السعر بين الفئات؛ C06 العملاء المحتفظ بهم بسبب العرض ناقص تكلفته؛ C08 الحوادث المؤكدة المكتشفة والتنبيهات في اليوم؛ C09 الطاقة الموفرة أمام مواقع ضابطة مع معدل الانقطاع.</li>
+    <li><b>الفخاخ الأربعة:</b> نسبة النقر في C02، و«دقة 88%» في C06، و«دقة 97%» في C08، وكلمة «تلقائيًّا» في C09.</li>
+    <li>المفتاح كاملًا في <code>labs/solutions/key.json</code> تحت <code>1.1</code>، وشرحه في <code>labs/solutions/answer_key.md</code>. التحقق: <code>uv run labs/solutions/check.py 1.1</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><span></span><a href="D1_2_seasonal_baseline.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"1.1","title":"سلاسل القرار لعشر حالات","summary":"تكتب سلسلة القرار لعشر حالات استخدام في مجموعة سحاب: البيانات، والمخرج، وقاعدة القرار، والفعل، وصاحبه، ونتيجة العمل، وخط الأساس، ثم تطابقها بمفتاح الإجابة.","minutes":20,"day":1,"unit":"اليوم 1","session":1,"deck":"../slides/day1.html#lab-1-1","prev":null,"next":"D1_2_seasonal_baseline.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

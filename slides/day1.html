@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="deck" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اليوم 1 · أسواق سحاب: القيمة قبل النموذج · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day1.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<div class="deck" data-course="الذكاء الاصطناعي في التجزئة والاتصالات" data-track="fluency" data-day="اليوم 1">
+<section class="slide title" id="title" data-auto="title" data-label="الترحيب" data-n="1">
+  <div class="kicker">أكاديمية سدايا · الذكاء الاصطناعي في التجزئة والاتصالات</div>
+  <h1>أسواق سحاب: القيمة قبل النموذج</h1>
+  <p class="lead mt">اليوم 1: سلاسل القرار، وخط الأساس الموسمي، وتجارب التوصيات، والأسعار المخصصة أمام الموافقة والإنصاف</p>
+  <div class="meta"><span class="track">مسار الطلاقة في البيانات والذكاء الاصطناعي</span><span>يومان تدريبيان + يوم للمشروع الختامي</span><span>8 جلسات · 8 مختبرات</span><span>USE-SEC-210</span></div>
+  <aside class="notes"><p>رحّب، وعرّف بنفسك في جملتين. ثم اسأل القاعة: من اشترى نظامًا أو وافق على نظام قال مورده إنه «يزيد المبيعات» أو «يقلل الانصراف»؟ كيف عرفتم بعدها أنه فعل؟ اجمع ثلاث إجابات. الورشة كلها جواب عن هذا السؤال: نقيس القيمة قبل أن نصدقها.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="جدول اليوم" data-n="2">
+  <div class="kicker">اليوم</div>
+  <h2>أسواق سحاب: القيمة قبل النموذج</h2>
+  <div class="agenda"><div class="item"><div><b>الجلسة 1 · كيف يصير مخرج النموذج قرارًا</b><small>سلسلة القرار، ومقياس النموذج أمام نتيجة العمل</small></div></div><div class="item"><div><b>الجلسة 2 · خط الأساس قبل النموذج</b><small>الموسمي البسيط، والاختبار على سنة لاحقة</small></div></div><div class="item"><div><b>الجلسة 3 · أين يستحق النموذج تكلفته</b><small>الخطأ بحسب المجموعة، وكلفته أمام الترخيص</small></div></div><div class="item"><div><b>الجلسة 4 · العروض ورمضان والمبيعات الناقصة</b><small>المناسبات المتنقلة، والنفاد الذي يخفي الطلب</small></div></div><div class="item"><div><b>الجلسة 5 · التوصيات والبحث</b><small>معدل الإصابة، وخط أساس الشعبية، والعميل الجديد</small></div></div><div class="item"><div><b>الجلسة 6 · المقاييس دون اتصال وتجارب A/B</b><small>فترة الثقة، ونسبة العينة، وأثر الجِدّة</small></div></div><div class="item"><div><b>الجلسة 7 · الأسعار المخصصة والموافقة</b><small>مدخلات السعر، والموافقة لكل غرض</small></div></div><div class="item"><div><b>الجلسة 8 · فروق الأسعار والعملاء الأكثر عرضة للضرر</b><small>الفروق بين الفئات، والمتغيرات الوكيلة</small></div></div></div>
+  <aside class="notes"><p>ثماني جلسات اليوم، كل منها مفاهيم قصيرة ثم مختبر على جدول بيانات: أربع جلسات من 45 دقيقة بمختبر من 25 (الجلسات 2 و3 و6 و8)، وأربع من 37 أو 38 دقيقة بمختبر من 20 (الجلسات 1 و4 و5 و7). اليوم كله في أسواق سحاب: التنبؤ، ثم التوصيات، ثم الأسعار. غدًا سحاب للاتصالات ثم الخريطة. الاستراحات بزر B.</p></aside>
+</section>
+
+<section class="slide" id="sahab-group" data-lo="LO1" data-n="3">
+  <div class="kicker">دراسة الحالة</div>
+  <h2>مجموعة سحاب: متجر ومشغل اتصالات، ومكتب يقيس القيمة</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>أسواق سحاب</h4><p class="small mb0">48 فرعًا وتطبيق للتسوق. روزان الباهلي المديرة التجارية، وعزام الدغيم لتخطيط الإمداد، وعسايل الرقيبي للقنوات الرقمية. أنظمة قيد التقييم: «استشراف» و«مختارات» و«سعرك».</p></div>
+    <div class="card c-purple"><h4>سحاب للاتصالات</h4><p class="small mb0">مشغل متنقل وإنترنت منزلي. قاسم البليهد للاحتفاظ بالعملاء، ورتيل الرميان لمركز عمليات الشبكة. أنظمة قيد التقييم: «بقاء» و«رصد» و«سُبات».</p></div>
+  </div>
+  <div class="callout note mt"><b>دورك.</b> محلل في مكتب القيمة بالمجموعة، مع وصال الحبشان مسؤولة حماية البيانات. لا نظام يتوسع قبل أن يمر بمكتبك.</div>
+  <aside class="notes"><p>الشركة والأشخاص والأرقام كلها اصطناعية، والملف في <code>labs/files/company_profile.txt</code>. أكّد أن المشاركين لا يحتاجون خبرة في بناء النماذج: يحتاجون أن يسألوا الأسئلة الصحيحة ويحسبوا الإجابة بجدول بيانات. والأنظمة الستة كلها ستظهر في خريطة اليوم الثاني.</p></aside>
+</section>
+
+<section class="slide" id="ai-policy-prework" data-lo="LO1 LO6" data-n="4">
+  <div class="kicker">قواعد الورشة</div>
+  <h2>ثلاث درجات لاستعمال الذكاء الاصطناعي، وعمل تحضيري يعود في الخريطة</h2>
+  <table class="t">
+    <tr><th>الدرجة</th><th>أين</th><th>ما يعنيه</th></tr>
+    <tr><td><b>دون ذكاء اصطناعي</b></td><td>فحص السيناريوهات العشرة، والمحاولة الأولى في مختبر الأثر الإضافي (2.2)</td><td>تفكيرك وحدك؛ يُقاس ما تعرفه أنت</td></tr>
+    <tr><td><b>مساعد معلّم</b></td><td>بقية المختبرات</td><td>تسأله ليشرح صيغة أو مفهومًا، لا ليملأ الجدول عنك</td></tr>
+    <tr><td><b>استعمال كامل</b></td><td>خريطة الفرص والمخاطر</td><td>مسموح، على أن تدافع عن كل رقم مباشرة</td></tr>
+  </table>
+  <div class="callout warn mt"><b>لا بيانات من جهتك.</b> لا ترفع إلى أي مساعد ملفًا من عملك. ورقة العمل التحضيري بأسماء مغيّرة وأرقام مقرّبة.</div>
+  <aside class="notes"><p>اسأل: من أكمل ورقة العمل التحضيري (<code>prework_sheet.csv</code>)؟ من لم يكملها يأخذ القرار الجاهز في <code>prework_fallback.txt</code>. الورقة تعود في المختبر 1.1 صفًّا حادي عشر، وفي المتابعة بعد الورشة. التقييم: الفحص دون ذكاء اصطناعي 25%، وسجلات المختبرات 35%، والخريطة ومناقشتها 40%.</p></aside>
+</section>
+
+<section class="slide" id="setup-check" data-lo="LO1" data-n="5">
+  <div class="kicker">قبل أن نبدأ</div>
+  <h2>جدول بيانات يفتح ملفات CSV بالعربية، وهذا كل ما تحتاجه</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>جدول بيانات: <span class="en">LibreOffice Calc</span> أو <span class="en">Microsoft Excel</span> أو <span class="en">Google Sheets</span></li>
+      <li>افتح <code>labs/files/use_cases.csv</code> واقرأ عمود الاسم: إن ظهر بالعربية سليمًا فأنت جاهز</li>
+      <li>إن ظهرت رموز غريبة: استورد الملف بترميز <span class="en">UTF-8</span></li>
+      <li>المختبر 1.6 فيه دفتر مقدَّم اختياري يعمل في <span class="en">Colab</span> أو <span class="en">JupyterLite</span></li>
+    </ul>
+    <div class="card c-teal"><h4>لا شيء يُنزَّل</h4><p class="small mb0">لا نموذج ولا برنامج جديد. لا مختبر يستدعي نموذجًا لغويًّا. كل حساب صيغة تكتبها بيدك.</p></div>
+  </div>
+  <aside class="notes"><p>دقيقتان فقط. مرّ على القاعة واطلب من كل مشارك أن يريك عمود الاسم بالعربية. أكثر مشكلة شائعة: Excel يفتح الملف بترميز خاطئ عند النقر المزدوج؛ الحل من قائمة البيانات: من نص أو CSV، ثم اختيار UTF-8. في Google Sheets يعمل الاستيراد مباشرة.</p></aside>
+</section>
+
+<!-- الجلسة 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="6">
+  <div class="kicker">الجلسة 1</div>
+  <h1>كيف يصير مخرج النموذج قرارًا</h1>
+  <ul class="bullets outcomes"><li>تتبع سلسلة القرار من البيانات إلى الفعل والنتيجة</li><li>تميّز مقياس النموذج من نتيجة العمل التي يُحكم بها</li><li>تسمّي صاحب القرار وموضع الإنسان في السلسلة</li></ul>
+  <div class="sess-no">01</div>
+  <aside class="notes"><p>الجلسة الأولى تبني لغة الورشة: سلسلة القرار. كل ما بعدها سؤال عن حلقة من حلقاتها.</p></aside>
+</section>
+
+<section class="slide" id="decision-chain" data-lo="LO1" data-n="7" data-session="1">
+  <div class="kicker">سلسلة القرار</div>
+  <h2>النموذج لا يصنع قيمة؛ القرار الذي يغيّره هو الذي يصنعها</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>البيانات</b>ما يدخل: مبيعات، نقرات، فواتير، مؤشرات</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>المخرج</b>رقم، أو ترتيب، أو درجة</div>
+    <div class="arrow frag" data-frag="b">←</div>
+    <div class="step c-purple frag" data-frag="b"><b>قاعدة القرار</b>من يقرأ المخرج، وماذا يفعل به</div>
+    <div class="arrow frag" data-frag="c">←</div>
+    <div class="step c-coral frag" data-frag="c"><b>الفعل والنتيجة</b>طلبية، سعر، عرض، تنبيه؛ ثم أثره في الحسابات</div>
+  </div>
+  <div class="callout tip mt frag" data-frag="c"><b>السؤال الدائم.</b> لو اختفى النموذج غدًا، أي قرار كان سيُتخذ؟ ذلك خط الأساس.</div>
+  <aside class="notes"><p>اضغط لكل حلقة. مثال من خارج سحاب: سلسلة مقاهٍ تتنبأ بعدد الأكواب غدًا؛ المخرج رقم، وقاعدة القرار أن المشرف يطلب الحليب على أساسه، والنتيجة حليب مهدر أقل أو زبائن بلا قهوة. النموذج نفسه بلا قاعدة قرار لا يغيّر شيئًا. ارسم السلسلة على السبورة: ستعود إليها في كل جلسة.</p></aside>
+</section>
+
+<section class="slide" id="five-families" data-lo="LO1" data-n="8" data-session="1">
+  <div class="kicker">خمس عائلات</div>
+  <h2>في التجزئة والاتصالات، خمس عائلات تغطي أغلب ما يُعرض عليك</h2>
+  <table class="t">
+    <tr><th>العائلة</th><th>المخرج</th><th>قرار نموذجي</th></tr>
+    <tr><td><b>التنبؤ</b></td><td>رقم للمستقبل</td><td>كم نطلب، أين نوسّع السعة</td></tr>
+    <tr><td><b>التوصية والبحث</b></td><td>ترتيب</td><td>ماذا يرى العميل أولًا</td></tr>
+    <tr><td><b>التسعير</b></td><td>سعر أو نسبة خصم</td><td>كم يدفع العميل</td></tr>
+    <tr><td><b>الانصراف والعرض الأنسب</b></td><td>درجة خطر أو عرض مقترح</td><td>لمن نرسل عرضًا، وأي عرض</td></tr>
+    <tr><td><b>الشبكة</b></td><td>درجة شذوذ أو أمر تشغيل</td><td>أي تنبيه يُفحص، متى تُطفأ خلية</td></tr>
+  </table>
+  <aside class="notes"><p>اطلب من كل طاولة مثالًا من عملها لكل صف. لا تدخل في طريقة بناء النماذج: الورشة عن الحكم عليها. الأمثلة كلها من غير بطاقات المختبر؛ البطاقات العشر يصنفها المشاركون بأنفسهم.</p></aside>
+</section>
+
+<section class="slide" id="metric-vs-outcome" data-lo="LO1" data-n="9" data-session="1">
+  <div class="kicker">ما نحكم به</div>
+  <h2>مقياس النموذج يصف النموذج؛ نتيجة العمل تصف الشركة</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>مقاييس يذكرها المورد</h4><ul class="bullets small"><li>«الدقة 95%»</li><li>نسبة النقر على التوصيات</li><li>معدل الإصابة في أول خمس توصيات</li><li>عدد التنبيهات</li></ul></div>
+    <div class="card c-teal"><h4>نتائج عمل تتغير بها الحسابات</h4><ul class="bullets small"><li>الهدر والنفاد بالريال</li><li>الإيراد لكل زائر في تجربة عشوائية</li><li>عملاء بقوا بسبب العرض</li><li>حوادث مكتشفة في وقتها</li></ul></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> مقياس يتحسن ولا يتغير شيء في الحسابات. اسأل دائمًا: لو تحسن هذا الرقم، أين أراه في الأرباح أو التكاليف؟</div>
+  <aside class="notes"><p>المقاييس على اليسار ليست عديمة الفائدة: تساعد الفريق الفني. لكنها لا تقرر الشراء. مثال: نظام توصيات في متجر كتب إلكتروني يرفع النقر لأنه يعرض أغلفة لافتة، والمبيعات لا تتغير. سنحسب هذا الفرق بالأرقام في الجلستين 5 و6.</p></aside>
+</section>
+
+<section class="slide" id="who-decides" data-lo="LO1" data-n="10" data-session="1">
+  <div class="kicker">موضع الإنسان</div>
+  <h2>ثلاثة مواضع للإنسان، ولكل منها أسئلة مختلفة</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>يقرأ ويقرر</h4><p class="small mb0">صيدلية تقترح كمية الطلب، والمشرف يطلب ما يراه. السؤال: هل يغيّر المقترح قرار المشرف للأفضل؟</p></div>
+    <div class="card c-amber"><h4>يوافق أو يرفض</h4><p class="small mb0">اقتراح تخفيض ينتظر موافقة مدير الفرع. السؤال: هل يراجع فعلًا، أم يوافق على كل شيء؟</p></div>
+    <div class="card c-coral"><h4>لا أحد في كل مرة</h4><p class="small mb0">سعر يتغير في التطبيق تلقائيًّا ضمن حدود. السؤال: من وضع الحدود، ومن يراقب أثرها؟</p></div>
+  </div>
+  <div class="callout tip mt"><b>صاحب القرار</b> هو من يملك تغيير القاعدة، ولو لم يلمس كل قرار بيده.</div>
+  <aside class="notes"><p>كلمات مثل «تلقائيًّا» و«مباشرة» و«دون مراجعة» في وصف المورد تنقل الحالة إلى العمود الثالث. في المختبر ابحثوا عنها. اسأل القاعة: في العمود الثاني، كيف تعرف أن الموافقة ليست شكلية؟ (نسبة الرفض أو التعديل؛ إن كانت صفرًا فالإنسان ختم لا حَكَم.)</p></aside>
+</section>
+
+<section class="slide" id="baseline-today" data-lo="LO1 LO2" data-n="11" data-session="1">
+  <div class="kicker">خط الأساس</div>
+  <h2>لكل قرار قاعدة تعمل اليوم، والنموذج يُقاس أمامها</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الطلبية اليوم: «مثل الأسبوع نفسه من العام الماضي»</li>
+      <li>التوصية اليوم: «الأكثر مبيعًا»</li>
+      <li>العرض اليوم: «لكل من في الشريحة العليا»</li>
+      <li>التنبيه اليوم: «عتبة ثابتة على مؤشر واحد»</li>
+    </ul>
+    <div class="card c-purple"><h4>لماذا يهم</h4><p class="small mb0">قيمة النموذج هي الفرق بينه وبين هذه القاعدة، لا بينه وبين لا شيء. وقاعدة بسيطة تعمل جيدًا تترك للنموذج مجالًا ضيقًا.</p></div>
+  </div>
+  <aside class="notes"><p>اطلب من كل مشارك أن يكتب خط الأساس لقراره في العمل التحضيري إن لم يكتبه. الأمثلة الأربعة عامة؛ في المختبر يكتب المشاركون خط الأساس لكل بطاقة. هذه الفكرة هي موضوع الجلسة 2 كلها.</p></aside>
+</section>
+
+<section class="slide" id="check-decision-chain" data-lo="LO1" data-n="12" data-session="1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما نتيجة العمل هنا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-decision-chain-q1">
+    <p class="lead">سلسلة مكتبات تشتري نظامًا يقترح كمية إعادة الطلب لكل كتاب كل أسبوع، ويقرأ المشرف الاقتراح ثم يطلب. يقول المورد: «دقة النظام 94% على بيانات العام الماضي». بأي نتيجة تحكم على قيمته؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقبل مقياس النموذج بدل نتيجة العمل: الدقة لا تقول كم تغيرت الكتب الراكدة أو الرفوف الفارغة" data-k="أ">الدقة 94%، فهي أعلى من الحد المقبول في القطاع ومن عروض المنافسين</div>
+      <div class="opt" data-ok data-k="ب">تكلفة الكتب الراكدة والرفوف الفارغة أمام طريقة الطلب الحالية</div>
+      <div class="opt" data-why="يعد استعمال النظام قيمة: كثرة الطلبات المقبولة لا تقول إن القرار تحسن" data-k="ج">عدد الاقتراحات التي قبلها المشرفون دون تعديل</div>
+      <div class="opt" data-why="يقارن بلا شيء بدل خط الأساس: لا أحد يطلب عشوائيًّا اليوم" data-k="د">الفرق بين النظام وطلب عشوائي على بيانات العام الماضي نفسها</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> القيمة في القرار: الطلبية. وتُقاس بما تغيّره في التكلفة أمام القاعدة المستعملة اليوم.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. من اختار «ج» يحتاج سؤال: لو قبل المشرفون كل الاقتراحات وارتفع الهدر، هل نجح النظام؟ من اختار «د» ارجع به إلى شريحة خط الأساس.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-1" data-auto="lab" data-lab="1.1" data-label="المختبر 1.1" data-n="13" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.1 · 20 دقيقة</div><h2>سلاسل القرار لعشر حالات</h2><p class="lead small">تكتب سلسلة القرار لعشر حالات استخدام في مجموعة سحاب: البيانات، والمخرج، وقاعدة القرار، والفعل، وصاحبه، ونتيجة العمل، وخط الأساس، ثم تطابقها بمفتاح الإجابة.</p><a class="nb" href="../labs/D1_1_decision_chains.html">D1_1_decision_chains.html</a></div><ul class="checklist"><li>اقرأ الملف التعريفي للمجموعة وبطاقات الحالات العشر <span class="min">3 د</span></li><li>املأ العائلة والمخرج وقاعدة القرار لكل حالة <span class="min">7 د</span></li><li>اكتب صاحب القرار ونتيجة العمل وخط الأساس لكل حالة <span class="min">6 د</span></li><li>طابق جدولك بالمفتاح وصحّح الحالات المختلفة <span class="min">4 د</span></li><li class="stretch">✱ إضافي: أضف قرارك من العمل التحضيري صفًّا حادي عشر، واكتب أي حلقة في سلسلته أضعف</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. راقب عمودي قاعدة القرار ونتيجة العمل: الخطأ الأكثر شيوعًا نسخ مقياس المورد في عمود النتيجة. في الدقيقة 16 اعرض المفتاح (<code>labs/solutions/key.json</code>، أو قائمة المدرب في صفحة المختبر). من أنهى مبكرًا يضيف قراره من العمل التحضيري.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-1" data-lo="LO1" data-n="14" data-session="1">
+  <div class="kicker">بعد المختبر 1.1</div>
+  <h2>أربع حالات من عشر تصل إلى العميل أو الشبكة دون إنسان في كل مرة</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>قرار آلي</h4><p class="small mb0">C02 «مختارات»، وC03 ترتيب البحث، وC04 «سعرك»، وC09 «سُبات». هذه تحتاج حدودًا ومراقبة قبل غيرها.</p></div>
+    <div class="card c-amber"><h4>أربعة فخاخ في الوصف</h4><p class="small mb0">نسبة النقر في C02، و«دقة 88%» في C06، و«دقة 97%» في C08، وكلمة «تلقائيًّا» في C09.</p></div>
+  </div>
+  <div class="callout tip mt"><b>ما يبقى.</b> كل حالة في الخريطة غدًا تبدأ من هذا الجدول: من يقرر، وبأي نتيجة نحكم، وأمام أي قاعدة.</div>
+  <aside class="notes"><p>اسأل: كم طاولة طابقت تسعًا من عشر في العائلة وقاعدة القرار؟ الحالات الأكثر اختلافًا عادة C06 (الفريق يرسل العروض بقاعدة ثابتة، فليس آليًّا بالكامل) وC08 (التنبيه يفحصه مهندس). المفتاح في <code>labs/solutions/answer_key.md</code>.</p></aside>
+</section>
+
+<!-- الجلسة 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="15">
+  <div class="kicker">الجلسة 2</div>
+  <h1>خط الأساس قبل النموذج</h1>
+  <ul class="bullets outcomes"><li>تبني خط أساس موسميًّا بسيطًا لبيانات أسبوعية</li><li>تحسب نسبة الخطأ المطلق الموزونة والانحياز</li><li>تقارن تنبؤ المورد بخط الأساس على سنة لم يرها</li></ul>
+  <div class="sess-no">02</div>
+  <aside class="notes"><p>من هنا حتى نهاية الجلسة 4: «استشراف»، تنبؤ الطلب الأسبوعي لعزام الدغيم.</p></aside>
+</section>
+
+<section class="slide" id="naive-methods" data-lo="LO2" data-n="16" data-session="2">
+  <div class="kicker">قاعدتان لا تتعلمان شيئًا</div>
+  <h2>البسيط والموسمي البسيط: كل تنبؤ يُقارن بهما أولًا</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>البسيط</h4><p>الأسبوع القادم مثل هذا الأسبوع.</p><p class="small mb0">قوي حين يتغير الطلب ببطء.</p></div>
+    <div class="card c-purple"><h4>الموسمي البسيط</h4><p>هذا الأسبوع مثل الأسبوع نفسه من العام الماضي.</p><p class="small mb0">يحفظ المواسم الثابتة: الصيف، والعودة إلى المدارس.</p></div>
+  </div>
+  <div class="callout tip mt"><b>القاعدة.</b> النموذج الذي لا يغلب الموسمي البسيط على بيانات لم يرها لا يُناقش ثمنه بعد.</div>
+  <aside class="notes"><p>كتاب Hyndman وAthanasopoulos في التنبؤ يعرض الطرق البسيطة، ومنها الموسمي البسيط، معايير مقارنة لأي طريقة أعقد. مثال من خارج سحاب: محل زهور يطلب الورد الأحمر للأسبوع الذي فيه مناسبة سنوية ثابتة بمبيعات الأسبوع نفسه من العام الماضي.</p><p>المصادر: Hyndman and Athanasopoulos, Forecasting: Principles and Practice, 3rd edition, simple forecasting methods.</p></aside>
+</section>
+
+<section class="slide" id="test-on-later-period" data-lo="LO2" data-n="17" data-session="2">
+  <div class="kicker">بيانات لم يرها</div>
+  <h2>يُختبر التنبؤ على فترة بعد فترة تدريبه، لا عليها</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>السنة الأولى</b>يتعلم منها النموذج</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>السنة الثانية</b>يُختبر عليها، والقاعدة البسيطة معه</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> رقم دقة محسوب على السنة التي تدرّب عليها النموذج يقيس الحفظ، لا التنبؤ. اسأل المورد دائمًا: على أي فترة حُسب؟ وهل رآها النموذج؟</div>
+  <aside class="notes"><p>في ملف المختبر عمود التنبؤ فارغ في السنة الأولى عمدًا. والسؤال الثاني الذي تسأله: هل الفترة بعد التدريب في الزمن، أم صفوف مقتطعة عشوائيًّا من الفترة نفسها؟ الاقتطاع العشوائي يسمح للنموذج أن «يرى» الأسبوع التالي.</p><p>المصادر: Hyndman and Athanasopoulos, Forecasting: Principles and Practice, 3rd edition, evaluating point forecast accuracy.</p></aside>
+</section>
+
+<section class="slide" id="wape-and-bias" data-lo="LO2" data-n="18" data-session="2">
+  <div class="kicker">مقياسان</div>
+  <h2>نسبة الخطأ المطلق الموزونة تقول كم نخطئ؛ الانحياز يقول إلى أي جهة</h2>
+  <table class="t">
+    <tr><th>المقياس</th><th>يُحسب</th><th>يجيب عن</th></tr>
+    <tr><td><b>نسبة الخطأ المطلق الموزونة</b> (<span class="en">WAPE</span>)</td><td>مجموع |التنبؤ ناقص المبيعات| ÷ مجموع المبيعات</td><td>كم وحدة نخطئ من كل 100 نبيعها؟</td></tr>
+    <tr><td><b>الانحياز</b></td><td>مجموع (التنبؤ ناقص المبيعات) ÷ مجموع المبيعات</td><td>هل نطلب أكثر من اللازم أم أقل، باستمرار؟</td></tr>
+  </table>
+  <div class="callout note mt"><b>مثال توضيحي.</b> منتجان: خطأ 10 وحدات على مبيعات 100، وخطأ 10 على 1,000. النسبة الموزونة 20 ÷ 1,100 = 1.8%، لا متوسط 10% و1% = 5.5%.</div>
+  <aside class="notes"><p>لماذا الموزونة؟ لأن المتجر يدفع ثمن الوحدات، لا ثمن النسب. المتوسط البسيط للنسب يعطي المنتج الصغير صوتًا مثل الكبير. الانحياز قد يكون صفرًا والخطأ كبيرًا: أخطاء كبيرة تلغي بعضها. الصيغ جاهزة في صفحة المختبر.</p></aside>
+</section>
+
+<section class="slide" id="moving-calendar" data-lo="LO2" data-n="19" data-session="2">
+  <div class="kicker">التقويم المتنقل</div>
+  <h2>رمضان يتقدم نحو 11 يومًا كل عام، والموسمي البسيط لا يعرف</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>السنة الهجرية أقصر من الميلادية بنحو 11 يومًا</li>
+      <li>الأسبوع نفسه من العام الماضي قد يكون قبل رمضان، وهو هذا العام في رمضان</li>
+      <li>وكذلك العيدان، وكل عرض ترويجي لم يُكرر في الأسبوع نفسه</li>
+    </ul>
+    <div class="card c-coral"><h4>ما يعرفه النموذج ولا تعرفه القاعدة</h4><p class="small mb0">تقويم العروض المخطط، وتواريخ المناسبات هذا العام. هذا ما يدفع ثمنه المتجر حين يشتري تنبؤًا.</p></div>
+  </div>
+  <aside class="notes"><p>اسأل القاعة: ماذا يحدث لطلبية أسبوع بدأ فيه رمضان هذا العام، إذا نُسخت من أسبوع عادي في العام الماضي؟ ثم العكس: أسبوع عادي هذا العام يُنسخ من أسبوع رمضان. الخطآن في اتجاهين متعاكسين. هذا ما ستقيسه في الجلسة 4.</p></aside>
+</section>
+
+<section class="slide" id="what-average-hides" data-lo="LO2" data-n="20" data-session="2">
+  <div class="kicker">رقم واحد لخمسين منتجًا</div>
+  <h2>متوسط واحد يقول هل النموذج أدق، ولا يقول أين يستحق ثمنه</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>المتوسط يخلط منتجات مستقرة بمنتجات العروض</li>
+      <li>ويخلط أسابيع رمضان بالأسابيع العادية</li>
+      <li>ولا يعرف كم يكلف كل خطأ: الطماطم الزائدة تُتلف، والأرز الزائد يبقى في المخزن</li>
+    </ul>
+    <div class="card c-purple"><h4>اليوم بالترتيب</h4><p class="small mb0">الجلسة 2: المتوسط على السنة. الجلسة 3: بحسب المجموعة وبالريال. الجلسة 4: بحسب نوع الأسبوع.</p></div>
+  </div>
+  <aside class="notes"><p>هذه الشريحة تمهد للسطرين اللذين يكتبهما المشاركون في آخر المختبر: ما يقوله الرقمان وما لا يقولانه. لا تكشف أي رقم من المختبر.</p></aside>
+</section>
+
+<section class="slide" id="check-baseline" data-lo="LO2" data-n="21" data-session="2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي مقارنة تعرضها على اللجنة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-baseline-q1">
+    <p class="lead">سلسلة صيدليات تقيّم تنبؤًا أسبوعيًّا لواقي الشمس. المورد درّب النموذج على 2024. أي مقارنة تكفي لتقول إن النموذج أدق من الطريقة الحالية؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يختبر على سنة التدريب: الرقم يقيس ما حفظه النموذج لا ما يتنبأ به" data-k="أ">خطأ النموذج على 2024 أمام خطأ الموسمي البسيط على 2024، بالنسبة الموزونة والانحياز</div>
+      <div class="opt" data-why="يقارن بقاعدة لا يستعملها أحد: الصيدلية لا تطلب عشوائيًّا" data-k="ب">خطأ النموذج على 2025 أمام طلب عشوائي على 2025</div>
+      <div class="opt" data-ok data-k="ج">خطأ النموذج والموسمي البسيط على 2025، بالنسبة الموزونة والانحياز</div>
+      <div class="opt" data-why="يكتفي بمتوسط النسب: يعطي المنتجات الصغيرة وزن الكبيرة ويغفل اتجاه الخطأ" data-k="د">متوسط نسبة الخطأ لكل أسبوع في 2025، للنموذج وحده</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> فترة لم يرها النموذج، أمام القاعدة المستعملة اليوم، بمقياس موزون ومعه اتجاه الخطأ.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. «أ» هو أكثر فخ شائع في عروض الموردين. إن اختاره كثيرون، ارجع إلى شريحة «بيانات لم يرها».</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-2" data-auto="lab" data-lab="1.2" data-label="المختبر 1.2" data-n="22" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.2 · 25 دقيقة</div><h2>خط الأساس الموسمي البسيط</h2><p class="lead small">تبني عمود الموسمي البسيط لمبيعات السنة الثانية لخمسين منتجًا، وتحسب خطأه وخطأ «استشراف» وانحيازهما على السنة كلها.</p><a class="nb" href="../labs/D1_2_seasonal_baseline.html">D1_2_seasonal_baseline.html</a></div><ul class="checklist"><li>افتح ملف المبيعات وافهم أعمدته وترتيب صفوفه <span class="min">4 د</span></li><li>ابنِ عمود الموسمي البسيط لصفوف السنة الثانية <span class="min">7 د</span></li><li>احسب الخطأ المطلق والخطأ بإشارته لكل تنبؤ <span class="min">6 د</span></li><li>احسب نسبة الخطأ المطلق الموزونة والانحياز للتنبؤين <span class="min">5 د</span></li><li>اكتب في سطرين ما يقوله الرقمان وما لا يقولانه <span class="min">3 د</span></li><li class="stretch">✱ إضافي: أضف خط أساس ثالثًا هو مبيعات الأسبوع السابق، وقارن خطأه بالموسمي البسيط</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. أكثر خطأ تقني: سحب صيغة الموسمي البسيط من الصف 2. الصيغة تبدأ من الصف 54. الخطأ الثاني: قسمة مجموع الأخطاء على مبيعات السنتين. من يتأخر يعطى <code>files/start/forecast_errors_y2.csv</code>.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-2" data-lo="LO2" data-n="23" data-session="2">
+  <div class="kicker">بعد المختبر 1.2</div>
+  <h2>على سنة لم يرها، خطأ استشراف نصف خطأ القاعدة الحالية</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">7.2%</div><div class="lbl">نسبة الخطأ المطلق الموزونة لاستشراف، والانحياز 0.61%</div></div>
+    <div class="stat center"><div class="big">15.2%</div><div class="lbl">للموسمي البسيط، والانحياز ناقص 1.46%</div></div>
+  </div>
+  <div class="callout warn mt"><b>لكن.</b> هذا لا يقول بعدُ أين يستحق الترخيص ثمنه. عزام يشتري الترخيص لكل مجموعة على حدة.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل على 2,600 صف (<code>labs/solutions/check.py 1.2</code>). اسأل: من كتب في سطريه أن المتوسط لا يقول أين؟ ذلك هو السؤال التالي.</p></aside>
+</section>
+
+<!-- الجلسة 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="24">
+  <div class="kicker">الجلسة 3</div>
+  <h1>أين يستحق النموذج تكلفته</h1>
+  <ul class="bullets outcomes"><li>تقارن الخطأ بحسب مجموعة المنتجات لا بالمتوسط وحده</li><li>تسعّر الخطأ بكلفة غير متماثلة للنقص والزيادة</li><li>تحدد المجموعات التي يغطي فيها الوفر الترخيص</li></ul>
+  <div class="sess-no">03</div>
+  <aside class="notes"><p>جلسة من 45 دقيقة بمختبر من 25: تسعير الأخطاء يحتاج وقتًا في الجدول.</p></aside>
+</section>
+
+<section class="slide" id="average-hides-groups" data-lo="LO2" data-n="25" data-session="3">
+  <div class="kicker">بحسب المجموعة</div>
+  <h2>النموذج قد يربح كثيرًا في مجموعة ويخسر في أخرى، والمتوسط يخفي الاثنين</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>مخبز بفروع: الخبز اليومي مستقر، والكعك يتبع المناسبات</li>
+      <li>القاعدة البسيطة تكفي للخبز تقريبًا</li>
+      <li>النموذج يربح في الكعك لأنه يعرف تقويم المناسبات</li>
+      <li>متوسط الاثنين يقول «أدق قليلًا»، ولا يقول أين</li>
+    </ul>
+    <div class="card c-teal"><h4>السؤال الصحيح</h4><p class="small mb0">لكل مجموعة: كم ينقص الخطأ؟ وكم يساوي ذلك بالريال؟</p></div>
+  </div>
+  <aside class="notes"><p>المثال من خارج سحاب ودون أرقام. في المختبر خمس مجموعات: الطازج، والألبان، والمواد الأساسية، والمشروبات، والمستلزمات المنزلية. اسأل القاعة قبل المختبر: أين تتوقعون أن يربح النموذج أكثر؟ اكتب التوقعات على السبورة وارجع إليها بعد المختبر.</p></aside>
+</section>
+
+<section class="slide" id="asymmetric-cost" data-lo="LO2" data-n="26" data-session="3">
+  <div class="kicker">كلفة الخطأ</div>
+  <h2>الوحدة الناقصة والوحدة الزائدة لا تكلفان الشيء نفسه</h2>
+  <table class="t">
+    <tr><th>المنتج</th><th>إن طلبنا أقل</th><th>إن طلبنا أكثر</th></tr>
+    <tr><td>طازج قصير الصلاحية</td><td>هامش ضائع وعميل غاضب</td><td><b>هدر</b>: الوحدة تُتلف</td></tr>
+    <tr><td>مواد جافة طويلة الصلاحية</td><td>هامش ضائع</td><td>تكلفة تخزين صغيرة، وتُباع الأسبوع القادم</td></tr>
+    <tr><td>منتج العرض الترويجي</td><td>رف فارغ في أسبوع الإعلان</td><td>مخزون زائد بعد العرض</td></tr>
+  </table>
+  <div class="callout tip mt"><b>لذلك</b> يُسعَّر كل خطأ بكلفة اتجاهه: نقص × كلفة النقص، أو زيادة × كلفة الزيادة.</div>
+  <aside class="notes"><p>جدول الكلفة في المختبر (<code>cost_by_group.csv</code>) اصطناعي، لكنه يتبع هذا المنطق. أكّد: هذا الجدول يكتبه أصحاب العمل لا المورد. ولو تغير رقم فيه قد يتغير القرار: التمرين الإضافي يختبر ذلك.</p></aside>
+</section>
+
+<section class="slide" id="price-the-error" data-lo="LO2" data-n="27" data-session="3">
+  <div class="kicker">مثال توضيحي</div>
+  <h2>خطأ أصغر لا يعني دائمًا كلفة أصغر</h2>
+  <table class="t">
+    <tr><th></th><th>الأسبوع 1</th><th>الأسبوع 2</th><th>الكلفة (نقص 2، زيادة 0.5)</th></tr>
+    <tr><td>التنبؤ أ</td><td>نقص 10</td><td>نقص 10</td><td>20 × 2 = <b>40</b></td></tr>
+    <tr><td>التنبؤ ب</td><td>زيادة 15</td><td>زيادة 15</td><td>30 × 0.5 = <b>15</b></td></tr>
+  </table>
+  <div class="callout note mt"><b>الخلاصة.</b> التنبؤ ب أكبر خطأً وأقل كلفة. في الجدول: عمود يسعّر كل صف بـ<code>IF</code>، ثم <code>SUMIFS</code> لكل مجموعة.</div>
+  <aside class="notes"><p>الأرقام توضيحية بالكامل. اطلب من أحد المشاركين أن يحسب السطرين بصوت عالٍ. ثم اسأل: لو كانت كلفة الزيادة 3 ريالات بدل 0.5، أيهما أفضل؟ (ب: 90، أ: 40.) القرار يتبع الكلفة لا الخطأ.</p></aside>
+</section>
+
+<section class="slide" id="saving-vs-fee" data-lo="LO2" data-n="28" data-session="3">
+  <div class="kicker">القرار</div>
+  <h2>يُشترى الترخيص حيث يزيد الوفر على ثمنه، مجموعةً مجموعة</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>كلفة أخطاء القاعدة</b>بالريال في السنة</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>ناقص كلفة أخطاء النموذج</b>= الوفر</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>ناقص الترخيص</b>= الوفر الصافي: موجب أم سالب؟</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> شراء «الحزمة كاملة» لأن المتوسط أفضل. والمورد يسعّر لكل مجموعة؛ فالقرار لكل مجموعة.</div>
+  <aside class="notes"><p>عرض المورد في <code>vendor_offer.txt</code>: 220,000 ريال لكل مجموعة في السنة. ذكّر بملاحظة عزام: «أريد أن أعرف أين يستحق الترخيص ثمنه، لا هل هو أدق بالمتوسط». هذا هو سطر التوصية في آخر المختبر.</p></aside>
+</section>
+
+<section class="slide" id="check-error-cost" data-lo="LO2" data-n="29" data-session="3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أين تشتري الترخيص؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-error-cost-q1">
+    <p class="lead">متجر إلكترونيات يقيّم تنبؤًا بترخيص 100,000 ريال لكل فئة. في الشواحن: الخطأ ينقص من 20% إلى 8%، والوفر 60,000 ريال. في الشاشات: الخطأ ينقص من 12% إلى 9%، والوفر 250,000 ريال. ماذا توصي؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يحكم بحجم تحسن الخطأ لا بالريال: الشواحن رخيصة فخطؤها لا يكلف كثيرًا" data-k="أ">الشواحن وحدها، لأن الخطأ فيها نقص أكثر</div>
+      <div class="opt" data-why="يشتري للفئتين لأن النموذج أدق في كل منهما: الدقة الأعلى لا تكفي إن قل الوفر عن الثمن" data-k="ب">الفئتان، لأن النموذج أدق في كل منهما</div>
+      <div class="opt" data-why="ينسى أن القرار لكل فئة: إحدى الفئتين تغطي الترخيص بوضوح" data-k="ج">لا شيء، لأن الوفر في الفئتين معًا لا يكفي لترخيص الحزمة كاملة</div>
+      <div class="opt" data-ok data-k="د">الشاشات وحدها، لأن وفرها يزيد على الترخيص</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الشاشات: 250,000 ناقص 100,000 = وفر صافٍ موجب. الشواحن: 60,000 ناقص 100,000 = خسارة، مهما تحسن الخطأ.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. الأرقام توضيحية. من اختار «أ» يحتاج شريحة «خطأ أصغر لا يعني كلفة أصغر». ضع هذا الحساب بجانب جدول المختبر.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-3" data-auto="lab" data-lab="1.3" data-label="المختبر 1.3" data-n="30" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.3 · 25 دقيقة</div><h2>الخطأ وكلفته بحسب مجموعة المنتجات</h2><p class="lead small">تحسب خطأ «استشراف» والموسمي البسيط لكل مجموعة من المجموعات الخمس، وتسعّر الأخطاء بجدول الكلفة، وتقارن الوفر بترخيص كل مجموعة.</p><a class="nb" href="../labs/D1_3_error_by_group.html">D1_3_error_by_group.html</a></div><ul class="checklist"><li>افتح ملف البداية وجدول الكلفة وعرض المورد <span class="min">3 د</span></li><li>احسب نسبة الخطأ المطلق الموزونة لكل مجموعة وتنبؤ <span class="min">7 د</span></li><li>سعّر كل خطأ بكلفة النقص أو الزيادة لمجموعته <span class="min">7 د</span></li><li>قارن الوفر بالترخيص لكل مجموعة <span class="min">5 د</span></li><li>اكتب توصية لعزام الدغيم: أي المجموعات يُشترى لها الترخيص <span class="min">3 د</span></li><li class="stretch">✱ إضافي: غيّر كلفة الزيادة للطازج إلى نصفها، وانظر هل يتغير قرار أي مجموعة</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. ذكّر بالشرط: تُستبعد أسابيع النفاد (<code>G</code> = 1). صيغة <code>VLOOKUP</code> تحتاج ورقة <code>cost</code>: من لا يريد ورقة ثانية يكتب الكلفة في عمودين بجانب الصفوف. المختبر يبدأ من ملف جاهز، فلا يحتاج المختبر 1.2.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-3" data-lo="LO2" data-n="31" data-session="3">
+  <div class="kicker">بعد المختبر 1.3</div>
+  <h2>استشراف أدق في المجموعات الخمس، ويستحق ثمنه في أربع</h2>
+  <table class="t small">
+    <tr><th>المجموعة</th><th class="num">الخطأ: استشراف</th><th class="num">الخطأ: الموسمي</th><th class="num">الوفر (ريال)</th><th class="num">بعد الترخيص</th></tr>
+    <tr><td>الطازج</td><td class="num">7.50%</td><td class="num">12.13%</td><td class="num">453,560</td><td class="num">233,560</td></tr>
+    <tr><td>الألبان</td><td class="num">5.92%</td><td class="num">11.99%</td><td class="num">727,246</td><td class="num">507,246</td></tr>
+    <tr class="hl"><td>المواد الأساسية</td><td class="num">5.14%</td><td class="num">9.64%</td><td class="num">179,784</td><td class="num"><span class="ltr">-40,216</span></td></tr>
+    <tr><td>المشروبات</td><td class="num">8.20%</td><td class="num">22.14%</td><td class="num">812,404</td><td class="num">592,404</td></tr>
+    <tr><td>المستلزمات المنزلية</td><td class="num">8.10%</td><td class="num">22.28%</td><td class="num">463,180</td><td class="num">243,180</td></tr>
+  </table>
+  <div class="callout tip mt"><b>التوصية.</b> أربع مجموعات بوفر صافٍ 1,576,390 ريالًا. المواد الأساسية تبقى على القاعدة: أصغر خطأ، لكن كلفة الزيادة فيها 0.3 ريال.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 1.3</code>)، دون أسابيع النفاد. ارجع إلى توقعات القاعدة التي كتبتها قبل المختبر. السؤال الذي يفتح الجلسة التالية: هل يتغير شيء إذا فصلنا أسابيع العروض ورمضان؟</p></aside>
+</section>
+
+<!-- الجلسة 4 -->
+
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="32">
+  <div class="kicker">الجلسة 4</div>
+  <h1>العروض ورمضان والمبيعات الناقصة</h1>
+  <ul class="bullets outcomes"><li>تفصل خطأ أسابيع العروض ورمضان عن الأسابيع العادية</li><li>تستبعد أسابيع النفاد لأن المبيعات فيها لا تقيس الطلب</li><li>تكتب قاعدة استعمال للنموذج بحسب نوع الأسبوع</li></ul>
+  <div class="sess-no">04</div>
+  <aside class="notes"><p>آخر جلسة عن التنبؤ: متى يُتبع، ومتى يراجعه إنسان.</p></aside>
+</section>
+
+<section class="slide" id="known-events" data-lo="LO2" data-n="33" data-session="4">
+  <div class="kicker">ما يُعرف مسبقًا</div>
+  <h2>العروض والمناسبات تُعرف قبل وقوعها، فالتنبؤ الذي يقرؤها يربح فيها</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>العروض</h4><p class="small mb0">تقويم مخطط قبل أسابيع</p></div>
+    <div class="card c-cyan"><h4>رمضان والعيدان</h4><p class="small mb0">تتقدم كل عام</p></div>
+    <div class="card c-purple"><h4>الجمعة البيضاء</h4><p class="small mb0">في آخر نوفمبر كل عام</p></div>
+    <div class="card c-amber"><h4>العودة للمدارس</h4><p class="small mb0">موعد يُعلن مسبقًا</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> قاعدة «مثل العام الماضي» تنسخ عرض العام الماضي إلى أسبوع لا عرض فيه، وتنسى عرض هذا العام.</div>
+  <aside class="notes"><p>اسأل: في متجر للإلكترونيات، أي أسبوع في السنة تخطئ فيه القاعدة البسيطة أكثر؟ (أسبوع العرض الكبير إذا تغير موعده.) في المختبر تفصل الأخطاء بحسب نوع الأسبوع.</p></aside>
+</section>
+
+<section class="slide" id="sales-are-not-demand" data-lo="LO2" data-n="34" data-session="4">
+  <div class="kicker">النفاد</div>
+  <h2>المبيعات في أسبوع النفاد لا تقيس الطلب</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>فرغ الرف يوم الثلاثاء: مبيعات الأسبوع هي ما كان على الرف، لا ما أراده العملاء</li>
+      <li>خطأ أي تنبؤ محسوب على هذه المبيعات مضلل</li>
+      <li>لذلك تُستبعد أسابيع النفاد من قياس الخطأ</li>
+    </ul>
+    <div class="card c-coral"><h4>والأخطر</h4><p class="small mb0">رقم النفاد يبقى في السجل. والعام القادم تقرؤه القاعدة البسيطة طلبًا حقيقيًّا.</p></div>
+  </div>
+  <aside class="notes"><p>مثال: صيدلية نفد فيها دواء موسمي في أسبوع الذروة؛ السجل يقول إنها باعت 40، والطلب كان 70. اسأل القاعة: ماذا يطلب المشرف في الأسبوع نفسه من العام القادم إن اتبع القاعدة؟</p></aside>
+</section>
+
+<section class="slide" id="stockout-loop" data-lo="LO2 LO1" data-n="35" data-session="4">
+  <div class="kicker">حلقة تغذية راجعة</div>
+  <h2>القاعدة التي تقرأ مبيعات النفاد تعيد إنتاج النفاد</h2>
+  <div class="flow">
+    <div class="step c-coral"><b>نفاد هذا العام</b>المبيعات أقل من الطلب</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>العام القادم</b>القاعدة تطلب بقدر المبيعات</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>نفاد من جديد</b>والسجل ينخفض أكثر</div>
+  </div>
+  <div class="callout tip mt"><b>الإصلاح.</b> في أسبوع النفاد يُسجَّل الطلب التقديري بجانب المبيعات، ولا يتدرب نموذج على مبيعات النفاد.</div>
+  <aside class="notes"><p>الدليل المرجعي للتحيز في الذكاء الاصطناعي الصادر عن سدايا يعرّف تحيز حلقة التغذية الراجعة: مخرجات النظام تعود مدخلات له فتعزز الخطأ الأول. هنا الحلقة في قاعدة بسيطة لا في نموذج، والمبدأ واحد. وسنراها مرة أخرى في التوصيات وفي عروض الاحتفاظ.</p><p>المصادر: SDAIA, AI Bias Reference Guide, first edition, Feedback Loop Bias.</p></aside>
+</section>
+
+<section class="slide" id="usage-rule" data-lo="LO2 LO1" data-n="36" data-session="4">
+  <div class="kicker">قاعدة الاستعمال</div>
+  <h2>ليس «نموذج أو إنسان»، بل: من يضع الرقم في أي أسبوع</h2>
+  <table class="t">
+    <tr><th>نوع الأسبوع</th><th>من يضع الرقم</th><th>ما يراجعه الإنسان</th></tr>
+    <tr><td>أسبوع مستقر</td><td>التنبؤ أو القاعدة، أيهما أرخص</td><td>المنتجات الأعلى وزنًا فقط</td></tr>
+    <tr><td>عرض أو مناسبة</td><td>التنبؤ الذي يعرف التقويم</td><td>هل العرض في التقويم فعلًا؟</td></tr>
+    <tr><td>منتج جديد</td><td>المخطط بيده، بمنتج مشابه</td><td>كل شيء</td></tr>
+  </table>
+  <aside class="notes"><p>الجدول عام ومن خارج بيانات المختبر. يكتب المشاركون قاعدتهم لأسواق سحاب من أرقامهم. شدّد على السطر الأخير: لا نموذج يعرف منتجًا بلا تاريخ، وهذه حالة يجب أن تكون مكتوبة في القاعدة.</p></aside>
+</section>
+
+<section class="slide" id="check-stockout" data-lo="LO2" data-n="37" data-session="4">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ماذا تفعل بأسبوع النفاد؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-stockout-q1">
+    <p class="lead">محل حلويات نفدت فيه علب المعمول في الأسبوع الأخير قبل العيد: باع 300 علبة، وقدّر المشرف أن 450 طُلبت. تقارن الآن تنبؤين على هذا العام. ماذا تفعل بذلك الأسبوع؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يعد المبيعات طلبًا: 300 هو ما كان على الرف، فكل تنبؤ أعلى منه سيبدو مخطئًا ظلمًا" data-k="أ">تحسب الخطأ عليه كأي أسبوع، فالمبيعات هي الحقيقة</div>
+      <div class="opt" data-ok data-k="ب">تستبعده من القياس، وتسجّل الطلب التقديري للعام القادم</div>
+      <div class="opt" data-why="يعالج الرقم بالمتوسط: تعويض النفاد بمتوسط الأسابيع العادية يمحو أثر العيد" data-k="ج">تضع مكانه متوسط مبيعات الأسابيع الأخرى</div>
+      <div class="opt" data-why="يحكم على التنبؤ بالنفاد: النفاد قد يأتي من التوريد لا من التنبؤ" data-k="د">تعده خطأً كبيرًا على التنبؤ الذي اقترح الكمية، فهو سبب النفاد</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المبيعات في أسبوع النفاد سقف لا طلب. تقيس الخطأ حيث المبيعات تمثل الطلب، وتحفظ تقدير الطلب كي لا تنسخ القاعدة النفاد.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. «أ» هو الخطأ الذي يقع في المختبر إن لم يُستبعد عمود النفاد. «د» سؤال جيد لكن في مكان آخر: النفاد قد يكون من المورد أو من المستودع.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-4" data-auto="lab" data-lab="1.4" data-label="المختبر 1.4" data-n="38" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.4 · 20 دقيقة</div><h2>أسابيع العروض ورمضان والنفاد</h2><p class="lead small">تقارن الخطأ في أسابيع العروض ورمضان والأسابيع العادية، وتقيس انحياز الموسمي البسيط في الأسابيع التي نفد فيها المنتج في العام الماضي، ثم تكتب قاعدة استعمال.</p><a class="nb" href="../labs/D1_4_promo_and_stockouts.html">D1_4_promo_and_stockouts.html</a></div><ul class="checklist"><li>صنّف صفوف السنة الثانية: عرض، ورمضان، وعادي، واستبعد أسابيع النفاد <span class="min">4 د</span></li><li>احسب الخطأ لكل نوع أسبوع وتنبؤ <span class="min">6 د</span></li><li>احسب انحياز التنبؤين في أسابيع نفاد العام الماضي <span class="min">5 د</span></li><li>اكتب قاعدة استعمال: متى يُتبع النموذج ومتى يراجعه المخطط <span class="min">5 د</span></li><li class="stretch">✱ إضافي: عدّ أسابيع النفاد في السنتين، واكتب لماذا يرث خط الأساس نفاد العام الماضي</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. الصيغة المتداخلة في الخطوة 1 تحتاج ترتيبًا: النفاد أولًا، ثم العرض، ثم رمضان. راقب الخطوة 3: من نسي شرط <code>G</code> = 0 يحصل على انحياز مختلف. الخطوة 4 هي التي تُسلَّم في سجل المختبرات.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-4" data-lo="LO2" data-n="39" data-session="4">
+  <div class="kicker">بعد المختبر 1.4</div>
+  <h2>القاعدة البسيطة تنهار في أسابيع العروض، وترث نفاد العام الماضي</h2>
+  <div class="bars">
+    <div class="row"><span>عروض: الموسمي</span><div class="bar c-coral" style="--w:100%"></div><span class="val">34.72%</span></div>
+    <div class="row"><span>عروض: استشراف</span><div class="bar c-teal" style="--w:21%"></div><span class="val">7.26%</span></div>
+    <div class="row"><span>رمضان: الموسمي</span><div class="bar c-coral" style="--w:48%"></div><span class="val">16.81%</span></div>
+    <div class="row"><span>رمضان: استشراف</span><div class="bar c-teal" style="--w:22%"></div><span class="val">7.63%</span></div>
+    <div class="row"><span>عادي: الموسمي</span><div class="bar c-coral" style="--w:36%"></div><span class="val">12.45%</span></div>
+    <div class="row"><span>عادي: استشراف</span><div class="bar c-teal" style="--w:19%"></div><span class="val">6.63%</span></div>
+  </div>
+  <div class="callout warn mt"><b>بعد نفاد العام الماضي</b> (88 أسبوعًا): الموسمي البسيط يطلب أقل بـ24.05%، واستشراف بانحياز 1.66% فقط لأنه دُرّب دون أسابيع النفاد.</div>
+  <aside class="notes"><p>نسب الخطأ من تشغيل الحل، دون أسابيع النفاد. أسابيع النفاد 92 في السنة الأولى و36 في الثانية. اقرأ قاعدتين أو ثلاثًا من قواعد المشاركين بصوت عالٍ، واسأل: من يملك قرار تغيير القاعدة؟ (عزام الدغيم.)</p></aside>
+</section>
+
+<!-- الجلسة 5 -->
+
+<section class="slide section" id="s5" data-auto="section" data-session="5" data-n="40">
+  <div class="kicker">الجلسة 5</div>
+  <h1>التوصيات والبحث</h1>
+  <ul class="bullets outcomes"><li>تحسب معدل الإصابة لنظام توصية ولخط أساس الشعبية</li><li>تفصل النتيجة بين العملاء الجدد والعائدين</li><li>تشرح لماذا لا يكفي التقييم دون اتصال للقرار</li></ul>
+  <div class="sess-no">05</div>
+  <aside class="notes"><p>ننتقل إلى التطبيق: «مختارات»، نظام التوصيات لعسايل الرقيبي.</p></aside>
+</section>
+
+<section class="slide" id="how-recommenders-work" data-lo="LO1" data-n="41" data-session="5">
+  <div class="kicker">التوصية والبحث</div>
+  <h2>نظام التوصية يحوّل سلوك العملاء السابق إلى ترتيب</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>البيانات</b>ما اشتراه العميل وما نقر عليه، وما اشتراه من يشبهونه</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>المخرج</b>ترتيب: أول خمسة منتجات</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>الفعل</b>تظهر الخمسة دون أن يراجعها أحد</div>
+  </div>
+  <div class="callout note mt"><b>والبحث مثلها.</b> ترتيب نتائج البحث يتعلم مما ينقر عليه العملاء بعد كل بحث: ترتيب أيضًا، ويظهر دون مراجعة.</div>
+  <aside class="notes"><p>لا تدخل في الخوارزميات. الفكرة: المخرج ترتيب، والقرار آلي، فالسؤال الوحيد هو أثر الترتيب على ما يشتريه العميل. مثال من خارج سحاب: متجر كتب إلكتروني يعرض «اشترى قراء هذا الكتاب أيضًا».</p></aside>
+</section>
+
+<section class="slide" id="hit-rate" data-lo="LO1" data-n="42" data-session="5">
+  <div class="kicker">التقييم دون اتصال</div>
+  <h2>معدل الإصابة: هل كان ما اشتراه العميل بين التوصيات؟</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>نأخذ جلسات من الماضي لم يرها النموذج</li>
+      <li>نعرف ما اشتراه العميل بعد كل جلسة</li>
+      <li>إصابة إذا كان بين التوصيات الخمس</li>
+      <li>المعدل = الجلسات المصيبة ÷ كل الجلسات</li>
+    </ul>
+    <div class="card c-purple"><h4>في الجدول</h4><p class="small mb0"><code>COUNTIF</code> على الخلايا الخمس للصف: إن وُجد المنتج المشترى فهي إصابة. ثم <code>AVERAGE</code> و<code>AVERAGEIF</code>.</p></div>
+  </div>
+  <aside class="notes"><p>اسم المقياس بالإنجليزية <span class="en">hit rate at 5</span>. هو مقياس للنموذج، لا نتيجة عمل: يعود في الجلسة 6. اسأل: لماذا جلسات لم يرها النموذج؟ (السبب نفسه في التنبؤ: الحفظ ليس توقعًا.)</p></aside>
+</section>
+
+<section class="slide" id="popularity-baseline" data-lo="LO1" data-n="43" data-session="5">
+  <div class="kicker">خط الأساس</div>
+  <h2>التوصية تُقارن بالأكثر مبيعًا، لا بالعشوائي</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>المقارنة التي تعجب المورد</h4><p class="small mb0">«أفضل من التوصية العشوائية بكذا ضعفًا». لا أحد يعرض على عملائه منتجات عشوائية.</p></div>
+    <div class="card c-teal"><h4>المقارنة التي تقرر</h4><p class="small mb0">أمام قائمة «الأكثر مبيعًا» نفسها لكل العملاء: قاعدة لا تحتاج ترخيصًا ولا بيانات شخصية.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> رقم «عدد الأضعاف» يكبر كلما كبر الكتالوج، ولا يقول شيئًا عن القرار.</div>
+  <aside class="notes"><p>مثال حسابي توضيحي: في كتالوج من 1,000 منتج، التوصية العشوائية لخمسة منتجات تصيب في 0.5% من الجلسات، فأي نظام يبدو «أفضل بعشرين ضعفًا». الأكثر مبيعًا قد يصيب أكثر من النظام نفسه. هذا ما يحسبه المشاركون.</p></aside>
+</section>
+
+<section class="slide" id="cold-start" data-lo="LO1" data-n="44" data-session="5">
+  <div class="kicker">العميل الجديد</div>
+  <h2>نظام يتعلم من السجل لا يعرف شيئًا عمن لا سجل له</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>العميل العائد: سجله يقول ما يحتاجه</li>
+      <li>العميل الجديد: لا سجل، فالنظام يخمّن</li>
+      <li>المتوسط على الكل يخلط الاثنين</li>
+      <li>افصل النتيجة دائمًا بحسب نوع العميل</li>
+    </ul>
+    <div class="card c-amber"><h4>السؤال للمورد</h4><p class="small mb0">كم نسبة العملاء الجدد في الشهر، وما معدل الإصابة لهم وحدهم أمام خط الأساس؟</p></div>
+  </div>
+  <aside class="notes"><p>اسم المشكلة بالإنجليزية <span class="en">cold start</span>. اسأل: في عملكم، كم نسبة العملاء الجدد في الشهر؟ إن كانت كبيرة، فالنتيجة على العائدين وحدهم تبالغ في قيمة النظام.</p></aside>
+</section>
+
+<section class="slide" id="reco-feedback-loop" data-lo="LO1" data-n="45" data-session="5">
+  <div class="kicker">حلقة أخرى</div>
+  <h2>ما يُعرض يُشترى أكثر، ثم يتعلم النظام أنه المطلوب</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>يعرض الأكثر شهرة</b>لأنه الأكثر في السجل</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>يُشترى أكثر</b>لأنه معروض</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>يعود إلى التدريب</b>فيزداد عرضه، وتختفي البقية</div>
+  </div>
+  <div class="callout tip mt"><b>ما تقيسه.</b> نصيب المنتجات الأكثر مبيعًا من التوصيات. إن كان كبيرًا، فالنظام يقترب من «الأكثر مبيعًا» بثمن.</div>
+  <aside class="notes"><p>هذه حلقة التغذية الراجعة التي رأيناها في النفاد، في صورة أخرى. والتقييم دون اتصال لا يراها، لأنه يقرأ ماضيًا صنعته التوصيات القديمة. المصادر: SDAIA, AI Bias Reference Guide, first edition, Feedback Loop Bias.</p></aside>
+</section>
+
+<section class="slide" id="check-popularity" data-lo="LO1" data-n="46" data-session="5">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>كيف تقرأ هذه المذكرة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-popularity-q1">
+    <p class="lead">تطبيق لبيع الكتب يقول مورد توصياته: «معدل الإصابة 8%، أي 16 ضعف التوصية العشوائية». قائمة الأكثر مبيعًا تصيب 7.3%. للعملاء العائدين 11% مقابل 7%، وللجدد 2% مقابل 8%. ما الخلاصة؟</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="أ">النظام يضيف قيمة للعائدين فقط، وللجدد قائمة الأكثر مبيعًا أفضل</div>
+      <div class="opt" data-why="يقبل المقارنة بالعشوائي: لا أحد يعرض منتجات عشوائية، فالأضعاف لا تقرر شيئًا" data-k="ب">النظام ناجح، فهو 16 ضعف العشوائي</div>
+      <div class="opt" data-why="يحكم بالمتوسط وحده: الفرق الصغير في الكل يخفي فرقين كبيرين متعاكسين" data-k="ج">النظام لا يضيف شيئًا، فالفرق 0.7 نقطة فقط</div>
+      <div class="opt" data-why="يعد التقييم دون اتصال حكمًا على الإيراد: الإصابة لا تقول هل اشترى العميل أكثر" data-k="د">النظام يرفع المبيعات بنحو 10% فوق قائمة الأكثر مبيعًا، بحسب فرق الإصابة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المقارنة الصحيحة بالأكثر مبيعًا، ومفصولة بحسب نوع العميل. وأثر الإيراد سؤال آخر تجيب عنه تجربة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. الأرقام توضيحية ومن خارج سحاب. «د» يمهد للجلسة التالية: من اختاره اسأله أين يرى المبيعات في هذه الأرقام.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-5" data-auto="lab" data-lab="1.5" data-label="المختبر 1.5" data-n="47" data-session="5">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.5 · 20 دقيقة</div><h2>التقييم دون اتصال أمام خط أساس الشعبية</h2><p class="lead small">تحسب معدل الإصابة لتوصيات «مختارات» ولأكثر خمسة منتجات مبيعًا على 2,000 جلسة، للعملاء الجدد والعائدين، وتقارن النتيجة بادعاء المورد.</p><a class="nb" href="../labs/D1_5_offline_vs_popular.html">D1_5_offline_vs_popular.html</a></div><ul class="checklist"><li>اقرأ مذكرة المورد وأعمدة ملف الجلسات <span class="min">3 د</span></li><li>احسب الإصابة لكل جلسة لمختارات ولخط أساس الشعبية <span class="min">6 د</span></li><li>احسب معدل الإصابة للكل وللجدد وللعائدين <span class="min">5 د</span></li><li>احسب نصيب أكثر 50 منتجًا مبيعًا من التوصيات <span class="min">3 د</span></li><li>اكتب ردًّا من ثلاثة أسطر على مذكرة المورد <span class="min">3 د</span></li><li class="stretch">✱ إضافي: اقترح قاعدة بسيطة تجمع النظامين: أيهما يظهر لأي عميل</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. راقب الصيغة في الخطوة 2: من يبحث عن الرقم في نص يحسب إصابات خاطئة. صيغة الخطوة 4 تفترض أن الأعمدة أرقام: إن قُرئت نصًّا، حوّلها. المختبر لا يحتاج أي مختبر سابق.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-5" data-lo="LO1" data-n="48" data-session="5">
+  <div class="kicker">بعد المختبر 1.5</div>
+  <h2>أمام الأكثر مبيعًا، يربح مختارات عند العائدين ويخسر عند الجدد</h2>
+  <table class="t">
+    <tr><th>العملاء</th><th class="num">الجلسات</th><th class="num">مختارات</th><th class="num">الأكثر مبيعًا</th></tr>
+    <tr><td>الكل</td><td class="num">2,000</td><td class="num">11.85%</td><td class="num">11.65%</td></tr>
+    <tr class="hl"><td>العائدون</td><td class="num">1,416</td><td class="num">15.11%</td><td class="num">11.86%</td></tr>
+    <tr><td>الجدد</td><td class="num">584</td><td class="num">3.94%</td><td class="num">11.13%</td></tr>
+  </table>
+  <div class="callout note mt"><b>و66.54%</b> من توصيات مختارات من أكثر 50 منتجًا مبيعًا من 400. «تسعة أضعاف ونصف العشوائي» صحيح بالحرف ولا يقرر شيئًا.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 1.5</code>). القاعدة المركبة (مختارات للعائدين والأكثر مبيعًا للجدد) تصيب نحو 13.95%. لكن لا شيء هنا يقول إن العميل اشترى أكثر: ذلك سؤال الجلسة 6.</p></aside>
+</section>
+
+<!-- الجلسة 6 -->
+
+<section class="slide section" id="s6" data-auto="section" data-session="6" data-n="49">
+  <div class="kicker">الجلسة 6</div>
+  <h1>المقاييس دون اتصال وتجارب A/B</h1>
+  <ul class="bullets outcomes"><li>تقرأ نتيجة تجربة A/B بمقياس القرار المتفق عليه مسبقًا</li><li>تفحص تطابق نسبة العينة وتحسب فترة ثقة للفرق</li><li>تكشف أثر الجِدّة بمقارنة الأسابيع</li></ul>
+  <div class="sess-no">06</div>
+  <aside class="notes"><p>من «هل كان سيصيب» إلى «هل يغيّر ما يشتريه العميل».</p></aside>
+</section>
+
+<section class="slide" id="offline-is-not-online" data-lo="LO1 LO3" data-n="50" data-session="6">
+  <div class="kicker">سؤالان مختلفان</div>
+  <h2>التقييم دون اتصال يسأل «هل كان سيصيب»؛ التجربة تسأل «هل غيّر شيئًا»</h2>
+  <div class="cols cols-2">
+    <div class="card c-purple"><h4>دون اتصال</h4><p class="small mb0">جلسات من الماضي. سريع ورخيص. لا يرى أثر العرض نفسه، ولا ما كان العميل سيشتريه على كل حال.</p></div>
+    <div class="card c-teal"><h4>تجربة A/B</h4><p class="small mb0">زوار يُقسمون بالقرعة: نصف يرى النظام ونصف لا. الفرق بين النصفين هو أثر النظام، لأن القرعة وحدها فرّقت بينهما.</p></div>
+  </div>
+  <div class="callout tip mt"><b>القاعدة.</b> التقييم دون اتصال يختار من يدخل التجربة. والتجربة تقرر من يُعمَّم.</div>
+  <aside class="notes"><p>توصية تصيب منتجًا كان العميل سيشتريه على كل حال لا تضيف إيرادًا. هذه فكرة «الأثر الإضافي» التي تعود غدًا في عروض الاحتفاظ. كتاب Kohavi وTang وXu مرجع عملي في التجارب على الإنترنت.</p><p>المصادر: Kohavi, Tang and Xu, Trustworthy Online Controlled Experiments, Cambridge University Press, 2020.</p></aside>
+</section>
+
+<section class="slide" id="ab-design" data-lo="LO3" data-n="51" data-session="6">
+  <div class="kicker">قبل أن تبدأ التجربة</div>
+  <h2>ثلاثة أشياء تُكتب قبل أول زائر، لا بعد النتيجة</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>مقياس القرار</h4><p class="small mb0">رقم واحد يقرر التعميم: الإيراد لكل زائر مثلًا.</p></div>
+    <div class="card c-amber"><h4>مقياس الحماية</h4><p class="small mb0">رقم يجب ألا يسوء: المرتجعات، الشكاوى، سرعة الصفحة.</p></div>
+    <div class="card c-purple"><h4>المدة</h4><p class="small mb0">أسابيع كاملة تحددها مسبقًا. لا توقف حين «تظهر» النتيجة.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> تقرير يختار بعد التجربة المقياس الذي تحسّن. لكل تجربة مقياس يتحسن بالصدفة.</div>
+  <aside class="notes"><p>اسأل القاعة: لماذا الإيراد لكل زائر لا معدل التحويل؟ (لأن التحويل قد يرتفع بطلبات أصغر.) في المختبر اتُّفق على المقياسين قبل التجربة، والمورد كتب تقريره بمقياس ثالث.</p></aside>
+</section>
+
+<section class="slide" id="confidence-interval" data-lo="LO3" data-n="52" data-session="6">
+  <div class="kicker">فترة الثقة</div>
+  <h2>الفرق بين النسختين رقم، ومعه مدى يقول كم يمكن أن تكون الصدفة صنعته</h2>
+  <pre class="code" data-file="readout"><code>pA = ordersA / visitorsA          pB = ordersB / visitorsB
+diff = pB - pA
+se   = SQRT(pA*(1-pA)/visitorsA + pB*(1-pB)/visitorsB)
+95% interval = diff - 1.96*se  ...  diff + 1.96*se</code></pre>
+  <div class="callout tip mt"><b>اقرأها هكذا.</b> إن ضمّت الفترة الصفر، فالبيانات لا تستبعد أن الأثر لا شيء. وإن كانت كلها فوق الصفر، فالأثر موجب على الأغلب، وحجمه بين طرفيها.</div>
+  <aside class="notes"><p>لا حاجة لنظرية الإحصاء: الصيغة في صفحة المختبر، والدفتر المقدَّم يحسبها أيضًا. مثال توضيحي: فرق 0.3 نقطة وفترة من ناقص 0.1 إلى 0.7: لا نعرف بعد. فرق 0.3 وفترة من 0.1 إلى 0.5: أثر موجب صغير.</p></aside>
+</section>
+
+<section class="slide" id="sample-ratio" data-lo="LO3" data-n="53" data-session="6">
+  <div class="kicker">الفحص الأول</div>
+  <h2>قبل أي رقم: هل قسمت القرعة الزوار كما يجب؟</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>قرعة نصف ونصف يجب أن تعطي نصفين متقاربين</li>
+      <li>ابتعاد كبير عن النصف علامة عطب: زوار يُسقطون من نسخة، أو أخطاء في التسجيل</li>
+      <li>يسمى عدم تطابق نسبة العينة (<span class="en">sample ratio mismatch</span>)</li>
+      <li>إن وُجد، لا يُقرأ أي رقم آخر حتى يُصلح</li>
+    </ul>
+    <div class="card c-coral"><h4>اختبار سريع</h4><p class="small mb0">مربع كاي على عددي الزوار، والقيمة الاحتمالية بـ<code>CHISQ.DIST.RT</code>. قيمة صغيرة جدًّا تعني عطبًا.</p></div>
+  </div>
+  <aside class="notes"><p>Fabijan وزملاؤه في دراسة على تجارب حقيقية وجدوا أن عدم تطابق نسبة العينة شائع ويقود إلى استنتاجات خاطئة إن لم يُفحص أولًا. الفحص هو الخطوة 2 في المختبر.</p><p>المصادر: Fabijan et al., Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, KDD 2019.</p></aside>
+</section>
+
+<section class="slide" id="novelty-and-peeking" data-lo="LO3" data-n="54" data-session="6">
+  <div class="kicker">الأسبوع الأول</div>
+  <h2>كل جديد يجذب النقر أيامًا، ثم يعود العملاء إلى عاداتهم</h2>
+  <div class="cols cols-2">
+    <div class="card c-amber"><h4>أثر الجِدّة</h4><p class="small mb0">العملاء يجرّبون ما تغير في الصفحة، فيرتفع الرقم في الأيام الأولى ثم يتلاشى. اقرأ النتيجة أسبوعًا أسبوعًا.</p></div>
+    <div class="card c-coral"><h4>النظر المبكر</h4><p class="small mb0">من يفحص النتيجة كل يوم ويوقف التجربة حين تبدو «دالة» يجد أثرًا حيث لا أثر.</p></div>
+  </div>
+  <div class="callout tip mt"><b>القاعدة.</b> المدة المكتوبة مسبقًا تُكمل، ويُقرأ الأسبوع الأخير بجانب الأول.</div>
+  <aside class="notes"><p>الاسم بالإنجليزية <span class="en">novelty effect</span>، وهو سبب من أسباب قراءة التجربة على مدتها كلها. لا تخلطه بـ«تحيز الجِدّة» (<span class="en">Novelty Bias</span>) في الدليل المرجعي للتحيز من سدايا: ذاك نموذج يبالغ في وزن البيانات الجديدة أو النادرة، لا عملاء يجربون ما تغير. مثال من خارج سحاب: تطبيق توصيل يغيّر لون زر الطلب، فيرتفع النقر في الأسبوع الأول ثم يعود.</p></aside>
+</section>
+
+<section class="slide" id="check-ab" data-lo="LO3" data-n="55" data-session="6">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>هل يُعمَّم التغيير؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-ab-q1">
+    <p class="lead">تطبيق توصيل طعام جرّب ترتيبًا جديدًا للمطاعم أربعة أسابيع. مقياس القرار المكتوب مسبقًا: الإيراد لكل زائر. النتيجة: الطلبات ارتفعت 5% في الأسبوع الأول و1% في الأخير، والإيراد لكل زائر لم يتغير، والزوار 20,040 في النسخة الحالية و19,960 في الجديدة. ماذا تقرر؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقرأ الأسبوع الأول وحده: ارتفاع يتلاشى أثر جِدّة لا أثر ترتيب" data-k="أ">التعميم، فالطلبات ارتفعت 5%</div>
+      <div class="opt" data-why="يعد كل ابتعاد عن النصف عطبًا: 40 زائرًا من 20,000 في كل نسخة فرق تصنعه الصدفة، واختبار مربع كاي لا يرفضه" data-k="ب">إعادة التجربة، لأن الزوار لم ينقسموا نصفين تمامًا</div>
+      <div class="opt" data-ok data-k="ج">عدم التعميم: مقياس القرار ثابت والارتفاع تلاشى</div>
+      <div class="opt" data-why="يبدّل مقياس القرار بعد النتيجة: الطلبات ليست المقياس المتفق عليه" data-k="د">التعميم، لأن الطلبات في الأسابيع الأربعة معًا أعلى</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> القرار بالمقياس المكتوب قبل التجربة، على المدة كلها. والارتفاع الذي يتلاشى أثر جِدّة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. «ب» فخ معاكس: ليس كل ابتعاد عن النصف عطبًا؛ الاختبار يقول متى يكون الابتعاد أكبر من الصدفة (هنا القيمة الاحتمالية نحو 0.69). وفي عينة من ملايين الزوار قد تكون نسبة 50.1 إلى 49.9 عطبًا حقيقيًّا: الحجم يقرر لا النسبة وحدها. الأرقام توضيحية.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-6" data-auto="lab" data-lab="1.6" data-label="المختبر 1.6" data-n="56" data-session="6">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.6 · 25 دقيقة</div><h2>قراءة نتيجة تجربة التوصيات</h2><p class="lead small">تعيد قراءة تجربة «مختارات» على 28 يومًا: تطابق نسبة العينة، والتحويل بفترة ثقة في الأسبوع الأول والأسبوعين الأخيرين، والإيراد لكل زائر، والمرتجعات، ثم تكتب القرار.</p><a class="nb" href="../labs/D1_6_ab_readout.html">D1_6_ab_readout.html</a></div><ul class="checklist"><li>اقرأ تقرير المورد واكتب مقياس القرار ومقياس الحماية <span class="min">3 د</span></li><li>افحص تطابق نسبة العينة بين النسختين <span class="min">4 د</span></li><li>احسب التحويل والفرق وفترة الثقة للأسبوع الأول والأسبوعين الأخيرين <span class="min">8 د</span></li><li>احسب الإيراد لكل زائر ونسبة المرتجعات للتجربة كلها <span class="min">6 د</span></li><li>اكتب القرار في ثلاثة أسطر لعسايل الرقيبي <span class="min">4 د</span></li><li class="stretch">✱ إضافي: شغّل الدفتر المقدم <span class="ltr" dir="ltr">ab_readout.ipynb</span> في <span class="ltr" dir="ltr">Colab</span> أو <span class="ltr" dir="ltr">JupyterLite</span> وقارن أرقامه بأرقامك</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. في LibreOffice تعمل الدالة القديمة <code>CHIDIST</code> بالمعاملين أنفسهم إن لم تظهر <code>CHISQ.DIST.RT</code>. الدفتر المقدَّم يعمل في Colab بعد رفع الملف، أو في JupyterLite.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-6" data-lo="LO3" data-n="57" data-session="6">
+  <div class="kicker">بعد المختبر 1.6</div>
+  <h2>ارتفاع الأسبوع الأول تلاشى، والإيراد لكل زائر لم يتحرك</h2>
+  <table class="t small">
+    <tr><th>الفترة</th><th class="num">التحويل A</th><th class="num">التحويل B</th><th class="num">الارتفاع</th><th class="num">فترة الثقة للفرق (نقاط)</th></tr>
+    <tr><td>الأسبوع 1</td><td class="num">6.05%</td><td class="num">6.55%</td><td class="num">8.41%</td><td class="num">0.25 إلى 0.77</td></tr>
+    <tr class="hl"><td>الأسبوعان 3 و4</td><td class="num">6.01%</td><td class="num">6.07%</td><td class="num">1.09%</td><td class="num"><span class="ltr">-0.11</span> إلى 0.25</td></tr>
+  </table>
+  <div class="cols cols-3 mt">
+    <div class="stat center"><div class="big">49.97%</div><div class="lbl">نصيب A من الزوار: لا عطب</div></div>
+    <div class="stat center"><div class="big"><span class="ltr">-0.17%</span></div><div class="lbl">تغير الإيراد لكل زائر</div></div>
+    <div class="stat center"><div class="big">5.19%</div><div class="lbl">مرتجعات B مقابل 4.07%</div></div>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل والدفتر المقدَّم (<code>check.py 1.6</code>). القرار: لا تعميم. مختارات تكلف 300,000 ريال في السنة ولم يتغير مقياس القرار، وساء مقياس الحماية. سؤال للقاعة: ماذا كنا سنقرر لو أوقفنا التجربة في اليوم السابع كما اقترح المورد؟</p></aside>
+</section>
+
+<!-- الجلسة 7 -->
+
+<section class="slide section" id="s7" data-auto="section" data-session="7" data-n="58">
+  <div class="kicker">الجلسة 7</div>
+  <h1>الأسعار المخصصة والموافقة</h1>
+  <ul class="bullets outcomes"><li>تفرّق بين التسعير المتغير والتسعير المخصص</li><li>تطابق كل مدخل في قاعدة التسعير بالموافقة التي يحتاجها</li><li>تكشف الاستنتاج الحساس الذي لا تغطيه أي موافقة</li></ul>
+  <div class="sess-no">07</div>
+  <aside class="notes"><p>آخر جلستين اليوم: «سعرك»، القسائم الشخصية لروزان الباهلي، أمام الموافقة ثم الإنصاف.</p></aside>
+</section>
+
+<section class="slide" id="dynamic-vs-personalised" data-lo="LO4" data-n="59" data-session="7">
+  <div class="kicker">نوعان من الأسعار</div>
+  <h2>التسعير المتغير يغيّر السعر للجميع؛ التسعير المخصص يغيّره لكل عميل</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>المتغير</h4><p class="small mb0">تخفيض الطازج قرب نهاية صلاحيته، أو عرض الأسبوع. كل من يدخل المتجر يرى السعر نفسه.</p></div>
+    <div class="card c-coral"><h4>المخصص</h4><p class="small mb0">قسيمة لكل عميل بنسبة مختلفة، من بياناته. عميلان في الطابور نفسه يدفعان سعرين.</p></div>
+  </div>
+  <div class="callout warn mt"><b>لذلك.</b> المخصص يعالج بيانات شخصية ليقرر ما يدفعه شخص بعينه. أسئلته: بأي بيانات، وبأي موافقة، وهل يدفع بعض الناس أكثر لأنهم من فئة ما.</div>
+  <aside class="notes"><p>اسأل القاعة: أي النوعين يستعمل في عملكم؟ أغلب المتاجر تستعمل الاثنين. هذه الجلسة عن السؤالين الأولين، والجلسة التالية عن الثالث.</p></aside>
+</section>
+
+<section class="slide" id="inputs-make-price" data-lo="LO4" data-n="60" data-session="7">
+  <div class="kicker">ما يدخل السعر</div>
+  <h2>كل مدخل في قاعدة التسعير بيانات شخصية تُستعمل لغرض</h2>
+  <table class="t">
+    <tr><th>مدخل شائع</th><th>ما يكشفه</th><th>السؤال</th></tr>
+    <tr><td>سجل المشتريات</td><td>العادات، والقدرة على الدفع</td><td>هل وافق العميل على استعماله للتسعير؟</td></tr>
+    <tr><td>موقع الجهاز</td><td>أين يكون، وقربه من منافس</td><td>هل يعلم أن موقعه يغيّر سعره؟</td></tr>
+    <tr><td>نوع الجهاز وطريقة الدفع</td><td>الدخل تقريبًا</td><td>أي غرض معلن يغطيهما؟</td></tr>
+    <tr><td>مشتريات تكشف حالة</td><td>الصحة أحيانًا</td><td>هل هذا استنتاج لبيانات حساسة؟</td></tr>
+  </table>
+  <aside class="notes"><p>الجدول عام. في المختبر يجرد المشاركون مدخلات «سعرك» بأنفسهم من وصف المورد، ويطابقونها بأغراض الموافقة في التطبيق. شدّد: الوصف الفني للمورد هو المصدر، لا ما يقوله فريق المبيعات عنه.</p></aside>
+</section>
+
+<section class="slide" id="consent-per-purpose" data-lo="LO4" data-n="61" data-session="7">
+  <div class="kicker">نظام حماية البيانات الشخصية</div>
+  <h2>موافقة مستقلة لكل غرض، موثقة، ويمكن سحبها بسهولة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الغرض واضح ومحدد، ويُشرح للعميل قبل طلب الموافقة أو عندها</li>
+      <li>موافقة مستقلة لكل غرض: الموافقة على التسويق لا تغطي التسعير</li>
+      <li>موثقة بما يسمح بالتحقق منها لاحقًا</li>
+      <li>التسويق المباشر: موافقة مسبقة، وطريقة لإيقافه سهلة كطريقة الموافقة</li>
+    </ul>
+    <div class="card c-purple"><h4>في جدول البيانات</h4><p class="small mb0">لكل مدخل عمود استعمال، ولكل عميل أعلام موافقة. الفجوة: مدخل استُعمل وعلم موافقته صفر.</p></div>
+  </div>
+  <aside class="notes"><p>هذه النقاط من اللائحة التنفيذية لنظام حماية البيانات الشخصية (المادة 11 في الموافقة، والمادة 12 في سحبها، والمادة 29 في التسويق المباشر) ومن النظام نفسه (المادة 26: معالجة البيانات لأغراض تسويقية بموافقة صاحبها). صغها بكلماتك ولا تقدمها رأيًا قانونيًّا: المختبر تمرين على الأسئلة، والقرار لمسؤول حماية البيانات.</p><p>المصادر: SDAIA, Personal Data Protection Law, article 26; Implementing Regulation of the Personal Data Protection Law, articles 11, 12 and 29.</p></aside>
+</section>
+
+<section class="slide" id="sensitive-and-automated" data-lo="LO4" data-n="62" data-session="7">
+  <div class="kicker">حالتان تحتاجان موافقة صريحة</div>
+  <h2>البيانات الحساسة، والقرار الذي تصدره المعالجة الآلية وحدها</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>استنتاج حساس</h4><p class="small mb0">متجر إلكتروني يستنتج من شراء شرائط قياس السكر أن العميل مصاب بالسكري، ويوجه له عروضًا. البيانات الصحية حساسة، والاستنتاج منها معالجة لها، والنظام يستثني البيانات الحساسة من المعالجة لأغراض تسويقية.</p></div>
+    <div class="card c-amber"><h4>قرار آلي بالكامل</h4><p class="small mb0">قسيمة تُحسب وتظهر دون أن يراجعها أحد. حين يصدر القرار بالمعالجة الآلية وحدها، تشترط اللائحة الموافقة الصريحة.</p></div>
+  </div>
+  <div class="callout tip mt"><b>اسأل عن كل مدخل:</b> هل يكشف أو يستنتج ما يعده النظام حساسًا؟ وهل يمر القرار على إنسان؟</div>
+  <aside class="notes"><p>النظام يعد البيانات الصحية من البيانات الحساسة (المادة 1)، ويجيز معالجة البيانات الشخصية لأغراض تسويقية بموافقة صاحبها «باستثناء البيانات الحساسة» (المادة 26). واللائحة التنفيذية تشترط الموافقة الصريحة حين تتضمن المعالجة بيانات حساسة، وحين تُتخذ القرارات بناءً على المعالجة الآلية وحدها (المادة 11). فالعروض الموجهة بحالة صحية مستنتجة سؤال لمسؤول حماية البيانات قبل أي موافقة. المثال من خارج سحاب.</p><p>المصادر: SDAIA, Personal Data Protection Law, articles 1 and 26; Implementing Regulation, article 11.</p></aside>
+</section>
+
+<section class="slide" id="check-consent" data-lo="LO4" data-n="63" data-session="7">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي موافقة تكفي؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="check-consent-q1">
+    <p class="lead">تطبيق صيدلية فيه موافقتان: «استلام العروض» و«استعمال الموقع». يريد الفريق أن يحسب لكل عميل خصمًا من سجل مشترياته ويرسله في رسالة. 80% وافقوا على العروض، و30% على الموقع. لمن يجوز الخصم المحسوب من السجل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يمد موافقة التسويق إلى غرض آخر: استلام العروض لا يغطي تحليل السجل لتحديد السعر" data-k="أ">لمن وافق على استلام العروض، أي 80%، فالخصم عرض تسويقي</div>
+      <div class="opt" data-why="يخلط بين البيانات: الموقع لا علاقة له بسجل المشتريات" data-k="ب">لمن وافق على الموقع، أي 30%</div>
+      <div class="opt" data-why="يعد الاحتفاظ بالسجل إذنًا: جمع البيانات لتنفيذ الطلب لا يجيز استعمالها لغرض جديد" data-k="ج">للجميع، فسجل المشتريات عند الصيدلية أصلًا</div>
+      <div class="opt" data-ok data-k="د">لا أحد بعد: يحتاج موافقة على غرض التخصيص نفسه</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> لكل غرض موافقته. التخصيص من السجل غرض لم يُطلب، فلا تغطيه موافقة العروض ولا الموقع.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. والرسالة نفسها تحتاج موافقة التسويق، فالجواب الكامل: من وافق على التخصيص وعلى استلام العروض معًا، بعد أن يُطلب غرض التخصيص. «ج» أكثر خطأ شيوعًا في الشركات.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-7" data-auto="lab" data-lab="1.7" data-label="المختبر 1.7" data-n="64" data-session="7">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.7 · 20 دقيقة</div><h2>جرد مدخلات سعرك أمام الموافقات</h2><p class="lead small">تجرد مدخلات قاعدة «سعرك» وتربط كل مدخل بغرض الموافقة الذي يحتاجه، ثم تعدّ في قسائم الشهر العملاء الذين استُعملت بياناتهم دون الموافقة المطلوبة.</p><a class="nb" href="../labs/D1_7_consent_inventory.html">D1_7_consent_inventory.html</a></div><ul class="checklist"><li>اقرأ وصف القاعدة وأغراض الموافقة <span class="min">3 د</span></li><li>املأ جدول المدخلات: المدخل، والغرض، والموافقة المطلوبة <span class="min">5 د</span></li><li>اربط القسائم بملف العملاء <span class="min">3 د</span></li><li>عدّ القسائم التي استعملت مدخلًا دون موافقته <span class="min">6 د</span></li><li>اكتب الفجوات الثلاث الأكبر لوصال الحبشان <span class="min">3 د</span></li><li class="stretch">✱ إضافي: اكتب ما يتغير في القاعدة لو طُبقت على من وافق فقط: كم عميلًا يبقى</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم. ذكّر: الجدول تمرين على الأسئلة لا رأي قانوني. في الخطوة 3 تأكد أن عمود التحقق كله صحيح قبل العدّ. الخطأ الشائع: عدّ العملاء الذين لم يوافقوا على الموقع بدل القسائم التي استعملت الموقع فعلًا.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-7" data-lo="LO4" data-n="65" data-session="7">
+  <div class="kicker">بعد المختبر 1.7</div>
+  <h2>من 6,000 قسيمة، 1,493 فقط بلا فجوة في الموافقة</h2>
+  <div class="bars">
+    <div class="row"><span>سجل المشتريات دون موافقة التخصيص</span><div class="bar c-coral" style="--w:100%"></div><span class="val">3,429</span></div>
+    <div class="row"><span>الموقع دون موافقة الموقع</span><div class="bar c-coral" style="--w:52%"></div><span class="val">1,776</span></div>
+    <div class="row"><span>دون موافقة التسويق أصلًا</span><div class="bar c-amber" style="--w:47%"></div><span class="val">1,626</span></div>
+    <div class="row"><span>شريحة الاهتمام الصحي المستنتجة</span><div class="bar c-purple" style="--w:21%"></div><span class="val">715</span></div>
+  </div>
+  <div class="callout warn mt"><b>أولًا:</b> تتوقف الشريحة الصحية، فلا غرض موافقة لها أصلًا. ثم تقرأ القاعدة أعلام الموافقة قبل أن تحسب.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 1.7</code>). مدخلات الجهاز والتقسيط والعمر لا يغطيها نص أي غرض، والقاعدة لا تقرأ أعلام الموافقة. والقسيمة تظهر دون مراجعة: قرار آلي بالكامل. الجلسة التالية: من يدفع أكثر بسبب هذه المدخلات؟</p></aside>
+</section>
+
+<!-- الجلسة 8 -->
+
+<section class="slide section" id="s8" data-auto="section" data-session="8" data-n="66">
+  <div class="kicker">الجلسة 8</div>
+  <h1>فروق الأسعار والعملاء الأكثر عرضة للضرر</h1>
+  <ul class="bullets outcomes"><li>تقارن متوسط الخصم والسعر الفعلي بين الفئات</li><li>تتتبع الفرق إلى المكوّن الذي يصنعه في القاعدة</li><li>تكتب مذكرة نتائج بتعديل مقترح يمكن قياسه</li></ul>
+  <div class="sess-no">08</div>
+  <aside class="notes"><p>جلسة من 45 دقيقة بمختبر من 25: المذكرة تحتاج وقتًا للكتابة.</p></aside>
+</section>
+
+<section class="slide" id="compare-effective-price" data-lo="LO4" data-n="67" data-session="8">
+  <div class="kicker">اختبار الإنصاف</div>
+  <h2>لا تقرأ نص القاعدة وحده؛ قارن ما تدفعه كل فئة فعلًا</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>متوسط الخصم لكل فئة: العمر، والحي، والجهاز، وطريقة الدفع</li>
+      <li>ومؤشر السعر: ما يدفعه العميل من كل 100 ريال</li>
+      <li>فرق نقطة أو أكثر بين فئتين يستحق السؤال: من أين؟</li>
+    </ul>
+    <div class="card c-teal"><h4>ثم تتبع المصدر</h4><p class="small mb0">إن كان الخصم مجموع مكونات، احسب متوسط كل مكوّن لكل فئة. المكوّن الذي يتغير أكثر هو مصدر الفرق.</p></div>
+  </div>
+  <aside class="notes"><p>مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا تطلب في مبدأ الإنصاف تقييمًا للإنصاف بمقاييس تُختار مسبقًا للفئات الحساسة. متوسط الخصم بحسب الفئة أبسط مقياس من هذا النوع، ويُحسب بجدول محوري.</p><p>المصادر: SDAIA, AI Ethics Principles, Fairness.</p></aside>
+</section>
+
+<section class="slide" id="proxies" data-lo="LO4" data-n="68" data-session="8">
+  <div class="kicker">المتغير الوكيل</div>
+  <h2>قاعدة لا تقرأ الدخل قد تسعّر به، عبر ما يرافقه</h2>
+  <table class="t">
+    <tr><th>ما تقرؤه القاعدة</th><th>ما قد يرافقه</th></tr>
+    <tr><td>لغة الواجهة المختارة</td><td>الجنسية والعمر</td></tr>
+    <tr><td>وقت التسوق المعتاد</td><td>نوع العمل والدخل</td></tr>
+    <tr><td>حجم السلة المعتاد</td><td>حجم الأسرة والدخل</td></tr>
+    <tr><td>مدة الاشتراك الطويلة</td><td>العمر، وصعوبة الانتقال</td></tr>
+  </table>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> «حذفنا عمود العمر» لا يعني أن العمر لم يعد يصنع فرقًا. افحص الفرق بين الفئات بعد الحذف.</div>
+  <aside class="notes"><p>اسم المفهوم بالإنجليزية <span class="en">proxy variable</span>. اسأل القاعة: في عملكم، أي متغير «بريء» قد يرافق فئة؟ لا تذكر مكونات «سعرك»: المشاركون يجدونها في المختبر.</p></aside>
+</section>
+
+<section class="slide" id="vulnerable-customers" data-lo="LO4" data-n="69" data-session="8">
+  <div class="kicker">من يتضرر</div>
+  <h2>الضرر أكبر حين يقع على من يصعب عليه المقارنة أو الانتقال</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>كبار السن</h4><p class="small mb0">أقل مقارنةً بين المتاجر والتطبيقات، فيصعب عليهم أن يلاحظوا أنهم يدفعون أكثر.</p></div>
+    <div class="card c-amber"><h4>ضيق الدخل</h4><p class="small mb0">فرق بضعة ريالات في السلة أثقل على ميزانية صغيرة منه على كبيرة.</p></div>
+    <div class="card c-purple"><h4>الأحياء الأقل خدمة</h4><p class="small mb0">خيارات أقل حولهم، فيصعب عليهم الانتقال إن ارتفع السعر.</p></div>
+  </div>
+  <div class="callout tip mt"><b>عقوبة الولاء.</b> قاعدة تكافئ من يهدد بالرحيل تعاقب من لا يستطيعه.</div>
+  <aside class="notes"><p>قريب من هذا ما يسميه الدليل المرجعي للتحيز من سدايا التحيز التاريخي: بيانات تحمل افتراضات من الماضي لم تعد صحيحة، فيعيد النظام إنتاجها. قاعدة تعامل «من لم يغادر» على أنه لا يريد المغادرة قد تعاقب من لا يستطيعها. مثال من خارج سحاب: نادٍ رياضي يرفع سعر التجديد لمن اشترك أطول مدة.</p><p>المصادر: SDAIA, AI Bias Reference Guide, first edition, Historical Bias.</p></aside>
+</section>
+
+<section class="slide" id="findings-note" data-lo="LO4" data-n="70" data-session="8">
+  <div class="kicker">مذكرة النتائج</div>
+  <h2>مذكرة تُقرأ في دقيقتين: الفرق، ومصدره، ومن يتضرر، والتعديل</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>الفرق</b>بالأرقام، لكل فئة</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>المصدر</b>أي مكوّن في القاعدة</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>الضرر</b>من يدفع أكثر، ولماذا يهم</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>التعديل</b>واحد، محدد، ويُقاس بعد شهر</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> تعديل لا يُقاس: «سنراجع القاعدة». اكتب الرقم الذي ستنظر إليه بعد شهر.</div>
+  <aside class="notes"><p>المذكرة دليل الناتج الرابع في المقرر: مذكرة نتائج بتعديل مقترح. تُكتب لروزان الباهلي، ونسخة لوصال الحبشان. اقرأ واحدة جيدة بصوت عالٍ بعد المختبر.</p></aside>
+</section>
+
+<section class="slide" id="check-fairness" data-lo="LO4" data-n="71" data-session="8">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>من أين يأتي الفرق؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="check-fairness-q1">
+    <p class="lead">نادٍ رياضي يحسب خصم التجديد من ثلاثة مكونات: الحضور، والقرب من نادٍ منافس، ومدة الاشتراك. متوسط الخصم لمن هم فوق 55 عامًا 3%، ولغيرهم 7%. مكوّن المدة ناقص 3 للأولى وناقص 0.5 للثانية، والمكونان الآخران متقاربان. ماذا تكتب في المذكرة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يكتفي بغياب العمر من القاعدة: المدة متغير وكيل يصنع الفرق نفسه" data-k="أ">لا تمييز، فالقاعدة لا تقرأ العمر</div>
+      <div class="opt" data-ok data-k="ب">حذف مكوّن المدة أو سقفه، ثم قياس الفرق</div>
+      <div class="opt" data-why="يعالج الفرق بإضافة العمر صراحة: تعويض فئة بعينها لا يصلح القاعدة ويضيف معالجة جديدة" data-k="ج">يضاف للأكبر سنًّا خصم ثابت يعوض الفرق</div>
+      <div class="opt" data-why="يعد المتوسطات كافية دون تتبع المصدر: لا يعرف ما يجب تغييره" data-k="د">الفرق 4 نقاط، فيُطلب من المورد مراجعة النموذج وإعادة تدريبه على بيانات أحدث</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المكوّن الذي يتغير بين الفئتين هو المدة، وهو وكيل للعمر. التعديل يستهدفه، والقياس يثبت أثره.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. الأرقام توضيحية. «د» ليس خطأً تامًّا لكنه لا يكتب تعديلًا يُقاس. «ج» يحل الأعراض ويترك المصدر.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-8" data-auto="lab" data-lab="1.8" data-label="المختبر 1.8" data-n="72" data-session="8">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.8 · 25 دقيقة</div><h2>فروق الأسعار بين الفئات ومذكرة النتائج</h2><p class="lead small">تحسب متوسط الخصم ومؤشر السعر لكل فئة عمرية وفئة دخل الحي ونوع الجهاز ومستخدمي التقسيط، وتتتبع كل فرق إلى مكوّنه، وتكتب مذكرة نتائج بتعديل مقترح.</p><a class="nb" href="../labs/D1_8_group_differences.html">D1_8_group_differences.html</a></div><ul class="checklist"><li>افتح ملف البداية وافهم أعمدة مكونات الخصم <span class="min">3 د</span></li><li>احسب متوسط الخصم ومؤشر السعر لكل فئة <span class="min">7 د</span></li><li>احسب متوسط كل مكوّن للفئات التي يظهر فيها فرق <span class="min">6 د</span></li><li>اكتب مذكرة النتائج: الفرق، ومصدره، ومن يتضرر <span class="min">5 د</span></li><li>اقترح تعديلًا واحدًا وطريقة قياس أثره <span class="min">4 د</span></li><li class="stretch">✱ إضافي: احذف مكوّني العمر والتقسيط من الخصم وأعد حساب الفرق بين الفئات</li></ul></div>
+  <aside class="notes"><p>سياسة الذكاء الاصطناعي: مساعد معلّم؛ ويمكن للمساعد أن يقترح صياغة للمذكرة، على أن تكون الأرقام من جدول المشارك. الجدول المحوري أسرع من <code>AVERAGEIF</code> لمن يعرفه. المختبر يبدأ من ملف جاهز، فلا يحتاج 1.7.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-8" data-lo="LO4" data-n="73" data-session="8">
+  <div class="kicker">بعد المختبر 1.8</div>
+  <h2>كبار السن ومستخدمو التقسيط وسكان الأحياء الأقل دخلًا يدفعون أكثر</h2>
+  <table class="t small">
+    <tr><th>الفئة</th><th class="num">متوسط الخصم</th><th>المصدر في «سعرك»</th></tr>
+    <tr><td>60 عامًا فأكثر / غيرهم</td><td class="num">2.60% / نحو 3.75%</td><td>مكوّن العمر: ناقص 1.5 («أوفى»)</td></tr>
+    <tr><td>مستخدمو التقسيط / غيرهم</td><td class="num">1.89% / 4.19%</td><td>مكوّن التقسيط: ناقص 2.5</td></tr>
+    <tr><td>أحياء الدخل المنخفض / المرتفع</td><td class="num">2.94% / 4.25%</td><td>مكوّن الموقع: 0.86 مقابل 2.50، ثم التقسيط</td></tr>
+  </table>
+  <div class="callout tip mt"><b>تعديل معقول.</b> حذف مكوّني العمر والتقسيط، وسقف لفرق الخصم بين أي فئتين، وقياس شهري للفروق والهامش. ويبقى فرق الأحياء لأن الموقع وكيل للدخل.</div>
+  <aside class="notes"><p>الأرقام من تشغيل الحل (<code>check.py 1.8</code>). دون مكوّني العمر والتقسيط يصير خصم الأعمار 4.30 إلى 4.61، ومستخدمو التقسيط 4.31 مقابل 4.37، والأحياء 3.95 و4.47 و4.62. هذه المذكرة مع جدول المختبر 1.7 تشكلان دليل الناتج الرابع.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-lo="LO1 LO2 LO4" data-n="74" data-session="8">
+  <div class="kicker">خلاصة اليوم 1</div>
+  <h2>ثلاثة أمور تبقى معك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>خط الأساس أولًا</h4><p class="small mb0">على فترة لم يرها النموذج، وبحسب المجموعة، وبالريال.</p></div>
+    <div class="card c-coral"><h4>التجربة تقرر</h4><p class="small mb0">التقييم دون اتصال يختار، والتجربة بمقياس مكتوب مسبقًا تقرر.</p></div>
+    <div class="card c-purple"><h4>الموافقة قبل التخصيص</h4><p class="small mb0">لكل مدخل غرضه، ولكل فئة ما تدفعه فعلًا.</p></div>
+  </div>
+  <aside class="notes"><p>اطلب من كل مشارك أن يكتب جملة واحدة: أي من الثلاثة يغيّر شيئًا في عمله الأسبوع القادم. سجلات المختبرات الثمانية تُحفظ: هي 35% من التقييم.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="التالي" data-n="75" data-session="8">
+  <div class="kicker">التالي</div>
+  <h2>اليوم 2: سحاب للاتصالات: الاحتفاظ والشبكة والخريطة</h2>
+  <p class="lead">احفظ جداول اليوم في مجلد واحد. غدًا تجربة احتفاظ عشوائية بمحاولة أولى دون ذكاء اصطناعي، ثم الشبكة، ثم الخريطة التي تدافع عنها.</p>
+  <aside class="notes"><p>ذكّر بأن المختبر 2.2 يبدأ دون أي مساعد. ومن لم يكمل مختبرًا اليوم يستطيع إكماله في المنزل: كل مختبر يبدأ من ملف جاهز. وفكّر من الليلة: هل ستعرض غدًا خريطة أسواق سحاب أم سحاب للاتصالات؟</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"deck":{"id":"day1","kind":"day","day":1,"label":"اليوم 1","title":"أسواق سحاب: القيمة قبل النموذج","prev":null,"next":"day2.html","md":"day1.md","alt":{}},"sessions":[{"n":1,"label":"الجلسة 1","title":"كيف يصير مخرج النموذج قرارًا","slide":"s1","outcomes":["تتبع سلسلة القرار من البيانات إلى الفعل والنتيجة","تميّز مقياس النموذج من نتيجة العمل التي يُحكم بها","تسمّي صاحب القرار وموضع الإنسان في السلسلة"],"minutes":38,"lab":{"id":"1.1","title":"سلاسل القرار لعشر حالات","minutes":20,"href":"../labs/D1_1_decision_chains.html"}},{"n":2,"label":"الجلسة 2","title":"خط الأساس قبل النموذج","slide":"s2","outcomes":["تبني خط أساس موسميًّا بسيطًا لبيانات أسبوعية","تحسب نسبة الخطأ المطلق الموزونة والانحياز","تقارن تنبؤ المورد بخط الأساس على سنة لم يرها"],"minutes":45,"lab":{"id":"1.2","title":"خط الأساس الموسمي البسيط","minutes":25,"href":"../labs/D1_2_seasonal_baseline.html"}},{"n":3,"label":"الجلسة 3","title":"أين يستحق النموذج تكلفته","slide":"s3","outcomes":["تقارن الخطأ بحسب مجموعة المنتجات لا بالمتوسط وحده","تسعّر الخطأ بكلفة غير متماثلة للنقص والزيادة","تحدد المجموعات التي يغطي فيها الوفر الترخيص"],"minutes":45,"lab":{"id":"1.3","title":"الخطأ وكلفته بحسب مجموعة المنتجات","minutes":25,"href":"../labs/D1_3_error_by_group.html"}},{"n":4,"label":"الجلسة 4","title":"العروض ورمضان والمبيعات الناقصة","slide":"s4","outcomes":["تفصل خطأ أسابيع العروض ورمضان عن الأسابيع العادية","تستبعد أسابيع النفاد لأن المبيعات فيها لا تقيس الطلب","تكتب قاعدة استعمال للنموذج بحسب نوع الأسبوع"],"minutes":37,"lab":{"id":"1.4","title":"أسابيع العروض ورمضان والنفاد","minutes":20,"href":"../labs/D1_4_promo_and_stockouts.html"}},{"n":5,"label":"الجلسة 5","title":"التوصيات والبحث","slide":"s5","outcomes":["تحسب معدل الإصابة لنظام توصية ولخط أساس الشعبية","تفصل النتيجة بين العملاء الجدد والعائدين","تشرح لماذا لا يكفي التقييم دون اتصال للقرار"],"minutes":38,"lab":{"id":"1.5","title":"التقييم دون اتصال أمام خط أساس الشعبية","minutes":20,"href":"../labs/D1_5_offline_vs_popular.html"}},{"n":6,"label":"الجلسة 6","title":"المقاييس دون اتصال وتجارب A/B","slide":"s6","outcomes":["تقرأ نتيجة تجربة A/B بمقياس القرار المتفق عليه مسبقًا","تفحص تطابق نسبة العينة وتحسب فترة ثقة للفرق","تكشف أثر الجِدّة بمقارنة الأسابيع"],"minutes":45,"lab":{"id":"1.6","title":"قراءة نتيجة تجربة التوصيات","minutes":25,"href":"../labs/D1_6_ab_readout.html"}},{"n":7,"label":"الجلسة 7","title":"الأسعار المخصصة والموافقة","slide":"s7","outcomes":["تفرّق بين التسعير المتغير والتسعير المخصص","تطابق كل مدخل في قاعدة التسعير بالموافقة التي يحتاجها","تكشف الاستنتاج الحساس الذي لا تغطيه أي موافقة"],"minutes":37,"lab":{"id":"1.7","title":"جرد مدخلات سعرك أمام الموافقات","minutes":20,"href":"../labs/D1_7_consent_inventory.html"}},{"n":8,"label":"الجلسة 8","title":"فروق الأسعار والعملاء الأكثر عرضة للضرر","slide":"s8","outcomes":["تقارن متوسط الخصم والسعر الفعلي بين الفئات","تتتبع الفرق إلى المكوّن الذي يصنعه في القاعدة","تكتب مذكرة نتائج بتعديل مقترح يمكن قياسه"],"minutes":45,"lab":{"id":"1.8","title":"فروق الأسعار بين الفئات ومذكرة النتائج","minutes":25,"href":"../labs/D1_8_group_differences.html"}}],"slides":[{"id":"title","n":1,"title":"أسواق سحاب: القيمة قبل النموذج","kind":"title","session":0,"hash":"88a76ded","md":"#### [day1#title] أسواق سحاب: القيمة قبل النموذج\n\n*أكاديمية سدايا · الذكاء الاصطناعي في التجزئة والاتصالات*\n\nاليوم 1: سلاسل القرار، وخط الأساس الموسمي، وتجارب التوصيات، والأسعار المخصصة أمام الموافقة والإنصاف\n\nمسار الطلاقة في البيانات والذكاء الاصطناعي · يومان تدريبيان + يوم للمشروع الختامي · 8 جلسات · 8 مختبرات · USE-SEC-210","notes":"رحّب، وعرّف بنفسك في جملتين. ثم اسأل القاعة: من اشترى نظامًا أو وافق على نظام قال مورده إنه «يزيد المبيعات» أو «يقلل الانصراف»؟ كيف عرفتم بعدها أنه فعل؟ اجمع ثلاث إجابات. الورشة كلها جواب عن هذا السؤال: نقيس القيمة قبل أن نصدقها.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"أسواق سحاب: القيمة قبل النموذج","kind":"content","session":0,"hash":"7d6656ef","md":"#### [day1#agenda] أسواق سحاب: القيمة قبل النموذج\n\n*اليوم*\n\n- **الجلسة 1 · كيف يصير مخرج النموذج قرارًا**: سلسلة القرار، ومقياس النموذج أمام نتيجة العمل\n- **الجلسة 2 · خط الأساس قبل النموذج**: الموسمي البسيط، والاختبار على سنة لاحقة\n- **الجلسة 3 · أين يستحق النموذج تكلفته**: الخطأ بحسب المجموعة، وكلفته أمام الترخيص\n- **الجلسة 4 · العروض ورمضان والمبيعات الناقصة**: المناسبات المتنقلة، والنفاد الذي يخفي الطلب\n- **الجلسة 5 · التوصيات والبحث**: معدل الإصابة، وخط أساس الشعبية، والعميل الجديد\n- **الجلسة 6 · المقاييس دون اتصال وتجارب A/B**: فترة الثقة، ونسبة العينة، وأثر الجِدّة\n- **الجلسة 7 · الأسعار المخصصة والموافقة**: مدخلات السعر، والموافقة لكل غرض\n- **الجلسة 8 · فروق الأسعار والعملاء الأكثر عرضة للضرر**: الفروق بين الفئات، والمتغيرات الوكيلة","notes":"ثماني جلسات اليوم، كل منها مفاهيم قصيرة ثم مختبر على جدول بيانات: أربع جلسات من 45 دقيقة بمختبر من 25 (الجلسات 2 و3 و6 و8)، وأربع من 37 أو 38 دقيقة بمختبر من 20 (الجلسات 1 و4 و5 و7). اليوم كله في أسواق سحاب: التنبؤ، ثم التوصيات، ثم الأسعار. غدًا سحاب للاتصالات ثم الخريطة. الاستراحات بزر B.","minutes":null,"lo":[]},{"id":"sahab-group","n":3,"title":"مجموعة سحاب: متجر ومشغل اتصالات، ومكتب يقيس القيمة","kind":"content","session":0,"hash":"264efcb9","md":"#### [day1#sahab-group] مجموعة سحاب: متجر ومشغل اتصالات، ومكتب يقيس القيمة\n\n*دراسة الحالة*\n\n- **أسواق سحاب.** 48 فرعًا وتطبيق للتسوق. روزان الباهلي المديرة التجارية، وعزام الدغيم لتخطيط الإمداد، وعسايل الرقيبي للقنوات الرقمية. أنظمة قيد التقييم: «استشراف» و«مختارات» و«سعرك».\n- **سحاب للاتصالات.** مشغل متنقل وإنترنت منزلي. قاسم البليهد للاحتفاظ بالعملاء، ورتيل الرميان لمركز عمليات الشبكة. أنظمة قيد التقييم: «بقاء» و«رصد» و«سُبات».\n\n> **دورك.** محلل في مكتب القيمة بالمجموعة، مع وصال الحبشان مسؤولة حماية البيانات. لا نظام يتوسع قبل أن يمر بمكتبك.","notes":"الشركة والأشخاص والأرقام كلها اصطناعية، والملف في `labs/files/company_profile.txt`. أكّد أن المشاركين لا يحتاجون خبرة في بناء النماذج: يحتاجون أن يسألوا الأسئلة الصحيحة ويحسبوا الإجابة بجدول بيانات. والأنظمة الستة كلها ستظهر في خريطة اليوم الثاني.","minutes":null,"lo":["LO1"]},{"id":"ai-policy-prework","n":4,"title":"ثلاث درجات لاستعمال الذكاء الاصطناعي، وعمل تحضيري يعود في الخريطة","kind":"content","session":0,"hash":"842674fd","md":"#### [day1#ai-policy-prework] ثلاث درجات لاستعمال الذكاء الاصطناعي، وعمل تحضيري يعود في الخريطة\n\n*قواعد الورشة*\n\n| الدرجة | أين | ما يعنيه |\n| --- | --- | --- |\n| **دون ذكاء اصطناعي** | فحص السيناريوهات العشرة، والمحاولة الأولى في مختبر الأثر الإضافي (2.2) | تفكيرك وحدك؛ يُقاس ما تعرفه أنت |\n| **مساعد معلّم** | بقية المختبرات | تسأله ليشرح صيغة أو مفهومًا، لا ليملأ الجدول عنك |\n| **استعمال كامل** | خريطة الفرص والمخاطر | مسموح، على أن تدافع عن كل رقم مباشرة |\n\n> **لا بيانات من جهتك.** لا ترفع إلى أي مساعد ملفًا من عملك. ورقة العمل التحضيري بأسماء مغيّرة وأرقام مقرّبة.","notes":"اسأل: من أكمل ورقة العمل التحضيري (`prework_sheet.csv`)؟ من لم يكملها يأخذ القرار الجاهز في `prework_fallback.txt`. الورقة تعود في المختبر 1.1 صفًّا حادي عشر، وفي المتابعة بعد الورشة. التقييم: الفحص دون ذكاء اصطناعي 25%، وسجلات المختبرات 35%، والخريطة ومناقشتها 40%.","minutes":null,"lo":["LO1","LO6"]},{"id":"setup-check","n":5,"title":"جدول بيانات يفتح ملفات CSV بالعربية، وهذا كل ما تحتاجه","kind":"content","session":0,"hash":"c66ad1bf","md":"#### [day1#setup-check] جدول بيانات يفتح ملفات CSV بالعربية، وهذا كل ما تحتاجه\n\n*قبل أن نبدأ*\n\n- جدول بيانات: LibreOffice Calc أو Microsoft Excel أو Google Sheets\n- افتح `labs/files/use_cases.csv` واقرأ عمود الاسم: إن ظهر بالعربية سليمًا فأنت جاهز\n- إن ظهرت رموز غريبة: استورد الملف بترميز UTF-8\n- المختبر 1.6 فيه دفتر مقدَّم اختياري يعمل في Colab أو JupyterLite\n\n- **لا شيء يُنزَّل.** لا نموذج ولا برنامج جديد. لا مختبر يستدعي نموذجًا لغويًّا. كل حساب صيغة تكتبها بيدك.","notes":"دقيقتان فقط. مرّ على القاعة واطلب من كل مشارك أن يريك عمود الاسم بالعربية. أكثر مشكلة شائعة: Excel يفتح الملف بترميز خاطئ عند النقر المزدوج؛ الحل من قائمة البيانات: من نص أو CSV، ثم اختيار UTF-8. في Google Sheets يعمل الاستيراد مباشرة.","minutes":null,"lo":["LO1"]},{"id":"s1","n":6,"title":"كيف يصير مخرج النموذج قرارًا","kind":"section","session":1,"hash":"8d07ad7e","md":"#### [day1#s1] كيف يصير مخرج النموذج قرارًا\n\n*الجلسة 1*\n\n- تتبع سلسلة القرار من البيانات إلى الفعل والنتيجة\n- تميّز مقياس النموذج من نتيجة العمل التي يُحكم بها\n- تسمّي صاحب القرار وموضع الإنسان في السلسلة","notes":"الجلسة الأولى تبني لغة الورشة: سلسلة القرار. كل ما بعدها سؤال عن حلقة من حلقاتها.","minutes":null,"lo":["LO1"]},{"id":"decision-chain","n":7,"title":"النموذج لا يصنع قيمة؛ القرار الذي يغيّره هو الذي يصنعها","kind":"content","session":1,"hash":"308f7277","md":"#### [day1#decision-chain] النموذج لا يصنع قيمة؛ القرار الذي يغيّره هو الذي يصنعها\n\n*سلسلة القرار*\n\n1. **البيانات** ما يدخل: مبيعات، نقرات، فواتير، مؤشرات\n2. **المخرج** رقم، أو ترتيب، أو درجة\n3. **قاعدة القرار** من يقرأ المخرج، وماذا يفعل به\n4. **الفعل والنتيجة** طلبية، سعر، عرض، تنبيه؛ ثم أثره في الحسابات\n\n> **السؤال الدائم.** لو اختفى النموذج غدًا، أي قرار كان سيُتخذ؟ ذلك خط الأساس.","notes":"اضغط لكل حلقة. مثال من خارج سحاب: سلسلة مقاهٍ تتنبأ بعدد الأكواب غدًا؛ المخرج رقم، وقاعدة القرار أن المشرف يطلب الحليب على أساسه، والنتيجة حليب مهدر أقل أو زبائن بلا قهوة. النموذج نفسه بلا قاعدة قرار لا يغيّر شيئًا. ارسم السلسلة على السبورة: ستعود إليها في كل جلسة.","minutes":null,"lo":["LO1"]},{"id":"five-families","n":8,"title":"في التجزئة والاتصالات، خمس عائلات تغطي أغلب ما يُعرض عليك","kind":"content","session":1,"hash":"ab4bf0bb","md":"#### [day1#five-families] في التجزئة والاتصالات، خمس عائلات تغطي أغلب ما يُعرض عليك\n\n*خمس عائلات*\n\n| العائلة | المخرج | قرار نموذجي |\n| --- | --- | --- |\n| **التنبؤ** | رقم للمستقبل | كم نطلب، أين نوسّع السعة |\n| **التوصية والبحث** | ترتيب | ماذا يرى العميل أولًا |\n| **التسعير** | سعر أو نسبة خصم | كم يدفع العميل |\n| **الانصراف والعرض الأنسب** | درجة خطر أو عرض مقترح | لمن نرسل عرضًا، وأي عرض |\n| **الشبكة** | درجة شذوذ أو أمر تشغيل | أي تنبيه يُفحص، متى تُطفأ خلية |","notes":"اطلب من كل طاولة مثالًا من عملها لكل صف. لا تدخل في طريقة بناء النماذج: الورشة عن الحكم عليها. الأمثلة كلها من غير بطاقات المختبر؛ البطاقات العشر يصنفها المشاركون بأنفسهم.","minutes":null,"lo":["LO1"]},{"id":"metric-vs-outcome","n":9,"title":"مقياس النموذج يصف النموذج؛ نتيجة العمل تصف الشركة","kind":"content","session":1,"hash":"5ed98ec8","md":"#### [day1#metric-vs-outcome] مقياس النموذج يصف النموذج؛ نتيجة العمل تصف الشركة\n\n*ما نحكم به*\n\n- **مقاييس يذكرها المورد.**\n  - «الدقة 95%»\n  - نسبة النقر على التوصيات\n  - معدل الإصابة في أول خمس توصيات\n  - عدد التنبيهات\n- **نتائج عمل تتغير بها الحسابات.**\n  - الهدر والنفاد بالريال\n  - الإيراد لكل زائر في تجربة عشوائية\n  - عملاء بقوا بسبب العرض\n  - حوادث مكتشفة في وقتها\n\n> **أين يقع الخطأ.** مقياس يتحسن ولا يتغير شيء في الحسابات. اسأل دائمًا: لو تحسن هذا الرقم، أين أراه في الأرباح أو التكاليف؟","notes":"المقاييس على اليسار ليست عديمة الفائدة: تساعد الفريق الفني. لكنها لا تقرر الشراء. مثال: نظام توصيات في متجر كتب إلكتروني يرفع النقر لأنه يعرض أغلفة لافتة، والمبيعات لا تتغير. سنحسب هذا الفرق بالأرقام في الجلستين 5 و6.","minutes":null,"lo":["LO1"]},{"id":"who-decides","n":10,"title":"ثلاثة مواضع للإنسان، ولكل منها أسئلة مختلفة","kind":"content","session":1,"hash":"a375a0e9","md":"#### [day1#who-decides] ثلاثة مواضع للإنسان، ولكل منها أسئلة مختلفة\n\n*موضع الإنسان*\n\n- **يقرأ ويقرر.** صيدلية تقترح كمية الطلب، والمشرف يطلب ما يراه. السؤال: هل يغيّر المقترح قرار المشرف للأفضل؟\n- **يوافق أو يرفض.** اقتراح تخفيض ينتظر موافقة مدير الفرع. السؤال: هل يراجع فعلًا، أم يوافق على كل شيء؟\n- **لا أحد في كل مرة.** سعر يتغير في التطبيق تلقائيًّا ضمن حدود. السؤال: من وضع الحدود، ومن يراقب أثرها؟\n\n> **صاحب القرار** هو من يملك تغيير القاعدة، ولو لم يلمس كل قرار بيده.","notes":"كلمات مثل «تلقائيًّا» و«مباشرة» و«دون مراجعة» في وصف المورد تنقل الحالة إلى العمود الثالث. في المختبر ابحثوا عنها. اسأل القاعة: في العمود الثاني، كيف تعرف أن الموافقة ليست شكلية؟ (نسبة الرفض أو التعديل؛ إن كانت صفرًا فالإنسان ختم لا حَكَم.)","minutes":null,"lo":["LO1"]},{"id":"baseline-today","n":11,"title":"لكل قرار قاعدة تعمل اليوم، والنموذج يُقاس أمامها","kind":"content","session":1,"hash":"565511f7","md":"#### [day1#baseline-today] لكل قرار قاعدة تعمل اليوم، والنموذج يُقاس أمامها\n\n*خط الأساس*\n\n- الطلبية اليوم: «مثل الأسبوع نفسه من العام الماضي»\n- التوصية اليوم: «الأكثر مبيعًا»\n- العرض اليوم: «لكل من في الشريحة العليا»\n- التنبيه اليوم: «عتبة ثابتة على مؤشر واحد»\n\n- **لماذا يهم.** قيمة النموذج هي الفرق بينه وبين هذه القاعدة، لا بينه وبين لا شيء. وقاعدة بسيطة تعمل جيدًا تترك للنموذج مجالًا ضيقًا.","notes":"اطلب من كل مشارك أن يكتب خط الأساس لقراره في العمل التحضيري إن لم يكتبه. الأمثلة الأربعة عامة؛ في المختبر يكتب المشاركون خط الأساس لكل بطاقة. هذه الفكرة هي موضوع الجلسة 2 كلها.","minutes":null,"lo":["LO1","LO2"]},{"id":"check-decision-chain","n":12,"title":"ما نتيجة العمل هنا؟","kind":"quiz","session":1,"hash":"8aca015c","md":"#### [day1#check-decision-chain] ما نتيجة العمل هنا؟\n\n*نقطة تحقق*\n\n**سؤال:** سلسلة مكتبات تشتري نظامًا يقترح كمية إعادة الطلب لكل كتاب كل أسبوع، ويقرأ المشرف الاقتراح ثم يطلب. يقول المورد: «دقة النظام 94% على بيانات العام الماضي». بأي نتيجة تحكم على قيمته؟\n\n- أ. الدقة 94%، فهي أعلى من الحد المقبول في القطاع ومن عروض المنافسين\n- ب. تكلفة الكتب الراكدة والرفوف الفارغة أمام طريقة الطلب الحالية\n- ج. عدد الاقتراحات التي قبلها المشرفون دون تعديل\n- د. الفرق بين النظام وطلب عشوائي على بيانات العام الماضي نفسها","notes":"الإجابة: ب. من اختار «ج» يحتاج سؤال: لو قبل المشرفون كل الاقتراحات وارتفع الهدر، هل نجح النظام؟ من اختار «د» ارجع به إلى شريحة خط الأساس.","minutes":null,"lo":["LO1"]},{"id":"lab-1-1","n":13,"title":"سلاسل القرار لعشر حالات","kind":"lab","session":1,"hash":"3bff0bb5","md":"#### [day1#lab-1-1] سلاسل القرار لعشر حالات\n\nالمختبر 1.1 · 20 دقيقة\n\nتكتب سلسلة القرار لعشر حالات استخدام في مجموعة سحاب: البيانات، والمخرج، وقاعدة القرار، والفعل، وصاحبه، ونتيجة العمل، وخط الأساس، ثم تطابقها بمفتاح الإجابة.\n\n[D1_1_decision_chains.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_1_decision_chains.html)\n\n- [ ] اقرأ الملف التعريفي للمجموعة وبطاقات الحالات العشر (3 د)\n- [ ] املأ العائلة والمخرج وقاعدة القرار لكل حالة (7 د)\n- [ ] اكتب صاحب القرار ونتيجة العمل وخط الأساس لكل حالة (6 د)\n- [ ] طابق جدولك بالمفتاح وصحّح الحالات المختلفة (4 د)\n- [ ] ✱ إضافي: أضف قرارك من العمل التحضيري صفًّا حادي عشر، واكتب أي حلقة في سلسلته أضعف","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. راقب عمودي قاعدة القرار ونتيجة العمل: الخطأ الأكثر شيوعًا نسخ مقياس المورد في عمود النتيجة. في الدقيقة 16 اعرض المفتاح (`labs/solutions/key.json`، أو قائمة المدرب في صفحة المختبر). من أنهى مبكرًا يضيف قراره من العمل التحضيري.","minutes":null,"lo":[]},{"id":"debrief-1-1","n":14,"title":"أربع حالات من عشر تصل إلى العميل أو الشبكة دون إنسان في كل مرة","kind":"content","session":1,"hash":"808377d9","md":"#### [day1#debrief-1-1] أربع حالات من عشر تصل إلى العميل أو الشبكة دون إنسان في كل مرة\n\n*بعد المختبر 1.1*\n\n- **قرار آلي.** C02 «مختارات»، وC03 ترتيب البحث، وC04 «سعرك»، وC09 «سُبات». هذه تحتاج حدودًا ومراقبة قبل غيرها.\n- **أربعة فخاخ في الوصف.** نسبة النقر في C02، و«دقة 88%» في C06، و«دقة 97%» في C08، وكلمة «تلقائيًّا» في C09.\n\n> **ما يبقى.** كل حالة في الخريطة غدًا تبدأ من هذا الجدول: من يقرر، وبأي نتيجة نحكم، وأمام أي قاعدة.","notes":"اسأل: كم طاولة طابقت تسعًا من عشر في العائلة وقاعدة القرار؟ الحالات الأكثر اختلافًا عادة C06 (الفريق يرسل العروض بقاعدة ثابتة، فليس آليًّا بالكامل) وC08 (التنبيه يفحصه مهندس). المفتاح في `labs/solutions/answer_key.md`.","minutes":null,"lo":["LO1"]},{"id":"s2","n":15,"title":"خط الأساس قبل النموذج","kind":"section","session":2,"hash":"4e58833e","md":"#### [day1#s2] خط الأساس قبل النموذج\n\n*الجلسة 2*\n\n- تبني خط أساس موسميًّا بسيطًا لبيانات أسبوعية\n- تحسب نسبة الخطأ المطلق الموزونة والانحياز\n- تقارن تنبؤ المورد بخط الأساس على سنة لم يرها","notes":"من هنا حتى نهاية الجلسة 4: «استشراف»، تنبؤ الطلب الأسبوعي لعزام الدغيم.","minutes":null,"lo":["LO2"]},{"id":"naive-methods","n":16,"title":"البسيط والموسمي البسيط: كل تنبؤ يُقارن بهما أولًا","kind":"content","session":2,"hash":"4b8a2ce2","md":"#### [day1#naive-methods] البسيط والموسمي البسيط: كل تنبؤ يُقارن بهما أولًا\n\n*قاعدتان لا تتعلمان شيئًا*\n\n- **البسيط.** الأسبوع القادم مثل هذا الأسبوع. قوي حين يتغير الطلب ببطء.\n- **الموسمي البسيط.** هذا الأسبوع مثل الأسبوع نفسه من العام الماضي. يحفظ المواسم الثابتة: الصيف، والعودة إلى المدارس.\n\n> **القاعدة.** النموذج الذي لا يغلب الموسمي البسيط على بيانات لم يرها لا يُناقش ثمنه بعد.","notes":"كتاب Hyndman وAthanasopoulos في التنبؤ يعرض الطرق البسيطة، ومنها الموسمي البسيط، معايير مقارنة لأي طريقة أعقد. مثال من خارج سحاب: محل زهور يطلب الورد الأحمر للأسبوع الذي فيه مناسبة سنوية ثابتة بمبيعات الأسبوع نفسه من العام الماضي.\n\nالمصادر: Hyndman and Athanasopoulos, Forecasting: Principles and Practice, 3rd edition, simple forecasting methods.","minutes":null,"lo":["LO2"]},{"id":"test-on-later-period","n":17,"title":"يُختبر التنبؤ على فترة بعد فترة تدريبه، لا عليها","kind":"content","session":2,"hash":"60f9ec13","md":"#### [day1#test-on-later-period] يُختبر التنبؤ على فترة بعد فترة تدريبه، لا عليها\n\n*بيانات لم يرها*\n\n**السنة الأولى** يتعلم منها النموذج ← **السنة الثانية** يُختبر عليها، والقاعدة البسيطة معه\n\n> **أين يقع الخطأ.** رقم دقة محسوب على السنة التي تدرّب عليها النموذج يقيس الحفظ، لا التنبؤ. اسأل المورد دائمًا: على أي فترة حُسب؟ وهل رآها النموذج؟","notes":"في ملف المختبر عمود التنبؤ فارغ في السنة الأولى عمدًا. والسؤال الثاني الذي تسأله: هل الفترة بعد التدريب في الزمن، أم صفوف مقتطعة عشوائيًّا من الفترة نفسها؟ الاقتطاع العشوائي يسمح للنموذج أن «يرى» الأسبوع التالي.\n\nالمصادر: Hyndman and Athanasopoulos, Forecasting: Principles and Practice, 3rd edition, evaluating point forecast accuracy.","minutes":null,"lo":["LO2"]},{"id":"wape-and-bias","n":18,"title":"نسبة الخطأ المطلق الموزونة تقول كم نخطئ؛ الانحياز يقول إلى أي جهة","kind":"content","session":2,"hash":"0c9de7f0","md":"#### [day1#wape-and-bias] نسبة الخطأ المطلق الموزونة تقول كم نخطئ؛ الانحياز يقول إلى أي جهة\n\n*مقياسان*\n\n| المقياس | يُحسب | يجيب عن |\n| --- | --- | --- |\n| **نسبة الخطأ المطلق الموزونة** (WAPE) | مجموع \\|التنبؤ ناقص المبيعات\\| ÷ مجموع المبيعات | كم وحدة نخطئ من كل 100 نبيعها؟ |\n| **الانحياز** | مجموع (التنبؤ ناقص المبيعات) ÷ مجموع المبيعات | هل نطلب أكثر من اللازم أم أقل، باستمرار؟ |\n\n> **مثال توضيحي.** منتجان: خطأ 10 وحدات على مبيعات 100، وخطأ 10 على 1,000. النسبة الموزونة 20 ÷ 1,100 = 1.8%، لا متوسط 10% و1% = 5.5%.","notes":"لماذا الموزونة؟ لأن المتجر يدفع ثمن الوحدات، لا ثمن النسب. المتوسط البسيط للنسب يعطي المنتج الصغير صوتًا مثل الكبير. الانحياز قد يكون صفرًا والخطأ كبيرًا: أخطاء كبيرة تلغي بعضها. الصيغ جاهزة في صفحة المختبر.","minutes":null,"lo":["LO2"]},{"id":"moving-calendar","n":19,"title":"رمضان يتقدم نحو 11 يومًا كل عام، والموسمي البسيط لا يعرف","kind":"content","session":2,"hash":"9e4ee81d","md":"#### [day1#moving-calendar] رمضان يتقدم نحو 11 يومًا كل عام، والموسمي البسيط لا يعرف\n\n*التقويم المتنقل*\n\n- السنة الهجرية أقصر من الميلادية بنحو 11 يومًا\n- الأسبوع نفسه من العام الماضي قد يكون قبل رمضان، وهو هذا العام في رمضان\n- وكذلك العيدان، وكل عرض ترويجي لم يُكرر في الأسبوع نفسه\n\n- **ما يعرفه النموذج ولا تعرفه القاعدة.** تقويم العروض المخطط، وتواريخ المناسبات هذا العام. هذا ما يدفع ثمنه المتجر حين يشتري تنبؤًا.","notes":"اسأل القاعة: ماذا يحدث لطلبية أسبوع بدأ فيه رمضان هذا العام، إذا نُسخت من أسبوع عادي في العام الماضي؟ ثم العكس: أسبوع عادي هذا العام يُنسخ من أسبوع رمضان. الخطآن في اتجاهين متعاكسين. هذا ما ستقيسه في الجلسة 4.","minutes":null,"lo":["LO2"]},{"id":"what-average-hides","n":20,"title":"متوسط واحد يقول هل النموذج أدق، ولا يقول أين يستحق ثمنه","kind":"content","session":2,"hash":"b739f4be","md":"#### [day1#what-average-hides] متوسط واحد يقول هل النموذج أدق، ولا يقول أين يستحق ثمنه\n\n*رقم واحد لخمسين منتجًا*\n\n- المتوسط يخلط منتجات مستقرة بمنتجات العروض\n- ويخلط أسابيع رمضان بالأسابيع العادية\n- ولا يعرف كم يكلف كل خطأ: الطماطم الزائدة تُتلف، والأرز الزائد يبقى في المخزن\n\n- **اليوم بالترتيب.** الجلسة 2: المتوسط على السنة. الجلسة 3: بحسب المجموعة وبالريال. الجلسة 4: بحسب نوع الأسبوع.","notes":"هذه الشريحة تمهد للسطرين اللذين يكتبهما المشاركون في آخر المختبر: ما يقوله الرقمان وما لا يقولانه. لا تكشف أي رقم من المختبر.","minutes":null,"lo":["LO2"]},{"id":"check-baseline","n":21,"title":"أي مقارنة تعرضها على اللجنة؟","kind":"quiz","session":2,"hash":"f7e87a7d","md":"#### [day1#check-baseline] أي مقارنة تعرضها على اللجنة؟\n\n*نقطة تحقق*\n\n**سؤال:** سلسلة صيدليات تقيّم تنبؤًا أسبوعيًّا لواقي الشمس. المورد درّب النموذج على 2024. أي مقارنة تكفي لتقول إن النموذج أدق من الطريقة الحالية؟\n\n- أ. خطأ النموذج على 2024 أمام خطأ الموسمي البسيط على 2024، بالنسبة الموزونة والانحياز\n- ب. خطأ النموذج على 2025 أمام طلب عشوائي على 2025\n- ج. خطأ النموذج والموسمي البسيط على 2025، بالنسبة الموزونة والانحياز\n- د. متوسط نسبة الخطأ لكل أسبوع في 2025، للنموذج وحده","notes":"الإجابة: ج. «أ» هو أكثر فخ شائع في عروض الموردين. إن اختاره كثيرون، ارجع إلى شريحة «بيانات لم يرها».","minutes":null,"lo":["LO2"]},{"id":"lab-1-2","n":22,"title":"خط الأساس الموسمي البسيط","kind":"lab","session":2,"hash":"ede6e039","md":"#### [day1#lab-1-2] خط الأساس الموسمي البسيط\n\nالمختبر 1.2 · 25 دقيقة\n\nتبني عمود الموسمي البسيط لمبيعات السنة الثانية لخمسين منتجًا، وتحسب خطأه وخطأ «استشراف» وانحيازهما على السنة كلها.\n\n[D1_2_seasonal_baseline.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_2_seasonal_baseline.html)\n\n- [ ] افتح ملف المبيعات وافهم أعمدته وترتيب صفوفه (4 د)\n- [ ] ابنِ عمود الموسمي البسيط لصفوف السنة الثانية (7 د)\n- [ ] احسب الخطأ المطلق والخطأ بإشارته لكل تنبؤ (6 د)\n- [ ] احسب نسبة الخطأ المطلق الموزونة والانحياز للتنبؤين (5 د)\n- [ ] اكتب في سطرين ما يقوله الرقمان وما لا يقولانه (3 د)\n- [ ] ✱ إضافي: أضف خط أساس ثالثًا هو مبيعات الأسبوع السابق، وقارن خطأه بالموسمي البسيط","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. أكثر خطأ تقني: سحب صيغة الموسمي البسيط من الصف 2. الصيغة تبدأ من الصف 54. الخطأ الثاني: قسمة مجموع الأخطاء على مبيعات السنتين. من يتأخر يعطى `files/start/forecast_errors_y2.csv`.","minutes":null,"lo":[]},{"id":"debrief-1-2","n":23,"title":"على سنة لم يرها، خطأ استشراف نصف خطأ القاعدة الحالية","kind":"content","session":2,"hash":"5c95d847","md":"#### [day1#debrief-1-2] على سنة لم يرها، خطأ استشراف نصف خطأ القاعدة الحالية\n\n*بعد المختبر 1.2*\n\n- **7.2%** نسبة الخطأ المطلق الموزونة لاستشراف، والانحياز 0.61%\n- **15.2%** للموسمي البسيط، والانحياز ناقص 1.46%\n\n> **لكن.** هذا لا يقول بعدُ أين يستحق الترخيص ثمنه. عزام يشتري الترخيص لكل مجموعة على حدة.","notes":"الأرقام من تشغيل الحل على 2,600 صف (`labs/solutions/check.py 1.2`). اسأل: من كتب في سطريه أن المتوسط لا يقول أين؟ ذلك هو السؤال التالي.","minutes":null,"lo":["LO2"]},{"id":"s3","n":24,"title":"أين يستحق النموذج تكلفته","kind":"section","session":3,"hash":"764aab8e","md":"#### [day1#s3] أين يستحق النموذج تكلفته\n\n*الجلسة 3*\n\n- تقارن الخطأ بحسب مجموعة المنتجات لا بالمتوسط وحده\n- تسعّر الخطأ بكلفة غير متماثلة للنقص والزيادة\n- تحدد المجموعات التي يغطي فيها الوفر الترخيص","notes":"جلسة من 45 دقيقة بمختبر من 25: تسعير الأخطاء يحتاج وقتًا في الجدول.","minutes":null,"lo":["LO2"]},{"id":"average-hides-groups","n":25,"title":"النموذج قد يربح كثيرًا في مجموعة ويخسر في أخرى، والمتوسط يخفي الاثنين","kind":"content","session":3,"hash":"a5571a8f","md":"#### [day1#average-hides-groups] النموذج قد يربح كثيرًا في مجموعة ويخسر في أخرى، والمتوسط يخفي الاثنين\n\n*بحسب المجموعة*\n\n- مخبز بفروع: الخبز اليومي مستقر، والكعك يتبع المناسبات\n- القاعدة البسيطة تكفي للخبز تقريبًا\n- النموذج يربح في الكعك لأنه يعرف تقويم المناسبات\n- متوسط الاثنين يقول «أدق قليلًا»، ولا يقول أين\n\n- **السؤال الصحيح.** لكل مجموعة: كم ينقص الخطأ؟ وكم يساوي ذلك بالريال؟","notes":"المثال من خارج سحاب ودون أرقام. في المختبر خمس مجموعات: الطازج، والألبان، والمواد الأساسية، والمشروبات، والمستلزمات المنزلية. اسأل القاعة قبل المختبر: أين تتوقعون أن يربح النموذج أكثر؟ اكتب التوقعات على السبورة وارجع إليها بعد المختبر.","minutes":null,"lo":["LO2"]},{"id":"asymmetric-cost","n":26,"title":"الوحدة الناقصة والوحدة الزائدة لا تكلفان الشيء نفسه","kind":"content","session":3,"hash":"6e2fe2e8","md":"#### [day1#asymmetric-cost] الوحدة الناقصة والوحدة الزائدة لا تكلفان الشيء نفسه\n\n*كلفة الخطأ*\n\n| المنتج | إن طلبنا أقل | إن طلبنا أكثر |\n| --- | --- | --- |\n| طازج قصير الصلاحية | هامش ضائع وعميل غاضب | **هدر**: الوحدة تُتلف |\n| مواد جافة طويلة الصلاحية | هامش ضائع | تكلفة تخزين صغيرة، وتُباع الأسبوع القادم |\n| منتج العرض الترويجي | رف فارغ في أسبوع الإعلان | مخزون زائد بعد العرض |\n\n> **لذلك** يُسعَّر كل خطأ بكلفة اتجاهه: نقص × كلفة النقص، أو زيادة × كلفة الزيادة.","notes":"جدول الكلفة في المختبر (`cost_by_group.csv`) اصطناعي، لكنه يتبع هذا المنطق. أكّد: هذا الجدول يكتبه أصحاب العمل لا المورد. ولو تغير رقم فيه قد يتغير القرار: التمرين الإضافي يختبر ذلك.","minutes":null,"lo":["LO2"]},{"id":"price-the-error","n":27,"title":"خطأ أصغر لا يعني دائمًا كلفة أصغر","kind":"content","session":3,"hash":"9de74c74","md":"#### [day1#price-the-error] خطأ أصغر لا يعني دائمًا كلفة أصغر\n\n*مثال توضيحي*\n\n|  | الأسبوع 1 | الأسبوع 2 | الكلفة (نقص 2، زيادة 0.5) |\n| --- | --- | --- | --- |\n| التنبؤ أ | نقص 10 | نقص 10 | 20 × 2 = **40** |\n| التنبؤ ب | زيادة 15 | زيادة 15 | 30 × 0.5 = **15** |\n\n> **الخلاصة.** التنبؤ ب أكبر خطأً وأقل كلفة. في الجدول: عمود يسعّر كل صف بـ`IF`، ثم `SUMIFS` لكل مجموعة.","notes":"الأرقام توضيحية بالكامل. اطلب من أحد المشاركين أن يحسب السطرين بصوت عالٍ. ثم اسأل: لو كانت كلفة الزيادة 3 ريالات بدل 0.5، أيهما أفضل؟ (ب: 90، أ: 40.) القرار يتبع الكلفة لا الخطأ.","minutes":null,"lo":["LO2"]},{"id":"saving-vs-fee","n":28,"title":"يُشترى الترخيص حيث يزيد الوفر على ثمنه، مجموعةً مجموعة","kind":"content","session":3,"hash":"4afbe2eb","md":"#### [day1#saving-vs-fee] يُشترى الترخيص حيث يزيد الوفر على ثمنه، مجموعةً مجموعة\n\n*القرار*\n\n1. **كلفة أخطاء القاعدة** بالريال في السنة\n2. **ناقص كلفة أخطاء النموذج** = الوفر\n3. **ناقص الترخيص** = الوفر الصافي: موجب أم سالب؟\n\n> **أين يقع الخطأ.** شراء «الحزمة كاملة» لأن المتوسط أفضل. والمورد يسعّر لكل مجموعة؛ فالقرار لكل مجموعة.","notes":"عرض المورد في `vendor_offer.txt`: 220,000 ريال لكل مجموعة في السنة. ذكّر بملاحظة عزام: «أريد أن أعرف أين يستحق الترخيص ثمنه، لا هل هو أدق بالمتوسط». هذا هو سطر التوصية في آخر المختبر.","minutes":null,"lo":["LO2"]},{"id":"check-error-cost","n":29,"title":"أين تشتري الترخيص؟","kind":"quiz","session":3,"hash":"0ce5b91b","md":"#### [day1#check-error-cost] أين تشتري الترخيص؟\n\n*نقطة تحقق*\n\n**سؤال:** متجر إلكترونيات يقيّم تنبؤًا بترخيص 100,000 ريال لكل فئة. في الشواحن: الخطأ ينقص من 20% إلى 8%، والوفر 60,000 ريال. في الشاشات: الخطأ ينقص من 12% إلى 9%، والوفر 250,000 ريال. ماذا توصي؟\n\n- أ. الشواحن وحدها، لأن الخطأ فيها نقص أكثر\n- ب. الفئتان، لأن النموذج أدق في كل منهما\n- ج. لا شيء، لأن الوفر في الفئتين معًا لا يكفي لترخيص الحزمة كاملة\n- د. الشاشات وحدها، لأن وفرها يزيد على الترخيص","notes":"الإجابة: د. الأرقام توضيحية. من اختار «أ» يحتاج شريحة «خطأ أصغر لا يعني كلفة أصغر». ضع هذا الحساب بجانب جدول المختبر.","minutes":null,"lo":["LO2"]},{"id":"lab-1-3","n":30,"title":"الخطأ وكلفته بحسب مجموعة المنتجات","kind":"lab","session":3,"hash":"c47d93c6","md":"#### [day1#lab-1-3] الخطأ وكلفته بحسب مجموعة المنتجات\n\nالمختبر 1.3 · 25 دقيقة\n\nتحسب خطأ «استشراف» والموسمي البسيط لكل مجموعة من المجموعات الخمس، وتسعّر الأخطاء بجدول الكلفة، وتقارن الوفر بترخيص كل مجموعة.\n\n[D1_3_error_by_group.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_3_error_by_group.html)\n\n- [ ] افتح ملف البداية وجدول الكلفة وعرض المورد (3 د)\n- [ ] احسب نسبة الخطأ المطلق الموزونة لكل مجموعة وتنبؤ (7 د)\n- [ ] سعّر كل خطأ بكلفة النقص أو الزيادة لمجموعته (7 د)\n- [ ] قارن الوفر بالترخيص لكل مجموعة (5 د)\n- [ ] اكتب توصية لعزام الدغيم: أي المجموعات يُشترى لها الترخيص (3 د)\n- [ ] ✱ إضافي: غيّر كلفة الزيادة للطازج إلى نصفها، وانظر هل يتغير قرار أي مجموعة","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. ذكّر بالشرط: تُستبعد أسابيع النفاد (`G` = 1). صيغة `VLOOKUP` تحتاج ورقة `cost`: من لا يريد ورقة ثانية يكتب الكلفة في عمودين بجانب الصفوف. المختبر يبدأ من ملف جاهز، فلا يحتاج المختبر 1.2.","minutes":null,"lo":[]},{"id":"debrief-1-3","n":31,"title":"استشراف أدق في المجموعات الخمس، ويستحق ثمنه في أربع","kind":"content","session":3,"hash":"dd911471","md":"#### [day1#debrief-1-3] استشراف أدق في المجموعات الخمس، ويستحق ثمنه في أربع\n\n*بعد المختبر 1.3*\n\n| المجموعة | الخطأ: استشراف | الخطأ: الموسمي | الوفر (ريال) | بعد الترخيص |\n| --- | --- | --- | --- | --- |\n| الطازج | 7.50% | 12.13% | 453,560 | 233,560 |\n| الألبان | 5.92% | 11.99% | 727,246 | 507,246 |\n| المواد الأساسية | 5.14% | 9.64% | 179,784 | -40,216 |\n| المشروبات | 8.20% | 22.14% | 812,404 | 592,404 |\n| المستلزمات المنزلية | 8.10% | 22.28% | 463,180 | 243,180 |\n\n> **التوصية.** أربع مجموعات بوفر صافٍ 1,576,390 ريالًا. المواد الأساسية تبقى على القاعدة: أصغر خطأ، لكن كلفة الزيادة فيها 0.3 ريال.","notes":"الأرقام من تشغيل الحل (`check.py 1.3`)، دون أسابيع النفاد. ارجع إلى توقعات القاعدة التي كتبتها قبل المختبر. السؤال الذي يفتح الجلسة التالية: هل يتغير شيء إذا فصلنا أسابيع العروض ورمضان؟","minutes":null,"lo":["LO2"]},{"id":"s4","n":32,"title":"العروض ورمضان والمبيعات الناقصة","kind":"section","session":4,"hash":"e770d82c","md":"#### [day1#s4] العروض ورمضان والمبيعات الناقصة\n\n*الجلسة 4*\n\n- تفصل خطأ أسابيع العروض ورمضان عن الأسابيع العادية\n- تستبعد أسابيع النفاد لأن المبيعات فيها لا تقيس الطلب\n- تكتب قاعدة استعمال للنموذج بحسب نوع الأسبوع","notes":"آخر جلسة عن التنبؤ: متى يُتبع، ومتى يراجعه إنسان.","minutes":null,"lo":["LO2","LO1"]},{"id":"known-events","n":33,"title":"العروض والمناسبات تُعرف قبل وقوعها، فالتنبؤ الذي يقرؤها يربح فيها","kind":"content","session":4,"hash":"d7a75319","md":"#### [day1#known-events] العروض والمناسبات تُعرف قبل وقوعها، فالتنبؤ الذي يقرؤها يربح فيها\n\n*ما يُعرف مسبقًا*\n\n- **العروض.** تقويم مخطط قبل أسابيع\n- **رمضان والعيدان.** تتقدم كل عام\n- **الجمعة البيضاء.** في آخر نوفمبر كل عام\n- **العودة للمدارس.** موعد يُعلن مسبقًا\n\n> **أين يقع الخطأ.** قاعدة «مثل العام الماضي» تنسخ عرض العام الماضي إلى أسبوع لا عرض فيه، وتنسى عرض هذا العام.","notes":"اسأل: في متجر للإلكترونيات، أي أسبوع في السنة تخطئ فيه القاعدة البسيطة أكثر؟ (أسبوع العرض الكبير إذا تغير موعده.) في المختبر تفصل الأخطاء بحسب نوع الأسبوع.","minutes":null,"lo":["LO2"]},{"id":"sales-are-not-demand","n":34,"title":"المبيعات في أسبوع النفاد لا تقيس الطلب","kind":"content","session":4,"hash":"51303807","md":"#### [day1#sales-are-not-demand] المبيعات في أسبوع النفاد لا تقيس الطلب\n\n*النفاد*\n\n- فرغ الرف يوم الثلاثاء: مبيعات الأسبوع هي ما كان على الرف، لا ما أراده العملاء\n- خطأ أي تنبؤ محسوب على هذه المبيعات مضلل\n- لذلك تُستبعد أسابيع النفاد من قياس الخطأ\n\n- **والأخطر.** رقم النفاد يبقى في السجل. والعام القادم تقرؤه القاعدة البسيطة طلبًا حقيقيًّا.","notes":"مثال: صيدلية نفد فيها دواء موسمي في أسبوع الذروة؛ السجل يقول إنها باعت 40، والطلب كان 70. اسأل القاعة: ماذا يطلب المشرف في الأسبوع نفسه من العام القادم إن اتبع القاعدة؟","minutes":null,"lo":["LO2"]},{"id":"stockout-loop","n":35,"title":"القاعدة التي تقرأ مبيعات النفاد تعيد إنتاج النفاد","kind":"content","session":4,"hash":"e89f85a2","md":"#### [day1#stockout-loop] القاعدة التي تقرأ مبيعات النفاد تعيد إنتاج النفاد\n\n*حلقة تغذية راجعة*\n\n1. **نفاد هذا العام** المبيعات أقل من الطلب\n2. **العام القادم** القاعدة تطلب بقدر المبيعات\n3. **نفاد من جديد** والسجل ينخفض أكثر\n\n> **الإصلاح.** في أسبوع النفاد يُسجَّل الطلب التقديري بجانب المبيعات، ولا يتدرب نموذج على مبيعات النفاد.","notes":"الدليل المرجعي للتحيز في الذكاء الاصطناعي الصادر عن سدايا يعرّف تحيز حلقة التغذية الراجعة: مخرجات النظام تعود مدخلات له فتعزز الخطأ الأول. هنا الحلقة في قاعدة بسيطة لا في نموذج، والمبدأ واحد. وسنراها مرة أخرى في التوصيات وفي عروض الاحتفاظ.\n\nالمصادر: SDAIA, AI Bias Reference Guide, first edition, Feedback Loop Bias.","minutes":null,"lo":["LO2","LO1"]},{"id":"usage-rule","n":36,"title":"ليس «نموذج أو إنسان»، بل: من يضع الرقم في أي أسبوع","kind":"content","session":4,"hash":"75edbf1d","md":"#### [day1#usage-rule] ليس «نموذج أو إنسان»، بل: من يضع الرقم في أي أسبوع\n\n*قاعدة الاستعمال*\n\n| نوع الأسبوع | من يضع الرقم | ما يراجعه الإنسان |\n| --- | --- | --- |\n| أسبوع مستقر | التنبؤ أو القاعدة، أيهما أرخص | المنتجات الأعلى وزنًا فقط |\n| عرض أو مناسبة | التنبؤ الذي يعرف التقويم | هل العرض في التقويم فعلًا؟ |\n| منتج جديد | المخطط بيده، بمنتج مشابه | كل شيء |","notes":"الجدول عام ومن خارج بيانات المختبر. يكتب المشاركون قاعدتهم لأسواق سحاب من أرقامهم. شدّد على السطر الأخير: لا نموذج يعرف منتجًا بلا تاريخ، وهذه حالة يجب أن تكون مكتوبة في القاعدة.","minutes":null,"lo":["LO2","LO1"]},{"id":"check-stockout","n":37,"title":"ماذا تفعل بأسبوع النفاد؟","kind":"quiz","session":4,"hash":"e653522f","md":"#### [day1#check-stockout] ماذا تفعل بأسبوع النفاد؟\n\n*نقطة تحقق*\n\n**سؤال:** محل حلويات نفدت فيه علب المعمول في الأسبوع الأخير قبل العيد: باع 300 علبة، وقدّر المشرف أن 450 طُلبت. تقارن الآن تنبؤين على هذا العام. ماذا تفعل بذلك الأسبوع؟\n\n- أ. تحسب الخطأ عليه كأي أسبوع، فالمبيعات هي الحقيقة\n- ب. تستبعده من القياس، وتسجّل الطلب التقديري للعام القادم\n- ج. تضع مكانه متوسط مبيعات الأسابيع الأخرى\n- د. تعده خطأً كبيرًا على التنبؤ الذي اقترح الكمية، فهو سبب النفاد","notes":"الإجابة: ب. «أ» هو الخطأ الذي يقع في المختبر إن لم يُستبعد عمود النفاد. «د» سؤال جيد لكن في مكان آخر: النفاد قد يكون من المورد أو من المستودع.","minutes":null,"lo":["LO2"]},{"id":"lab-1-4","n":38,"title":"أسابيع العروض ورمضان والنفاد","kind":"lab","session":4,"hash":"1e3e0bc4","md":"#### [day1#lab-1-4] أسابيع العروض ورمضان والنفاد\n\nالمختبر 1.4 · 20 دقيقة\n\nتقارن الخطأ في أسابيع العروض ورمضان والأسابيع العادية، وتقيس انحياز الموسمي البسيط في الأسابيع التي نفد فيها المنتج في العام الماضي، ثم تكتب قاعدة استعمال.\n\n[D1_4_promo_and_stockouts.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_4_promo_and_stockouts.html)\n\n- [ ] صنّف صفوف السنة الثانية: عرض، ورمضان، وعادي، واستبعد أسابيع النفاد (4 د)\n- [ ] احسب الخطأ لكل نوع أسبوع وتنبؤ (6 د)\n- [ ] احسب انحياز التنبؤين في أسابيع نفاد العام الماضي (5 د)\n- [ ] اكتب قاعدة استعمال: متى يُتبع النموذج ومتى يراجعه المخطط (5 د)\n- [ ] ✱ إضافي: عدّ أسابيع النفاد في السنتين، واكتب لماذا يرث خط الأساس نفاد العام الماضي","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. الصيغة المتداخلة في الخطوة 1 تحتاج ترتيبًا: النفاد أولًا، ثم العرض، ثم رمضان. راقب الخطوة 3: من نسي شرط `G` = 0 يحصل على انحياز مختلف. الخطوة 4 هي التي تُسلَّم في سجل المختبرات.","minutes":null,"lo":[]},{"id":"debrief-1-4","n":39,"title":"القاعدة البسيطة تنهار في أسابيع العروض، وترث نفاد العام الماضي","kind":"content","session":4,"hash":"c1aa71b0","md":"#### [day1#debrief-1-4] القاعدة البسيطة تنهار في أسابيع العروض، وترث نفاد العام الماضي\n\n*بعد المختبر 1.4*\n\n| البند | القيمة |\n| --- | --- |\n| عروض: الموسمي | 34.72% |\n| عروض: استشراف | 7.26% |\n| رمضان: الموسمي | 16.81% |\n| رمضان: استشراف | 7.63% |\n| عادي: الموسمي | 12.45% |\n| عادي: استشراف | 6.63% |\n\n> **بعد نفاد العام الماضي** (88 أسبوعًا): الموسمي البسيط يطلب أقل بـ24.05%، واستشراف بانحياز 1.66% فقط لأنه دُرّب دون أسابيع النفاد.","notes":"نسب الخطأ من تشغيل الحل، دون أسابيع النفاد. أسابيع النفاد 92 في السنة الأولى و36 في الثانية. اقرأ قاعدتين أو ثلاثًا من قواعد المشاركين بصوت عالٍ، واسأل: من يملك قرار تغيير القاعدة؟ (عزام الدغيم.)","minutes":null,"lo":["LO2"]},{"id":"s5","n":40,"title":"التوصيات والبحث","kind":"section","session":5,"hash":"9c436319","md":"#### [day1#s5] التوصيات والبحث\n\n*الجلسة 5*\n\n- تحسب معدل الإصابة لنظام توصية ولخط أساس الشعبية\n- تفصل النتيجة بين العملاء الجدد والعائدين\n- تشرح لماذا لا يكفي التقييم دون اتصال للقرار","notes":"ننتقل إلى التطبيق: «مختارات»، نظام التوصيات لعسايل الرقيبي.","minutes":null,"lo":["LO1"]},{"id":"how-recommenders-work","n":41,"title":"نظام التوصية يحوّل سلوك العملاء السابق إلى ترتيب","kind":"content","session":5,"hash":"29a9376e","md":"#### [day1#how-recommenders-work] نظام التوصية يحوّل سلوك العملاء السابق إلى ترتيب\n\n*التوصية والبحث*\n\n1. **البيانات** ما اشتراه العميل وما نقر عليه، وما اشتراه من يشبهونه\n2. **المخرج** ترتيب: أول خمسة منتجات\n3. **الفعل** تظهر الخمسة دون أن يراجعها أحد\n\n> **والبحث مثلها.** ترتيب نتائج البحث يتعلم مما ينقر عليه العملاء بعد كل بحث: ترتيب أيضًا، ويظهر دون مراجعة.","notes":"لا تدخل في الخوارزميات. الفكرة: المخرج ترتيب، والقرار آلي، فالسؤال الوحيد هو أثر الترتيب على ما يشتريه العميل. مثال من خارج سحاب: متجر كتب إلكتروني يعرض «اشترى قراء هذا الكتاب أيضًا».","minutes":null,"lo":["LO1"]},{"id":"hit-rate","n":42,"title":"معدل الإصابة: هل كان ما اشتراه العميل بين التوصيات؟","kind":"content","session":5,"hash":"2f400ab5","md":"#### [day1#hit-rate] معدل الإصابة: هل كان ما اشتراه العميل بين التوصيات؟\n\n*التقييم دون اتصال*\n\n- نأخذ جلسات من الماضي لم يرها النموذج\n- نعرف ما اشتراه العميل بعد كل جلسة\n- إصابة إذا كان بين التوصيات الخمس\n- المعدل = الجلسات المصيبة ÷ كل الجلسات\n\n- **في الجدول.** `COUNTIF` على الخلايا الخمس للصف: إن وُجد المنتج المشترى فهي إصابة. ثم `AVERAGE` و`AVERAGEIF`.","notes":"اسم المقياس بالإنجليزية hit rate at 5. هو مقياس للنموذج، لا نتيجة عمل: يعود في الجلسة 6. اسأل: لماذا جلسات لم يرها النموذج؟ (السبب نفسه في التنبؤ: الحفظ ليس توقعًا.)","minutes":null,"lo":["LO1"]},{"id":"popularity-baseline","n":43,"title":"التوصية تُقارن بالأكثر مبيعًا، لا بالعشوائي","kind":"content","session":5,"hash":"05e536e7","md":"#### [day1#popularity-baseline] التوصية تُقارن بالأكثر مبيعًا، لا بالعشوائي\n\n*خط الأساس*\n\n- **المقارنة التي تعجب المورد.** «أفضل من التوصية العشوائية بكذا ضعفًا». لا أحد يعرض على عملائه منتجات عشوائية.\n- **المقارنة التي تقرر.** أمام قائمة «الأكثر مبيعًا» نفسها لكل العملاء: قاعدة لا تحتاج ترخيصًا ولا بيانات شخصية.\n\n> **أين يقع الخطأ.** رقم «عدد الأضعاف» يكبر كلما كبر الكتالوج، ولا يقول شيئًا عن القرار.","notes":"مثال حسابي توضيحي: في كتالوج من 1,000 منتج، التوصية العشوائية لخمسة منتجات تصيب في 0.5% من الجلسات، فأي نظام يبدو «أفضل بعشرين ضعفًا». الأكثر مبيعًا قد يصيب أكثر من النظام نفسه. هذا ما يحسبه المشاركون.","minutes":null,"lo":["LO1"]},{"id":"cold-start","n":44,"title":"نظام يتعلم من السجل لا يعرف شيئًا عمن لا سجل له","kind":"content","session":5,"hash":"ac4abdde","md":"#### [day1#cold-start] نظام يتعلم من السجل لا يعرف شيئًا عمن لا سجل له\n\n*العميل الجديد*\n\n- العميل العائد: سجله يقول ما يحتاجه\n- العميل الجديد: لا سجل، فالنظام يخمّن\n- المتوسط على الكل يخلط الاثنين\n- افصل النتيجة دائمًا بحسب نوع العميل\n\n- **السؤال للمورد.** كم نسبة العملاء الجدد في الشهر، وما معدل الإصابة لهم وحدهم أمام خط الأساس؟","notes":"اسم المشكلة بالإنجليزية cold start. اسأل: في عملكم، كم نسبة العملاء الجدد في الشهر؟ إن كانت كبيرة، فالنتيجة على العائدين وحدهم تبالغ في قيمة النظام.","minutes":null,"lo":["LO1"]},{"id":"reco-feedback-loop","n":45,"title":"ما يُعرض يُشترى أكثر، ثم يتعلم النظام أنه المطلوب","kind":"content","session":5,"hash":"20b480f6","md":"#### [day1#reco-feedback-loop] ما يُعرض يُشترى أكثر، ثم يتعلم النظام أنه المطلوب\n\n*حلقة أخرى*\n\n1. **يعرض الأكثر شهرة** لأنه الأكثر في السجل\n2. **يُشترى أكثر** لأنه معروض\n3. **يعود إلى التدريب** فيزداد عرضه، وتختفي البقية\n\n> **ما تقيسه.** نصيب المنتجات الأكثر مبيعًا من التوصيات. إن كان كبيرًا، فالنظام يقترب من «الأكثر مبيعًا» بثمن.","notes":"هذه حلقة التغذية الراجعة التي رأيناها في النفاد، في صورة أخرى. والتقييم دون اتصال لا يراها، لأنه يقرأ ماضيًا صنعته التوصيات القديمة. المصادر: SDAIA, AI Bias Reference Guide, first edition, Feedback Loop Bias.","minutes":null,"lo":["LO1"]},{"id":"check-popularity","n":46,"title":"كيف تقرأ هذه المذكرة؟","kind":"quiz","session":5,"hash":"32ce45fa","md":"#### [day1#check-popularity] كيف تقرأ هذه المذكرة؟\n\n*نقطة تحقق*\n\n**سؤال:** تطبيق لبيع الكتب يقول مورد توصياته: «معدل الإصابة 8%، أي 16 ضعف التوصية العشوائية». قائمة الأكثر مبيعًا تصيب 7.3%. للعملاء العائدين 11% مقابل 7%، وللجدد 2% مقابل 8%. ما الخلاصة؟\n\n- أ. النظام يضيف قيمة للعائدين فقط، وللجدد قائمة الأكثر مبيعًا أفضل\n- ب. النظام ناجح، فهو 16 ضعف العشوائي\n- ج. النظام لا يضيف شيئًا، فالفرق 0.7 نقطة فقط\n- د. النظام يرفع المبيعات بنحو 10% فوق قائمة الأكثر مبيعًا، بحسب فرق الإصابة","notes":"الإجابة: أ. الأرقام توضيحية ومن خارج سحاب. «د» يمهد للجلسة التالية: من اختاره اسأله أين يرى المبيعات في هذه الأرقام.","minutes":null,"lo":["LO1"]},{"id":"lab-1-5","n":47,"title":"التقييم دون اتصال أمام خط أساس الشعبية","kind":"lab","session":5,"hash":"23c6da96","md":"#### [day1#lab-1-5] التقييم دون اتصال أمام خط أساس الشعبية\n\nالمختبر 1.5 · 20 دقيقة\n\nتحسب معدل الإصابة لتوصيات «مختارات» ولأكثر خمسة منتجات مبيعًا على 2,000 جلسة، للعملاء الجدد والعائدين، وتقارن النتيجة بادعاء المورد.\n\n[D1_5_offline_vs_popular.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_5_offline_vs_popular.html)\n\n- [ ] اقرأ مذكرة المورد وأعمدة ملف الجلسات (3 د)\n- [ ] احسب الإصابة لكل جلسة لمختارات ولخط أساس الشعبية (6 د)\n- [ ] احسب معدل الإصابة للكل وللجدد وللعائدين (5 د)\n- [ ] احسب نصيب أكثر 50 منتجًا مبيعًا من التوصيات (3 د)\n- [ ] اكتب ردًّا من ثلاثة أسطر على مذكرة المورد (3 د)\n- [ ] ✱ إضافي: اقترح قاعدة بسيطة تجمع النظامين: أيهما يظهر لأي عميل","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. راقب الصيغة في الخطوة 2: من يبحث عن الرقم في نص يحسب إصابات خاطئة. صيغة الخطوة 4 تفترض أن الأعمدة أرقام: إن قُرئت نصًّا، حوّلها. المختبر لا يحتاج أي مختبر سابق.","minutes":null,"lo":[]},{"id":"debrief-1-5","n":48,"title":"أمام الأكثر مبيعًا، يربح مختارات عند العائدين ويخسر عند الجدد","kind":"content","session":5,"hash":"60cd15d2","md":"#### [day1#debrief-1-5] أمام الأكثر مبيعًا، يربح مختارات عند العائدين ويخسر عند الجدد\n\n*بعد المختبر 1.5*\n\n| العملاء | الجلسات | مختارات | الأكثر مبيعًا |\n| --- | --- | --- | --- |\n| الكل | 2,000 | 11.85% | 11.65% |\n| العائدون | 1,416 | 15.11% | 11.86% |\n| الجدد | 584 | 3.94% | 11.13% |\n\n> **و66.54%** من توصيات مختارات من أكثر 50 منتجًا مبيعًا من 400. «تسعة أضعاف ونصف العشوائي» صحيح بالحرف ولا يقرر شيئًا.","notes":"الأرقام من تشغيل الحل (`check.py 1.5`). القاعدة المركبة (مختارات للعائدين والأكثر مبيعًا للجدد) تصيب نحو 13.95%. لكن لا شيء هنا يقول إن العميل اشترى أكثر: ذلك سؤال الجلسة 6.","minutes":null,"lo":["LO1"]},{"id":"s6","n":49,"title":"المقاييس دون اتصال وتجارب A/B","kind":"section","session":6,"hash":"efb26b52","md":"#### [day1#s6] المقاييس دون اتصال وتجارب A/B\n\n*الجلسة 6*\n\n- تقرأ نتيجة تجربة A/B بمقياس القرار المتفق عليه مسبقًا\n- تفحص تطابق نسبة العينة وتحسب فترة ثقة للفرق\n- تكشف أثر الجِدّة بمقارنة الأسابيع","notes":"من «هل كان سيصيب» إلى «هل يغيّر ما يشتريه العميل».","minutes":null,"lo":["LO1","LO3"]},{"id":"offline-is-not-online","n":50,"title":"التقييم دون اتصال يسأل «هل كان سيصيب»؛ التجربة تسأل «هل غيّر شيئًا»","kind":"content","session":6,"hash":"4bb66f16","md":"#### [day1#offline-is-not-online] التقييم دون اتصال يسأل «هل كان سيصيب»؛ التجربة تسأل «هل غيّر شيئًا»\n\n*سؤالان مختلفان*\n\n- **دون اتصال.** جلسات من الماضي. سريع ورخيص. لا يرى أثر العرض نفسه، ولا ما كان العميل سيشتريه على كل حال.\n- **تجربة A/B.** زوار يُقسمون بالقرعة: نصف يرى النظام ونصف لا. الفرق بين النصفين هو أثر النظام، لأن القرعة وحدها فرّقت بينهما.\n\n> **القاعدة.** التقييم دون اتصال يختار من يدخل التجربة. والتجربة تقرر من يُعمَّم.","notes":"توصية تصيب منتجًا كان العميل سيشتريه على كل حال لا تضيف إيرادًا. هذه فكرة «الأثر الإضافي» التي تعود غدًا في عروض الاحتفاظ. كتاب Kohavi وTang وXu مرجع عملي في التجارب على الإنترنت.\n\nالمصادر: Kohavi, Tang and Xu, Trustworthy Online Controlled Experiments, Cambridge University Press, 2020.","minutes":null,"lo":["LO1","LO3"]},{"id":"ab-design","n":51,"title":"ثلاثة أشياء تُكتب قبل أول زائر، لا بعد النتيجة","kind":"content","session":6,"hash":"f9ae3189","md":"#### [day1#ab-design] ثلاثة أشياء تُكتب قبل أول زائر، لا بعد النتيجة\n\n*قبل أن تبدأ التجربة*\n\n- **مقياس القرار.** رقم واحد يقرر التعميم: الإيراد لكل زائر مثلًا.\n- **مقياس الحماية.** رقم يجب ألا يسوء: المرتجعات، الشكاوى، سرعة الصفحة.\n- **المدة.** أسابيع كاملة تحددها مسبقًا. لا توقف حين «تظهر» النتيجة.\n\n> **أين يقع الخطأ.** تقرير يختار بعد التجربة المقياس الذي تحسّن. لكل تجربة مقياس يتحسن بالصدفة.","notes":"اسأل القاعة: لماذا الإيراد لكل زائر لا معدل التحويل؟ (لأن التحويل قد يرتفع بطلبات أصغر.) في المختبر اتُّفق على المقياسين قبل التجربة، والمورد كتب تقريره بمقياس ثالث.","minutes":null,"lo":["LO3"]},{"id":"confidence-interval","n":52,"title":"الفرق بين النسختين رقم، ومعه مدى يقول كم يمكن أن تكون الصدفة صنعته","kind":"content","session":6,"hash":"fa506a15","md":"#### [day1#confidence-interval] الفرق بين النسختين رقم، ومعه مدى يقول كم يمكن أن تكون الصدفة صنعته\n\n*فترة الثقة*\n\n```\n# ملف: readout\npA = ordersA / visitorsA          pB = ordersB / visitorsB\ndiff = pB - pA\nse   = SQRT(pA*(1-pA)/visitorsA + pB*(1-pB)/visitorsB)\n95% interval = diff - 1.96*se  ...  diff + 1.96*se\n```\n\n> **اقرأها هكذا.** إن ضمّت الفترة الصفر، فالبيانات لا تستبعد أن الأثر لا شيء. وإن كانت كلها فوق الصفر، فالأثر موجب على الأغلب، وحجمه بين طرفيها.","notes":"لا حاجة لنظرية الإحصاء: الصيغة في صفحة المختبر، والدفتر المقدَّم يحسبها أيضًا. مثال توضيحي: فرق 0.3 نقطة وفترة من ناقص 0.1 إلى 0.7: لا نعرف بعد. فرق 0.3 وفترة من 0.1 إلى 0.5: أثر موجب صغير.","minutes":null,"lo":["LO3"]},{"id":"sample-ratio","n":53,"title":"قبل أي رقم: هل قسمت القرعة الزوار كما يجب؟","kind":"content","session":6,"hash":"c88f32bc","md":"#### [day1#sample-ratio] قبل أي رقم: هل قسمت القرعة الزوار كما يجب؟\n\n*الفحص الأول*\n\n- قرعة نصف ونصف يجب أن تعطي نصفين متقاربين\n- ابتعاد كبير عن النصف علامة عطب: زوار يُسقطون من نسخة، أو أخطاء في التسجيل\n- يسمى عدم تطابق نسبة العينة (sample ratio mismatch)\n- إن وُجد، لا يُقرأ أي رقم آخر حتى يُصلح\n\n- **اختبار سريع.** مربع كاي على عددي الزوار، والقيمة الاحتمالية بـ`CHISQ.DIST.RT`. قيمة صغيرة جدًّا تعني عطبًا.","notes":"Fabijan وزملاؤه في دراسة على تجارب حقيقية وجدوا أن عدم تطابق نسبة العينة شائع ويقود إلى استنتاجات خاطئة إن لم يُفحص أولًا. الفحص هو الخطوة 2 في المختبر.\n\nالمصادر: Fabijan et al., Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, KDD 2019.","minutes":null,"lo":["LO3"]},{"id":"novelty-and-peeking","n":54,"title":"كل جديد يجذب النقر أيامًا، ثم يعود العملاء إلى عاداتهم","kind":"content","session":6,"hash":"dcfce987","md":"#### [day1#novelty-and-peeking] كل جديد يجذب النقر أيامًا، ثم يعود العملاء إلى عاداتهم\n\n*الأسبوع الأول*\n\n- **أثر الجِدّة.** العملاء يجرّبون ما تغير في الصفحة، فيرتفع الرقم في الأيام الأولى ثم يتلاشى. اقرأ النتيجة أسبوعًا أسبوعًا.\n- **النظر المبكر.** من يفحص النتيجة كل يوم ويوقف التجربة حين تبدو «دالة» يجد أثرًا حيث لا أثر.\n\n> **القاعدة.** المدة المكتوبة مسبقًا تُكمل، ويُقرأ الأسبوع الأخير بجانب الأول.","notes":"الاسم بالإنجليزية novelty effect، وهو سبب من أسباب قراءة التجربة على مدتها كلها. لا تخلطه بـ«تحيز الجِدّة» (Novelty Bias) في الدليل المرجعي للتحيز من سدايا: ذاك نموذج يبالغ في وزن البيانات الجديدة أو النادرة، لا عملاء يجربون ما تغير. مثال من خارج سحاب: تطبيق توصيل يغيّر لون زر الطلب، فيرتفع النقر في الأسبوع الأول ثم يعود.","minutes":null,"lo":["LO3"]},{"id":"check-ab","n":55,"title":"هل يُعمَّم التغيير؟","kind":"quiz","session":6,"hash":"fda0ea7c","md":"#### [day1#check-ab] هل يُعمَّم التغيير؟\n\n*نقطة تحقق*\n\n**سؤال:** تطبيق توصيل طعام جرّب ترتيبًا جديدًا للمطاعم أربعة أسابيع. مقياس القرار المكتوب مسبقًا: الإيراد لكل زائر. النتيجة: الطلبات ارتفعت 5% في الأسبوع الأول و1% في الأخير، والإيراد لكل زائر لم يتغير، والزوار 20,040 في النسخة الحالية و19,960 في الجديدة. ماذا تقرر؟\n\n- أ. التعميم، فالطلبات ارتفعت 5%\n- ب. إعادة التجربة، لأن الزوار لم ينقسموا نصفين تمامًا\n- ج. عدم التعميم: مقياس القرار ثابت والارتفاع تلاشى\n- د. التعميم، لأن الطلبات في الأسابيع الأربعة معًا أعلى","notes":"الإجابة: ج. «ب» فخ معاكس: ليس كل ابتعاد عن النصف عطبًا؛ الاختبار يقول متى يكون الابتعاد أكبر من الصدفة (هنا القيمة الاحتمالية نحو 0.69). وفي عينة من ملايين الزوار قد تكون نسبة 50.1 إلى 49.9 عطبًا حقيقيًّا: الحجم يقرر لا النسبة وحدها. الأرقام توضيحية.","minutes":null,"lo":["LO3"]},{"id":"lab-1-6","n":56,"title":"قراءة نتيجة تجربة التوصيات","kind":"lab","session":6,"hash":"f4349725","md":"#### [day1#lab-1-6] قراءة نتيجة تجربة التوصيات\n\nالمختبر 1.6 · 25 دقيقة\n\nتعيد قراءة تجربة «مختارات» على 28 يومًا: تطابق نسبة العينة، والتحويل بفترة ثقة في الأسبوع الأول والأسبوعين الأخيرين، والإيراد لكل زائر، والمرتجعات، ثم تكتب القرار.\n\n[D1_6_ab_readout.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_6_ab_readout.html)\n\n- [ ] اقرأ تقرير المورد واكتب مقياس القرار ومقياس الحماية (3 د)\n- [ ] افحص تطابق نسبة العينة بين النسختين (4 د)\n- [ ] احسب التحويل والفرق وفترة الثقة للأسبوع الأول والأسبوعين الأخيرين (8 د)\n- [ ] احسب الإيراد لكل زائر ونسبة المرتجعات للتجربة كلها (6 د)\n- [ ] اكتب القرار في ثلاثة أسطر لعسايل الرقيبي (4 د)\n- [ ] ✱ إضافي: شغّل الدفتر المقدم ab_readout.ipynb في Colab أو JupyterLite وقارن أرقامه بأرقامك","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. في LibreOffice تعمل الدالة القديمة `CHIDIST` بالمعاملين أنفسهم إن لم تظهر `CHISQ.DIST.RT`. الدفتر المقدَّم يعمل في Colab بعد رفع الملف، أو في JupyterLite.","minutes":null,"lo":[]},{"id":"debrief-1-6","n":57,"title":"ارتفاع الأسبوع الأول تلاشى، والإيراد لكل زائر لم يتحرك","kind":"content","session":6,"hash":"d8f91366","md":"#### [day1#debrief-1-6] ارتفاع الأسبوع الأول تلاشى، والإيراد لكل زائر لم يتحرك\n\n*بعد المختبر 1.6*\n\n| الفترة | التحويل A | التحويل B | الارتفاع | فترة الثقة للفرق (نقاط) |\n| --- | --- | --- | --- | --- |\n| الأسبوع 1 | 6.05% | 6.55% | 8.41% | 0.25 إلى 0.77 |\n| الأسبوعان 3 و4 | 6.01% | 6.07% | 1.09% | -0.11 إلى 0.25 |\n\n- **49.97%** نصيب A من الزوار: لا عطب\n- **-0.17%** تغير الإيراد لكل زائر\n- **5.19%** مرتجعات B مقابل 4.07%","notes":"الأرقام من تشغيل الحل والدفتر المقدَّم (`check.py 1.6`). القرار: لا تعميم. مختارات تكلف 300,000 ريال في السنة ولم يتغير مقياس القرار، وساء مقياس الحماية. سؤال للقاعة: ماذا كنا سنقرر لو أوقفنا التجربة في اليوم السابع كما اقترح المورد؟","minutes":null,"lo":["LO3"]},{"id":"s7","n":58,"title":"الأسعار المخصصة والموافقة","kind":"section","session":7,"hash":"1e10d44e","md":"#### [day1#s7] الأسعار المخصصة والموافقة\n\n*الجلسة 7*\n\n- تفرّق بين التسعير المتغير والتسعير المخصص\n- تطابق كل مدخل في قاعدة التسعير بالموافقة التي يحتاجها\n- تكشف الاستنتاج الحساس الذي لا تغطيه أي موافقة","notes":"آخر جلستين اليوم: «سعرك»، القسائم الشخصية لروزان الباهلي، أمام الموافقة ثم الإنصاف.","minutes":null,"lo":["LO4"]},{"id":"dynamic-vs-personalised","n":59,"title":"التسعير المتغير يغيّر السعر للجميع؛ التسعير المخصص يغيّره لكل عميل","kind":"content","session":7,"hash":"e5e18a47","md":"#### [day1#dynamic-vs-personalised] التسعير المتغير يغيّر السعر للجميع؛ التسعير المخصص يغيّره لكل عميل\n\n*نوعان من الأسعار*\n\n- **المتغير.** تخفيض الطازج قرب نهاية صلاحيته، أو عرض الأسبوع. كل من يدخل المتجر يرى السعر نفسه.\n- **المخصص.** قسيمة لكل عميل بنسبة مختلفة، من بياناته. عميلان في الطابور نفسه يدفعان سعرين.\n\n> **لذلك.** المخصص يعالج بيانات شخصية ليقرر ما يدفعه شخص بعينه. أسئلته: بأي بيانات، وبأي موافقة، وهل يدفع بعض الناس أكثر لأنهم من فئة ما.","notes":"اسأل القاعة: أي النوعين يستعمل في عملكم؟ أغلب المتاجر تستعمل الاثنين. هذه الجلسة عن السؤالين الأولين، والجلسة التالية عن الثالث.","minutes":null,"lo":["LO4"]},{"id":"inputs-make-price","n":60,"title":"كل مدخل في قاعدة التسعير بيانات شخصية تُستعمل لغرض","kind":"content","session":7,"hash":"aedb3381","md":"#### [day1#inputs-make-price] كل مدخل في قاعدة التسعير بيانات شخصية تُستعمل لغرض\n\n*ما يدخل السعر*\n\n| مدخل شائع | ما يكشفه | السؤال |\n| --- | --- | --- |\n| سجل المشتريات | العادات، والقدرة على الدفع | هل وافق العميل على استعماله للتسعير؟ |\n| موقع الجهاز | أين يكون، وقربه من منافس | هل يعلم أن موقعه يغيّر سعره؟ |\n| نوع الجهاز وطريقة الدفع | الدخل تقريبًا | أي غرض معلن يغطيهما؟ |\n| مشتريات تكشف حالة | الصحة أحيانًا | هل هذا استنتاج لبيانات حساسة؟ |","notes":"الجدول عام. في المختبر يجرد المشاركون مدخلات «سعرك» بأنفسهم من وصف المورد، ويطابقونها بأغراض الموافقة في التطبيق. شدّد: الوصف الفني للمورد هو المصدر، لا ما يقوله فريق المبيعات عنه.","minutes":null,"lo":["LO4"]},{"id":"consent-per-purpose","n":61,"title":"موافقة مستقلة لكل غرض، موثقة، ويمكن سحبها بسهولة","kind":"content","session":7,"hash":"2b963bb3","md":"#### [day1#consent-per-purpose] موافقة مستقلة لكل غرض، موثقة، ويمكن سحبها بسهولة\n\n*نظام حماية البيانات الشخصية*\n\n- الغرض واضح ومحدد، ويُشرح للعميل قبل طلب الموافقة أو عندها\n- موافقة مستقلة لكل غرض: الموافقة على التسويق لا تغطي التسعير\n- موثقة بما يسمح بالتحقق منها لاحقًا\n- التسويق المباشر: موافقة مسبقة، وطريقة لإيقافه سهلة كطريقة الموافقة\n\n- **في جدول البيانات.** لكل مدخل عمود استعمال، ولكل عميل أعلام موافقة. الفجوة: مدخل استُعمل وعلم موافقته صفر.","notes":"هذه النقاط من اللائحة التنفيذية لنظام حماية البيانات الشخصية (المادة 11 في الموافقة، والمادة 12 في سحبها، والمادة 29 في التسويق المباشر) ومن النظام نفسه (المادة 26: معالجة البيانات لأغراض تسويقية بموافقة صاحبها). صغها بكلماتك ولا تقدمها رأيًا قانونيًّا: المختبر تمرين على الأسئلة، والقرار لمسؤول حماية البيانات.\n\nالمصادر: SDAIA, Personal Data Protection Law, article 26; Implementing Regulation of the Personal Data Protection Law, articles 11, 12 and 29.","minutes":null,"lo":["LO4"]},{"id":"sensitive-and-automated","n":62,"title":"البيانات الحساسة، والقرار الذي تصدره المعالجة الآلية وحدها","kind":"content","session":7,"hash":"34cc0b43","md":"#### [day1#sensitive-and-automated] البيانات الحساسة، والقرار الذي تصدره المعالجة الآلية وحدها\n\n*حالتان تحتاجان موافقة صريحة*\n\n- **استنتاج حساس.** متجر إلكتروني يستنتج من شراء شرائط قياس السكر أن العميل مصاب بالسكري، ويوجه له عروضًا. البيانات الصحية حساسة، والاستنتاج منها معالجة لها، والنظام يستثني البيانات الحساسة من المعالجة لأغراض تسويقية.\n- **قرار آلي بالكامل.** قسيمة تُحسب وتظهر دون أن يراجعها أحد. حين يصدر القرار بالمعالجة الآلية وحدها، تشترط اللائحة الموافقة الصريحة.\n\n> **اسأل عن كل مدخل:** هل يكشف أو يستنتج ما يعده النظام حساسًا؟ وهل يمر القرار على إنسان؟","notes":"النظام يعد البيانات الصحية من البيانات الحساسة (المادة 1)، ويجيز معالجة البيانات الشخصية لأغراض تسويقية بموافقة صاحبها «باستثناء البيانات الحساسة» (المادة 26). واللائحة التنفيذية تشترط الموافقة الصريحة حين تتضمن المعالجة بيانات حساسة، وحين تُتخذ القرارات بناءً على المعالجة الآلية وحدها (المادة 11). فالعروض الموجهة بحالة صحية مستنتجة سؤال لمسؤول حماية البيانات قبل أي موافقة. المثال من خارج سحاب.\n\nالمصادر: SDAIA, Personal Data Protection Law, articles 1 and 26; Implementing Regulation, article 11.","minutes":null,"lo":["LO4"]},{"id":"check-consent","n":63,"title":"أي موافقة تكفي؟","kind":"quiz","session":7,"hash":"ee097a83","md":"#### [day1#check-consent] أي موافقة تكفي؟\n\n*نقطة تحقق*\n\n**سؤال:** تطبيق صيدلية فيه موافقتان: «استلام العروض» و«استعمال الموقع». يريد الفريق أن يحسب لكل عميل خصمًا من سجل مشترياته ويرسله في رسالة. 80% وافقوا على العروض، و30% على الموقع. لمن يجوز الخصم المحسوب من السجل؟\n\n- أ. لمن وافق على استلام العروض، أي 80%، فالخصم عرض تسويقي\n- ب. لمن وافق على الموقع، أي 30%\n- ج. للجميع، فسجل المشتريات عند الصيدلية أصلًا\n- د. لا أحد بعد: يحتاج موافقة على غرض التخصيص نفسه","notes":"الإجابة: د. والرسالة نفسها تحتاج موافقة التسويق، فالجواب الكامل: من وافق على التخصيص وعلى استلام العروض معًا، بعد أن يُطلب غرض التخصيص. «ج» أكثر خطأ شيوعًا في الشركات.","minutes":null,"lo":["LO4"]},{"id":"lab-1-7","n":64,"title":"جرد مدخلات سعرك أمام الموافقات","kind":"lab","session":7,"hash":"7c403645","md":"#### [day1#lab-1-7] جرد مدخلات سعرك أمام الموافقات\n\nالمختبر 1.7 · 20 دقيقة\n\nتجرد مدخلات قاعدة «سعرك» وتربط كل مدخل بغرض الموافقة الذي يحتاجه، ثم تعدّ في قسائم الشهر العملاء الذين استُعملت بياناتهم دون الموافقة المطلوبة.\n\n[D1_7_consent_inventory.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_7_consent_inventory.html)\n\n- [ ] اقرأ وصف القاعدة وأغراض الموافقة (3 د)\n- [ ] املأ جدول المدخلات: المدخل، والغرض، والموافقة المطلوبة (5 د)\n- [ ] اربط القسائم بملف العملاء (3 د)\n- [ ] عدّ القسائم التي استعملت مدخلًا دون موافقته (6 د)\n- [ ] اكتب الفجوات الثلاث الأكبر لوصال الحبشان (3 د)\n- [ ] ✱ إضافي: اكتب ما يتغير في القاعدة لو طُبقت على من وافق فقط: كم عميلًا يبقى","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم. ذكّر: الجدول تمرين على الأسئلة لا رأي قانوني. في الخطوة 3 تأكد أن عمود التحقق كله صحيح قبل العدّ. الخطأ الشائع: عدّ العملاء الذين لم يوافقوا على الموقع بدل القسائم التي استعملت الموقع فعلًا.","minutes":null,"lo":[]},{"id":"debrief-1-7","n":65,"title":"من 6,000 قسيمة، 1,493 فقط بلا فجوة في الموافقة","kind":"content","session":7,"hash":"99af98d0","md":"#### [day1#debrief-1-7] من 6,000 قسيمة، 1,493 فقط بلا فجوة في الموافقة\n\n*بعد المختبر 1.7*\n\n| البند | القيمة |\n| --- | --- |\n| سجل المشتريات دون موافقة التخصيص | 3,429 |\n| الموقع دون موافقة الموقع | 1,776 |\n| دون موافقة التسويق أصلًا | 1,626 |\n| شريحة الاهتمام الصحي المستنتجة | 715 |\n\n> **أولًا:** تتوقف الشريحة الصحية، فلا غرض موافقة لها أصلًا. ثم تقرأ القاعدة أعلام الموافقة قبل أن تحسب.","notes":"الأرقام من تشغيل الحل (`check.py 1.7`). مدخلات الجهاز والتقسيط والعمر لا يغطيها نص أي غرض، والقاعدة لا تقرأ أعلام الموافقة. والقسيمة تظهر دون مراجعة: قرار آلي بالكامل. الجلسة التالية: من يدفع أكثر بسبب هذه المدخلات؟","minutes":null,"lo":["LO4"]},{"id":"s8","n":66,"title":"فروق الأسعار والعملاء الأكثر عرضة للضرر","kind":"section","session":8,"hash":"2c2332ad","md":"#### [day1#s8] فروق الأسعار والعملاء الأكثر عرضة للضرر\n\n*الجلسة 8*\n\n- تقارن متوسط الخصم والسعر الفعلي بين الفئات\n- تتتبع الفرق إلى المكوّن الذي يصنعه في القاعدة\n- تكتب مذكرة نتائج بتعديل مقترح يمكن قياسه","notes":"جلسة من 45 دقيقة بمختبر من 25: المذكرة تحتاج وقتًا للكتابة.","minutes":null,"lo":["LO4"]},{"id":"compare-effective-price","n":67,"title":"لا تقرأ نص القاعدة وحده؛ قارن ما تدفعه كل فئة فعلًا","kind":"content","session":8,"hash":"35410839","md":"#### [day1#compare-effective-price] لا تقرأ نص القاعدة وحده؛ قارن ما تدفعه كل فئة فعلًا\n\n*اختبار الإنصاف*\n\n- متوسط الخصم لكل فئة: العمر، والحي، والجهاز، وطريقة الدفع\n- ومؤشر السعر: ما يدفعه العميل من كل 100 ريال\n- فرق نقطة أو أكثر بين فئتين يستحق السؤال: من أين؟\n\n- **ثم تتبع المصدر.** إن كان الخصم مجموع مكونات، احسب متوسط كل مكوّن لكل فئة. المكوّن الذي يتغير أكثر هو مصدر الفرق.","notes":"مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا تطلب في مبدأ الإنصاف تقييمًا للإنصاف بمقاييس تُختار مسبقًا للفئات الحساسة. متوسط الخصم بحسب الفئة أبسط مقياس من هذا النوع، ويُحسب بجدول محوري.\n\nالمصادر: SDAIA, AI Ethics Principles, Fairness.","minutes":null,"lo":["LO4"]},{"id":"proxies","n":68,"title":"قاعدة لا تقرأ الدخل قد تسعّر به، عبر ما يرافقه","kind":"content","session":8,"hash":"63fc6089","md":"#### [day1#proxies] قاعدة لا تقرأ الدخل قد تسعّر به، عبر ما يرافقه\n\n*المتغير الوكيل*\n\n| ما تقرؤه القاعدة | ما قد يرافقه |\n| --- | --- |\n| لغة الواجهة المختارة | الجنسية والعمر |\n| وقت التسوق المعتاد | نوع العمل والدخل |\n| حجم السلة المعتاد | حجم الأسرة والدخل |\n| مدة الاشتراك الطويلة | العمر، وصعوبة الانتقال |\n\n> **أين يقع الخطأ.** «حذفنا عمود العمر» لا يعني أن العمر لم يعد يصنع فرقًا. افحص الفرق بين الفئات بعد الحذف.","notes":"اسم المفهوم بالإنجليزية proxy variable. اسأل القاعة: في عملكم، أي متغير «بريء» قد يرافق فئة؟ لا تذكر مكونات «سعرك»: المشاركون يجدونها في المختبر.","minutes":null,"lo":["LO4"]},{"id":"vulnerable-customers","n":69,"title":"الضرر أكبر حين يقع على من يصعب عليه المقارنة أو الانتقال","kind":"content","session":8,"hash":"53a485f2","md":"#### [day1#vulnerable-customers] الضرر أكبر حين يقع على من يصعب عليه المقارنة أو الانتقال\n\n*من يتضرر*\n\n- **كبار السن.** أقل مقارنةً بين المتاجر والتطبيقات، فيصعب عليهم أن يلاحظوا أنهم يدفعون أكثر.\n- **ضيق الدخل.** فرق بضعة ريالات في السلة أثقل على ميزانية صغيرة منه على كبيرة.\n- **الأحياء الأقل خدمة.** خيارات أقل حولهم، فيصعب عليهم الانتقال إن ارتفع السعر.\n\n> **عقوبة الولاء.** قاعدة تكافئ من يهدد بالرحيل تعاقب من لا يستطيعه.","notes":"قريب من هذا ما يسميه الدليل المرجعي للتحيز من سدايا التحيز التاريخي: بيانات تحمل افتراضات من الماضي لم تعد صحيحة، فيعيد النظام إنتاجها. قاعدة تعامل «من لم يغادر» على أنه لا يريد المغادرة قد تعاقب من لا يستطيعها. مثال من خارج سحاب: نادٍ رياضي يرفع سعر التجديد لمن اشترك أطول مدة.\n\nالمصادر: SDAIA, AI Bias Reference Guide, first edition, Historical Bias.","minutes":null,"lo":["LO4"]},{"id":"findings-note","n":70,"title":"مذكرة تُقرأ في دقيقتين: الفرق، ومصدره، ومن يتضرر، والتعديل","kind":"content","session":8,"hash":"04ec2623","md":"#### [day1#findings-note] مذكرة تُقرأ في دقيقتين: الفرق، ومصدره، ومن يتضرر، والتعديل\n\n*مذكرة النتائج*\n\n1. **الفرق** بالأرقام، لكل فئة\n2. **المصدر** أي مكوّن في القاعدة\n3. **الضرر** من يدفع أكثر، ولماذا يهم\n4. **التعديل** واحد، محدد، ويُقاس بعد شهر\n\n> **أين يقع الخطأ.** تعديل لا يُقاس: «سنراجع القاعدة». اكتب الرقم الذي ستنظر إليه بعد شهر.","notes":"المذكرة دليل الناتج الرابع في المقرر: مذكرة نتائج بتعديل مقترح. تُكتب لروزان الباهلي، ونسخة لوصال الحبشان. اقرأ واحدة جيدة بصوت عالٍ بعد المختبر.","minutes":null,"lo":["LO4"]},{"id":"check-fairness","n":71,"title":"من أين يأتي الفرق؟","kind":"quiz","session":8,"hash":"1b991ff1","md":"#### [day1#check-fairness] من أين يأتي الفرق؟\n\n*نقطة تحقق*\n\n**سؤال:** نادٍ رياضي يحسب خصم التجديد من ثلاثة مكونات: الحضور، والقرب من نادٍ منافس، ومدة الاشتراك. متوسط الخصم لمن هم فوق 55 عامًا 3%، ولغيرهم 7%. مكوّن المدة ناقص 3 للأولى وناقص 0.5 للثانية، والمكونان الآخران متقاربان. ماذا تكتب في المذكرة؟\n\n- أ. لا تمييز، فالقاعدة لا تقرأ العمر\n- ب. حذف مكوّن المدة أو سقفه، ثم قياس الفرق\n- ج. يضاف للأكبر سنًّا خصم ثابت يعوض الفرق\n- د. الفرق 4 نقاط، فيُطلب من المورد مراجعة النموذج وإعادة تدريبه على بيانات أحدث","notes":"الإجابة: ب. الأرقام توضيحية. «د» ليس خطأً تامًّا لكنه لا يكتب تعديلًا يُقاس. «ج» يحل الأعراض ويترك المصدر.","minutes":null,"lo":["LO4"]},{"id":"lab-1-8","n":72,"title":"فروق الأسعار بين الفئات ومذكرة النتائج","kind":"lab","session":8,"hash":"e29009a7","md":"#### [day1#lab-1-8] فروق الأسعار بين الفئات ومذكرة النتائج\n\nالمختبر 1.8 · 25 دقيقة\n\nتحسب متوسط الخصم ومؤشر السعر لكل فئة عمرية وفئة دخل الحي ونوع الجهاز ومستخدمي التقسيط، وتتتبع كل فرق إلى مكوّنه، وتكتب مذكرة نتائج بتعديل مقترح.\n\n[D1_8_group_differences.html](https://sdaiaacademy.github.io/use-sec-210/labs/D1_8_group_differences.html)\n\n- [ ] افتح ملف البداية وافهم أعمدة مكونات الخصم (3 د)\n- [ ] احسب متوسط الخصم ومؤشر السعر لكل فئة (7 د)\n- [ ] احسب متوسط كل مكوّن للفئات التي يظهر فيها فرق (6 د)\n- [ ] اكتب مذكرة النتائج: الفرق، ومصدره، ومن يتضرر (5 د)\n- [ ] اقترح تعديلًا واحدًا وطريقة قياس أثره (4 د)\n- [ ] ✱ إضافي: احذف مكوّني العمر والتقسيط من الخصم وأعد حساب الفرق بين الفئات","notes":"سياسة الذكاء الاصطناعي: مساعد معلّم؛ ويمكن للمساعد أن يقترح صياغة للمذكرة، على أن تكون الأرقام من جدول المشارك. الجدول المحوري أسرع من `AVERAGEIF` لمن يعرفه. المختبر يبدأ من ملف جاهز، فلا يحتاج 1.7.","minutes":null,"lo":[]},{"id":"debrief-1-8","n":73,"title":"كبار السن ومستخدمو التقسيط وسكان الأحياء الأقل دخلًا يدفعون أكثر","kind":"content","session":8,"hash":"7e211f30","md":"#### [day1#debrief-1-8] كبار السن ومستخدمو التقسيط وسكان الأحياء الأقل دخلًا يدفعون أكثر\n\n*بعد المختبر 1.8*\n\n| الفئة | متوسط الخصم | المصدر في «سعرك» |\n| --- | --- | --- |\n| 60 عامًا فأكثر / غيرهم | 2.60% / نحو 3.75% | مكوّن العمر: ناقص 1.5 («أوفى») |\n| مستخدمو التقسيط / غيرهم | 1.89% / 4.19% | مكوّن التقسيط: ناقص 2.5 |\n| أحياء الدخل المنخفض / المرتفع | 2.94% / 4.25% | مكوّن الموقع: 0.86 مقابل 2.50، ثم التقسيط |\n\n> **تعديل معقول.** حذف مكوّني العمر والتقسيط، وسقف لفرق الخصم بين أي فئتين، وقياس شهري للفروق والهامش. ويبقى فرق الأحياء لأن الموقع وكيل للدخل.","notes":"الأرقام من تشغيل الحل (`check.py 1.8`). دون مكوّني العمر والتقسيط يصير خصم الأعمار 4.30 إلى 4.61، ومستخدمو التقسيط 4.31 مقابل 4.37، والأحياء 3.95 و4.47 و4.62. هذه المذكرة مع جدول المختبر 1.7 تشكلان دليل الناتج الرابع.","minutes":null,"lo":["LO4"]},{"id":"wrap-up","n":74,"title":"ثلاثة أمور تبقى معك","kind":"content","session":8,"hash":"65b76c0d","md":"#### [day1#wrap-up] ثلاثة أمور تبقى معك\n\n*خلاصة اليوم 1*\n\n- **خط الأساس أولًا.** على فترة لم يرها النموذج، وبحسب المجموعة، وبالريال.\n- **التجربة تقرر.** التقييم دون اتصال يختار، والتجربة بمقياس مكتوب مسبقًا تقرر.\n- **الموافقة قبل التخصيص.** لكل مدخل غرضه، ولكل فئة ما تدفعه فعلًا.","notes":"اطلب من كل مشارك أن يكتب جملة واحدة: أي من الثلاثة يغيّر شيئًا في عمله الأسبوع القادم. سجلات المختبرات الثمانية تُحفظ: هي 35% من التقييم.","minutes":null,"lo":["LO1","LO2","LO4"]},{"id":"next","n":75,"title":"اليوم 2: سحاب للاتصالات: الاحتفاظ والشبكة والخريطة","kind":"content","session":8,"hash":"2326ace7","md":"#### [day1#next] اليوم 2: سحاب للاتصالات: الاحتفاظ والشبكة والخريطة\n\n*التالي*\n\nاحفظ جداول اليوم في مجلد واحد. غدًا تجربة احتفاظ عشوائية بمحاولة أولى دون ذكاء اصطناعي، ثم الشبكة، ثم الخريطة التي تدافع عنها.","notes":"ذكّر بأن المختبر 2.2 يبدأ دون أي مساعد. ومن لم يكمل مختبرًا اليوم يستطيع إكماله في المنزل: كل مختبر يبدأ من ملف جاهز. وفكّر من الليلة: هل ستعرض غدًا خريطة أسواق سحاب أم سحاب للاتصالات؟","minutes":null,"lo":[]}],"activities":[{"id":"check-decision-chain-q1","slide":"check-decision-chain","type":"single","prompt":"سلسلة مكتبات تشتري نظامًا يقترح كمية إعادة الطلب لكل كتاب كل أسبوع، ويقرأ المشرف الاقتراح ثم يطلب. يقول المورد: «دقة النظام 94% على بيانات العام الماضي». بأي نتيجة تحكم على قيمته؟","options":[{"key":"أ","text":"الدقة 94%، فهي أعلى من الحد المقبول في القطاع ومن عروض المنافسين"},{"key":"ب","text":"تكلفة الكتب الراكدة والرفوف الفارغة أمام طريقة الطلب الحالية"},{"key":"ج","text":"عدد الاقتراحات التي قبلها المشرفون دون تعديل"},{"key":"د","text":"الفرق بين النظام وطلب عشوائي على بيانات العام الماضي نفسها"}],"correct":[1],"explanation":"القيمة في القرار: الطلبية. وتُقاس بما تغيّره في التكلفة أمام القاعدة المستعملة اليوم.","misconceptions":["يقبل مقياس النموذج بدل نتيجة العمل: الدقة لا تقول كم تغيرت الكتب الراكدة أو الرفوف الفارغة","","يعد استعمال النظام قيمة: كثرة الطلبات المقبولة لا تقول إن القرار تحسن","يقارن بلا شيء بدل خط الأساس: لا أحد يطلب عشوائيًّا اليوم"],"lo":["LO1"]},{"id":"check-baseline-q1","slide":"check-baseline","type":"single","prompt":"سلسلة صيدليات تقيّم تنبؤًا أسبوعيًّا لواقي الشمس. المورد درّب النموذج على 2024. أي مقارنة تكفي لتقول إن النموذج أدق من الطريقة الحالية؟","options":[{"key":"أ","text":"خطأ النموذج على 2024 أمام خطأ الموسمي البسيط على 2024، بالنسبة الموزونة والانحياز"},{"key":"ب","text":"خطأ النموذج على 2025 أمام طلب عشوائي على 2025"},{"key":"ج","text":"خطأ النموذج والموسمي البسيط على 2025، بالنسبة الموزونة والانحياز"},{"key":"د","text":"متوسط نسبة الخطأ لكل أسبوع في 2025، للنموذج وحده"}],"correct":[2],"explanation":"فترة لم يرها النموذج، أمام القاعدة المستعملة اليوم، بمقياس موزون ومعه اتجاه الخطأ.","misconceptions":["يختبر على سنة التدريب: الرقم يقيس ما حفظه النموذج لا ما يتنبأ به","يقارن بقاعدة لا يستعملها أحد: الصيدلية لا تطلب عشوائيًّا","","يكتفي بمتوسط النسب: يعطي المنتجات الصغيرة وزن الكبيرة ويغفل اتجاه الخطأ"],"lo":["LO2"]},{"id":"check-error-cost-q1","slide":"check-error-cost","type":"single","prompt":"متجر إلكترونيات يقيّم تنبؤًا بترخيص 100,000 ريال لكل فئة. في الشواحن: الخطأ ينقص من 20% إلى 8%، والوفر 60,000 ريال. في الشاشات: الخطأ ينقص من 12% إلى 9%، والوفر 250,000 ريال. ماذا توصي؟","options":[{"key":"أ","text":"الشواحن وحدها، لأن الخطأ فيها نقص أكثر"},{"key":"ب","text":"الفئتان، لأن النموذج أدق في كل منهما"},{"key":"ج","text":"لا شيء، لأن الوفر في الفئتين معًا لا يكفي لترخيص الحزمة كاملة"},{"key":"د","text":"الشاشات وحدها، لأن وفرها يزيد على الترخيص"}],"correct":[3],"explanation":"الشاشات: 250,000 ناقص 100,000 = وفر صافٍ موجب. الشواحن: 60,000 ناقص 100,000 = خسارة، مهما تحسن الخطأ.","misconceptions":["يحكم بحجم تحسن الخطأ لا بالريال: الشواحن رخيصة فخطؤها لا يكلف كثيرًا","يشتري للفئتين لأن النموذج أدق في كل منهما: الدقة الأعلى لا تكفي إن قل الوفر عن الثمن","ينسى أن القرار لكل فئة: إحدى الفئتين تغطي الترخيص بوضوح",""],"lo":["LO2"]},{"id":"check-stockout-q1","slide":"check-stockout","type":"single","prompt":"محل حلويات نفدت فيه علب المعمول في الأسبوع الأخير قبل العيد: باع 300 علبة، وقدّر المشرف أن 450 طُلبت. تقارن الآن تنبؤين على هذا العام. ماذا تفعل بذلك الأسبوع؟","options":[{"key":"أ","text":"تحسب الخطأ عليه كأي أسبوع، فالمبيعات هي الحقيقة"},{"key":"ب","text":"تستبعده من القياس، وتسجّل الطلب التقديري للعام القادم"},{"key":"ج","text":"تضع مكانه متوسط مبيعات الأسابيع الأخرى"},{"key":"د","text":"تعده خطأً كبيرًا على التنبؤ الذي اقترح الكمية، فهو سبب النفاد"}],"correct":[1],"explanation":"المبيعات في أسبوع النفاد سقف لا طلب. تقيس الخطأ حيث المبيعات تمثل الطلب، وتحفظ تقدير الطلب كي لا تنسخ القاعدة النفاد.","misconceptions":["يعد المبيعات طلبًا: 300 هو ما كان على الرف، فكل تنبؤ أعلى منه سيبدو مخطئًا ظلمًا","","يعالج الرقم بالمتوسط: تعويض النفاد بمتوسط الأسابيع العادية يمحو أثر العيد","يحكم على التنبؤ بالنفاد: النفاد قد يأتي من التوريد لا من التنبؤ"],"lo":["LO2"]},{"id":"check-popularity-q1","slide":"check-popularity","type":"single","prompt":"تطبيق لبيع الكتب يقول مورد توصياته: «معدل الإصابة 8%، أي 16 ضعف التوصية العشوائية». قائمة الأكثر مبيعًا تصيب 7.3%. للعملاء العائدين 11% مقابل 7%، وللجدد 2% مقابل 8%. ما الخلاصة؟","options":[{"key":"أ","text":"النظام يضيف قيمة للعائدين فقط، وللجدد قائمة الأكثر مبيعًا أفضل"},{"key":"ب","text":"النظام ناجح، فهو 16 ضعف العشوائي"},{"key":"ج","text":"النظام لا يضيف شيئًا، فالفرق 0.7 نقطة فقط"},{"key":"د","text":"النظام يرفع المبيعات بنحو 10% فوق قائمة الأكثر مبيعًا، بحسب فرق الإصابة"}],"correct":[0],"explanation":"المقارنة الصحيحة بالأكثر مبيعًا، ومفصولة بحسب نوع العميل. وأثر الإيراد سؤال آخر تجيب عنه تجربة.","misconceptions":["","يقبل المقارنة بالعشوائي: لا أحد يعرض منتجات عشوائية، فالأضعاف لا تقرر شيئًا","يحكم بالمتوسط وحده: الفرق الصغير في الكل يخفي فرقين كبيرين متعاكسين","يعد التقييم دون اتصال حكمًا على الإيراد: الإصابة لا تقول هل اشترى العميل أكثر"],"lo":["LO1"]},{"id":"check-ab-q1","slide":"check-ab","type":"single","prompt":"تطبيق توصيل طعام جرّب ترتيبًا جديدًا للمطاعم أربعة أسابيع. مقياس القرار المكتوب مسبقًا: الإيراد لكل زائر. النتيجة: الطلبات ارتفعت 5% في الأسبوع الأول و1% في الأخير، والإيراد لكل زائر لم يتغير، والزوار 20,040 في النسخة الحالية و19,960 في الجديدة. ماذا تقرر؟","options":[{"key":"أ","text":"التعميم، فالطلبات ارتفعت 5%"},{"key":"ب","text":"إعادة التجربة، لأن الزوار لم ينقسموا نصفين تمامًا"},{"key":"ج","text":"عدم التعميم: مقياس القرار ثابت والارتفاع تلاشى"},{"key":"د","text":"التعميم، لأن الطلبات في الأسابيع الأربعة معًا أعلى"}],"correct":[2],"explanation":"القرار بالمقياس المكتوب قبل التجربة، على المدة كلها. والارتفاع الذي يتلاشى أثر جِدّة.","misconceptions":["يقرأ الأسبوع الأول وحده: ارتفاع يتلاشى أثر جِدّة لا أثر ترتيب","يعد كل ابتعاد عن النصف عطبًا: 40 زائرًا من 20,000 في كل نسخة فرق تصنعه الصدفة، واختبار مربع كاي لا يرفضه","","يبدّل مقياس القرار بعد النتيجة: الطلبات ليست المقياس المتفق عليه"],"lo":["LO3"]},{"id":"check-consent-q1","slide":"check-consent","type":"single","prompt":"تطبيق صيدلية فيه موافقتان: «استلام العروض» و«استعمال الموقع». يريد الفريق أن يحسب لكل عميل خصمًا من سجل مشترياته ويرسله في رسالة. 80% وافقوا على العروض، و30% على الموقع. لمن يجوز الخصم المحسوب من السجل؟","options":[{"key":"أ","text":"لمن وافق على استلام العروض، أي 80%، فالخصم عرض تسويقي"},{"key":"ب","text":"لمن وافق على الموقع، أي 30%"},{"key":"ج","text":"للجميع، فسجل المشتريات عند الصيدلية أصلًا"},{"key":"د","text":"لا أحد بعد: يحتاج موافقة على غرض التخصيص نفسه"}],"correct":[3],"explanation":"لكل غرض موافقته. التخصيص من السجل غرض لم يُطلب، فلا تغطيه موافقة العروض ولا الموقع.","misconceptions":["يمد موافقة التسويق إلى غرض آخر: استلام العروض لا يغطي تحليل السجل لتحديد السعر","يخلط بين البيانات: الموقع لا علاقة له بسجل المشتريات","يعد الاحتفاظ بالسجل إذنًا: جمع البيانات لتنفيذ الطلب لا يجيز استعمالها لغرض جديد",""],"lo":["LO4"]},{"id":"check-fairness-q1","slide":"check-fairness","type":"single","prompt":"نادٍ رياضي يحسب خصم التجديد من ثلاثة مكونات: الحضور، والقرب من نادٍ منافس، ومدة الاشتراك. متوسط الخصم لمن هم فوق 55 عامًا 3%، ولغيرهم 7%. مكوّن المدة ناقص 3 للأولى وناقص 0.5 للثانية، والمكونان الآخران متقاربان. ماذا تكتب في المذكرة؟","options":[{"key":"أ","text":"لا تمييز، فالقاعدة لا تقرأ العمر"},{"key":"ب","text":"حذف مكوّن المدة أو سقفه، ثم قياس الفرق"},{"key":"ج","text":"يضاف للأكبر سنًّا خصم ثابت يعوض الفرق"},{"key":"د","text":"الفرق 4 نقاط، فيُطلب من المورد مراجعة النموذج وإعادة تدريبه على بيانات أحدث"}],"correct":[1],"explanation":"المكوّن الذي يتغير بين الفئتين هو المدة، وهو وكيل للعمر. التعديل يستهدفه، والقياس يثبت أثره.","misconceptions":["يكتفي بغياب العمر من القاعدة: المدة متغير وكيل يصنع الفرق نفسه","","يعالج الفرق بإضافة العمر صراحة: تعويض فئة بعينها لا يصلح القاعدة ويضيف معالجة جديدة","يعد المتوسطات كافية دون تتبع المصدر: لا يعرف ما يجب تغييره"],"lo":["LO4"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day1.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

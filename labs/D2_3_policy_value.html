@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.3 · قيمة ثلاث سياسات · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_3_policy_value.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.3</span>
+<h1>قيمة ثلاث سياسات</h1>
+<p>تطبّق الأثر الإضافي المقيس على قاعدة من 400,000 مشترك، وتقدّر لثلاث سياسات (العرض للجميع، وللشريحة العليا، وبالأثر الإضافي) العملاء المحتفظ بهم والإيراد والعروض المهدرة والقيمة الصافية.</p>
+<div class="meta"><span>20 دقيقة</span><span>اليوم 2</span><span>الجلسة 3: الإيراد المحتفظ به والعروض المهدرة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.3">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>لكل خلية: العملاء المحتفظ بهم بسبب العرض، والإيراد، والتكلفة، والعروض المهدرة.</li>
+    <li>جدول لثلاث سياسات: العرض للجميع، وللشريحة العليا، وللخلايا التي أثرها 3 نقاط فأكثر.</li>
+    <li>توصية لقاسم البليهد بالأرقام.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/start/uplift_cells.csv" target="_blank"><b>start/uplift_cells.csv</b><span>الخلايا العشر مكبّرة إلى قاعدة 400,000 مشترك، مع الأثر الإضافي المقيس في التجربة</span></a>
+  <a href="files/telecom/trial_note.txt" target="_blank"><b>telecom/trial_note.txt</b><span>تكلفة العرض وقيمة العميل المحتفظ به</span></a>
+</div>
+<p class="small">يبدأ المختبر من ملف جاهز، فلا يحتاج نتيجة المختبر 2.2. الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · افتح الملفين <span class="min">دقيقتان</span></h3>
+  <p>الأعمدة: <code>A</code> العقد، و<code>B</code> الشريحة، و<code>C</code> عدد العملاء في القاعدة، و<code>D</code> الأثر الإضافي بالنقاط، و<code>E</code> متوسط الإيراد الشهري. من المذكرة: العرض يكلف 50 ريالًا، وقيمة العميل المحتفظ به إيراده الشهري × 12.</p>
+</div>
+
+<div class="step">
+  <h3>2 · المحتفظ بهم بسبب العرض <span class="min">5 دقائق</span></h3>
+  <pre class="code" data-file="uplift_cells.csv"><code>G2  =C2*D2/100          customers kept because of the offer</code></pre>
+</div>
+
+<div class="step">
+  <h3>3 · الإيراد والتكلفة والعروض المهدرة <span class="min">5 دقائق</span></h3>
+  <pre class="code" data-file="uplift_cells.csv"><code>H2  =G2*E2*12           revenue kept over 12 months
+I2  =C2*50              cost of the offers
+J2  =C2-G2              wasted offers: sent, and changed nothing</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · ثلاث سياسات <span class="min">5 دقائق</span></h3>
+  <pre class="code" data-file="uplift_cells.csv"><code>all customers   =SUM(H:H)-SUM(I:I)
+top band only   =SUMIF(B:B,5,H:H)-SUMIF(B:B,5,I:I)
+uplift >= 3     =SUMIF(D:D,"&gt;=3",H:H)-SUMIF(D:D,"&gt;=3",I:I)</code></pre>
+  <table>
+    <tr><th>السياسة</th><th>العروض</th><th>المحتفظ بهم</th><th>العروض المهدرة (%)</th><th>القيمة الصافية (ريال)</th></tr>
+    <tr><td>للجميع</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>للشريحة 5 (القاعدة الحالية)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>للخلايا ذات الأثر 3 نقاط فأكثر</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · التوصية <span class="min">3 دقائق</span></h3>
+  <p>ثلاثة أسطر لقاسم البليهد: أي سياسة، وكم تضيف، وما الذي يبقى مجهولًا في هذا التقدير.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>ضاعف تكلفة العرض إلى 100 ريال وأعد الجدول. أي سياسة تبقى رابحة؟ وما أدنى أثر إضافي يجعل الخلية رابحة عند كل تكلفة؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>لماذا تكاد كل العروض تكون «مهدرة» حتى في أفضل سياسة؟ وهل هذا سيئ؟</li>
+  <li>لماذا تخسر القاعدة الحالية مع أنها تستهدف من يغادرون أكثر؟</li>
+  <li>ما الذي يفترضه التقدير عن الخلايا حين يكبّر التجربة إلى 400,000 مشترك؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>للجميع:</b> 400,000 عرض، 9,129 محتفظًا بهم، 97.72% مهدرة، صافٍ ناقص 1,837,673 ريالًا.</li>
+    <li><b>للشريحة 5:</b> 80,648 عرضًا، 276 محتفظًا بهم، 99.66% مهدرة، صافٍ ناقص 3,478,604 ريالات.</li>
+    <li><b>بالأثر الإضافي (3 نقاط فأكثر):</b> 159,104 عروض، 9,544 محتفظًا بهم، 94.0% مهدرة، صافٍ 11,035,401 ريال.</li>
+    <li><b>للمحتفظ بهم:</b> سياسة الأثر الإضافي تحتفظ بعدد أكبر من «للجميع» لأنها تستبعد الخلايا التي يزيد فيها العرض الانصراف.</li>
+    <li><b>المهدر:</b> أغلب العروض لا تغيّر قرارًا في أي سياسة؛ القرار يُحكم بالقيمة الصافية لا بنسبة المهدر وحدها.</li>
+    <li><b>ما يبقى مجهولًا:</b> أن الخلايا في القاعدة تشبه خلايا التجربة، وأن الأثر يبقى بعد 90 يومًا، وأن 12 شهرًا تقدير لمدة البقاء.</li>
+    <li><b>التمرين الإضافي:</b> الخلية رابحة حين الأثر × الإيراد × 12 أكبر من التكلفة: عند 165 ريالًا شهريًّا، نحو 2.5 نقطة لتكلفة 50، ونحو 5 نقاط لتكلفة 100.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.3</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_2_uplift_table.html" rel="prev">→ المختبر السابق</a><a href="D2_4_honest_claim.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"2.3","title":"قيمة ثلاث سياسات","summary":"تطبّق الأثر الإضافي المقيس على قاعدة من 400,000 مشترك، وتقدّر لثلاث سياسات (العرض للجميع، وللشريحة العليا، وبالأثر الإضافي) العملاء المحتفظ بهم والإيراد والعروض المهدرة والقيمة الصافية.","minutes":20,"day":2,"unit":"اليوم 2","session":3,"deck":"../slides/day2.html#lab-2-3","prev":"D2_2_uplift_table.html","next":"D2_4_honest_claim.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+# الذكاء الاصطناعي في التجزئة والاتصالات
+
+> تختبر التنبؤات والتوصيات والأسعار المخصصة وعروض الاحتفاظ وتنبيهات الشبكة أمام خطوط الأساس والتجارب، وتفحص استخدام بيانات العملاء، وترتّب حالات الاستخدام في خريطة تدافع عنها. مقرر من أكاديمية سدايا، الرمز USE-SEC-210، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/use-sec-210/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/use-sec-210/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/use-sec-210/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 23,987 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/use-sec-210/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [اليوم 1: أسواق سحاب: القيمة قبل النموذج](https://sdaiaacademy.github.io/use-sec-210/slides/day1.md): سلاسل القرار، وخط الأساس الموسمي، وتجارب التوصيات، والأسعار المخصصة أمام الموافقة والإنصاف؛ الجلسات: كيف يصير مخرج النموذج قرارًا، خط الأساس قبل النموذج، أين يستحق النموذج تكلفته، العروض ورمضان والمبيعات الناقصة، التوصيات والبحث، المقاييس دون اتصال وتجارب A/B، الأسعار المخصصة والموافقة، فروق الأسعار والعملاء الأكثر عرضة للضرر؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/slides/day1.html؛ نحو 11,353 من الوحدات النصية
+- [اليوم 2: سحاب للاتصالات: الاحتفاظ والشبكة والخريطة](https://sdaiaacademy.github.io/use-sec-210/slides/day2.md): الاستهداف بالأثر الإضافي، والادعاء الصادق، وعتبة التنبيه، وتوفير الطاقة وبيانات الموقع، ثم الخريطة؛ الجلسات: من درجة الخطر إلى القرار، الاستهداف بالأثر الإضافي، الإيراد المحتفظ به والعروض المهدرة، حلقات التغذية الراجعة وادعاءات القيمة الصادقة، شذوذ الشبكة أمام الحوادث المؤكدة، عتبة يتحملها الفريق، توفير الطاقة وبيانات الموقع، خريطة الفرص والمخاطر؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/slides/day2.html؛ نحو 10,611 من الوحدات النصية
+- [المناقشة الختامية: الخريطة أمام مكتب القيمة](https://sdaiaacademy.github.io/use-sec-210/slides/capstone.md): فحص دون ذكاء اصطناعي، ثم خريطة من صفحة واحدة تُناقش في خمس دقائق وثلاث دقائق للأسئلة على حالة يختارها المدرب؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/slides/capstone.html؛ نحو 1,182 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: سلاسل القرار لعشر حالات](https://sdaiaacademy.github.io/use-sec-210/labs/D1_1_decision_chains.md): اليوم 1، الجلسة 1، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_1_decision_chains.html
+- [المختبر 1.2: خط الأساس الموسمي البسيط](https://sdaiaacademy.github.io/use-sec-210/labs/D1_2_seasonal_baseline.md): اليوم 1، الجلسة 2، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_2_seasonal_baseline.html
+- [المختبر 1.3: الخطأ وكلفته بحسب مجموعة المنتجات](https://sdaiaacademy.github.io/use-sec-210/labs/D1_3_error_by_group.md): اليوم 1، الجلسة 3، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_3_error_by_group.html
+- [المختبر 1.4: أسابيع العروض ورمضان والنفاد](https://sdaiaacademy.github.io/use-sec-210/labs/D1_4_promo_and_stockouts.md): اليوم 1، الجلسة 4، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_4_promo_and_stockouts.html
+- [المختبر 1.5: التقييم دون اتصال أمام خط أساس الشعبية](https://sdaiaacademy.github.io/use-sec-210/labs/D1_5_offline_vs_popular.md): اليوم 1، الجلسة 5، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_5_offline_vs_popular.html
+- [المختبر 1.6: قراءة نتيجة تجربة التوصيات](https://sdaiaacademy.github.io/use-sec-210/labs/D1_6_ab_readout.md): اليوم 1، الجلسة 6، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_6_ab_readout.html
+- [المختبر 1.7: جرد مدخلات سعرك أمام الموافقات](https://sdaiaacademy.github.io/use-sec-210/labs/D1_7_consent_inventory.md): اليوم 1، الجلسة 7، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_7_consent_inventory.html
+- [المختبر 1.8: فروق الأسعار بين الفئات ومذكرة النتائج](https://sdaiaacademy.github.io/use-sec-210/labs/D1_8_group_differences.md): اليوم 1، الجلسة 8، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D1_8_group_differences.html
+- [المختبر 2.1: قراءة تجربة الاحتفاظ](https://sdaiaacademy.github.io/use-sec-210/labs/D2_1_read_the_trial.md): اليوم 2، الجلسة 1، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_1_read_the_trial.html
+- [المختبر 2.2: جدول الاستهداف بالأثر الإضافي](https://sdaiaacademy.github.io/use-sec-210/labs/D2_2_uplift_table.md): اليوم 2، الجلسة 2، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_2_uplift_table.html
+- [المختبر 2.3: قيمة ثلاث سياسات](https://sdaiaacademy.github.io/use-sec-210/labs/D2_3_policy_value.md): اليوم 2، الجلسة 3، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_3_policy_value.html
+- [المختبر 2.4: ادعاء الحملة ومجموعة الضبط](https://sdaiaacademy.github.io/use-sec-210/labs/D2_4_honest_claim.md): اليوم 2، الجلسة 4، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_4_honest_claim.html
+- [المختبر 2.5: مطابقة التنبيهات بالحوادث المؤكدة](https://sdaiaacademy.github.io/use-sec-210/labs/D2_5_alert_matching.md): اليوم 2، الجلسة 5، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_5_alert_matching.html
+- [المختبر 2.6: عتبة يتحملها المركز](https://sdaiaacademy.github.io/use-sec-210/labs/D2_6_threshold.md): اليوم 2، الجلسة 6، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_6_threshold.html
+- [المختبر 2.7: تجربة سُبات وطلب بيانات الموقع](https://sdaiaacademy.github.io/use-sec-210/labs/D2_7_energy_and_location.md): اليوم 2، الجلسة 7، 20 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_7_energy_and_location.html
+- [المختبر 2.8: خريطة الفرص والمخاطر](https://sdaiaacademy.github.io/use-sec-210/labs/D2_8_opportunity_map.md): اليوم 2، الجلسة 8، 25 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-sec-210/labs/D2_8_opportunity_map.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/use-sec-210/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 23,987 من الوحدات النصية
+- [context/day1.md](https://sdaiaacademy.github.io/use-sec-210/context/day1.md): اليوم 1، نحو 11,353 من الوحدات النصية
+- [context/day2.md](https://sdaiaacademy.github.io/use-sec-210/context/day2.md): اليوم 2، نحو 10,611 من الوحدات النصية
+- [context/capstone.md](https://sdaiaacademy.github.io/use-sec-210/context/capstone.md): المناقشة الختامية، نحو 1,182 من الوحدات النصية

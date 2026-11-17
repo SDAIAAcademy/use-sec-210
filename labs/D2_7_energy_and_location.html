@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.7 · تجربة سُبات وطلب بيانات الموقع · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_7_energy_and_location.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-7">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.7</span>
+<h1>تجربة سُبات وطلب بيانات الموقع</h1>
+<p>تحسب توفير «سُبات» الحقيقي بطرح تغير المواقع الضابطة، وتفحص معدل الانقطاع موقعًا موقعًا، ثم تقرر في طلب أسواق سحاب لقائمة فردية من بيانات الموقع وتقترح بديلًا.</p>
+<div class="meta"><span>20 دقيقة</span><span>اليوم 2</span><span>الجلسة 7: توفير الطاقة وبيانات الموقع</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.7">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>التوفير الصافي لـ«سُبات» بعد طرح تغير المواقع الضابطة، أمام ادعاء المورد.</li>
+    <li>المواقع التي تجاوزت حد الحماية لمعدل المكالمات المنقطعة.</li>
+    <li>قرار مكتوب في طلب بيانات الموقع، وبديل مجمّع يخدم الغرض التجاري.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/network/subat_vendor_claim.txt" target="_blank"><b>network/subat_vendor_claim.txt</b><span>ادعاء المورد، وحد الحماية، وسعر الطاقة، والترخيص</span></a>
+  <a href="files/network/energy_pilot.csv" target="_blank"><b>network/energy_pilot.csv</b><span>40 موقع تجربة و40 موقعًا ضابطًا: الطاقة والانقطاع قبل وبعد</span></a>
+  <a href="files/network/location_request.txt" target="_blank"><b>network/location_request.txt</b><span>طلب أسواق سحاب، ومعلومات مسؤولة حماية البيانات</span></a>
+</div>
+<p class="small">الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم. ما تكتبه عن طلب الموقع قرار عمل، والرأي القانوني لمسؤولة حماية البيانات.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · تغير الطاقة في المجموعتين <span class="min">5 دقائق</span></h3>
+  <pre class="code" data-file="energy_pilot.csv"><code>pilot change, %     =(SUMIF(B:B,"pilot",E:E)/SUMIF(B:B,"pilot",D:D)-1)*100
+control change, %   =(SUMIF(B:B,"control",E:E)/SUMIF(B:B,"control",D:D)-1)*100</code></pre>
+</div>
+
+<div class="step">
+  <h3>2 · التوفير الصافي <span class="min">3 دقائق</span></h3>
+  <p>التوفير الصافي = تغير مواقع التجربة ناقص تغير المواقع الضابطة. لماذا انخفض استهلاك المواقع الضابطة أيضًا؟ قارن بنسبة المورد.</p>
+</div>
+
+<div class="step">
+  <h3>3 · حد الحماية موقعًا موقعًا <span class="min">4 دقائق</span></h3>
+  <pre class="code" data-file="energy_pilot.csv"><code>H2  =G2-F2                drop-rate change, points
+I2  =AND(B2="pilot",H2&gt;0.10)  over the guardrail</code></pre>
+  <p>اكتب رموز المواقع التي تجاوزت الحد ونوع منطقتها (<code>C</code>). ثم قارن متوسط التغير في المجموعتين.</p>
+</div>
+
+<div class="step">
+  <h3>4 · طلب بيانات الموقع <span class="min">5 دقائق</span></h3>
+  <p>اقرأ الطلب ومعلومات وصال الحبشان. اكتب قرارك (توافق، أو ترفض، أو توافق بشروط) وثلاثة أسباب، بلغة الغرض والموافقة والجهة.</p>
+</div>
+
+<div class="step">
+  <h3>5 · البديل المجمّع <span class="min">3 دقائق</span></h3>
+  <p>اقترح ما يخدم سؤال روزان الباهلي التجاري دون قائمة أفراد: ماذا يُعدّ، وبأي تجميع، وبأي حد أدنى للخلية، ومن يرى الناتج.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>قدّر الوفر السنوي على 3,000 موقع: متوسط الاستهلاك اليومي × التوفير الصافي × 365 × 0.18 ريال × 3,000، ثم اطرح الترخيص. وقارن بمبلغ المورد.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم من نسبة المورد يعود إلى «سُبات» فعلًا، وكم يعود إلى ما حدث في كل المواقع؟</li>
+  <li>هل يكفي متوسط تغير الانقطاع للحكم على حد الحماية؟ لماذا؟</li>
+  <li>لماذا لا يجعل كون الشركتين في مجموعة واحدة نقل البيانات جائزًا؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>الطاقة:</b> مواقع التجربة ناقص 14.51%، والمواقع الضابطة ناقص 6.43% (الطقس والأحمال تغيرت للجميع)، والتوفير الصافي 8.08%.</li>
+    <li><b>حد الحماية:</b> S3009 (0.61 إلى 0.92) وS3016 (0.54 إلى 0.85)، وكلاهما ريفي. متوسط الفرق بين المجموعتين 0.0435 نقطة فقط: المتوسط يخفي الموقعين.</li>
+    <li><b>طلب الموقع:</b> الرفض. البيانات جُمعت لتقديم الخدمة لا لتسويق جهة أخرى؛ ولا موافقة من المشتركين على هذا الغرض (التسويق المباشر يحتاج موافقة مسبقة وطريقة سهلة للانسحاب في نظام حماية البيانات الشخصية ولائحته)؛ والقائمة فردية بأرقام هواتف؛ وأسواق سحاب شركة مستقلة، فتمكينها من البيانات إفصاح لجهة أخرى بحسب ما نستنتجه من تعريف الإفصاح في النظام، لا بنص صريح عن الشركات الشقيقة. القرار النهائي لمسؤولة حماية البيانات.</li>
+    <li><b>البديل:</b> أعداد زوار مجمّعة بحسب الحي والأسبوع، بحد أدنى للخلية، دون أرقام هواتف، لتخطيط الفروع والعروض العامة. وهو الحالة T6 في خريطة المختبر 2.8.</li>
+    <li><b>التمرين الإضافي:</b> نحو 320 × 8.08% × 365 × 0.18 × 3,000 = نحو 5.1 مليون ريال، ونحو 3.7 مليون بعد الترخيص، أمام «أكثر من 9 ملايين» عند المورد (14.5% دون طرح الضابطة ودون الترخيص).</li>
+    <li><b>الفخ:</b> متوسط النسب موقعًا موقعًا بدل نسبة المجاميع يعطي رقمًا قريبًا لكن مختلفًا؛ نقبل الاثنين إن ذُكرت الطريقة.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.7</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_6_threshold.html" rel="prev">→ المختبر السابق</a><a href="D2_8_opportunity_map.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"2.7","title":"تجربة سُبات وطلب بيانات الموقع","summary":"تحسب توفير «سُبات» الحقيقي بطرح تغير المواقع الضابطة، وتفحص معدل الانقطاع موقعًا موقعًا، ثم تقرر في طلب أسواق سحاب لقائمة فردية من بيانات الموقع وتقترح بديلًا.","minutes":20,"day":2,"unit":"اليوم 2","session":7,"deck":"../slides/day2.html#lab-2-7","prev":"D2_6_threshold.html","next":"D2_8_opportunity_map.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

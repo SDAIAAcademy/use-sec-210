@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.6 · عتبة يتحملها المركز · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_6_threshold.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-6">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.6</span>
+<h1>عتبة يتحملها المركز</h1>
+<p>تبني لست عتبات جدول التنبيهات في اليوم والدقة والاستدعاء واستدعاء الحوادث الحرجة، بأعمال الصيانة ودونها، وتختار عتبة ضمن طاقة المركز.</p>
+<div class="meta"><span>25 دقيقة</span><span>اليوم 2</span><span>الجلسة 6: عتبة يتحملها الفريق</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.6">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>جدول لست عتبات: التنبيهات في اليوم، والدقة، والاستدعاء، واستدعاء الحوادث الحرجة.</li>
+    <li>الجدول نفسه بعد إخفاء تنبيهات الصيانة المجدولة.</li>
+    <li>عتبة مختارة ضمن طاقة المركز، وسببها في ثلاثة أسطر لرتيل الرميان.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/network/noc_capacity.txt" target="_blank"><b>network/noc_capacity.txt</b><span>طاقة المركز وشرط الحوادث الحرجة</span></a>
+  <a href="files/start/alert_matches.csv" target="_blank"><b>start/alert_matches.csv</b><span>كل التنبيهات موسومة بالحادثة التي تقابلها (إن وُجدت)</span></a>
+  <a href="files/start/incident_best_score.csv" target="_blank"><b>start/incident_best_score.csv</b><span>كل حادثة مع شدتها وأعلى درجة تنبيه وقع عليها</span></a>
+</div>
+<p class="small">يبدأ المختبر من ملفين جاهزين، فلا يحتاج نتيجة المختبر 2.5. الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ المذكرة وافتح الملفين <span class="min">3 دقائق</span></h3>
+  <p>اكتب الشرطين: كم تنبيهًا في اليوم على الأكثر، وكم حادثة حرجة يُقبل أن تفوت في الأسبوع. في <code>alert_matches.csv</code>: <code>D</code> الدرجة، و<code>E</code> الصيانة المجدولة، و<code>F</code> رمز الحادثة المقابلة أو فارغ.</p>
+</div>
+
+<div class="step">
+  <h3>2 · التنبيهات في اليوم والدقة <span class="min">7 دقائق</span></h3>
+  <p>ضع العتبات 0.3 و0.4 و0.5 و0.6 و0.7 و0.8 في عمود (<code>T</code> في الأسفل خلية العتبة).</p>
+  <pre class="code" data-file="alert_matches.csv"><code>alerts a day   =COUNTIF(D:D,"&gt;="&amp;T)/7
+precision, %   =COUNTIFS(D:D,"&gt;="&amp;T,F:F,"&lt;&gt;")/COUNTIF(D:D,"&gt;="&amp;T)*100</code></pre>
+</div>
+
+<div class="step">
+  <h3>3 · الاستدعاء واستدعاء الحرجة <span class="min">6 دقائق</span></h3>
+  <p>الحادثة مكشوفة عند عتبة ما إذا كانت أعلى درجة تنبيه عليها لا تقل عن العتبة.</p>
+  <pre class="code" data-file="incident_best_score.csv"><code>recall, %            =COUNTIF(C:C,"&gt;="&amp;T)/72*100
+critical recall, %   =COUNTIFS(B:B,"critical",C:C,"&gt;="&amp;T)/COUNTIF(B:B,"critical")*100</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · إخفاء الصيانة المجدولة <span class="min">5 دقائق</span></h3>
+  <p>أعد التنبيهات في اليوم والدقة بإضافة شرط <code>E:E,0</code>. لماذا لا يتغير الاستدعاء؟</p>
+  <table>
+    <tr><th>العتبة</th><th>في اليوم</th><th>الدقة</th><th>في اليوم دون الصيانة</th><th>الدقة دون الصيانة</th><th>الاستدعاء</th><th>استدعاء الحرجة</th></tr>
+    <tr><td>0.4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>0.5</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>0.6</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · اختر العتبة <span class="min">4 دقائق</span></h3>
+  <p>ثلاثة أسطر لرتيل الرميان: العتبة، وما يكسبه المركز، وما يدفعه (كم حادثة تفوت أسبوعيًّا، وأي شدة).</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>اقترح عتبتين: واحدة للحوادث الحرجة وأخرى لغيرها. هل تسمح الملفات بتقدير أثر الاقتراح؟ ما المعلومة التي تنقص التنبيه لحظة صدوره؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>لماذا لا تصلح العتبة الافتراضية للمركز مع أن استدعاءها عالٍ؟</li>
+  <li>لماذا يرفع إخفاء الصيانة المجدولة الدقة دون أن يمس الاستدعاء؟</li>
+  <li>ما أعلى عتبة تحقق شرط الحوادث الحرجة؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <table>
+    <tr><th>العتبة</th><th>في اليوم</th><th>الدقة</th><th>دون الصيانة: في اليوم / الدقة</th><th>الاستدعاء</th><th>الحرجة</th></tr>
+    <tr><td>0.3</td><td>349.14</td><td>8.88</td><td>330.43 / 9.38</td><td>100</td><td>100</td></tr>
+    <tr><td>0.4</td><td>160.29</td><td>16.67</td><td>141.57 / 18.87</td><td>95.83</td><td>90.91</td></tr>
+    <tr><td>0.5</td><td>86.14</td><td>26.37</td><td>67.57 / 33.62</td><td>86.11</td><td>90.91</td></tr>
+    <tr><td>0.6</td><td>48.00</td><td>32.44</td><td>31.14 / 50.00</td><td>69.44</td><td>81.82</td></tr>
+    <tr><td>0.7</td><td>23.86</td><td>35.33</td><td>13.00 / 64.84</td><td>50.00</td><td>72.73</td></tr>
+    <tr><td>0.8</td><td>8.86</td><td>38.71</td><td>4.86 / 70.59</td><td>23.61</td><td>54.55</td></tr>
+  </table>
+  <ul>
+    <li><b>الجواب:</b> 0.5 مع إخفاء الصيانة المجدولة: 67.57 تنبيهًا في اليوم (ضمن 120)، والدقة 33.62%، وتفوت حادثة حرجة واحدة (المقبول). عند 0.6 تفوت حادثتان حرجتان. عند 0.4 حتى بعد إخفاء الصيانة 141.57 في اليوم، فوق الطاقة.</li>
+    <li><b>الثمن:</b> عند 0.5 يفوت 10 من 72 حادثة في الأسبوع بدل 3. يجب أن يُكتب هذا في التوصية، لا أن يُخفى.</li>
+    <li><b>سؤال التحقق 3:</b> أعلى عتبة تحقق شرط الحرجة 0.5 (عند 0.6 تفوت حادثتان)، وأقل عتبة ضمن الطاقة 0.5 مع إخفاء الصيانة: الشرطان يلتقيان عند العتبة نفسها.</li>
+    <li><b>الاستدعاء لا يتغير بإخفاء الصيانة:</b> لا تنبيه في صيانة مجدولة يقابل حادثة غير معروفة.</li>
+    <li><b>التمرين الإضافي:</b> شدة الحادثة لا تُعرف إلا بعد التأكيد، فلا يحمل التنبيه شدته لحظة صدوره. الملفات لا تسمح بالتقدير إلا بمؤشر بديل (نوع <code>kpi</code> أو المنطقة)، وهذا يحتاج اختبارًا.</li>
+    <li><b>الفخ:</b> قسمة التنبيهات على 24 بدل 7، أو حساب الاستدعاء على التنبيهات بدل الحوادث.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.6</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_5_alert_matching.html" rel="prev">→ المختبر السابق</a><a href="D2_7_energy_and_location.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"2.6","title":"عتبة يتحملها المركز","summary":"تبني لست عتبات جدول التنبيهات في اليوم والدقة والاستدعاء واستدعاء الحوادث الحرجة، بأعمال الصيانة ودونها، وتختار عتبة ضمن طاقة المركز.","minutes":25,"day":2,"unit":"اليوم 2","session":6,"deck":"../slides/day2.html#lab-2-6","prev":"D2_5_alert_matching.html","next":"D2_7_energy_and_location.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

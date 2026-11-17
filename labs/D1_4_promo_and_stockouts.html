@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.4 · أسابيع العروض ورمضان والنفاد · الذكاء الاصطناعي في التجزئة والاتصالات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_4_promo_and_stockouts.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-4">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.4</span>
+<h1>أسابيع العروض ورمضان والنفاد</h1>
+<p>تقارن الخطأ في أسابيع العروض ورمضان والأسابيع العادية، وتقيس انحياز الموسمي البسيط في الأسابيع التي نفد فيها المنتج في العام الماضي، ثم تكتب قاعدة استعمال.</p>
+<div class="meta"><span>20 دقيقة</span><span>اليوم 1</span><span>الجلسة 4: العروض ورمضان والمبيعات الناقصة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.4">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>جدول الخطأ بحسب نوع الأسبوع: عرض ترويجي، ورمضان، وعادي، دون أسابيع النفاد.</li>
+    <li>انحياز التنبؤين في الأسابيع التي نفد فيها المنتج في العام الماضي.</li>
+    <li>قاعدة استعمال مكتوبة: متى يُتبع النموذج ومتى يراجعه المخطط.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/start/forecast_errors_y2.csv" target="_blank"><b>start/forecast_errors_y2.csv</b><span>2,600 صف للسنة الثانية، مع علامات العرض ورمضان والنفاد ونفاد العام الماضي</span></a>
+</div>
+<p class="small">يبدأ المختبر من ملف جاهز، فلا يحتاج نتيجة مختبر سابق. الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · صنّف الأسابيع <span class="min">4 دقائق</span></h3>
+  <p>الأعمدة: <code>E</code> عرض، و<code>F</code> رمضان، و<code>G</code> نفاد هذا العام، و<code>H</code> نفاد في الأسبوع نفسه من العام الماضي، و<code>I</code> المبيعات، و<code>J</code> استشراف، و<code>K</code> الموسمي البسيط.</p>
+  <pre class="code" data-file="forecast_errors_y2.csv"><code>L2  =IF(G2=1,"stockout",IF(E2=1,"promo",IF(F2=1,"ramadan","normal")))
+M2  =ABS(J2-I2)      N2  =ABS(K2-I2)
+O2  =J2-I2           P2  =K2-I2</code></pre>
+</div>
+
+<div class="step">
+  <h3>2 · الخطأ لكل نوع أسبوع <span class="min">6 دقائق</span></h3>
+  <pre class="code" data-file="forecast_errors_y2.csv"><code>WAPE Istishraf, promo  =SUMIF(L:L,"promo",M:M)/SUMIF(L:L,"promo",I:I)*100</code></pre>
+  <table>
+    <tr><th>نوع الأسبوع</th><th>عدد الصفوف</th><th>الخطأ: استشراف (%)</th><th>الخطأ: الموسمي (%)</th></tr>
+    <tr><td>عرض ترويجي</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>رمضان دون عرض</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>عادي</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>3 · ما ورثه خط الأساس من نفاد العام الماضي <span class="min">5 دقائق</span></h3>
+  <p>حين نفد منتج في أسبوع من العام الماضي، سجّل الملف مبيعات أقل من الطلب. الموسمي البسيط ينسخ ذلك الرقم إلى هذا العام. احسب الانحياز في هذه الأسابيع (دون أسابيع نفاد هذا العام):</p>
+  <pre class="code" data-file="forecast_errors_y2.csv"><code>bias, seasonal naive  =SUMIFS(P:P,H:H,1,G:G,0)/SUMIFS(I:I,H:H,1,G:G,0)*100
+bias, Istishraf       =SUMIFS(O:O,H:H,1,G:G,0)/SUMIFS(I:I,H:H,1,G:G,0)*100</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · قاعدة الاستعمال <span class="min">5 دقائق</span></h3>
+  <p>اكتب ثلاث جمل لعزام الدغيم، كل جملة لنوع من الأسابيع: من يضع الرقم في الطلبية (التنبؤ أم المخطط)، وما الذي يراجعه المخطط بيده قبل الإرسال. واكتب جملة رابعة: ماذا يُسجَّل في أسبوع النفاد كي لا يتكرر الخطأ في العام القادم.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>عدّ أسابيع النفاد في السنة الأولى من <code>files/retail/sales_weekly.csv</code> وفي السنة الثانية. اكتب كيف يمكن لقاعدة «مثل العام الماضي» أن تعيد إنتاج النفاد نفسه سنة بعد سنة.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>في أي نوع من الأسابيع يكون الفرق بين التنبؤين أكبر؟ ولماذا يعجز الموسمي البسيط فيه؟</li>
+  <li>لماذا لا تقيس مبيعات أسبوع النفاد الطلب؟</li>
+  <li>ما إشارة الانحياز في الخطوة 3، وماذا تعني للطلبية؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>الخطأ بحسب الأسبوع:</b> العروض 171 صفًّا، استشراف 7.26% والموسمي 34.72%؛ رمضان دون عرض 233 صفًّا، 7.63% و16.81%؛ العادي 2,160 صفًّا، 6.63% و12.45%.</li>
+    <li><b>بعد نفاد العام الماضي:</b> 88 صفًّا، انحياز الموسمي ناقص 24.05% (يطلب أقل بنحو الربع)، واستشراف 1.66% (لأنه دُرّب دون أسابيع النفاد).</li>
+    <li><b>أسابيع النفاد:</b> 92 في السنة الأولى و36 في الثانية.</li>
+    <li><b>قاعدة معقولة:</b> أسابيع العروض: يُتبع استشراف لأنه يعرف تقويم العروض. رمضان: يُتبع استشراف لأن رمضان يتقدم نحو 11 يومًا كل عام والموسمي ينسخ الأسبوع الخطأ. العادي: الفرق أصغر، ويراجع المخطط المنتجات ذات الوزن الكبير. أسبوع النفاد: يُسجَّل الطلب التقديري لا المبيعات.</li>
+    <li><b>الفخ:</b> حساب الخطأ على كل الأسابيع، فتختلط أسابيع النفاد ويبدو التنبؤ أسوأ مما هو.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 1.4</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_3_error_by_group.html" rel="prev">→ المختبر السابق</a><a href="D1_5_offline_vs_popular.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في التجزئة والاتصالات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 1f9fc03</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T21:40:52Z","version":"2027.1.0","commit":"1f9fc03"},"course":{"id":"use-sec-210","code":"USE-SEC-210","title":"الذكاء الاصطناعي في التجزئة والاتصالات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-210/","repo":"SDAIAAcademy/use-sec-210","home":"../index.html"},"lab":{"id":"1.4","title":"أسابيع العروض ورمضان والنفاد","summary":"تقارن الخطأ في أسابيع العروض ورمضان والأسابيع العادية، وتقيس انحياز الموسمي البسيط في الأسابيع التي نفد فيها المنتج في العام الماضي، ثم تكتب قاعدة استعمال.","minutes":20,"day":1,"unit":"اليوم 1","session":4,"deck":"../slides/day1.html#lab-1-4","prev":"D1_3_error_by_group.html","next":"D1_5_offline_vs_popular.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
