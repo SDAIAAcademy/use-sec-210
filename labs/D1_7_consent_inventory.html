@@ -20,12 +20,12 @@
 <h2>الخطوات</h2>
 
 <div class="step">
-  <h3>1 · اقرأ القاعدة والأغراض <span class="min">4 دقائق</span></h3>
+  <h3>1 · اقرأ القاعدة والأغراض <span class="min">3 دقائق</span></h3>
   <p>اقرأ <b>saerak_rule.txt</b> و<b>consent_purposes.txt</b>. علّم في وصف القاعدة كل نوع من البيانات تقرؤه، وكل جملة عن من تُطبَّق عليه القاعدة.</p>
 </div>
 
 <div class="step">
-  <h3>2 · جدول المدخلات <span class="min">6 دقائق</span></h3>
+  <h3>2 · جدول المدخلات <span class="min">5 دقائق</span></h3>
   <table>
     <tr><th>المدخل</th><th>عمود الاستعمال في القسائم</th><th>الغرض الذي يخدمه</th><th>الموافقة التي يحتاجها</th></tr>
     <tr><td>سجل المشتريات</td><td><code>used_purchase_history</code></td><td class="fill"></td><td class="fill"></td></tr>
@@ -39,7 +39,7 @@
 </div>
 
 <div class="step">
-  <h3>3 · اربط القسائم بالعملاء <span class="min">4 دقائق</span></h3>
+  <h3>3 · اربط القسائم بالعملاء <span class="min">3 دقائق</span></h3>
   <p>الملفان مرتبان برقم العميل، صفًّا مقابل صف. انسخ أعمدة الموافقة الثلاثة من <b>customers.csv</b> إلى يسار القسائم، ثم تحقق:</p>
   <pre class="code" data-file="offers_month.csv"><code>J2  =customers!F2      consent_marketing
 K2  =customers!G2      consent_personalisation
@@ -48,7 +48,7 @@ M2  =A2=customers!A2   same customer? must be TRUE on every row</code></pre>
 </div>
 
 <div class="step">
-  <h3>4 · عدّ القسائم دون موافقة <span class="min">7 دقائق</span></h3>
+  <h3>4 · عدّ القسائم دون موافقة <span class="min">6 دقائق</span></h3>
   <pre class="code" data-file="offers_month.csv"><code>history without personalisation  =COUNTIFS(D:D,1,K:K,0)
 location without location        =COUNTIFS(E:E,1,L:L,0)
 no marketing consent at all      =COUNTIF(J:J,0)
@@ -57,7 +57,7 @@ health segment offers            =COUNTIF(I:I,1)</code></pre>
 </div>
 
 <div class="step">
-  <h3>5 · الفجوات الثلاث <span class="min">4 دقائق</span></h3>
+  <h3>5 · الفجوات الثلاث <span class="min">3 دقائق</span></h3>
   <p>اكتب لوصال الحبشان ثلاث فجوات مرتبة بخطورتها، لكل منها: المدخل، وعدد العملاء، وما يجب أن يتوقف أو يتغير أولًا.</p>
 </div>
 

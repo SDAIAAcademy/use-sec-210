@@ -18,24 +18,24 @@
 <h2>الخطوات</h2>
 
 <div class="step">
-  <h3>1 · افتح الملفين <span class="min">3 دقائق</span></h3>
+  <h3>1 · افتح الملفين <span class="min">دقيقتان</span></h3>
   <p>الأعمدة: <code>A</code> العقد، و<code>B</code> الشريحة، و<code>C</code> عدد العملاء في القاعدة، و<code>D</code> الأثر الإضافي بالنقاط، و<code>E</code> متوسط الإيراد الشهري. من المذكرة: العرض يكلف 50 ريالًا، وقيمة العميل المحتفظ به إيراده الشهري × 12.</p>
 </div>
 
 <div class="step">
-  <h3>2 · المحتفظ بهم بسبب العرض <span class="min">6 دقائق</span></h3>
+  <h3>2 · المحتفظ بهم بسبب العرض <span class="min">5 دقائق</span></h3>
   <pre class="code" data-file="uplift_cells.csv"><code>G2  =C2*D2/100          customers kept because of the offer</code></pre>
 </div>
 
 <div class="step">
-  <h3>3 · الإيراد والتكلفة والعروض المهدرة <span class="min">6 دقائق</span></h3>
+  <h3>3 · الإيراد والتكلفة والعروض المهدرة <span class="min">5 دقائق</span></h3>
   <pre class="code" data-file="uplift_cells.csv"><code>H2  =G2*E2*12           revenue kept over 12 months
 I2  =C2*50              cost of the offers
 J2  =C2-G2              wasted offers: sent, and changed nothing</code></pre>
 </div>
 
 <div class="step">
-  <h3>4 · ثلاث سياسات <span class="min">6 دقائق</span></h3>
+  <h3>4 · ثلاث سياسات <span class="min">5 دقائق</span></h3>
   <pre class="code" data-file="uplift_cells.csv"><code>all customers   =SUM(H:H)-SUM(I:I)
 top band only   =SUMIF(B:B,5,H:H)-SUMIF(B:B,5,I:I)
 uplift >= 3     =SUMIF(D:D,"&gt;=3",H:H)-SUMIF(D:D,"&gt;=3",I:I)</code></pre>
@@ -48,7 +48,7 @@ uplift >= 3     =SUMIF(D:D,"&gt;=3",H:H)-SUMIF(D:D,"&gt;=3",I:I)</code></pre>
 </div>
 
 <div class="step">
-  <h3>5 · التوصية <span class="min">4 دقائق</span></h3>
+  <h3>5 · التوصية <span class="min">3 دقائق</span></h3>
   <p>ثلاثة أسطر لقاسم البليهد: أي سياسة، وكم تضيف، وما الذي يبقى مجهولًا في هذا التقدير.</p>
 </div>
 

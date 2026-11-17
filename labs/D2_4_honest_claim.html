@@ -18,30 +18,30 @@
 <h2>الخطوات</h2>
 
 <div class="step">
-  <h3>1 · اقرأ التقرير <span class="min">3 دقائق</span></h3>
+  <h3>1 · اقرأ التقرير <span class="min">دقيقتان</span></h3>
   <p>اكتب في سطر كيف حسب التقرير الرقم 168,465، وتحقق منه بجمع العمود <code>E</code> (<code>offered_stayed</code>).</p>
 </div>
 
 <div class="step">
-  <h3>2 · نسبة البقاء في كل شهر <span class="min">6 دقائق</span></h3>
+  <h3>2 · نسبة البقاء في كل شهر <span class="min">5 دقائق</span></h3>
   <pre class="code" data-file="campaign_months.csv"><code>H2  =E2/D2*100                       stayed, offered (%)
 I2  =IF(F2=0,"no holdout",G2/F2*100)  stayed, holdout (%)</code></pre>
 </div>
 
 <div class="step">
-  <h3>3 · المحتفظ بهم بسبب العرض <span class="min">6 دقائق</span></h3>
+  <h3>3 · المحتفظ بهم بسبب العرض <span class="min">5 دقائق</span></h3>
   <pre class="code" data-file="campaign_months.csv"><code>J2  =IF(F2=0,"",H2-I2)               effect, points
 K2  =IF(F2=0,"",ROUND(J2/100*D2,0))   kept because of the offer</code></pre>
   <p>اجمع العمود <code>K</code> للأشهر المقيسة. ما الذي تستطيع قوله عن الأشهر 5 و6 و7؟</p>
 </div>
 
 <div class="step">
-  <h3>4 · الشهر الثامن أمام الأشهر الأولى <span class="min">5 دقائق</span></h3>
+  <h3>4 · الشهر الثامن أمام الأشهر الأولى <span class="min">4 دقائق</span></h3>
   <p>قارن الأثر في الشهر 8 بالأشهر 1 إلى 4. انظر إلى نسبة البقاء في مجموعة الضبط في الشهر 8. من صار «بقاء» v2 يختار؟ ولماذا؟ (التقرير يقول على أي بيانات أُعيد تدريبه.)</p>
 </div>
 
 <div class="step">
-  <h3>5 · الادعاء الصادق <span class="min">5 دقائق</span></h3>
+  <h3>5 · الادعاء الصادق <span class="min">4 دقائق</span></h3>
   <p>ثلاثة أسطر للإدارة: ما قيس وكم، وما لم يُقس ولماذا، وما الذي يجب أن يتغير الآن.</p>
 </div>
 

@@ -19,30 +19,30 @@
 <h2>الخطوات</h2>
 
 <div class="step">
-  <h3>1 · تغير الطاقة في المجموعتين <span class="min">6 دقائق</span></h3>
+  <h3>1 · تغير الطاقة في المجموعتين <span class="min">5 دقائق</span></h3>
   <pre class="code" data-file="energy_pilot.csv"><code>pilot change, %     =(SUMIF(B:B,"pilot",E:E)/SUMIF(B:B,"pilot",D:D)-1)*100
 control change, %   =(SUMIF(B:B,"control",E:E)/SUMIF(B:B,"control",D:D)-1)*100</code></pre>
 </div>
 
 <div class="step">
-  <h3>2 · التوفير الصافي <span class="min">4 دقائق</span></h3>
+  <h3>2 · التوفير الصافي <span class="min">3 دقائق</span></h3>
   <p>التوفير الصافي = تغير مواقع التجربة ناقص تغير المواقع الضابطة. لماذا انخفض استهلاك المواقع الضابطة أيضًا؟ قارن بنسبة المورد.</p>
 </div>
 
 <div class="step">
-  <h3>3 · حد الحماية موقعًا موقعًا <span class="min">5 دقائق</span></h3>
+  <h3>3 · حد الحماية موقعًا موقعًا <span class="min">4 دقائق</span></h3>
   <pre class="code" data-file="energy_pilot.csv"><code>H2  =G2-F2                drop-rate change, points
 I2  =AND(B2="pilot",H2&gt;0.10)  over the guardrail</code></pre>
   <p>اكتب رموز المواقع التي تجاوزت الحد ونوع منطقتها (<code>C</code>). ثم قارن متوسط التغير في المجموعتين.</p>
 </div>
 
 <div class="step">
-  <h3>4 · طلب بيانات الموقع <span class="min">6 دقائق</span></h3>
+  <h3>4 · طلب بيانات الموقع <span class="min">5 دقائق</span></h3>
   <p>اقرأ الطلب ومعلومات وصال الحبشان. اكتب قرارك (توافق، أو ترفض، أو توافق بشروط) وثلاثة أسباب، بلغة الغرض والموافقة والجهة.</p>
 </div>
 
 <div class="step">
-  <h3>5 · البديل المجمّع <span class="min">4 دقائق</span></h3>
+  <h3>5 · البديل المجمّع <span class="min">3 دقائق</span></h3>
   <p>اقترح ما يخدم سؤال روزان الباهلي التجاري دون قائمة أفراد: ماذا يُعدّ، وبأي تجميع، وبأي حد أدنى للخلية، ومن يرى الناتج.</p>
 </div>
 

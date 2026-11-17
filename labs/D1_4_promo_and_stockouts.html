@@ -17,7 +17,7 @@
 <h2>الخطوات</h2>
 
 <div class="step">
-  <h3>1 · صنّف الأسابيع <span class="min">5 دقائق</span></h3>
+  <h3>1 · صنّف الأسابيع <span class="min">4 دقائق</span></h3>
   <p>الأعمدة: <code>E</code> عرض، و<code>F</code> رمضان، و<code>G</code> نفاد هذا العام، و<code>H</code> نفاد في الأسبوع نفسه من العام الماضي، و<code>I</code> المبيعات، و<code>J</code> استشراف، و<code>K</code> الموسمي البسيط.</p>
   <pre class="code" data-file="forecast_errors_y2.csv"><code>L2  =IF(G2=1,"stockout",IF(E2=1,"promo",IF(F2=1,"ramadan","normal")))
 M2  =ABS(J2-I2)      N2  =ABS(K2-I2)
@@ -25,7 +25,7 @@ O2  =J2-I2           P2  =K2-I2</code></pre>
 </div>
 
 <div class="step">
-  <h3>2 · الخطأ لكل نوع أسبوع <span class="min">7 دقائق</span></h3>
+  <h3>2 · الخطأ لكل نوع أسبوع <span class="min">6 دقائق</span></h3>
   <pre class="code" data-file="forecast_errors_y2.csv"><code>WAPE Istishraf, promo  =SUMIF(L:L,"promo",M:M)/SUMIF(L:L,"promo",I:I)*100</code></pre>
   <table>
     <tr><th>نوع الأسبوع</th><th>عدد الصفوف</th><th>الخطأ: استشراف (%)</th><th>الخطأ: الموسمي (%)</th></tr>
@@ -36,14 +36,14 @@ O2  =J2-I2           P2  =K2-I2</code></pre>
 </div>
 
 <div class="step">
-  <h3>3 · ما ورثه خط الأساس من نفاد العام الماضي <span class="min">6 دقائق</span></h3>
+  <h3>3 · ما ورثه خط الأساس من نفاد العام الماضي <span class="min">5 دقائق</span></h3>
   <p>حين نفد منتج في أسبوع من العام الماضي، سجّل الملف مبيعات أقل من الطلب. الموسمي البسيط ينسخ ذلك الرقم إلى هذا العام. احسب الانحياز في هذه الأسابيع (دون أسابيع نفاد هذا العام):</p>
   <pre class="code" data-file="forecast_errors_y2.csv"><code>bias, seasonal naive  =SUMIFS(P:P,H:H,1,G:G,0)/SUMIFS(I:I,H:H,1,G:G,0)*100
 bias, Istishraf       =SUMIFS(O:O,H:H,1,G:G,0)/SUMIFS(I:I,H:H,1,G:G,0)*100</code></pre>
 </div>
 
 <div class="step">
-  <h3>4 · قاعدة الاستعمال <span class="min">7 دقائق</span></h3>
+  <h3>4 · قاعدة الاستعمال <span class="min">5 دقائق</span></h3>
   <p>اكتب ثلاث جمل لعزام الدغيم، كل جملة لنوع من الأسابيع: من يضع الرقم في الطلبية (التنبؤ أم المخطط)، وما الذي يراجعه المخطط بيده قبل الإرسال. واكتب جملة رابعة: ماذا يُسجَّل في أسبوع النفاد كي لا يتكرر الخطأ في العام القادم.</p>
 </div>
 

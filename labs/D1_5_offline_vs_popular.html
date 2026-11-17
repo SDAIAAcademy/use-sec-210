@@ -23,14 +23,14 @@
 </div>
 
 <div class="step">
-  <h3>2 · الإصابة لكل جلسة <span class="min">8 دقائق</span></h3>
+  <h3>2 · الإصابة لكل جلسة <span class="min">6 دقائق</span></h3>
   <p>الإصابة: المنتج المشترى بين التوصيات الخمس.</p>
   <pre class="code" data-file="reco_offline.csv"><code>N2  =--(COUNTIF(D2:H2,C2)>0)     hit, Mukhtarat
 O2  =--(COUNTIF(I2:M2,C2)>0)     hit, popularity baseline</code></pre>
 </div>
 
 <div class="step">
-  <h3>3 · معدل الإصابة للكل وللفئتين <span class="min">6 دقائق</span></h3>
+  <h3>3 · معدل الإصابة للكل وللفئتين <span class="min">5 دقائق</span></h3>
   <pre class="code" data-file="reco_offline.csv"><code>all        =AVERAGE(N2:N2001)*100
 new        =AVERAGEIF(B2:B2001,"new",N2:N2001)*100
 returning  =AVERAGEIF(B2:B2001,"returning",N2:N2001)*100</code></pre>
@@ -43,13 +43,13 @@ returning  =AVERAGEIF(B2:B2001,"returning",N2:N2001)*100</code></pre>
 </div>
 
 <div class="step">
-  <h3>4 · نصيب الأكثر مبيعًا <span class="min">4 دقائق</span></h3>
+  <h3>4 · نصيب الأكثر مبيعًا <span class="min">3 دقائق</span></h3>
   <pre class="code" data-file="reco_offline.csv"><code>share in top 50  =COUNTIF(D2:H2001,"&lt;=50")/COUNT(D2:H2001)*100</code></pre>
   <p>اكتب جملة: ماذا يحدث لمبيعات المنتجات الأقل شهرة إذا عُرض هذا النظام لكل الزوار، ثم دُرّب من جديد على ما اشتروه؟</p>
 </div>
 
 <div class="step">
-  <h3>5 · الرد على المورد <span class="min">4 دقائق</span></h3>
+  <h3>5 · الرد على المورد <span class="min">3 دقائق</span></h3>
   <p>ثلاثة أسطر لعسايل الرقيبي: ما المقارنة الصحيحة بدل «أفضل من العشوائي»، وما النتيجة للعائدين وللجدد، وما الذي لا يجيب عنه أي رقم دون اتصال.</p>
 </div>
 

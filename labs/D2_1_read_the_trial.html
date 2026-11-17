@@ -23,7 +23,7 @@
 </div>
 
 <div class="step">
-  <h3>2 · فحص التوازن <span class="min">6 دقائق</span></h3>
+  <h3>2 · فحص التوازن <span class="min">4 دقائق</span></h3>
   <p>القرعة لم تنظر إلى شيء، فالمجموعتان يجب أن تتشابها في كل شيء قبل العرض. إن اختلفتا كثيرًا، فالقرعة معطوبة.</p>
   <pre class="code" data-file="retention_trial.csv"><code>tenure, offered      =AVERAGEIF(F:F,1,D:D)
 revenue, offered     =AVERAGEIF(F:F,1,E:E)
@@ -32,14 +32,14 @@ out of contract, %   =COUNTIFS(F:F,1,C:C,"out_of_contract")/COUNTIF(F:F,1)*100</
 </div>
 
 <div class="step">
-  <h3>3 · الأثر في التجربة كلها <span class="min">5 دقائق</span></h3>
+  <h3>3 · الأثر في التجربة كلها <span class="min">4 دقائق</span></h3>
   <pre class="code" data-file="retention_trial.csv"><code>churn without offer  =AVERAGEIF(F:F,0,G:G)*100
 churn with offer     =AVERAGEIF(F:F,1,G:G)*100
 effect, points       =without - with</code></pre>
 </div>
 
 <div class="step">
-  <h3>4 · الأثر في كل شريحة <span class="min">8 دقائق</span></h3>
+  <h3>4 · الأثر في كل شريحة <span class="min">7 دقائق</span></h3>
   <pre class="code" data-file="retention_trial.csv"><code>band 5, without  =AVERAGEIFS(G:G,F:F,0,B:B,5)*100
 band 5, with     =AVERAGEIFS(G:G,F:F,1,B:B,5)*100</code></pre>
   <table>
@@ -53,7 +53,7 @@ band 5, with     =AVERAGEIFS(G:G,F:F,1,B:B,5)*100</code></pre>
 </div>
 
 <div class="step">
-  <h3>5 · ما تقوله النتيجة عن القاعدة الحالية <span class="min">3 دقائق</span></h3>
+  <h3>5 · ما تقوله النتيجة عن القاعدة الحالية <span class="min">دقيقتان</span></h3>
   <p>سطران لقاسم البليهد: هل يذهب العرض اليوم إلى من يغيّر العرض قراره؟</p>
 </div>
 
