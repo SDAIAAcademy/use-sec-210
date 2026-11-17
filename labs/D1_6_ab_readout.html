@@ -1,37 +1,88 @@
 <article class="lab" data-lab="1.6">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>فحص تطابق نسبة العينة بين النسختين A وB.</li>
+    <li>فرق معدل التحويل بفترة ثقة 95% في الأسبوع الأول وفي الأسبوعين الأخيرين.</li>
+    <li>الإيراد لكل زائر ونسبة المرتجعات للتجربة كلها، وقرار من ثلاثة أسطر.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="جدول بيانات">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/retail/ab_test_daily.csv" target="_blank"><b>retail/ab_test_daily.csv</b><span>28 يومًا × نسختان: الزوار والطلبات والإيراد والطلبات المرتجعة</span></a>
+  <a href="files/retail/ab_vendor_readout.txt" target="_blank"><b>retail/ab_vendor_readout.txt</b><span>تقرير المورد بعد الأسبوع الأول، ومقياسا القرار والحماية</span></a>
+  <a href="notebooks/ab_readout.ipynb" target="_blank"><b>notebooks/ab_readout.ipynb</b><span>دفتر مقدَّم يحسب الأرقام نفسها، للتمرين الإضافي</span></a>
+</div>
+<p class="small">الأداة جدول بيانات، والدفتر مكمّل اختياري يعمل في Colab أو JupyterLite. سياسة الذكاء الاصطناعي: مساعد معلّم. لا يحتاج المختبر شيئًا من مختبر سابق.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · مقياس القرار ومقياس الحماية <span class="min">3 دقائق</span></h3>
+  <p>اقرأ تقرير المورد. اكتب في سطرين: ما المقياس الذي يقرر التعميم كما اتُّفق عليه قبل التجربة؟ وما المقياس الذي يجب ألا يسوء؟ وعلى أي مقياس بنى المورد توصيته؟</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · تطابق نسبة العينة <span class="min">4 دقائق</span></h3>
+  <p>القرعة تقسم الزوار نصفين. إن ابتعدت النسبة عن النصف أكثر مما تسمح به الصدفة، فشيء في التجربة معطوب، ولا يُقرأ أي رقم آخر قبل إصلاحه.</p>
+  <pre class="code" data-file="ab_test_daily.csv"><code>nA     =SUMIF(C:C,"A",D:D)
+nB     =SUMIF(C:C,"B",D:D)
+share  =nA/(nA+nB)*100
+chi2   =(nA-(nA+nB)/2)^2/((nA+nB)/2)*2
+p      =CHISQ.DIST.RT(chi2,1)</code></pre>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · التحويل بفترة ثقة، أسبوعًا أسبوعًا <span class="min">8 دقائق</span></h3>
+  <p>احسب للأسبوع الأول (<code>B</code> = 1) ثم للأسبوعين الأخيرين (<code>B</code> = 3 أو 4):</p>
+  <pre class="code" data-file="ab_test_daily.csv"><code>pA    =SUMIFS(E:E,C:C,"A",B:B,1)/SUMIFS(D:D,C:C,"A",B:B,1)
+pB    =SUMIFS(E:E,C:C,"B",B:B,1)/SUMIFS(D:D,C:C,"B",B:B,1)
+diff  =pB-pA
+se    =SQRT(pA*(1-pA)/nA_week + pB*(1-pB)/nB_week)
+low   =diff-1.96*se          high  =diff+1.96*se
+lift  =(pB/pA-1)*100</code></pre>
+  <table>
+    <tr><th>الفترة</th><th>تحويل A (%)</th><th>تحويل B (%)</th><th>الارتفاع النسبي (%)</th><th>فترة الثقة للفرق (نقاط)</th></tr>
+    <tr><td>الأسبوع 1</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>الأسبوعان 3 و4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>4 · الإيراد لكل زائر والمرتجعات <span class="min">6 دقائق</span></h3>
+  <pre class="code" data-file="ab_test_daily.csv"><code>RPV A        =SUMIF(C:C,"A",F:F)/SUMIF(C:C,"A",D:D)
+returns A %  =SUMIF(C:C,"A",G:G)/SUMIF(C:C,"A",E:E)*100</code></pre>
+  <p>كرر للنسخة B، واحسب تغير الإيراد لكل زائر بالنسبة المئوية.</p>
+</div>
+
+<div class="step">
+  <h3>5 · القرار <span class="min">4 دقائق</span></h3>
+  <p>ثلاثة أسطر لعسايل الرقيبي: هل تُعمَّم مختارات؟ ما الرقم الذي يحسم؟ وماذا تطلب قبل أي قرار آخر؟ تذكّر أن تكلفتها السنوية 300,000 ريال.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>افتح <code>notebooks/ab_readout.ipynb</code> في Colab أو JupyterLite، وارفع إليه <code>ab_test_daily.csv</code>، وشغّل الخلايا. قارن كل رقم بجدولك، واقرأ جدول الأسابيع الأربعة الذي يطبعه الدفتر.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>هل في التجربة عدم تطابق في نسبة العينة؟ بأي رقم عرفت؟</li>
+  <li>لماذا يختلف الأسبوع الأول عن الأسبوعين الأخيرين؟</li>
+  <li>لماذا يمكن أن يرتفع التحويل ولا يرتفع الإيراد لكل زائر؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>نسبة العينة:</b> A تساوي 49.97% من الزوار، ومربع كاي 0.18، والقيمة الاحتمالية 0.67: لا عدم تطابق.</li>
+    <li><b>الأسبوع 1:</b> التحويل 6.05% مقابل 6.55%، ارتفاع 8.41%، وفترة الثقة للفرق من 0.25 إلى 0.77 نقطة.</li>
+    <li><b>الأسبوعان 3 و4:</b> 6.01% مقابل 6.07%، ارتفاع 1.09%، وفترة الثقة من ناقص 0.11 إلى 0.25 نقطة: تضم الصفر.</li>
+    <li><b>التجربة كلها:</b> ارتفاع التحويل 3.68%، لكن الإيراد لكل زائر 11.00 مقابل 10.98 ريال (ناقص 0.17%)، والمرتجعات 4.07% مقابل 5.19%.</li>
+    <li><b>القرار:</b> لا تعميم. الارتفاع في الأسبوع الأول أثر جِدّة يتلاشى، ومقياس القرار (الإيراد لكل زائر) لم يتغير، ومقياس الحماية ساء. التكلفة 300,000 ريال دون إيراد إضافي.</li>
+    <li><b>الفخ:</b> قراءة التحويل وحده لأنه في تقرير المورد. وقراءة النتيجة بعد سبعة أيام لأنها «دالة».</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 1.6</code>. الدفتر يطبع الأرقام نفسها.</li>
+  </ul>
+</details>
 </article>

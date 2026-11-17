@@ -1,37 +1,91 @@
 <article class="lab" data-lab="1.3">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>جدول من خمسة صفوف: الخطأ لكل مجموعة منتجات، لاستشراف وللموسمي البسيط.</li>
+    <li>كلفة الأخطاء بالريال لكل مجموعة، والوفر، والوفر بعد الترخيص.</li>
+    <li>توصية لعزام الدغيم: لأي المجموعات يُشترى الترخيص.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="جدول بيانات">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/start/forecast_errors_y2.csv" target="_blank"><b>start/forecast_errors_y2.csv</b><span>2,600 صف للسنة الثانية: المبيعات والتنبؤان جاهزان</span></a>
+  <a href="files/retail/cost_by_group.csv" target="_blank"><b>retail/cost_by_group.csv</b><span>كلفة الوحدة الناقصة والوحدة الزائدة لكل مجموعة</span></a>
+  <a href="files/retail/vendor_offer.txt" target="_blank"><b>retail/vendor_offer.txt</b><span>عرض المورد: الترخيص لكل مجموعة</span></a>
+</div>
+<p class="small">يبدأ المختبر من ملف جاهز، فلا يحتاج نتيجة المختبر 1.2. الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · افتح الملفات الثلاثة <span class="min">3 دقائق</span></h3>
+  <p>الأعمدة في ملف البداية: <code>C</code> المجموعة، و<code>G</code> نفاد، و<code>I</code> المبيعات، و<code>J</code> استشراف، و<code>K</code> الموسمي البسيط. انسخ جدول الكلفة إلى ورقة اسمها <code>cost</code>.</p>
+  <p>أسابيع النفاد (<code>G</code> = 1) تُستبعد من كل الحسابات: المبيعات فيها أقل من الطلب لأن الرف فرغ، فلا تقيس خطأ أي تنبؤ.</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · الخطأ لكل مجموعة <span class="min">7 دقائق</span></h3>
+  <pre class="code" data-file="forecast_errors_y2.csv"><code>L2  =ABS(J2-I2)      absolute error, Istishraf
+M2  =ABS(K2-I2)      absolute error, seasonal naive
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+WAPE Istishraf, fresh  =SUMIFS(L:L,C:C,"fresh",G:G,0)/SUMIFS(I:I,C:C,"fresh",G:G,0)*100</code></pre>
+  <p>كرر للمجموعات الخمس وللتنبؤين.</p>
+</div>
+
+<div class="step">
+  <h3>3 · سعّر كل خطأ <span class="min">7 دقائق</span></h3>
+  <p>التنبؤ الأعلى من المبيعات يترك وحدات زائدة، والأدنى يترك رفًّا فارغًا. لكل منهما كلفة مختلفة في كل مجموعة:</p>
+  <pre class="code" data-file="forecast_errors_y2.csv"><code>N2  =IF(J2>I2,(J2-I2)*VLOOKUP(C2,cost!A:C,3,0),(I2-J2)*VLOOKUP(C2,cost!A:C,2,0))
+O2  =IF(K2>I2,(K2-I2)*VLOOKUP(C2,cost!A:C,3,0),(I2-K2)*VLOOKUP(C2,cost!A:C,2,0))
+
+cost, fresh  =SUMIFS(N:N,C:C,"fresh",G:G,0)</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · الوفر أمام الترخيص <span class="min">5 دقائق</span></h3>
+  <table>
+    <tr><th>المجموعة</th><th>الخطأ: استشراف</th><th>الخطأ: الموسمي</th><th>كلفة استشراف</th><th>كلفة الموسمي</th><th>الوفر</th><th>الوفر ناقص 220,000</th></tr>
+    <tr><td>fresh</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>dairy</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>staples</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>beverages</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>household</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · التوصية <span class="min">3 دقائق</span></h3>
+  <p>ثلاثة أسطر لعزام الدغيم: المجموعات التي يُشترى لها الترخيص، والتي تبقى على القاعدة الحالية، ورقم واحد يسند كل قرار.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>غيّر كلفة الزيادة للطازج إلى نصفها، وأعد الحساب. هل يتغير قرار أي مجموعة؟ ماذا يقول ذلك عن الرقم الذي يجب أن يتحقق منه عزام قبل الشراء؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>في أي مجموعة يكون الفرق في الخطأ كبيرًا والوفر بالريال صغيرًا؟ ولماذا؟</li>
+  <li>لماذا لا يكفي أن يكون استشراف أدق في كل المجموعات لنشتريه لها كلها؟</li>
+  <li>ما الذي يتغير لو حُسبت أسابيع النفاد؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <table>
+    <tr><th>المجموعة</th><th>الخطأ: استشراف</th><th>الخطأ: الموسمي</th><th>الوفر</th><th>بعد الترخيص</th></tr>
+    <tr><td>fresh</td><td>7.50</td><td>12.13</td><td>453,560</td><td>233,560</td></tr>
+    <tr><td>dairy</td><td>5.92</td><td>11.99</td><td>727,246</td><td>507,246</td></tr>
+    <tr><td>staples</td><td>5.14</td><td>9.64</td><td>179,784</td><td>ناقص 40,216</td></tr>
+    <tr><td>beverages</td><td>8.20</td><td>22.14</td><td>812,404</td><td>592,404</td></tr>
+    <tr><td>household</td><td>8.10</td><td>22.28</td><td>463,180</td><td>243,180</td></tr>
+  </table>
+  <ul>
+    <li><b>القرار:</b> الترخيص لأربع مجموعات (الوفر الصافي 1,576,390 ريالًا)، والمواد الأساسية تبقى على الموسمي البسيط: استشراف أدق فيها لكن كلفة الزيادة 0.3 ريال فقط، فلا يغطي الوفر الترخيص.</li>
+    <li><b>الفخ:</b> الحكم بالخطأ وحده. المواد الأساسية فيها أصغر خطأ لاستشراف، وأصغر وفر.</li>
+    <li>من يجمع بلا شرط النفاد يحصل على أرقام مختلفة قليلًا: ذكّره بالخطوة 1.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 1.3</code>.</li>
+  </ul>
+</details>
 </article>

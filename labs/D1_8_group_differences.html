@@ -1,37 +1,82 @@
 <article class="lab" data-lab="1.8">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>متوسط الخصم ومؤشر السعر لكل فئة: العمر، ودخل الحي، ونوع الجهاز، ومستخدمو التقسيط.</li>
+    <li>لكل فرق كبير: المكوّن في القاعدة الذي يصنعه.</li>
+    <li>مذكرة نتائج من صفحة واحدة بتعديل مقترح وطريقة قياس أثره.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="جدول بيانات">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/start/offers_with_groups.csv" target="_blank"><b>start/offers_with_groups.csv</b><span>قسائم الشهر لـ6,000 عميل مع فئاتهم ومكونات الخصم الخمسة</span></a>
+  <a href="files/pricing/saerak_rule.txt" target="_blank"><b>pricing/saerak_rule.txt</b><span>وصف القاعدة</span></a>
+</div>
+<p class="small">يبدأ المختبر من ملف جاهز، فلا يحتاج نتيجة المختبر 1.7. الأداة جدول بيانات (جدول محوري أو <code>AVERAGEIF</code>). سياسة الذكاء الاصطناعي: مساعد معلّم.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · افهم الأعمدة <span class="min">3 دقائق</span></h3>
+  <p><code>F</code> نسبة الخصم، و<code>G</code> مؤشر السعر (100 ناقص الخصم: ما يدفعه العميل من كل 100 ريال)، و<code>H</code> إلى <code>L</code> مكونات الخصم: من السجل، ومن الموقع، ومن الجهاز، ومن التقسيط، ومن العمر. مجموع المكونات هو الخصم (ولا يقل عن صفر).</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · متوسط الخصم لكل فئة <span class="min">7 دقائق</span></h3>
+  <pre class="code" data-file="offers_with_groups.csv"><code>=AVERAGEIF(B:B,"60+",F:F)       age band
+=AVERAGEIF(C:C,"low",F:F)       district income
+=AVERAGEIF(D:D,"ios",F:F)       device
+=AVERAGEIF(E:E,1,F:F)           instalments users</code></pre>
+  <table>
+    <tr><th>الفئة</th><th>العدد</th><th>متوسط الخصم (%)</th><th>مؤشر السعر</th></tr>
+    <tr><td>العمر 18-29 / 30-44 / 45-59 / 60+</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>دخل الحي low / middle / high</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>الجهاز ios / android_new / android_old</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>التقسيط 0 / 1</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · من أين يأتي الفرق <span class="min">6 دقائق</span></h3>
+  <p>لكل فئة يظهر فيها فرق أكبر من نقطة، احسب متوسط كل مكوّن. المكوّن الذي يتغير أكثر بين الفئات هو مصدر الفرق.</p>
+  <pre class="code" data-file="offers_with_groups.csv"><code>=AVERAGEIF(C:C,"low",I:I)       location part, low-income districts
+=AVERAGEIF(C:C,"high",I:I)      location part, high-income districts</code></pre>
+  <p>انتبه للمكوّن الذي لا يذكر الفئة باسمها ويصنع الفرق بينها: هذا متغير وكيل.</p>
+</div>
+
+<div class="step">
+  <h3>4 · مذكرة النتائج <span class="min">5 دقائق</span></h3>
+  <p>مذكرة لروزان الباهلي، ونسخة لوصال الحبشان، بثلاثة أجزاء: الفرق بالأرقام، ومصدره في القاعدة، ومن يتضرر ولماذا يهم ذلك عند فئة أكثر عرضة للضرر.</p>
+</div>
+
+<div class="step">
+  <h3>5 · التعديل المقترح <span class="min">4 دقائق</span></h3>
+  <p>اقترح تعديلًا واحدًا محددًا، وكيف يُقاس أثره بعد شهر: على الفروق بين الفئات، وعلى الهامش.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>أضف عمودًا للخصم دون مكوّني العمر والتقسيط (<code>=MAX(0,H2+I2+J2)</code>)، وأعد حساب الفرق بين الأعمار وبين مستخدمي التقسيط وغيرهم.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>أي فئة تدفع أكثر، وبكم نقطة؟</li>
+  <li>لماذا يصنع مكوّن الموقع فرقًا بين أحياء الدخل، مع أن القاعدة لا تقرأ الدخل؟</li>
+  <li>لماذا لا يكفي حذف عمود العمر من البيانات لإزالة الفرق؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>متوسط الخصم:</b> الكل 3.61. العمر: 18-29 3.75، و30-44 3.80، و45-59 3.73، و60+ 2.60. دخل الحي: low 2.94، وmiddle 3.69، وhigh 4.25. الجهاز: ios 2.96، وandroid_new 3.97، وandroid_old 4.17. التقسيط: 4.19 لغير مستخدميه و1.89 لمستخدميه.</li>
+    <li><b>المصادر:</b> العمر: مكوّن العمر ناقص 1.5 لمن عمره 60 فأكثر («أوفى»). التقسيط: ناقص 2.5 («أقل حساسية»). دخل الحي: مكوّن الموقع 0.86 في الأحياء الأقل دخلًا مقابل 2.50 في الأعلى، لأن المتاجر المنافسة أقل فيها، ثم التقسيط (ناقص 0.96 مقابل ناقص 0.21).</li>
+    <li><b>من يتضرر:</b> كبار السن ومستخدمو التقسيط وسكان الأحياء الأقل دخلًا يدفعون أكثر. الدليل المرجعي للتحيز يسمّي ما ورثته القاعدة من الماضي تحيزًا تاريخيًّا، ومبدأ الإنصاف في مبادئ أخلاقيات الذكاء الاصطناعي يطلب تقييمًا للإنصاف بمقاييس محددة.</li>
+    <li><b>تعديل معقول:</b> حذف مكوّني العمر والتقسيط، وسقف لفرق متوسط الخصم بين أي فئتين (نقطة واحدة مثلًا)، وقياس شهري للفروق والهامش.</li>
+    <li><b>التمرين الإضافي:</b> دون مكوّني العمر والتقسيط يصير الخصم 4.30 و4.33 و4.30 و4.61 للأعمار، و4.37 و4.31 لغير مستخدمي التقسيط ومستخدميه؛ ويبقى فرق الأحياء (3.95 و4.47 و4.62) لأن الموقع وكيل للدخل.</li>
+    <li><b>الفخ:</b> الاكتفاء بحذف عمود العمر. التقسيط والموقع وكيلان يعيدان جزءًا من الفرق.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 1.8</code>.</li>
+  </ul>
+</details>
 </article>

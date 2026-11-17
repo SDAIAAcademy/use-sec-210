@@ -1,37 +1,89 @@
 <article class="lab" data-lab="1.7">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>جدول مدخلات قاعدة «سعرك»: لكل مدخل الغرض الذي يخدمه والموافقة التي يحتاجها.</li>
+    <li>عدد القسائم التي استعملت كل مدخل دون موافقته، من قسائم شهر كامل.</li>
+    <li>الفجوات الثلاث الأكبر، مكتوبة لمسؤولة حماية البيانات.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="جدول بيانات">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/pricing/saerak_rule.txt" target="_blank"><b>pricing/saerak_rule.txt</b><span>وصف القاعدة كما سلّمه المورد</span></a>
+  <a href="files/pricing/consent_purposes.txt" target="_blank"><b>pricing/consent_purposes.txt</b><span>أغراض الموافقة الثلاثة في التطبيق</span></a>
+  <a href="files/pricing/customers.csv" target="_blank"><b>pricing/customers.csv</b><span>6,000 عميل وأعلام موافقاتهم</span></a>
+  <a href="files/pricing/offers_month.csv" target="_blank"><b>pricing/offers_month.csv</b><span>قسائم الشهر والمدخلات التي استعملها كل منها</span></a>
+</div>
+<p class="small">الأداة جدول بيانات. سياسة الذكاء الاصطناعي: مساعد معلّم. لا يحتاج المختبر شيئًا من مختبر سابق. البيانات اصطناعية، والجدول تمرين على الأسئلة لا رأي قانوني.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · اقرأ القاعدة والأغراض <span class="min">4 دقائق</span></h3>
+  <p>اقرأ <b>saerak_rule.txt</b> و<b>consent_purposes.txt</b>. علّم في وصف القاعدة كل نوع من البيانات تقرؤه، وكل جملة عن من تُطبَّق عليه القاعدة.</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · جدول المدخلات <span class="min">6 دقائق</span></h3>
+  <table>
+    <tr><th>المدخل</th><th>عمود الاستعمال في القسائم</th><th>الغرض الذي يخدمه</th><th>الموافقة التي يحتاجها</th></tr>
+    <tr><td>سجل المشتريات</td><td><code>used_purchase_history</code></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>الموقع</td><td><code>used_location</code></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>نوع الجهاز</td><td><code>used_device</code></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>الدفع بالتقسيط</td><td><code>used_instalments</code></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>العمر</td><td><code>used_age</code></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>شريحة الاهتمام الصحي</td><td><code>health_segment_offer</code></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>إرسال القسيمة نفسها</td><td>كل القسائم</td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · اربط القسائم بالعملاء <span class="min">4 دقائق</span></h3>
+  <p>الملفان مرتبان برقم العميل، صفًّا مقابل صف. انسخ أعمدة الموافقة الثلاثة من <b>customers.csv</b> إلى يسار القسائم، ثم تحقق:</p>
+  <pre class="code" data-file="offers_month.csv"><code>J2  =customers!F2      consent_marketing
+K2  =customers!G2      consent_personalisation
+L2  =customers!H2      consent_location
+M2  =A2=customers!A2   same customer? must be TRUE on every row</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · عدّ القسائم دون موافقة <span class="min">7 دقائق</span></h3>
+  <pre class="code" data-file="offers_month.csv"><code>history without personalisation  =COUNTIFS(D:D,1,K:K,0)
+location without location        =COUNTIFS(E:E,1,L:L,0)
+no marketing consent at all      =COUNTIF(J:J,0)
+health segment offers            =COUNTIF(I:I,1)</code></pre>
+  <p>واسأل عن الجهاز والتقسيط والعمر: أي غرض موافقة يغطي استعمالها لتحديد السعر؟</p>
+</div>
+
+<div class="step">
+  <h3>5 · الفجوات الثلاث <span class="min">4 دقائق</span></h3>
+  <p>اكتب لوصال الحبشان ثلاث فجوات مرتبة بخطورتها، لكل منها: المدخل، وعدد العملاء، وما يجب أن يتوقف أو يتغير أولًا.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>عدّ قسائم الشهر التي لا فجوة فيها: صاحبها وافق على التسويق والتخصيص، ولم يُستعمل موقعه إلا بموافقته، وليست من الشريحة الصحية. ماذا يقول الرقم عن حجم القاعدة بعد إصلاحها؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>لماذا لا تغطي موافقة التسويق استعمال سجل المشتريات في تحديد السعر؟</li>
+  <li>ما الذي يجعل شريحة الاهتمام الصحي أخطر من غيرها؟</li>
+  <li>القرار يصدر دون مراجعة أحد: ماذا يغيّر ذلك في نوع الموافقة المطلوبة؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>الأعداد من 6,000 قسيمة:</b> سجل المشتريات دون موافقة التخصيص 3,429؛ الموقع دون موافقة الموقع 1,776؛ دون موافقة التسويق أصلًا 1,626؛ قسائم الشريحة الصحية 715. القسائم التي تغطيها الموافقات كلها ولا تمس الشريحة الصحية: 1,493.</li>
+    <li><b>الجهاز والتقسيط والعمر:</b> بيانات شخصية تُستعمل لتحديد السعر، فهي من التخصيص، ولم يذكرها نص الغرض للعميل. والقاعدة لا تقرأ أعمدة الموافقة أصلًا.</li>
+    <li><b>الشريحة الصحية:</b> استنتاج حالة صحية من المشتريات. اللائحة التنفيذية لنظام حماية البيانات الشخصية تعد البيانات الصحية حساسة وتشترط لمعالجتها موافقة صريحة، ولا غرض موافقة لها في التطبيق: تتوقف أولًا.</li>
+    <li><b>القرار الآلي:</b> اللائحة تشترط الموافقة الصريحة حين يصدر القرار بالمعالجة الآلية وحدها، والقسيمة تظهر دون مراجعة.</li>
+    <li><b>التمرين الإضافي:</b> 1,493 قسيمة من 6,000 بلا فجوة؛ ومن وافقوا على التسويق والتخصيص معًا 2,407 عملاء. القاعدة بعد الإصلاح تخدم ربع العملاء أو أقل حتى تُجمع موافقات جديدة.</li>
+    <li><b>الترتيب المعقول:</b> الشريحة الصحية، ثم قراءة أعلام الموافقة قبل الحساب (سجل المشتريات والموقع)، ثم مدخلات الجهاز والتقسيط والعمر التي لا يعرفها العميل.</li>
+    <li><b>الفخ:</b> عدّ العملاء الذين لم يوافقوا بدل القسائم التي استعملت المدخل فعلًا: الموقع لا يُستعمل إلا قرب متجر منافس.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 1.7</code>.</li>
+  </ul>
+</details>
 </article>
